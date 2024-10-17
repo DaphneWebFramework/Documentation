@@ -26,20 +26,6 @@ public static function GetInstance(): static
 
 The singleton instance of the subclass.
 
-> ### __wakeup
-
-Prevents unserialization of the instance.
-
-#### Syntax
-
-```php
-public function __wakeup(): mixed
-```
-
-#### Exceptions
-
-- **\RuntimeException**: If a `Singleton` instance is attempted to be unserialized. This prevents the creation of multiple instances via unserialization.
-
 ---
 
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
