@@ -16,7 +16,7 @@ that might modify them.
 #### Syntax
 
 ```php
-public static function BackupSingletons(): array&lt;string,\Harmonia\Patterns\Singleton&gt;
+public static function BackupSingletons(): array<string,\Harmonia\Patterns\Singleton>
 ```
 
 #### Return Value
@@ -61,7 +61,7 @@ loss or modification of the original instances.
 #### Syntax
 
 ```php
-public static function UpdateSingletons(array&lt;string,\Harmonia\Patterns\Singleton&gt; $singletons): void
+public static function UpdateSingletons(array<string,\Harmonia\Patterns\Singleton> $singletons): void
 ```
 
 #### Parameters
