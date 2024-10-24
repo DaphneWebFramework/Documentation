@@ -36,6 +36,20 @@ public static function NonStringProvider(): array
 
 Returns an array of non-string, non-Stringable values.
 
+> ### NonStringExcludingNullProvider
+
+Provides non-string, non-Stringable values, excluding `null`.
+
+#### Syntax
+
+```php
+public static function NonStringExcludingNullProvider(): array
+```
+
+#### Return Value
+
+Returns an array of non-string, non-Stringable values, excluding `null`.
+
 > ### Cartesian
 
 Generates the Cartesian product of multiple arrays.
