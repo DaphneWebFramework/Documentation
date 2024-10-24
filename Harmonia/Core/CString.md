@@ -7,14 +7,14 @@ This class requires PHP's `mbstring` extension for multibyte encoding support.
 
 ## Methods
 
-> ### __construct
+### __construct
 
 Constructs a new instance of CString.
 
 #### Syntax
 
 ```php
-public function __construct(string|\Stringable $value = '', ?string $encoding = null): mixed
+public function __construct(string|\Stringable $value = '', ?string $encoding = null)
 ```
 
 #### Parameters
@@ -22,7 +22,9 @@ public function __construct(string|\Stringable $value = '', ?string $encoding = 
 - **$value**: The string value to store. If a `CString` instance is provided, the value, encoding, and single-byte/multibyte status are copied from the original instance.
 - **$encoding**: The encoding to use (e.g., 'UTF-8', 'ISO-8859-1'). If `null`, defaults to the return value of `mb_internal_encoding`. This parameter is ignored when the `$value` is an instance of `CString`.
 
-> ### __toString
+---
+
+### __toString
 
 Converts the CString instance to a string.
 

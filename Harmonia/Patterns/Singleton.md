@@ -8,7 +8,7 @@ subclasses.
 
 ## Methods
 
-> ### Instance
+### Instance
 
 Returns the singleton instance of the subclass.
 
