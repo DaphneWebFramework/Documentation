@@ -5,7 +5,7 @@ modify them as needed.
 
 ## Methods
 
-> ### BackupSingletons
+### BackupSingletons
 
 Backs up the current Singleton instances.
 
@@ -27,7 +27,9 @@ An associative array containing the backed-up Singleton instances, where the key
 
 - **\RuntimeException**: If Singletons are already backed up.
 
-> ### RestoreSingletons
+---
+
+### RestoreSingletons
 
 Restores Singleton instances from the backup.
 
@@ -46,7 +48,9 @@ public static function RestoreSingletons(): void
 
 - **\RuntimeException**: If no Singleton backup is found.
 
-> ### UpdateSingletons
+---
+
+### UpdateSingletons
 
 Updates the Singleton instances.
 

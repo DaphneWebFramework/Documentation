@@ -22,7 +22,7 @@ class ExampleTest extends TestCase
 
 ## Methods
 
-> ### NonStringProvider
+### NonStringProvider
 
 Provides non-string, non-Stringable values.
 
@@ -36,7 +36,9 @@ public static function NonStringProvider(): array
 
 Returns an array of non-string, non-Stringable values.
 
-> ### NonStringExcludingNullProvider
+---
+
+### NonStringExcludingNullProvider
 
 Provides non-string, non-Stringable values, excluding `null`.
 
@@ -50,7 +52,9 @@ public static function NonStringExcludingNullProvider(): array
 
 Returns an array of non-string, non-Stringable values, excluding `null`.
 
-> ### Cartesian
+---
+
+### Cartesian
 
 Generates the Cartesian product of multiple arrays.
 

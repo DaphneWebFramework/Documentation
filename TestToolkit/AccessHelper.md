@@ -5,7 +5,7 @@ API, enabling modification and retrieval of otherwise inaccessible values.
 
 ## Methods
 
-> ### SetNonPublicProperty
+### SetNonPublicProperty
 
 Sets the value of a non-public (private or protected) property in an
 object.
@@ -27,7 +27,9 @@ public static function SetNonPublicProperty(object $object, string $propertyName
 - **\ReflectionException**: If the property does not exist or cannot be accessed.
 - **\Error**: If the property is read-only, a fatal error will be thrown when attempting to modify it.
 
-> ### GetNonPublicProperty
+---
+
+### GetNonPublicProperty
 
 Retrieves the value of a non-public (private or protected) property from
 an object.
@@ -51,7 +53,9 @@ The value of the specified property.
 
 - **\ReflectionException**: If the property does not exist or cannot be accessed.
 
-> ### SetNonPublicStaticProperty
+---
+
+### SetNonPublicStaticProperty
 
 Sets the value of a non-public (private or protected) static property in
 a class.
@@ -73,7 +77,9 @@ public static function SetNonPublicStaticProperty(string $className, string $pro
 - **\ReflectionException**: If the property does not exist or cannot be accessed.
 - **\Error**: If the property is read-only, a fatal error will be thrown when attempting to modify it.
 
-> ### GetNonPublicStaticProperty
+---
+
+### GetNonPublicStaticProperty
 
 Retrieves the value of a non-public (private or protected) static
 property from a class.
@@ -97,7 +103,9 @@ The value of the specified static property.
 
 - **\ReflectionException**: If the property does not exist or cannot be accessed.
 
-> ### SetNonPublicMockProperty
+---
+
+### SetNonPublicMockProperty
 
 Sets the value of a non-public (private or protected) property in a mock
 object.
@@ -124,7 +132,9 @@ public static function SetNonPublicMockProperty(string $className, object $mockO
 - **\ReflectionException**: If the property does not exist or cannot be accessed.
 - **\Error**: If the property is read-only, a fatal error will be thrown when attempting to modify it.
 
-> ### GetNonPublicMockProperty
+---
+
+### GetNonPublicMockProperty
 
 Retrieves the value of a non-public (private or protected) property from
 a mock object.
@@ -153,7 +163,9 @@ The value of the specified property.
 
 - **\ReflectionException**: If the property does not exist or cannot be accessed.
 
-> ### CallNonPublicConstructor
+---
+
+### CallNonPublicConstructor
 
 Invokes the non-public (private or protected) constructor of a given
 object or class.
