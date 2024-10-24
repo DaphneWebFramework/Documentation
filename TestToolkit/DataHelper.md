@@ -4,7 +4,37 @@ Provides reusable data sets for PHPUnit, including common value types like
 non-strings, non-integers, booleans, and combinations of test data (Cartesian
 product).
 
+Example usage:
+```php
+use \PHPUnit\Framework\TestCase;
+use \PHPUnit\Framework\Attributes\DataProviderExternal;
+
+class ExampleTest extends TestCase
+{
+    #[DataProviderExternal(DataHelper::class, 'NonStringProvider')]
+    public function testConstructorWithNonStringValue($nonString)
+    {
+        $this->expectException(\TypeError::class);
+        new ExampleClass($nonString);
+    }
+}
+```
+
 ## Methods
+
+> ### NonStringProvider
+
+Provides non-string, non-Stringable values.
+
+#### Syntax
+
+```php
+public static function NonStringProvider(): array
+```
+
+#### Return Value
+
+Returns an array of non-string, non-Stringable values.
 
 > ### Cartesian
 
@@ -17,7 +47,7 @@ multiple sets. The cartesian product operation results in an array of
 arrays, each containing a unique combination of elements from the input
 arrays.
 
-Example usage in PHPUnit data provider:
+Example usage:
 ```php
 public function dataProvider() {
     return DataHelper::Cartesian([1, 2, 3], ['a', 'b']);
