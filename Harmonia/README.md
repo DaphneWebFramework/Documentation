@@ -1,5 +1,8 @@
 # Harmonia
 
+## Core
+- [CString](Core/CString.md)
+
 ## Patterns
 - [Singleton](Patterns/Singleton.md)
 
