@@ -54,6 +54,22 @@ Returns an array of non-string, non-Stringable values, excluding `null`.
 
 ---
 
+### NonIntegerProvider
+
+Provides non-integer values.
+
+#### Syntax
+
+```php
+public static function NonIntegerProvider(): array
+```
+
+#### Return Value
+
+Returns an array of non-integer values.
+
+---
+
 ### Cartesian
 
 Generates the Cartesian product of multiple arrays.
