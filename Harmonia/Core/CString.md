@@ -40,4 +40,40 @@ The string value stored in the instance.
 
 ---
 
+### IsEmpty
+
+Checks if the string is empty.
+
+#### Syntax
+
+```php
+public function IsEmpty(): bool
+```
+
+#### Return Value
+
+Returns `true` if the string is empty, `false` otherwise.
+
+---
+
+### Length
+
+Returns the length of the string.
+
+#### Syntax
+
+```php
+public function Length(): int
+```
+
+#### Return Value
+
+The number of characters in the string.
+
+#### Exceptions
+
+- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
