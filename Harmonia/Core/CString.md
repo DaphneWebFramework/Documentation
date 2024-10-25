@@ -76,4 +76,68 @@ The number of characters in the string.
 
 ---
 
+### First
+
+Returns the first character of the string.
+
+#### Syntax
+
+```php
+public function First(): string
+```
+
+#### Return Value
+
+The first character of the string, or an empty string if the string is empty.
+
+#### Exceptions
+
+- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+
+---
+
+### Last
+
+Returns the last character of the string.
+
+#### Syntax
+
+```php
+public function Last(): string
+```
+
+#### Return Value
+
+The last character of the string, or an empty string if the string is empty.
+
+#### Exceptions
+
+- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+
+---
+
+### At
+
+Returns the character at a specified offset.
+
+#### Syntax
+
+```php
+public function At(int $offset): string
+```
+
+#### Parameters
+
+- **$offset**: The zero-based offset of the character to return.
+
+#### Return Value
+
+The character at the specified offset, or an empty string if the offset is out of bounds.
+
+#### Exceptions
+
+- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
