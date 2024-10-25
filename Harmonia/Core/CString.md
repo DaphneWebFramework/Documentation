@@ -140,4 +140,29 @@ The character at the specified offset, or an empty string if the offset is out o
 
 ---
 
+### SetAt
+
+Sets the character at the specified offset.
+
+#### Syntax
+
+```php
+public function SetAt(int $offset, string $character): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$offset**: The zero-based offset where the character will be set. If the offset is negative, no changes will be made. If the offset is greater than or equal to the length of the string, the method pads the string with spaces up to the specified offset and inserts the character at that position.
+- **$character**: The character to set at the specified offset. If more than one character is provided, only the first character will be used.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
