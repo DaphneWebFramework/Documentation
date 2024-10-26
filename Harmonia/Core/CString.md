@@ -152,8 +152,8 @@ public function SetAt(int $offset, string $character): \Harmonia\Core\CString
 
 #### Parameters
 
-- **$offset**: The zero-based offset where the character will be set. If the offset is negative, no changes will be made. If the offset is greater than or equal to the length of the string, the method pads the string with spaces up to the specified offset and inserts the character at that position.
-- **$character**: The character to set at the specified offset. If more than one character is provided, only the first character will be used.
+- **$offset**: The zero-based offset where the character will be set. If the offset is negative or greater than or equal to the length of the string, no changes will be made.
+- **$character**: The character to set at the specified offset. If more than one character is provided, no changes will be made.
 
 #### Return Value
 
