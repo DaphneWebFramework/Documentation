@@ -165,4 +165,28 @@ The current instance.
 
 ---
 
+### DeleteAt
+
+Deletes the character at the specified offset.
+
+#### Syntax
+
+```php
+public function DeleteAt(int $offset): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$offset**: The zero-based offset where the character will be deleted. If the offset is negative or greater than or equal to the length of the string, no changes will be made.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
