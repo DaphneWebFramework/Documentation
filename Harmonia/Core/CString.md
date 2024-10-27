@@ -167,17 +167,18 @@ The current instance.
 
 ### DeleteAt
 
-Deletes the character at the specified offset.
+Deletes a range of characters starting from the specified offset.
 
 #### Syntax
 
 ```php
-public function DeleteAt(int $offset): \Harmonia\Core\CString
+public function DeleteAt(int $offset, int $count = 1): \Harmonia\Core\CString
 ```
 
 #### Parameters
 
-- **$offset**: The zero-based offset where the character will be deleted. If the offset is negative or greater than or equal to the length of the string, no changes will be made.
+- **$offset**: The zero-based offset where the deletion will start. If the offset is negative or greater than or equal to the length of the string, no changes will be made.
+- **$count**: (Optional) The number of characters to delete. If the delete length is less than 1, no changes will be made. If the delete length exceeds the string's remaining length, it will delete up to the end. Defaults to 1.
 
 #### Return Value
 
