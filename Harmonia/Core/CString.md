@@ -165,6 +165,31 @@ The current instance.
 
 ---
 
+### InsertAt
+
+Inserts a substring at the specified offset.
+
+#### Syntax
+
+```php
+public function InsertAt(int $offset, string $substring): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$offset**: The zero-based offset where the insertion will start. If the offset is negative or greater than the length of the string, no changes will be made.
+- **$substring**: The substring to insert. If an empty string is provided, no changes will be made.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+
+---
+
 ### DeleteAt
 
 Deletes a range of characters starting from the specified offset.
@@ -178,7 +203,7 @@ public function DeleteAt(int $offset, int $count = 1): \Harmonia\Core\CString
 #### Parameters
 
 - **$offset**: The zero-based offset where the deletion will start. If the offset is negative or greater than or equal to the length of the string, no changes will be made.
-- **$count**: (Optional) The number of characters to delete. If the delete length is less than 1, no changes will be made. If the delete length exceeds the string's remaining length, it will delete up to the end. Defaults to 1.
+- **$count**: (Optional) The number of characters to delete. If this value is less than 1, no changes will be made. If it exceeds the remaining characters, it will delete up to the end. Defaults to 1.
 
 #### Return Value
 
