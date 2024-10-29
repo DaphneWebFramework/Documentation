@@ -72,7 +72,7 @@ The number of characters in the string.
 
 #### Exceptions
 
-- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+- **\ValueError**: If an error occurs due to encoding.
 
 ---
 
@@ -92,7 +92,7 @@ The first character of the string, or an empty string if the string is empty.
 
 #### Exceptions
 
-- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+- **\ValueError**: If an error occurs due to encoding.
 
 ---
 
@@ -112,7 +112,7 @@ The last character of the string, or an empty string if the string is empty.
 
 #### Exceptions
 
-- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+- **\ValueError**: If an error occurs due to encoding.
 
 ---
 
@@ -136,7 +136,7 @@ The character at the specified offset, or an empty string if the offset is out o
 
 #### Exceptions
 
-- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+- **\ValueError**: If an error occurs due to encoding.
 
 ---
 
@@ -161,7 +161,7 @@ The current instance.
 
 #### Exceptions
 
-- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+- **\ValueError**: If an error occurs due to encoding.
 
 ---
 
@@ -186,7 +186,7 @@ The current instance.
 
 #### Exceptions
 
-- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+- **\ValueError**: If an error occurs due to encoding.
 
 ---
 
@@ -211,7 +211,7 @@ The current instance.
 
 #### Exceptions
 
-- **\ValueError**: If the encoding is invalid when operating in multibyte mode.
+- **\ValueError**: If an error occurs due to encoding.
 
 ---
 
