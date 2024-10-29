@@ -196,4 +196,33 @@ The object with its constructor invoked.
 
 ---
 
+### CallNonPublicMethod
+
+Calls a non-public (private or protected) method on an object.
+
+This method allows for the invocation of non-public methods, enabling
+unit testing or advanced manipulation of otherwise inaccessible logic.
+
+#### Syntax
+
+```php
+public static function CallNonPublicMethod(object $object, string $methodName, array $args = []): mixed
+```
+
+#### Parameters
+
+- **$object**: The object instance on which to invoke the non-public method.
+- **$methodName**: The name of the non-public method to invoke.
+- **$args**: (Optional) An array of arguments to pass to the method.
+
+#### Return Value
+
+The result of the invoked method.
+
+#### Exceptions
+
+- **\ReflectionException**: If the method does not exist or cannot be accessed.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
