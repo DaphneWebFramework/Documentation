@@ -215,4 +215,80 @@ The current instance.
 
 ---
 
+### Left
+
+Extracts a specified number of characters from the left side of the
+string.
+
+#### Syntax
+
+```php
+public function Left(int $count): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$count**: The number of characters to return. If greater than or equal to the length of the string, the entire string is returned.
+
+#### Return Value
+
+A new `CString` instance with the leftmost characters.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If the count is negative.
+
+---
+
+### Right
+
+Extracts a specified number of characters from the right side of the
+string.
+
+#### Syntax
+
+```php
+public function Right(int $count): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$count**: The number of characters to return. If greater than or equal to the length of the string, the entire string is returned.
+
+#### Return Value
+
+A new `CString` instance with the rightmost characters.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If the count is negative.
+
+---
+
+### Middle
+
+Extracts a specified number of characters starting from a specified
+offset in the string.
+
+#### Syntax
+
+```php
+public function Middle(int $offset, int $count = PHP_INT_MAX): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$offset**: The zero-based starting offset of the characters to return.
+- **$count**: (Optional) The number of characters to return. If omitted, or if fewer characters are available in the string from the offset, only the available characters are returned.
+
+#### Return Value
+
+A new CString instance with the specified middle characters.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If either the offset or count is negative.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
