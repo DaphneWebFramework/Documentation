@@ -279,4 +279,78 @@ A new `CString` instance with the specified middle characters, or an empty insta
 
 ---
 
+### Trim
+
+Trims whitespace or specified characters from both sides of the string.
+
+#### Syntax
+
+```php
+public function Trim(?string $characters = null): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$characters**: (Optional) Characters to trim. Defaults to trimming whitespace characters.
+
+#### Return Value
+
+A new `CString` instance with the trimmed string.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
+### TrimLeft
+
+Trims whitespace or specified characters from the start (left) of the
+string.
+
+#### Syntax
+
+```php
+public function TrimLeft(?string $characters = null): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$characters**: (Optional) Characters to trim. Defaults to trimming whitespace characters.
+
+#### Return Value
+
+A new `CString` instance with the trimmed string.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
+### TrimRight
+
+Trims whitespace or specified characters from the end (right) of the
+string.
+
+#### Syntax
+
+```php
+public function TrimRight(?string $characters = null): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$characters**: (Optional) Characters to trim. Defaults to trimming whitespace characters.
+
+#### Return Value
+
+A new `CString` instance with the trimmed string.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
