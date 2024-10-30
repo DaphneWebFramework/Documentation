@@ -365,4 +365,44 @@ A new `CString` instance with the trimmed string.
 
 ---
 
+### Lowercase
+
+Converts the string to lowercase.
+
+#### Syntax
+
+```php
+public function Lowercase(): \Harmonia\Core\CString
+```
+
+#### Return Value
+
+A new `CString` instance with all characters converted to lowercase.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
+### Uppercase
+
+Converts the string to uppercase.
+
+#### Syntax
+
+```php
+public function Uppercase(): \Harmonia\Core\CString
+```
+
+#### Return Value
+
+A new `CString` instance with all characters converted to uppercase.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
