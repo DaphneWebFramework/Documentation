@@ -232,11 +232,7 @@ public function Left(int $count): \Harmonia\Core\CString
 
 #### Return Value
 
-A new `CString` instance with the leftmost characters.
-
-#### Exceptions
-
-- **\InvalidArgumentException**: If the count is negative.
+A new `CString` instance with the leftmost characters, or an empty instance if the count is negative.
 
 ---
 
@@ -257,11 +253,7 @@ public function Right(int $count): \Harmonia\Core\CString
 
 #### Return Value
 
-A new `CString` instance with the rightmost characters.
-
-#### Exceptions
-
-- **\InvalidArgumentException**: If the count is negative.
+A new `CString` instance with the rightmost characters, or an empty instance if the count is negative.
 
 ---
 
@@ -283,11 +275,7 @@ public function Middle(int $offset, int $count = PHP_INT_MAX): \Harmonia\Core\CS
 
 #### Return Value
 
-A new CString instance with the specified middle characters.
-
-#### Exceptions
-
-- **\InvalidArgumentException**: If either the offset or count is negative.
+A new `CString` instance with the specified middle characters, or an empty instance if the offset or count is negative.
 
 ---
 
