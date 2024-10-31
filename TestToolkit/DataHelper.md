@@ -54,6 +54,22 @@ Returns an array of non-string, non-Stringable values, excluding `null`.
 
 ---
 
+### NonBooleanProvider
+
+Provides non-boolean values.
+
+#### Syntax
+
+```php
+public static function NonBooleanProvider(): array
+```
+
+#### Return Value
+
+Returns an array of non-boolean values.
+
+---
+
 ### NonIntegerProvider
 
 Provides non-integer values.
