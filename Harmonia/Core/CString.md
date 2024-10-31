@@ -405,4 +405,54 @@ A new `CString` instance with all characters converted to uppercase.
 
 ---
 
+### StartsWith
+
+Checks if the string starts with the specified search string.
+
+#### Syntax
+
+```php
+public function StartsWith(string $searchString, bool $caseSensitive = true): bool
+```
+
+#### Parameters
+
+- **$searchString**: The string to check if the instance starts with it.
+- **$caseSensitive**: (Optional) Whether the comparison should be case-sensitive. By default, it is case-sensitive.
+
+#### Return Value
+
+Returns `true` if the string starts with the given search string, `false` otherwise.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
+### EndsWith
+
+Checks if the string ends with the specified search string.
+
+#### Syntax
+
+```php
+public function EndsWith(string $searchString, bool $caseSensitive = true): bool
+```
+
+#### Parameters
+
+- **$searchString**: The string to check if the instance ends with it.
+- **$caseSensitive**: (Optional) Whether the comparison should be case-sensitive. By default, it is case-sensitive.
+
+#### Return Value
+
+Returns `true` if the string ends with the given search string, `false` otherwise.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
