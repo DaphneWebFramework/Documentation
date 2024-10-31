@@ -405,6 +405,31 @@ A new `CString` instance with all characters converted to uppercase.
 
 ---
 
+### Equals
+
+Checks if this string is equal to another string.
+
+#### Syntax
+
+```php
+public function Equals(string|\Harmonia\Core\CString $other, bool $caseSensitive = true): bool
+```
+
+#### Parameters
+
+- **$other**: The string to compare with.
+- **$caseSensitive**: (Optional) Whether the comparison should be case-sensitive. By default, it is case-sensitive.
+
+#### Return Value
+
+Returns `true` if the strings are equal, `false` otherwise.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
 ### StartsWith
 
 Checks if the string starts with the specified search string.
