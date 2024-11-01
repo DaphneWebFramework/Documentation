@@ -487,7 +487,7 @@ Checks if the offset exists within the bounds of the string.
 #### Syntax
 
 ```php
-public function offsetExists(int $offset): bool
+public function offsetExists(mixed $offset): bool
 ```
 
 #### Parameters
@@ -569,6 +569,22 @@ public function offsetUnset(mixed $offset): void
 
 - **\TypeError**: If the offset is not an integer.
 - **\ValueError**: If an error occurs due to encoding.
+
+---
+
+### getIterator
+
+Returns an iterator for traversing each character in the string.
+
+#### Syntax
+
+```php
+public function getIterator(): \Traversable
+```
+
+#### Return Value
+
+An iterator yielding each character in the string.
 
 ---
 
