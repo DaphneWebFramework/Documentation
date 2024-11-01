@@ -24,22 +24,6 @@ public function __construct(string|\Stringable $value = '', ?string $encoding = 
 
 ---
 
-### __toString
-
-Converts the CString instance to a string.
-
-#### Syntax
-
-```php
-public function __toString(): string
-```
-
-#### Return Value
-
-The string value stored in the instance.
-
----
-
 ### IsEmpty
 
 Checks if the string is empty.
@@ -476,6 +460,114 @@ Returns `true` if the string ends with the given search string, `false` otherwis
 
 #### Exceptions
 
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
+### __toString
+
+Converts the CString instance to a string.
+
+#### Syntax
+
+```php
+public function __toString(): string
+```
+
+#### Return Value
+
+The string value stored in the instance.
+
+---
+
+### offsetExists
+
+Checks if the offset exists within the bounds of the string.
+
+#### Syntax
+
+```php
+public function offsetExists(int $offset): bool
+```
+
+#### Parameters
+
+- **$offset**: The zero-based offset to check.
+
+#### Return Value
+
+Returns `true` if the offset is within the string length, `false` otherwise.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If the offset is not an integer or is negative.
+
+---
+
+### offsetGet
+
+Returns the character at a specified offset.
+
+#### Syntax
+
+```php
+public function offsetGet(mixed $offset): mixed
+```
+
+#### Parameters
+
+- **$offset**: The zero-based offset of the character to return.
+
+#### Return Value
+
+The character at the specified offset, or an empty string if the offset is out of bounds.
+
+#### Exceptions
+
+- **\TypeError**: If the offset is not an integer.
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
+### offsetSet
+
+Sets the character at the specified offset.
+
+#### Syntax
+
+```php
+public function offsetSet(mixed $offset, mixed $value): void
+```
+
+#### Parameters
+
+- **$offset**: The zero-based offset where the character will be set. If the offset is negative or greater than or equal to the length of the string, no changes will be made.
+- **$value**: The character to set at the specified offset. If more than one character is provided, no changes will be made.
+
+#### Exceptions
+
+- **\TypeError**: If the offset is not an integer or the value is not a string.
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
+### offsetUnset
+
+Deletes the character at the specified offset.
+
+#### Syntax
+
+```php
+public function offsetUnset(mixed $offset): void
+```
+
+#### Parameters
+
+- **$offset**: The zero-based offset where the character will be removed. If the offset is negative or greater than or equal to the length of the string, no changes will be made.
+
+#### Exceptions
+
+- **\TypeError**: If the offset is not an integer.
 - **\ValueError**: If an error occurs due to encoding.
 
 ---
