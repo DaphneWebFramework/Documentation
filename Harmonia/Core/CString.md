@@ -464,6 +464,32 @@ Returns `true` if the string ends with the given search string, `false` otherwis
 
 ---
 
+### IndexOf
+
+Finds the offset of the first occurrence of a string.
+
+#### Syntax
+
+```php
+public function IndexOf(string $searchString, int $startOffset, bool $caseSensitive = true): int|null
+```
+
+#### Parameters
+
+- **$searchString**: The string to search for.
+- **$startOffset**: (Optional) The zero-based offset from which to start the search. Defaults to 0.
+- **$caseSensitive**: (Optional) Whether the comparison should be case-sensitive. By default, it is case-sensitive.
+
+#### Return Value
+
+The zero-based offset of the search string, or `null` if not found.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
 ### __toString
 
 Converts the CString instance to a string.
