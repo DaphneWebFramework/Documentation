@@ -1,7 +1,8 @@
 # CString
 
-CString is a wrapper class for string manipulation, allowing the use of both
-single-byte and multibyte encodings.
+CString is a wrapper for PHP's native `string` type, providing enhanced
+methods for string manipulation, with support for both single-byte and
+multibyte encodings.
 
 This class requires PHP's `mbstring` extension for multibyte encoding support.
 
@@ -19,8 +20,8 @@ public function __construct(string|\Stringable $value = '', ?string $encoding = 
 
 #### Parameters
 
-- **$value**: The string value to store. If a `CString` instance is provided, the value, encoding, and single-byte/multibyte status are copied from the original instance.
-- **$encoding**: The encoding to use (e.g., 'UTF-8', 'ISO-8859-1'). If `null`, defaults to the return value of `mb_internal_encoding`. This parameter is ignored when the `$value` is an instance of `CString`.
+- **$value**: (Optional) The string value to store. If omitted, defaults to an empty string. If a `CString` instance is provided, the value, encoding, and single-byte/multibyte status are copied from the original instance.
+- **$encoding**: (Optional) The encoding to use (e.g., 'UTF-8', 'ISO-8859-1'). If omitted or set to `null`, defaults to the return value of `mb_internal_encoding`. This parameter is ignored when `$value` is an instance of `CString`. Note that encoding names are case-insensitive.
 
 ---
 
