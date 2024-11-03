@@ -63,4 +63,76 @@ The value at the specified key if it exists, or the default value if the key is 
 
 ---
 
+### PushBack
+
+Adds an element to the end of the array.
+
+#### Syntax
+
+```php
+public function PushBack(mixed $element): \Harmonia\Core\CArray
+```
+
+#### Parameters
+
+- **$element**: The element to add to the array.
+
+#### Return Value
+
+The current instance.
+
+---
+
+### PushFront
+
+Adds an element to the beginning of the array.
+
+#### Syntax
+
+```php
+public function PushFront(mixed $element): \Harmonia\Core\CArray
+```
+
+#### Parameters
+
+- **$element**: The element to add to the array.
+
+#### Return Value
+
+The current instance.
+
+---
+
+### PopBack
+
+Removes and returns the last element of the array.
+
+#### Syntax
+
+```php
+public function PopBack(): mixed
+```
+
+#### Return Value
+
+The last element, or `null` if the array is empty.
+
+---
+
+### PopFront
+
+Removes and returns the first element of the array.
+
+#### Syntax
+
+```php
+public function PopFront(): mixed
+```
+
+#### Return Value
+
+The first element, or `null` if the array is empty.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
