@@ -9,13 +9,15 @@ Example usage:
 use \PHPUnit\Framework\TestCase;
 use \PHPUnit\Framework\Attributes\DataProviderExternal;
 
+use \TestToolkit\DataHelper;
+
 class ExampleTest extends TestCase
 {
     #[DataProviderExternal(DataHelper::class, 'NonStringProvider')]
-    public function testConstructorWithNonStringValue($nonString)
+    public function testConstructorWithNonStringValue($value)
     {
         $this->expectException(\TypeError::class);
-        new ExampleClass($nonString);
+        new ExampleClass($value);
     }
 }
 ```
@@ -83,6 +85,22 @@ public static function NonIntegerProvider(): array
 #### Return Value
 
 Returns an array of non-integer values.
+
+---
+
+### NonStringOrIntegerProvider
+
+Provides non-string, non-integer values.
+
+#### Syntax
+
+```php
+public static function NonStringOrIntegerProvider(): array
+```
+
+#### Return Value
+
+Returns an array of values that are neither strings nor integers.
 
 ---
 
