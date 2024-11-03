@@ -86,6 +86,22 @@ Returns an array of non-integer values.
 
 ---
 
+### NonArrayProvider
+
+Provides non-array values.
+
+#### Syntax
+
+```php
+public static function NonArrayProvider(): array
+```
+
+#### Return Value
+
+Returns an array of values that are not arrays.
+
+---
+
 ### Cartesian
 
 Generates the Cartesian product of multiple arrays.
@@ -99,7 +115,7 @@ arrays.
 
 Example usage:
 ```php
-public function dataProvider() {
+static function dataProvider() {
     return DataHelper::Cartesian([1, 2, 3], ['a', 'b']);
 }
 
