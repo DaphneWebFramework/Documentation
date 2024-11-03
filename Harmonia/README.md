@@ -1,6 +1,7 @@
 # Harmonia
 
 ## Core
+- [CArray](Core/CArray.md)
 - [CString](Core/CString.md)
 
 ## Patterns
