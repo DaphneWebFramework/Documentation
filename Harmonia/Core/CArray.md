@@ -21,4 +21,24 @@ public function __construct(array|\Harmonia\Core\CArray $value = [])
 
 ---
 
+### ContainsKey
+
+Checks if the specified key exists in the array.
+
+#### Syntax
+
+```php
+public function ContainsKey(string|int $key): bool
+```
+
+#### Parameters
+
+- **$key**: The key to check for existence within the array.
+
+#### Return Value
+
+Returns `true` if the key exists in the array, `false` otherwise.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
