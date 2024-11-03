@@ -41,4 +41,26 @@ Returns `true` if the key exists in the array, `false` otherwise.
 
 ---
 
+### ValueOrDefault
+
+Returns the value at the specified key, or a default value if the key
+does not exist in the array.
+
+#### Syntax
+
+```php
+public function ValueOrDefault(string|int $key, mixed $defaultValue = null): mixed
+```
+
+#### Parameters
+
+- **$key**: The key to look up in the array.
+- **$defaultValue**: (Optional) The value to return if the key does not exist. Defaults to `null`.
+
+#### Return Value
+
+The value at the specified key if it exists, or the default value if the key is not found.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
