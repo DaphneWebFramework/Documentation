@@ -491,6 +491,33 @@ The zero-based offset of the search string, or `null` if not found.
 
 ---
 
+### Replace
+
+Replaces all occurrences of a specified search string with a replacement
+string.
+
+#### Syntax
+
+```php
+public function Replace(string $searchString, string $replacement, bool $caseSensitive = true): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$searchString**: The substring to search for.
+- **$replacement**: The substring to replace each occurrence of the search string.
+- **$caseSensitive**: (Optional) Whether the comparison should be case-sensitive. By default, it is case-sensitive.
+
+#### Return Value
+
+A new `CString` instance with the replacements made.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+---
+
 ### __toString
 
 Converts the CString instance to a string.
