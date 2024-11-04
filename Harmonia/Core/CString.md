@@ -554,7 +554,8 @@ Returns `true` if the offset is within the string length, `false` otherwise.
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If the offset is not an integer or is negative.
+- **\InvalidArgumentException**: If the offset is not an integer.
+- **\OutOfRangeException**: If the offset is negative.
 
 ---
 
