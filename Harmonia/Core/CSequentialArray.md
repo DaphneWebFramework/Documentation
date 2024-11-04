@@ -12,7 +12,7 @@ Adds an element to the end of the array.
 #### Syntax
 
 ```php
-public function PushBack(mixed $element): \Harmonia\Core\CArray
+public function PushBack(mixed $element): \Harmonia\Core\CSequentialArray
 ```
 
 #### Parameters
@@ -32,7 +32,7 @@ Adds an element to the beginning of the array.
 #### Syntax
 
 ```php
-public function PushFront(mixed $element): \Harmonia\Core\CArray
+public function PushFront(mixed $element): \Harmonia\Core\CSequentialArray
 ```
 
 #### Parameters
@@ -84,7 +84,7 @@ Inserts a new element before an existing element at a specified offset.
 #### Syntax
 
 ```php
-public function InsertBefore(int $offset, mixed $element): \Harmonia\Core\CArray
+public function InsertBefore(int $offset, mixed $element): \Harmonia\Core\CSequentialArray
 ```
 
 #### Parameters
@@ -109,7 +109,7 @@ Inserts a new element after an existing element at a specified offset.
 #### Syntax
 
 ```php
-public function InsertAfter(int $offset, mixed $element): \Harmonia\Core\CArray
+public function InsertAfter(int $offset, mixed $element): \Harmonia\Core\CSequentialArray
 ```
 
 #### Parameters
