@@ -79,17 +79,17 @@ The first element, or `null` if the array is empty.
 
 ### InsertBefore
 
-Inserts a new element before an existing element at a specified offset.
+Inserts a new element before an existing element at a specified index.
 
 #### Syntax
 
 ```php
-public function InsertBefore(int $offset, mixed $element): \Harmonia\Core\CSequentialArray
+public function InsertBefore(int $index, mixed $element): \Harmonia\Core\CSequentialArray
 ```
 
 #### Parameters
 
-- **$offset**: The zero-based offset before which the new element should be inserted.
+- **$index**: The zero-based index before which the new element should be inserted.
 - **$element**: The new element to insert.
 
 #### Return Value
@@ -98,23 +98,23 @@ The current instance.
 
 #### Exceptions
 
-- **\OutOfRangeException**: If the offset is out of range.
+- **\OutOfRangeException**: If the index is out of range.
 
 ---
 
 ### InsertAfter
 
-Inserts a new element after an existing element at a specified offset.
+Inserts a new element after an existing element at a specified index.
 
 #### Syntax
 
 ```php
-public function InsertAfter(int $offset, mixed $element): \Harmonia\Core\CSequentialArray
+public function InsertAfter(int $index, mixed $element): \Harmonia\Core\CSequentialArray
 ```
 
 #### Parameters
 
-- **$offset**: The zero-based offset after which the new element should be inserted.
+- **$index**: The zero-based index after which the new element should be inserted.
 - **$element**: The new element to insert.
 
 #### Return Value
@@ -123,7 +123,38 @@ The current instance.
 
 #### Exceptions
 
-- **\OutOfRangeException**: If the offset is out of range.
+- **\OutOfRangeException**: If the index is out of range.
+
+---
+
+### Delete
+
+Removes an element at the specified index.
+
+The `$index` parameter accepts both integer and string types to ensure
+signature compatibility with the base class `CArray`, allowing this
+method to override `CArray::Delete`. However, if a string is given, an
+exception is thrown, as `CSequentialArray` is intended for integer-based
+indexing only.
+
+#### Syntax
+
+```php
+public function Delete(int|string $index): \Harmonia\Core\CSequentialArray
+```
+
+#### Parameters
+
+- **$index**: The zero-based index of the element to remove. If a string is given, an exception is thrown.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If the index is a string.
+- **\OutOfRangeException**: If the index is out of range.
 
 ---
 
