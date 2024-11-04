@@ -135,4 +135,72 @@ The first element, or `null` if the array is empty.
 
 ---
 
+### InsertBefore
+
+Inserts a new element before an existing element at a specified offset.
+
+> This method is intended for use with sequentially indexed arrays.
+After insertion, the array is reindexed to maintain sequential order.
+If applied to associative arrays, existing string keys are preserved, and
+the new element is added with the next available zero-based integer key.
+
+#### Syntax
+
+```php
+public function InsertBefore(int $offset, mixed $element): \Harmonia\Core\CArray
+```
+
+#### Parameters
+
+- **$offset**: The zero-based offset before which the new element should be inserted.
+- **$element**: The new element to insert.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\OutOfRangeException**: If the offset is out of range.
+
+#### See Also
+
+- [`InsertAfter`](#InsertAfter)
+
+---
+
+### InsertAfter
+
+Inserts a new element after an existing element at a specified offset.
+
+> This method is intended for use with sequentially indexed arrays.
+After insertion, the array is reindexed to maintain sequential order.
+If applied to associative arrays, existing string keys are preserved, and
+the new element is added with the next available zero-based integer key.
+
+#### Syntax
+
+```php
+public function InsertAfter(int $offset, mixed $element): \Harmonia\Core\CArray
+```
+
+#### Parameters
+
+- **$offset**: The zero-based offset after which the new element should be inserted.
+- **$element**: The new element to insert.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\OutOfRangeException**: If the offset is out of range.
+
+#### See Also
+
+- [`InsertBefore`](#InsertBefore)
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
