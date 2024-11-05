@@ -21,14 +21,14 @@ public function __construct(array|\Harmonia\Core\CArray $value = [])
 
 ---
 
-### ContainsKey
+### Has
 
 Checks if the specified key exists in the array.
 
 #### Syntax
 
 ```php
-public function ContainsKey(string|int $key): bool
+public function Has(string|int $key): bool
 ```
 
 #### Parameters
@@ -41,7 +41,7 @@ Returns `true` if the key exists in the array, `false` otherwise.
 
 ---
 
-### ValueOrDefault
+### Get
 
 Returns the value at the specified key, or a default value if the key
 does not exist in the array.
@@ -49,7 +49,7 @@ does not exist in the array.
 #### Syntax
 
 ```php
-public function ValueOrDefault(string|int $key, mixed $defaultValue = null): mixed
+public function Get(string|int $key, mixed $defaultValue = null): mixed
 ```
 
 #### Parameters
