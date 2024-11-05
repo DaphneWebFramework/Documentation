@@ -63,4 +63,24 @@ The value at the specified key if it exists, or the default value if the key is 
 
 ---
 
+### Delete
+
+Removes an element by its key.
+
+#### Syntax
+
+```php
+public function Delete(string|int $key): \Harmonia\Core\CArray
+```
+
+#### Parameters
+
+- **$key**: The key of the element to remove.
+
+#### Return Value
+
+The current instance.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*

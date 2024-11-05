@@ -131,16 +131,15 @@ The current instance.
 
 Removes an element at the specified index.
 
-The `$index` parameter accepts both integer and string types to ensure
-signature compatibility with the base class `CArray`, allowing this
-method to override `CArray::Delete`. However, if a string is given, an
-exception is thrown, as `CSequentialArray` is intended for integer-based
-indexing only.
+The `$index` parameter accepts both strings and integers to comply with
+the `CArray::Delete` signature. However, if a string is provided, an
+exception is thrown because `CSequentialArray` only supports integer
+indexing.
 
 #### Syntax
 
 ```php
-public function Delete(int|string $index): \Harmonia\Core\CSequentialArray
+public function Delete(string|int $index): \Harmonia\Core\CSequentialArray
 ```
 
 #### Parameters
