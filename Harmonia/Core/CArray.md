@@ -41,27 +41,6 @@ Returns `true` if the key exists, `false` otherwise.
 
 ---
 
-### Set
-
-Adds or updates the value at the specified key.
-
-#### Syntax
-
-```php
-public function Set(string|int $key, mixed $value): \Harmonia\Core\CArray
-```
-
-#### Parameters
-
-- **$key**: The key at which to set the value.
-- **$value**: The value to set at the specified key.
-
-#### Return Value
-
-The current instance.
-
----
-
 ### Get
 
 Returns the value at the specified key, or a default value if the key
@@ -84,6 +63,27 @@ The value at the specified key if it exists, or the default value if the key is 
 
 ---
 
+### Set
+
+Adds or updates the value at the specified key.
+
+#### Syntax
+
+```php
+public function Set(string|int $key, mixed $value): \Harmonia\Core\CArray
+```
+
+#### Parameters
+
+- **$key**: The key at which to set the value.
+- **$value**: The value to set at the specified key.
+
+#### Return Value
+
+The current instance.
+
+---
+
 ### Delete
 
 Removes an element by its key.
@@ -101,6 +101,95 @@ public function Delete(string|int $key): \Harmonia\Core\CArray
 #### Return Value
 
 The current instance.
+
+---
+
+### offsetExists
+
+Checks if the specified offset exists.
+
+#### Syntax
+
+```php
+public function offsetExists(mixed $offset): bool
+```
+
+#### Parameters
+
+- **$offset**: The offset to check for existence within the array.
+
+#### Return Value
+
+Returns `true` if the offset exists, `false` otherwise.
+
+#### Exceptions
+
+- **\TypeError**: If the offset is not a string or integer.
+
+---
+
+### offsetGet
+
+Returns the value at the specified offset.
+
+#### Syntax
+
+```php
+public function offsetGet(mixed $offset): mixed
+```
+
+#### Parameters
+
+- **$offset**: The offset to look up.
+
+#### Return Value
+
+The value at the specified offset, or `null` if the offset is not found.
+
+#### Exceptions
+
+- **\TypeError**: If the offset is not a string or integer.
+
+---
+
+### offsetSet
+
+Sets the value at the specified offset.
+
+#### Syntax
+
+```php
+public function offsetSet(mixed $offset, mixed $value): void
+```
+
+#### Parameters
+
+- **$offset**: The offset at which to set the value.
+- **$value**: The value to set at the specified offset.
+
+#### Exceptions
+
+- **\TypeError**: If the offset is not a string or integer.
+
+---
+
+### offsetUnset
+
+Unsets the value at the specified offset.
+
+#### Syntax
+
+```php
+public function offsetUnset(mixed $offset): void
+```
+
+#### Parameters
+
+- **$offset**: The offset of the element to unset.
+
+#### Exceptions
+
+- **\TypeError**: If the offset is not a string or integer.
 
 ---
 
