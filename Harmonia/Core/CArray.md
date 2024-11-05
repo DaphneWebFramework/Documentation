@@ -23,7 +23,7 @@ public function __construct(array|\Harmonia\Core\CArray $value = [])
 
 ### Has
 
-Checks if the specified key exists in the array.
+Checks if the specified key exists.
 
 #### Syntax
 
@@ -37,14 +37,35 @@ public function Has(string|int $key): bool
 
 #### Return Value
 
-Returns `true` if the key exists in the array, `false` otherwise.
+Returns `true` if the key exists, `false` otherwise.
+
+---
+
+### Set
+
+Adds or updates the value at the specified key.
+
+#### Syntax
+
+```php
+public function Set(string|int $key, mixed $value): \Harmonia\Core\CArray
+```
+
+#### Parameters
+
+- **$key**: The key at which to set the value.
+- **$value**: The value to set at the specified key.
+
+#### Return Value
+
+The current instance.
 
 ---
 
 ### Get
 
 Returns the value at the specified key, or a default value if the key
-does not exist in the array.
+does not exist.
 
 #### Syntax
 
@@ -54,7 +75,7 @@ public function Get(string|int $key, mixed $defaultValue = null): mixed
 
 #### Parameters
 
-- **$key**: The key to look up in the array.
+- **$key**: The key to look up.
 - **$defaultValue**: (Optional) The value to return if the key does not exist. Defaults to `null`.
 
 #### Return Value
