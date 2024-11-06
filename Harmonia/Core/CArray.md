@@ -33,7 +33,7 @@ public function Has(string|int $key): bool
 
 #### Parameters
 
-- **$key**: The key to check for existence within the array.
+- **$key**: The key to check for existence.
 
 #### Return Value
 
@@ -116,7 +116,7 @@ public function offsetExists(mixed $offset): bool
 
 #### Parameters
 
-- **$offset**: The offset to check for existence within the array.
+- **$offset**: The offset to check for existence.
 
 #### Return Value
 
