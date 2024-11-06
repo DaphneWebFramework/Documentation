@@ -21,7 +21,7 @@ public function __construct(array|\Harmonia\Core\CArray $value = [])
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If provided an array with non-sequential, non-zero-based, or non-integer indexes.
+- **\InvalidArgumentException**: If the provided array is non-sequential, not zero-based, or contains non-integer indexes.
 
 ---
 
@@ -102,7 +102,7 @@ public function Set(string|int $index, mixed $value): \Harmonia\Core\CSequential
 
 #### Parameters
 
-- **$index**: The zero-based index at which to set the value. If a string is given, an exception is thrown.
+- **$index**: The zero-based index at which to set the value. If a string is given, an exception is thrown. If the index is out of range, no changes are made.
 - **$value**: The value to set at the specified index.
 
 #### Return Value
@@ -112,7 +112,6 @@ The current instance.
 #### Exceptions
 
 - **\InvalidArgumentException**: If the index is a string.
-- **\OutOfRangeException**: If the index is out of range.
 
 ---
 
@@ -133,7 +132,7 @@ public function Delete(string|int $index): \Harmonia\Core\CSequentialArray
 
 #### Parameters
 
-- **$index**: The zero-based index of the element to remove. If a string is given, an exception is thrown.
+- **$index**: The zero-based index of the element to remove. If a string is given, an exception is thrown. If the index is out of range, no changes are made.
 
 #### Return Value
 
@@ -142,7 +141,6 @@ The current instance.
 #### Exceptions
 
 - **\InvalidArgumentException**: If the index is a string.
-- **\OutOfRangeException**: If the index is out of range.
 
 ---
 
@@ -230,16 +228,12 @@ public function InsertBefore(int $index, mixed $element): \Harmonia\Core\CSequen
 
 #### Parameters
 
-- **$index**: The zero-based index before which the new element should be inserted.
+- **$index**: The zero-based index before which the new element should be inserted. If the index is out of range, no changes are made.
 - **$element**: The new element to insert.
 
 #### Return Value
 
 The current instance.
-
-#### Exceptions
-
-- **\OutOfRangeException**: If the index is out of range.
 
 ---
 
@@ -255,16 +249,12 @@ public function InsertAfter(int $index, mixed $element): \Harmonia\Core\CSequent
 
 #### Parameters
 
-- **$index**: The zero-based index after which the new element should be inserted.
+- **$index**: The zero-based index after which the new element should be inserted. If the index is out of range, no changes are made.
 - **$element**: The new element to insert.
 
 #### Return Value
 
 The current instance.
-
-#### Exceptions
-
-- **\OutOfRangeException**: If the index is out of range.
 
 ---
 
