@@ -117,7 +117,7 @@ public function At(int $offset): string
 
 #### Return Value
 
-The character at the specified offset, or an empty string if the offset is out of bounds.
+The character at the specified offset, or an empty string if the offset is out of range.
 
 #### Exceptions
 
@@ -217,7 +217,7 @@ public function Left(int $count): \Harmonia\Core\CString
 
 #### Return Value
 
-A new `CString` instance with the leftmost characters, or an empty instance if the count is not a positive value.
+A new `CString` instance with the leftmost characters, or an empty instance if `$count` is not positive.
 
 #### Exceptions
 
@@ -242,7 +242,7 @@ public function Right(int $count): \Harmonia\Core\CString
 
 #### Return Value
 
-A new `CString` instance with the rightmost characters, or an empty instance if the count is not a positive value.
+A new `CString` instance with the rightmost characters, or an empty instance if `$count` is not positive.
 
 #### Exceptions
 
@@ -268,7 +268,7 @@ public function Middle(int $offset, int $count = PHP_INT_MAX): \Harmonia\Core\CS
 
 #### Return Value
 
-A new `CString` instance with the specified middle characters, or an empty instance if the offset or count is not a positive value.
+A new `CString` instance with the specified middle characters, or an empty instance if `$offset` is out of range or `$count` is not positive.
 
 #### Exceptions
 
@@ -536,7 +536,7 @@ The string value stored in the instance.
 
 ### offsetExists
 
-Checks if the offset exists within the bounds of the string.
+Checks if the offset exists within the range of the string.
 
 #### Syntax
 
@@ -550,12 +550,11 @@ public function offsetExists(mixed $offset): bool
 
 #### Return Value
 
-Returns `true` if the offset is within the string length, `false` otherwise.
+Returns `true` if the offset is within range, `false` otherwise.
 
 #### Exceptions
 
 - **\InvalidArgumentException**: If the offset is not an integer.
-- **\OutOfRangeException**: If the offset is negative.
 
 ---
 
@@ -575,7 +574,7 @@ public function offsetGet(mixed $offset): mixed
 
 #### Return Value
 
-The character at the specified offset, or an empty string if the offset is out of bounds.
+The character at the specified offset, or an empty string if the offset is out of range.
 
 #### Exceptions
 
