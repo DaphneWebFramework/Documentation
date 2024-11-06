@@ -21,6 +21,22 @@ public function __construct(array|\Harmonia\Core\CArray $value = [])
 
 ---
 
+### ToArray
+
+Retrieves a copy of the array stored in the instance.
+
+#### Syntax
+
+```php
+public function ToArray(): array
+```
+
+#### Return Value
+
+A copy of the array stored in the instance.
+
+---
+
 ### Has
 
 Checks if the specified key exists.
