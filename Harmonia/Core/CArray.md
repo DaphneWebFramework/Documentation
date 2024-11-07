@@ -245,4 +245,20 @@ The number of elements in the array.
 
 ---
 
+### getIterator
+
+Returns an iterator for traversing each element in the array.
+
+#### Syntax
+
+```php
+public function getIterator(): \Traversable
+```
+
+#### Return Value
+
+An iterator yielding each element in the array.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
