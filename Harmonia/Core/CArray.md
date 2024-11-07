@@ -37,6 +37,22 @@ A copy of the array stored in the instance.
 
 ---
 
+### IsEmpty
+
+Checks if the array is empty.
+
+#### Syntax
+
+```php
+public function IsEmpty(): bool
+```
+
+#### Return Value
+
+Returns `true` if the array is empty, `false` otherwise.
+
+---
+
 ### Has
 
 Checks if the specified key exists.
@@ -206,6 +222,26 @@ public function offsetUnset(mixed $offset): void
 #### Exceptions
 
 - **\TypeError**: If the offset is not a string or integer.
+
+---
+
+### count
+
+Returns the number of elements in the array.
+
+Can be accessed interchangeably as `count($instance)`, `$instance->count()`,
+or `$instance->Count()` due to PHP's case insensitivity and the `\Countable`
+interface.
+
+#### Syntax
+
+```php
+public function count(): int
+```
+
+#### Return Value
+
+The number of elements in the array.
 
 ---
 
