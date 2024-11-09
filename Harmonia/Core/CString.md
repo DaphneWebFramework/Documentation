@@ -472,7 +472,7 @@ Finds the offset of the first occurrence of a string.
 #### Syntax
 
 ```php
-public function IndexOf(string $searchString, int $startOffset = 0, bool $caseSensitive = true): int|null
+public function IndexOf(string|\Harmonia\Core\CString $searchString, int $startOffset = 0, bool $caseSensitive = true): int|null
 ```
 
 #### Parameters
