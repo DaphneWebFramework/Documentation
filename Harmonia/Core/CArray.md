@@ -138,7 +138,15 @@ The current instance.
 
 ### offsetExists
 
-Checks if the specified offset exists.
+Provides array-like access to check if a value exists at a given key.
+
+#### Example
+```php
+$arr = new CArray(['key' => 'value']);
+if (isset($arr['key'])) {
+    // ...
+}
+```
 
 #### Syntax
 
@@ -148,21 +156,27 @@ public function offsetExists(mixed $offset): bool
 
 #### Parameters
 
-- **$offset**: The offset to check for existence.
+- **$offset**: The key to check for existence.
 
 #### Return Value
 
-Returns `true` if the offset exists, `false` otherwise.
+Returns `true` if the key exists, `false` otherwise.
 
 #### Exceptions
 
-- **\TypeError**: If the offset is not a string or integer.
+- **\TypeError**: If the key is not a string or integer.
 
 ---
 
 ### offsetGet
 
-Returns the value at the specified offset.
+Provides array-like access to retrieve the value at a given key.
+
+#### Example
+```php
+$arr = new CArray(['key' => 'value']);
+$value = $arr['key'];
+```
 
 #### Syntax
 
@@ -172,21 +186,27 @@ public function offsetGet(mixed $offset): mixed
 
 #### Parameters
 
-- **$offset**: The offset to look up.
+- **$offset**: The key to look up.
 
 #### Return Value
 
-The value at the specified offset, or `null` if the offset is not found.
+The value at the specified key, or `null` if the key is not found.
 
 #### Exceptions
 
-- **\TypeError**: If the offset is not a string or integer.
+- **\TypeError**: If the key is not a string or integer.
 
 ---
 
 ### offsetSet
 
-Sets the value at the specified offset.
+Provides array-like access to set a value at a specified key.
+
+#### Example
+```php
+$arr = new CArray();
+$arr['key'] = 'value';
+```
 
 #### Syntax
 
@@ -196,18 +216,24 @@ public function offsetSet(mixed $offset, mixed $value): void
 
 #### Parameters
 
-- **$offset**: The offset at which to set the value.
-- **$value**: The value to set at the specified offset.
+- **$offset**: The key at which to set the value.
+- **$value**: The value to set at the specified key.
 
 #### Exceptions
 
-- **\TypeError**: If the offset is not a string or integer.
+- **\TypeError**: If the key is not a string or integer.
 
 ---
 
 ### offsetUnset
 
-Unsets the value at the specified offset.
+Provides array-like access to unset a value at a specified key.
+
+#### Example
+```php
+$arr = new CArray(['key' => 'value']);
+unset($arr['key']);
+```
 
 #### Syntax
 
@@ -217,17 +243,17 @@ public function offsetUnset(mixed $offset): void
 
 #### Parameters
 
-- **$offset**: The offset of the element to unset.
+- **$offset**: The key of the element to unset.
 
 #### Exceptions
 
-- **\TypeError**: If the offset is not a string or integer.
+- **\TypeError**: If the key is not a string or integer.
 
 ---
 
 ### count
 
-Returns the number of elements in the array.
+Returns the number of elements.
 
 Can be accessed interchangeably as `count($instance)`, `$instance->count()`,
 or `$instance->Count()` due to PHP's case insensitivity and the `\Countable`
@@ -241,13 +267,21 @@ public function count(): int
 
 #### Return Value
 
-The number of elements in the array.
+The number of elements.
 
 ---
 
 ### getIterator
 
-Returns an iterator for traversing each element in the array.
+Provides array-like traversal over each element.
+
+#### Example
+```php
+$arr = new CArray(['a' => 1, 'b' => 2]);
+foreach ($arr as $key => $value) {
+    // ...
+}
+```
 
 #### Syntax
 
@@ -257,7 +291,7 @@ public function getIterator(): \Traversable
 
 #### Return Value
 
-An iterator yielding each element in the array.
+An iterator yielding each element.
 
 ---
 
