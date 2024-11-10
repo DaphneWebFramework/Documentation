@@ -518,6 +518,83 @@ A new `CString` instance with the replacements made.
 
 ---
 
+### Split
+
+Splits the string by a given delimiter, yielding each substring as a
+`CString` instance.
+
+This method splits the string based on a specified delimiter and yields
+each substring as it's processed, which is memory-efficient for large
+strings.
+
+By default, it performs a straightforward split without trimming or
+excluding empty results. These behaviors can be customized with options.
+
+### Usage:
+```
+$text = new CString("  Line 1\n\nLine 2 \nLine 3\n\n");
+$options = CString::SPLIT_OPTION_TRIM | CString::SPLIT_OPTION_EXCLUDE_EMPTY;
+$lines = $text->Split("\n", $options);
+foreach ($lines as $line) {
+    echo $line . PHP_EOL;
+}
+```
+
+#### Syntax
+
+```php
+public function Split(string $delimiter, int $options = self::SPLIT_OPTION_NONE): \Generator
+```
+
+#### Parameters
+
+- **$delimiter**: The delimiter indicating the points at which each split should occur.
+- **$options**: (Optional) Bitwise options for splitting behavior. Supports:   - `CString::SPLIT_OPTION_TRIM` to trim whitespaces in substrings.   - `CString::SPLIT_OPTION_EXCLUDE_EMPTY` to exclude empty substrings. Defaults to `SPLIT_OPTION_NONE`, applying no trimming or exclusion.
+
+#### Return Value
+
+A generator yielding `CString` instances for each substring.
+
+---
+
+### SplitToArray
+
+Splits the string by a given delimiter and returns the result as an array
+of `CString` instances.
+
+This method provides a convenient way to receive split results directly
+in array form, rather than as an iterable.
+
+By default, it performs a straightforward split without trimming or
+excluding empty results. These behaviors can be customized with options.
+
+### Usage:
+```
+$text = new CString("  Line 1\n\nLine 2 \nLine 3\n\n");
+$options = CString::SPLIT_OPTION_TRIM | CString::SPLIT_OPTION_EXCLUDE_EMPTY;
+$lines = $text->SplitToArray("\n", $options);
+if ($lines[0] === 'Line 1') {
+    // Do something...
+}
+```
+
+#### Syntax
+
+```php
+public function SplitToArray(string $delimiter, int $options = self::SPLIT_OPTION_NONE): \Harmonia\Core\CString[]
+```
+
+#### Parameters
+
+- **$delimiter**: The delimiter indicating the points at which each split should occur.
+- **$options**: (Optional) Bitwise options for splitting behavior. Supports:   - `CString::SPLIT_OPTION_TRIM` to trim whitespaces in substrings.   - `CString::SPLIT_OPTION_EXCLUDE_EMPTY` to exclude empty substrings. Defaults to `SPLIT_OPTION_NONE`, applying no trimming or exclusion.
+
+#### Return Value
+
+An array of `CString` instances for each substring.
+
+---
+
 ### __toString
 
 Converts the CString instance to a string.
