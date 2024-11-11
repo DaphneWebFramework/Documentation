@@ -10,7 +10,7 @@ This class requires PHP's `mbstring` extension for multibyte encoding support.
 
 ### __construct
 
-Constructs a new instance of CString.
+Constructs a new instance.
 
 #### Syntax
 
@@ -43,7 +43,7 @@ Returns `true` if the string is empty, `false` otherwise.
 
 ### Length
 
-Returns the length of the string.
+Returns the length.
 
 #### Syntax
 
@@ -63,7 +63,7 @@ The number of characters.
 
 ### First
 
-Returns the first character of the string.
+Returns the first character.
 
 #### Syntax
 
@@ -73,7 +73,7 @@ public function First(): string
 
 #### Return Value
 
-The first character of the string, or an empty string if the string is empty.
+The first character, or an empty string if the string is empty.
 
 #### Exceptions
 
@@ -87,7 +87,7 @@ The first character of the string, or an empty string if the string is empty.
 
 ### Last
 
-Returns the last character of the string.
+Returns the last character.
 
 #### Syntax
 
@@ -97,7 +97,7 @@ public function Last(): string
 
 #### Return Value
 
-The last character of the string, or an empty string if the string is empty.
+The last character, or an empty string if the string is empty.
 
 #### Exceptions
 
@@ -398,7 +398,7 @@ A new `CString` instance with the trimmed string.
 
 ### Lowercase
 
-Converts the string to lowercase.
+Converts to lowercase.
 
 #### Syntax
 
@@ -422,7 +422,7 @@ A new `CString` instance with all characters converted to lowercase.
 
 ### Uppercase
 
-Converts the string to uppercase.
+Converts to uppercase.
 
 #### Syntax
 
@@ -665,7 +665,7 @@ An array of `CString` instances for each substring.
 
 ### __toString
 
-Returns the string representation of the object for use in string contexts.
+Returns the string representation for use in string contexts.
 
 #### Example
 ```php

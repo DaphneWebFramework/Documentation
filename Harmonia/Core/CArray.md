@@ -7,7 +7,7 @@ methods for array manipulation and consistency in array operations.
 
 ### __construct
 
-Constructs a new instance of CArray.
+Constructs a new instance.
 
 #### Syntax
 

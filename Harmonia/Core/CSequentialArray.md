@@ -7,7 +7,7 @@ zero-based, sequentially indexed arrays.
 
 ### __construct
 
-Constructs a new instance of CSequentialArray.
+Constructs a new instance.
 
 #### Syntax
 
