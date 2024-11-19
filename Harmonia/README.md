@@ -3,6 +3,7 @@
 ## Core
 - [CArray](Core/CArray.md)
 - [CFile](Core/CFile.md)
+- [CPath](Core/CPath.md)
 - [CSequentialArray](Core/CSequentialArray.md)
 - [CString](Core/CString.md)
 
