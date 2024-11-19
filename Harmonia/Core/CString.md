@@ -178,7 +178,7 @@ public function InsertAt(int $offset, string $substring): \Harmonia\Core\CString
 
 #### Parameters
 
-- **$offset**: The zero-based offset where the insertion will start. If the offset is negative or greater than the length of the string, no changes will be made.
+- **$offset**: The zero-based offset where the insertion will start. If the offset is negative or greater than the length of the string, no changes will be made. If the offset equals the length, the substring will be appended.
 - **$substring**: The substring to insert. If an empty string is provided, no changes will be made.
 
 #### Return Value
@@ -188,6 +188,10 @@ The current instance.
 #### Exceptions
 
 - **\ValueError**: If an error occurs due to encoding.
+
+#### See Also
+
+- [`Append`](#Append)
 
 ---
 
@@ -213,6 +217,30 @@ The current instance.
 #### Exceptions
 
 - **\ValueError**: If an error occurs due to encoding.
+
+---
+
+### Append
+
+Appends the specified string.
+
+#### Syntax
+
+```php
+public function Append(string|\Harmonia\Core\CString $substring): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$substring**: The string to append. If a `CString` instance is provided, its value will be used.
+
+#### Return Value
+
+The current instance.
+
+#### See Also
+
+- [`InsertAt`](#InsertAt)
 
 ---
 
