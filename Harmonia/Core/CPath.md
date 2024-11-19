@@ -20,6 +20,26 @@ public function __construct(string|\Stringable $value = '')
 
 ---
 
+### Join
+
+Joins multiple path segments into a single path.
+
+#### Syntax
+
+```php
+public static function Join(string ...$segments): \Harmonia\Core\CPath
+```
+
+#### Parameters
+
+- **$segments**: A list of path segments to join.
+
+#### Return Value
+
+A new `CPath` instance representing the joined path.
+
+---
+
 ### EnsureLeadingSlash
 
 Ensures the path starts with a leading slash.
