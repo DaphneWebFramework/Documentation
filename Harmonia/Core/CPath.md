@@ -20,6 +20,84 @@ public function __construct(string|\Stringable $value = '')
 
 ---
 
+### EnsureLeadingSlash
+
+Ensures the path starts with a leading slash.
+
+If the path does not already start with a valid slash (forward slash or
+backslash, depending on the operating system), a directory separator is
+inserted at the start of the path.
+
+#### Syntax
+
+```php
+public function EnsureLeadingSlash(): \Harmonia\Core\CPath
+```
+
+#### Return Value
+
+The current instance.
+
+---
+
+### EnsureTrailingSlash
+
+Ensures the path ends with a trailing slash.
+
+If the path does not already end with a valid slash (forward slash or
+backslash, depending on the operating system), a directory separator is
+appended to the end of the path.
+
+#### Syntax
+
+```php
+public function EnsureTrailingSlash(): \Harmonia\Core\CPath
+```
+
+#### Return Value
+
+The current instance.
+
+---
+
+### TrimLeadingSlashes
+
+Removes all leading slashes.
+
+Leading slashes include both forward slashes and backslashes depending on
+the operating system.
+
+#### Syntax
+
+```php
+public function TrimLeadingSlashes(): \Harmonia\Core\CPath
+```
+
+#### Return Value
+
+The current instance.
+
+---
+
+### TrimTrailingSlashes
+
+Removes all trailing slashes.
+
+Trailing slashes include both forward slashes and backslashes depending
+on the operating system.
+
+#### Syntax
+
+```php
+public function TrimTrailingSlashes(): \Harmonia\Core\CPath
+```
+
+#### Return Value
+
+The current instance.
+
+---
+
 ### __toString
 
 Returns the string representation for use in string contexts.
