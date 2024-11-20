@@ -227,12 +227,12 @@ Appends the specified string.
 #### Syntax
 
 ```php
-public function Append(string|\Harmonia\Core\CString $substring): \Harmonia\Core\CString
+public function Append(string|\Stringable $substring): \Harmonia\Core\CString
 ```
 
 #### Parameters
 
-- **$substring**: The string to append. If a `CString` instance is provided, its value will be used.
+- **$substring**: The string to append.
 
 #### Return Value
 
