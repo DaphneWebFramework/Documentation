@@ -140,14 +140,6 @@ The current instance.
 
 Provides array-like access to check if a value exists at a given key.
 
-#### Example
-```php
-$arr = new CArray(['key' => 'value']);
-if (isset($arr['key'])) {
-    // ...
-}
-```
-
 #### Syntax
 
 ```php
@@ -171,12 +163,6 @@ Returns `true` if the key exists, `false` otherwise.
 ### offsetGet
 
 Provides array-like access to retrieve the value at a given key.
-
-#### Example
-```php
-$arr = new CArray(['key' => 'value']);
-$value = $arr['key'];
-```
 
 #### Syntax
 
@@ -202,12 +188,6 @@ The value at the specified key, or `null` if the key is not found.
 
 Provides array-like access to set a value at a specified key.
 
-#### Example
-```php
-$arr = new CArray();
-$arr['key'] = 'value';
-```
-
 #### Syntax
 
 ```php
@@ -228,12 +208,6 @@ public function offsetSet(mixed $offset, mixed $value): void
 ### offsetUnset
 
 Provides array-like access to unset a value at a specified key.
-
-#### Example
-```php
-$arr = new CArray(['key' => 'value']);
-unset($arr['key']);
-```
 
 #### Syntax
 
@@ -274,14 +248,6 @@ The number of elements.
 ### getIterator
 
 Provides array-like traversal over each element.
-
-#### Example
-```php
-$arr = new CArray(['a' => 1, 'b' => 2]);
-foreach ($arr as $key => $value) {
-    // ...
-}
-```
 
 #### Syntax
 

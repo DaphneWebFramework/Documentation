@@ -619,15 +619,6 @@ substring one at a time, making it suitable for large strings.
 By default, it performs a straightforward split without trimming or
 excluding empty results. These behaviors can be customized with options.
 
-#### Example
-```php
-$text = new CString("  Line 1\n\nLine 2 \nLine 3\n\n");
-$options = CString::SPLIT_OPTION_TRIM | CString::SPLIT_OPTION_EXCLUDE_EMPTY;
-foreach ($text->Split("\n", $options) as $line) {
-    echo $line . PHP_EOL;
-}
-```
-
 #### Syntax
 
 ```php
@@ -660,16 +651,6 @@ directly as an array of `CString` instances.
 By default, it performs a straightforward split without trimming or
 excluding empty results. These behaviors can be customized with options.
 
-#### Example
-```php
-$text = new CString("  Line 1\n\nLine 2 \nLine 3\n\n");
-$options = CString::SPLIT_OPTION_TRIM | CString::SPLIT_OPTION_EXCLUDE_EMPTY;
-$lines = $text->SplitToArray("\n", $options);
-if ($lines[0] === 'Line 1') {
-    // ...
-}
-```
-
 #### Syntax
 
 ```php
@@ -695,12 +676,6 @@ An array of `CString` instances for each substring.
 
 Returns the string representation for use in string contexts.
 
-#### Example
-```php
-$str = new CString('Welcome');
-$message = (string)$str;
-```
-
 #### Syntax
 
 ```php
@@ -716,14 +691,6 @@ The string value stored in the instance.
 ### offsetExists
 
 Provides array-like access to check if a character exists at a given offset.
-
-#### Example
-```php
-$str = new CString('Hello');
-if (isset($str[1])) {
-    // ...
-}
-```
 
 #### Syntax
 
@@ -748,12 +715,6 @@ Returns `true` if the offset is within range, `false` otherwise.
 ### offsetGet
 
 Provides array-like access to retrieve the character at a given offset.
-
-#### Example
-```php
-$str = new CString('Hello');
-$char = $str[1];
-```
 
 #### Syntax
 
@@ -780,12 +741,6 @@ The character at the specified offset, or an empty string if the offset is out o
 
 Provides array-like access to set the character at a specified offset.
 
-#### Example
-```php
-$str = new CString('Hello');
-$str[1] = 'a';
-```
-
 #### Syntax
 
 ```php
@@ -808,12 +763,6 @@ public function offsetSet(mixed $offset, mixed $value): void
 
 Provides array-like access to delete the character at a specified offset.
 
-#### Example
-```php
-$str = new CString('Hello');
-unset($str[1]);
-```
-
 #### Syntax
 
 ```php
@@ -834,14 +783,6 @@ public function offsetUnset(mixed $offset): void
 ### getIterator
 
 Provides array-like traversal over each character.
-
-#### Example
-```php
-$str = new CString('Hello');
-foreach ($str as $char) {
-    // ...
-}
-```
 
 #### Syntax
 
