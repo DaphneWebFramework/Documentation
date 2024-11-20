@@ -16,7 +16,7 @@ public function __construct(string|\Stringable $value = '')
 
 #### Parameters
 
-- **$value**: (Optional) The path value to store. If omitted, defaults to an empty string. If a `CPath` or `CString` instance is provided, its value is cloned. If a native string is provided, it is directly used. For other `Stringable` instances, their string representations are used.
+- **$value**: (Optional) The path value to store. If omitted, defaults to an empty string. If given a `CPath` instance, its value is cloned. If given a `CString` instance, it is cloned as-is. For a `Stringable` instance, its string representation is used, and for a native string, the value is used directly.
 
 ---
 

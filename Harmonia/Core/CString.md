@@ -20,7 +20,7 @@ public function __construct(string|\Stringable $value = '', ?string $encoding = 
 
 #### Parameters
 
-- **$value**: (Optional) The string value to store. If omitted, defaults to an empty string. If a `CString` instance is provided, the value, encoding, and single-byte/multibyte status are copied from the original instance.
+- **$value**: (Optional) The string value to store. If omitted, defaults to an empty string. If given a `CString` instance, its value, encoding, and single-byte/multibyte status are copied. If given a `Stringable` instance, its string representation is used, and for a native string, the value is used directly.
 - **$encoding**: (Optional) The encoding to use (e.g., 'UTF-8', 'ISO-8859-1'). If omitted or set to `null`, defaults to the return value of `mb_internal_encoding`. This parameter is ignored when `$value` is an instance of `CString`. Note that encoding names are case-insensitive.
 
 ---
@@ -562,7 +562,7 @@ Finds the offset of the first occurrence of a string.
 #### Syntax
 
 ```php
-public function IndexOf(string|\Harmonia\Core\CString $searchString, int $startOffset = 0, bool $caseSensitive = true): int|null
+public function IndexOf(string|\Harmonia\Core\CString $searchString, int $startOffset = 0, bool $caseSensitive = true): ?int
 ```
 
 #### Parameters

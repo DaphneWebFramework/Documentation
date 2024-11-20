@@ -23,7 +23,7 @@ Opens a file and returns a new `CFile` instance.
 #### Syntax
 
 ```php
-public static function Open(string $filename, string $mode = self::MODE_READ): \Harmonia\Core\CFile|null
+public static function Open(string $filename, string $mode = self::MODE_READ): ?\Harmonia\Core\CFile
 ```
 
 #### Parameters
@@ -171,7 +171,7 @@ Returns the current cursor position.
 #### Syntax
 
 ```php
-public function Cursor(): int|null
+public function Cursor(): ?int
 ```
 
 #### Return Value
