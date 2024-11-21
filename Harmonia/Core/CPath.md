@@ -44,9 +44,8 @@ A new `CPath` instance representing the joined path.
 
 Ensures the path starts with a leading slash.
 
-If the path does not already start with a valid slash (forward slash or
-backslash, depending on the operating system), a directory separator is
-inserted at the start of the path.
+If the path does not already start with a slash, one is inserted at the
+beginning.
 
 #### Syntax
 
@@ -64,9 +63,8 @@ The current instance.
 
 Ensures the path ends with a trailing slash.
 
-If the path does not already end with a valid slash (forward slash or
-backslash, depending on the operating system), a directory separator is
-appended to the end of the path.
+If the path does not already end with a slash, one is appended at the
+end.
 
 #### Syntax
 
