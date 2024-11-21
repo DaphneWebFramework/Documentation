@@ -173,7 +173,7 @@ Inserts a substring at the specified offset.
 #### Syntax
 
 ```php
-public function InsertAt(int $offset, string $substring): \Harmonia\Core\CString
+public function InsertAt(int $offset, string|\Stringable $substring): \Harmonia\Core\CString
 ```
 
 #### Parameters
@@ -479,7 +479,7 @@ Checks if this string is equal to another string.
 #### Syntax
 
 ```php
-public function Equals(string|\Harmonia\Core\CString $other, bool $caseSensitive = true): bool
+public function Equals(string|\Stringable $other, bool $caseSensitive = true): bool
 ```
 
 #### Parameters
@@ -504,7 +504,7 @@ Checks if the string starts with the specified search string.
 #### Syntax
 
 ```php
-public function StartsWith(string $searchString, bool $caseSensitive = true): bool
+public function StartsWith(string|\Stringable $searchString, bool $caseSensitive = true): bool
 ```
 
 #### Parameters
@@ -533,7 +533,7 @@ Checks if the string ends with the specified search string.
 #### Syntax
 
 ```php
-public function EndsWith(string $searchString, bool $caseSensitive = true): bool
+public function EndsWith(string|\Stringable $searchString, bool $caseSensitive = true): bool
 ```
 
 #### Parameters
@@ -562,7 +562,7 @@ Finds the offset of the first occurrence of a string.
 #### Syntax
 
 ```php
-public function IndexOf(string|\Harmonia\Core\CString $searchString, int $startOffset = 0, bool $caseSensitive = true): ?int
+public function IndexOf(string|\Stringable $searchString, int $startOffset = 0, bool $caseSensitive = true): ?int
 ```
 
 #### Parameters
@@ -589,7 +589,7 @@ string.
 #### Syntax
 
 ```php
-public function Replace(string $searchString, string $replacement, bool $caseSensitive = true): \Harmonia\Core\CString
+public function Replace(string|\Stringable $searchString, string|\Stringable $replacement, bool $caseSensitive = true): \Harmonia\Core\CString
 ```
 
 #### Parameters
