@@ -8,6 +8,9 @@ CUrl is a class for manipulating URLs.
 
 Constructs a new instance.
 
+Leading and trailing whitespace are trimmed when storing the specified
+URL value.
+
 #### Syntax
 
 ```php
@@ -16,7 +19,7 @@ public function __construct(string|\Stringable $value = '')
 
 #### Parameters
 
-- **$value**: (Optional) The URL value to store. If omitted, defaults to an empty string. If given a `CUrl` instance, its value is cloned. If given a `CString` instance, it is cloned as-is. For a `Stringable` instance, its string representation is used, and for a native string, the value is used directly.
+- **$value**: (Optional) The URL value to store. If omitted, defaults to an empty string. If given a `CUrl` instance, its value is copied. For a `Stringable` instance, its string representation is used, and for a native string, the value is used directly.
 
 ---
 
@@ -42,7 +45,7 @@ A new `CUrl` instance representing the joined URL.
 
 ### EnsureLeadingSlash
 
-Ensures the path starts with a leading slash.
+Ensures the URL starts with a leading slash.
 
 If the URL does not already start with a slash, one is inserted at the
 beginning.
@@ -61,9 +64,10 @@ The current instance.
 
 ### EnsureTrailingSlash
 
-Ensures the path ends with a trailing slash.
+Ensures the URL ends with a trailing slash.
 
-If the URL does not already end with a slash, one is appended at the end.
+If the URL does not already end with a slash, one is appended at the
+end.
 
 #### Syntax
 
