@@ -8,6 +8,9 @@ CPath is a class for manipulating file system paths.
 
 Constructs a new instance.
 
+Leading and trailing whitespace are trimmed when storing the specified
+path value.
+
 #### Syntax
 
 ```php
@@ -16,7 +19,7 @@ public function __construct(string|\Stringable $value = '')
 
 #### Parameters
 
-- **$value**: (Optional) The path value to store. If omitted, defaults to an empty string. If given a `CPath` instance, its value is cloned. If given a `CString` instance, it is cloned as-is. For a `Stringable` instance, its string representation is used, and for a native string, the value is used directly.
+- **$value**: (Optional) The path value to store. If omitted, defaults to an empty string. If given a `CPath` instance, its value is copied. For a `Stringable` instance, its string representation is used, and for a native string, the value is used directly.
 
 ---
 
