@@ -221,6 +221,59 @@ The current instance.
 
 ---
 
+### PrependInPlace
+
+Inserts the specified string at the beginning.
+
+This version of the method directly modifies the current instance,
+instead of creating and returning a new one.
+
+#### Syntax
+
+```php
+public function PrependInPlace(string|\Stringable $substring): self
+```
+
+#### Parameters
+
+- **$substring**: The string to prepend.
+
+#### Return Value
+
+The current instance.
+
+#### See Also
+
+- [`Prepend`](#Prepend)
+- [`InsertAt`](#InsertAt)
+
+---
+
+### Prepend
+
+Inserts the specified string at the beginning.
+
+#### Syntax
+
+```php
+public function Prepend(string|\Stringable $substring): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$substring**: The string to prepend.
+
+#### Return Value
+
+A new `CString` instance with the string prepended.
+
+#### See Also
+
+- [`PrependInPlace`](#PrependInPlace)
+- [`InsertAt`](#InsertAt)
+
+---
+
 ### AppendInPlace
 
 Inserts the specified string at the end.
