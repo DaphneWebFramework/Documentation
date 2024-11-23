@@ -127,4 +127,61 @@ The current instance.
 
 ---
 
+### IsFile
+
+Determines whether the path points to an existing file.
+
+#### Syntax
+
+```php
+public function IsFile(): bool
+```
+
+#### Return Value
+
+Returns `true` if the path points to a file; otherwise, `false`.
+
+---
+
+### IsDirectory
+
+Determines whether the path points to an existing directory.
+
+#### Syntax
+
+```php
+public function IsDirectory(): bool
+```
+
+#### Return Value
+
+Returns `true` if the path points to a directory; otherwise, `false`.
+
+---
+
+### ToAbsolute
+
+Returns the canonical absolute form of the path.
+
+Resolves the path to its absolute and canonical form by expanding all
+symbolic links, resolving `/./`, `/../`, and extra `/` characters.
+On success, trailing slashes are also removed.
+
+The method fails if the path does not exist or if the script lacks
+sufficient permissions to access directories in the hierarchy.
+
+If the path is empty, it is interpreted as the current directory.
+
+#### Syntax
+
+```php
+public function ToAbsolute(): ?\Harmonia\Core\CPath
+```
+
+#### Return Value
+
+A new `CPath` instance containing the canonical absolute path if successful, or `null` if the method fails.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
