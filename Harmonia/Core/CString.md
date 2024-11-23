@@ -144,7 +144,7 @@ Sets the character at the specified offset.
 #### Syntax
 
 ```php
-public function SetAt(int $offset, string $character): \Harmonia\Core\CString
+public function SetAt(int $offset, string $character): self
 ```
 
 #### Parameters
@@ -173,7 +173,7 @@ Inserts a substring at the specified offset.
 #### Syntax
 
 ```php
-public function InsertAt(int $offset, string|\Stringable $substring): \Harmonia\Core\CString
+public function InsertAt(int $offset, string|\Stringable $substring): self
 ```
 
 #### Parameters
@@ -202,7 +202,7 @@ Deletes a range of characters starting from the specified offset.
 #### Syntax
 
 ```php
-public function DeleteAt(int $offset, int $count = 1): \Harmonia\Core\CString
+public function DeleteAt(int $offset, int $count = 1): self
 ```
 
 #### Parameters
@@ -227,7 +227,7 @@ Appends the specified string.
 #### Syntax
 
 ```php
-public function Append(string|\Stringable $substring): \Harmonia\Core\CString
+public function Append(string|\Stringable $substring): self
 ```
 
 #### Parameters
@@ -335,6 +335,39 @@ A new `CString` instance with the specified middle characters, or an empty insta
 
 ---
 
+### TrimInPlace
+
+Trims whitespace or specified characters from both sides of the string.
+
+This version of the method directly modifies the current instance,
+instead of creating and returning a new one.
+
+#### Syntax
+
+```php
+public function TrimInPlace(?string $characters = null): self
+```
+
+#### Parameters
+
+- **$characters**: (Optional) Characters to trim. Defaults to trimming whitespace characters.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+#### See Also
+
+- [`Trim`](#Trim)
+- [`TrimLeftInPlace`](#TrimLeftInPlace)
+- [`TrimRightInPlace`](#TrimRightInPlace)
+
+---
+
 ### Trim
 
 Trims whitespace or specified characters from both sides of the string.
@@ -359,8 +392,43 @@ A new `CString` instance with the trimmed string.
 
 #### See Also
 
+- [`TrimInPlace`](#TrimInPlace)
 - [`TrimLeft`](#TrimLeft)
 - [`TrimRight`](#TrimRight)
+
+---
+
+### TrimLeftInPlace
+
+Trims whitespace or specified characters from the start (left) of the
+string.
+
+This version of the method directly modifies the current instance,
+instead of creating and returning a new one.
+
+#### Syntax
+
+```php
+public function TrimLeftInPlace(?string $characters = null): self
+```
+
+#### Parameters
+
+- **$characters**: (Optional) Characters to trim. Defaults to trimming whitespace characters.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+#### See Also
+
+- [`TrimLeft`](#TrimLeft)
+- [`TrimInPlace`](#TrimInPlace)
+- [`TrimRightInPlace`](#TrimRightInPlace)
 
 ---
 
@@ -389,8 +457,43 @@ A new `CString` instance with the trimmed string.
 
 #### See Also
 
+- [`TrimLeftInPlace`](#TrimLeftInPlace)
 - [`Trim`](#Trim)
 - [`TrimRight`](#TrimRight)
+
+---
+
+### TrimRightInPlace
+
+Trims whitespace or specified characters from the end (right) of the
+string.
+
+This version of the method directly modifies the current instance,
+instead of creating and returning a new one.
+
+#### Syntax
+
+```php
+public function TrimRightInPlace(?string $characters = null): self
+```
+
+#### Parameters
+
+- **$characters**: (Optional) Characters to trim. Defaults to trimming whitespace characters.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+#### See Also
+
+- [`TrimRight`](#TrimRight)
+- [`TrimInPlace`](#TrimInPlace)
+- [`TrimLeftInPlace`](#TrimLeftInPlace)
 
 ---
 
@@ -419,6 +522,7 @@ A new `CString` instance with the trimmed string.
 
 #### See Also
 
+- [`TrimRightInPlace`](#TrimRightInPlace)
 - [`Trim`](#Trim)
 - [`TrimLeft`](#TrimLeft)
 
