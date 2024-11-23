@@ -50,10 +50,12 @@ Ensures the path starts with a leading slash.
 If the path does not already start with a slash, one is inserted at the
 beginning.
 
+This method directly modifies the current instance.
+
 #### Syntax
 
 ```php
-public function EnsureLeadingSlash(): \Harmonia\Core\CPath
+public function EnsureLeadingSlash(): self
 ```
 
 #### Return Value
@@ -69,10 +71,12 @@ Ensures the path ends with a trailing slash.
 If the path does not already end with a slash, one is appended at the
 end.
 
+This method directly modifies the current instance.
+
 #### Syntax
 
 ```php
-public function EnsureTrailingSlash(): \Harmonia\Core\CPath
+public function EnsureTrailingSlash(): self
 ```
 
 #### Return Value
@@ -88,10 +92,12 @@ Removes all leading slashes.
 Leading slashes include both forward slashes and backslashes depending on
 the operating system.
 
+This method directly modifies the current instance.
+
 #### Syntax
 
 ```php
-public function TrimLeadingSlashes(): \Harmonia\Core\CPath
+public function TrimLeadingSlashes(): self
 ```
 
 #### Return Value
@@ -107,31 +113,17 @@ Removes all trailing slashes.
 Trailing slashes include both forward slashes and backslashes depending
 on the operating system.
 
+This method directly modifies the current instance.
+
 #### Syntax
 
 ```php
-public function TrimTrailingSlashes(): \Harmonia\Core\CPath
+public function TrimTrailingSlashes(): self
 ```
 
 #### Return Value
 
 The current instance.
-
----
-
-### __toString
-
-Returns the string representation for use in string contexts.
-
-#### Syntax
-
-```php
-public function __toString(): string
-```
-
-#### Return Value
-
-The path value stored in the instance.
 
 ---
 
