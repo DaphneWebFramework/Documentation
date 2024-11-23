@@ -50,10 +50,12 @@ Ensures the URL starts with a leading slash.
 If the URL does not already start with a slash, one is inserted at the
 beginning.
 
+This method directly modifies the current instance.
+
 #### Syntax
 
 ```php
-public function EnsureLeadingSlash(): \Harmonia\Core\CUrl
+public function EnsureLeadingSlash(): self
 ```
 
 #### Return Value
@@ -69,10 +71,12 @@ Ensures the URL ends with a trailing slash.
 If the URL does not already end with a slash, one is appended at the
 end.
 
+This method directly modifies the current instance.
+
 #### Syntax
 
 ```php
-public function EnsureTrailingSlash(): \Harmonia\Core\CUrl
+public function EnsureTrailingSlash(): self
 ```
 
 #### Return Value
@@ -85,10 +89,12 @@ The current instance.
 
 Removes all leading slashes.
 
+This method directly modifies the current instance.
+
 #### Syntax
 
 ```php
-public function TrimLeadingSlashes(): \Harmonia\Core\CUrl
+public function TrimLeadingSlashes(): self
 ```
 
 #### Return Value
@@ -101,31 +107,17 @@ The current instance.
 
 Removes all trailing slashes.
 
+This method directly modifies the current instance.
+
 #### Syntax
 
 ```php
-public function TrimTrailingSlashes(): \Harmonia\Core\CUrl
+public function TrimTrailingSlashes(): self
 ```
 
 #### Return Value
 
 The current instance.
-
----
-
-### __toString
-
-Returns the string representation for use in string contexts.
-
-#### Syntax
-
-```php
-public function __toString(): string
-```
-
-#### Return Value
-
-The URL value stored in the instance.
 
 ---
 
