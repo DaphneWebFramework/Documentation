@@ -528,6 +528,34 @@ A new `CString` instance with the trimmed string.
 
 ---
 
+### LowercaseInPlace
+
+Converts to lowercase.
+
+This version of the method directly modifies the current instance,
+instead of creating and returning a new one.
+
+#### Syntax
+
+```php
+public function LowercaseInPlace(): self
+```
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+#### See Also
+
+- [`UppercaseInPlace`](#UppercaseInPlace)
+- [`Lowercase`](#Lowercase)
+
+---
+
 ### Lowercase
 
 Converts to lowercase.
@@ -548,6 +576,35 @@ A new `CString` instance with all characters converted to lowercase.
 
 #### See Also
 
+- [`LowercaseInPlace`](#LowercaseInPlace)
+- [`Uppercase`](#Uppercase)
+
+---
+
+### UppercaseInPlace
+
+Converts to uppercase.
+
+This version of the method directly modifies the current instance,
+instead of creating and returning a new one.
+
+#### Syntax
+
+```php
+public function UppercaseInPlace(): self
+```
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+#### See Also
+
+- [`LowercaseInPlace`](#LowercaseInPlace)
 - [`Uppercase`](#Uppercase)
 
 ---
@@ -572,6 +629,7 @@ A new `CString` instance with all characters converted to uppercase.
 
 #### See Also
 
+- [`UppercaseInPlace`](#UppercaseInPlace)
 - [`Lowercase`](#Lowercase)
 
 ---
