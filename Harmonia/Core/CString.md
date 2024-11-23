@@ -192,6 +192,7 @@ The current instance.
 #### See Also
 
 - [`Append`](#Append)
+- [`AppendInPlace`](#AppendInPlace)
 
 ---
 
@@ -220,14 +221,17 @@ The current instance.
 
 ---
 
-### Append
+### AppendInPlace
 
-Appends the specified string.
+Inserts the specified string at the end.
+
+This version of the method directly modifies the current instance,
+instead of creating and returning a new one.
 
 #### Syntax
 
 ```php
-public function Append(string|\Stringable $substring): self
+public function AppendInPlace(string|\Stringable $substring): self
 ```
 
 #### Parameters
@@ -240,6 +244,32 @@ The current instance.
 
 #### See Also
 
+- [`Append`](#Append)
+- [`InsertAt`](#InsertAt)
+
+---
+
+### Append
+
+Inserts the specified string at the end.
+
+#### Syntax
+
+```php
+public function Append(string|\Stringable $substring): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$substring**: The string to append.
+
+#### Return Value
+
+A new `CString` instance with the substring appended.
+
+#### See Also
+
+- [`AppendInPlace`](#AppendInPlace)
 - [`InsertAt`](#InsertAt)
 
 ---
