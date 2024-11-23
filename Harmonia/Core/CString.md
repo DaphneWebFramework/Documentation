@@ -743,6 +743,40 @@ The zero-based offset of the search string, or `null` if not found.
 
 ---
 
+### ReplaceInPlace
+
+Replaces all occurrences of a specified search string with a replacement
+string.
+
+This version of the method directly modifies the current instance,
+instead of creating and returning a new one.
+
+#### Syntax
+
+```php
+public function ReplaceInPlace(string|\Stringable $searchString, string|\Stringable $replacement, bool $caseSensitive = true): self
+```
+
+#### Parameters
+
+- **$searchString**: The substring to search for.
+- **$replacement**: The substring to replace each occurrence of the search string.
+- **$caseSensitive**: (Optional) Whether the comparison should be case-sensitive. By default, it is case-sensitive.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
+
+#### See Also
+
+- [`Replace`](#Replace)
+
+---
+
 ### Replace
 
 Replaces all occurrences of a specified search string with a replacement
@@ -767,6 +801,10 @@ A new `CString` instance with the replacements made.
 #### Exceptions
 
 - **\ValueError**: If an error occurs due to encoding.
+
+#### See Also
+
+- [`ReplaceInPlace`](#ReplaceInPlace)
 
 ---
 
