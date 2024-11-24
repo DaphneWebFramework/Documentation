@@ -955,6 +955,59 @@ An array of `CString` instances for each substring.
 
 ---
 
+### ApplyInPlace
+
+Applies a callable function to the current value.
+
+This version of the method directly modifies the current instance,
+instead of creating and returning a new one.
+
+#### Syntax
+
+```php
+public function ApplyInPlace(callable $function, mixed ...$args): self
+```
+
+#### Parameters
+
+- **$function**: The function to apply to the current value. The function must accept a `string` as its first parameter. Any additional arguments passed to this method will be forwarded to the callable.
+- **$args**: Additional arguments to pass to the callable.
+
+#### Return Value
+
+The current instance.
+
+#### See Also
+
+- [`Apply`](#Apply)
+
+---
+
+### Apply
+
+Applies a callable function to the current value.
+
+#### Syntax
+
+```php
+public function Apply(callable $function, mixed ...$args): \Harmonia\Core\CString
+```
+
+#### Parameters
+
+- **$function**: The function to apply to the current value. The function must accept a `string` as its first parameter. Any additional arguments passed to this method will be forwarded to the callable.
+- **$args**: Additional arguments to pass to the callable.
+
+#### Return Value
+
+A new `CString` instance containing the result of the callable.
+
+#### See Also
+
+- [`ApplyInPlace`](#ApplyInPlace)
+
+---
+
 ### __toString
 
 Returns the string representation for use in string contexts.
