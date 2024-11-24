@@ -121,4 +121,20 @@ The current instance.
 
 ---
 
+### Components
+
+Parses the URL into its components.
+
+#### Syntax
+
+```php
+public function Components(): ?\Harmonia\Core\CArray
+```
+
+#### Return Value
+
+A `CArray` instance containing the URL components if parsing is successful, or `null` if parsing fails.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
