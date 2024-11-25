@@ -167,16 +167,20 @@ Resolves the path to its absolute and canonical form by expanding all
 symbolic links, resolving `/./`, `/../`, and extra `/` characters.
 On success, trailing slashes are also removed.
 
-The method fails if the path does not exist or if the script lacks
+This method fails if the path does not exist or if the script lacks
 sufficient permissions to access directories in the hierarchy.
 
-If the path is empty, it is interpreted as the current directory.
+If the path is empty, it is interpreted as the current working directory.
 
 #### Syntax
 
 ```php
-public function ToAbsolute(): ?\Harmonia\Core\CPath
+public function ToAbsolute(string|\Stringable|null $basePath = null): ?\Harmonia\Core\CPath
 ```
+
+#### Parameters
+
+- **$basePath**: (Optional) Base directory to resolve the path relative to.
 
 #### Return Value
 
