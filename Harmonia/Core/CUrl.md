@@ -137,4 +137,29 @@ A `CArray` instance containing the URL components if parsing is successful, or `
 
 ---
 
+### ToAbsolute
+
+Returns the canonical absolute form of the URL.
+
+If the instance represents a relative URL, it will be converted into an
+absolute URL using the provided base URL. The path resolution is performed
+relative to the current working directory of the script (`getcwd()`).
+
+#### Syntax
+
+```php
+public function ToAbsolute(string|\Stringable $baseUrl, string|\Stringable $basePath): \Harmonia\Core\CUrl
+```
+
+#### Parameters
+
+- **$baseUrl**: The base URL which serves as the prefix of the resulting absolute URL.
+- **$basePath**: The base directory path used both to validate and compute the resolved absolute URL.
+
+#### Return Value
+
+A new `CUrl` instance representing the absolute URL. If the URL is already in absolute form, if parsing fails, if the resolved path is invalid or outside the base path, or if the base path cannot be resolved, the original URL instance is returned unchanged.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
