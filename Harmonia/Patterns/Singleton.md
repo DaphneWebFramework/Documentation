@@ -32,19 +32,20 @@ The singleton instance of the subclass.
 
 Replaces the singleton instance for the subclass.
 
-This method replaces the current singleton instance with a new one. It
-is primarily intended for scenarios like testing, dynamic configuration
-updates, or context-specific overrides.
+This method replaces the current singleton instance with a new one or
+resets it if `null` is provided. It is primarily intended for scenarios
+like testing, dynamic configuration updates, or context-specific
+overrides.
 
 #### Syntax
 
 ```php
-public static function ReplaceInstance(self $newInstance): static|null
+public static function ReplaceInstance(?self $newInstance): ?static
 ```
 
 #### Parameters
 
-- **$newInstance**: The new singleton instance to set.
+- **$newInstance**: The new singleton instance to set, or `null` to reset the instance.
 
 #### Return Value
 
