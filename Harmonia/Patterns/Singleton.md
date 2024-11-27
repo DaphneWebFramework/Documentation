@@ -28,4 +28,28 @@ The singleton instance of the subclass.
 
 ---
 
+### ReplaceInstance
+
+Replaces the singleton instance for the subclass.
+
+This method replaces the current singleton instance with a new one. It
+is primarily intended for scenarios like testing, dynamic configuration
+updates, or context-specific overrides.
+
+#### Syntax
+
+```php
+public static function ReplaceInstance(self $newInstance): static|null
+```
+
+#### Parameters
+
+- **$newInstance**: The new singleton instance to set.
+
+#### Return Value
+
+The previous instance before replacement, or `null` if no instance existed.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
