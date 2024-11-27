@@ -1,4 +1,5 @@
 # Harmonia
+- [Server](Server.md)
 
 ## Core
 - [CArray](Core/CArray.md)
