@@ -1,5 +1,6 @@
 # Charis
 - [Component](Component.md)
+- [ComponentHelper](ComponentHelper.md)
 
 ---
 
