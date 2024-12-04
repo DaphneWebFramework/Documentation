@@ -1,4 +1,5 @@
 # Charis
+- [Button](Button.md)
 - [Component](Component.md)
 - [ComponentHelper](ComponentHelper.md)
 
