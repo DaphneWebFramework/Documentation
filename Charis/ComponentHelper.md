@@ -4,6 +4,29 @@ Provides helper functions for component classes.
 
 ## Methods
 
+### MergeAttributes
+
+Resolves attributes by merging defaults, resolving classes, and handling
+mutually exclusive class groups.
+
+#### Syntax
+
+```php
+public static function MergeAttributes(array<string,bool|int|float|string> $defaultAttributes, array<string,bool|int|float|string>|null $userAttributes = null, string[] $mutuallyExclusiveClassGroups = []): array<string,bool|int|float|string>
+```
+
+#### Parameters
+
+- **$defaultAttributes**: Default attributes defined by the component.
+- **$userAttributes**: (Optional) Attributes provided by the user.
+- **$mutuallyExclusiveClassGroups**: (Optional) Mutually exclusive class groups to resolve conflicts.
+
+#### Return Value
+
+Resolved attributes ready for rendering.
+
+---
+
 ### ResolveClasses
 
 Resolve classes by merging default classes with user-defined classes,
