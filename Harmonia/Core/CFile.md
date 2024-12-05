@@ -66,7 +66,7 @@ public function Read(?int $length = null): ?string
 
 #### Parameters
 
-- **$length**: (Optional) The number of bytes to read. If omitted, reads until the end of the file.
+- **$length**: (Optional) The number of bytes to read. If omitted or set to `null`, reads until the end of the file.
 
 #### Return Value
 
