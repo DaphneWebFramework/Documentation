@@ -75,19 +75,39 @@ Returns `true` if the key exists, `false` otherwise.
 
 ### Get
 
+Returns the value at the specified key.
+
+#### Syntax
+
+```php
+public function Get(string|int $key): mixed
+```
+
+#### Parameters
+
+- **$key**: The key to look up.
+
+#### Return Value
+
+The value at the specified key if it exists, or `null` if the key is not found.
+
+---
+
+### GetOrDefault
+
 Returns the value at the specified key, or a default value if the key
 does not exist.
 
 #### Syntax
 
 ```php
-public function Get(string|int $key, mixed $defaultValue = null): mixed
+public function GetOrDefault(string|int $key, mixed $defaultValue): mixed
 ```
 
 #### Parameters
 
 - **$key**: The key to look up.
-- **$defaultValue**: (Optional) The value to return if the key does not exist. Defaults to `null`.
+- **$defaultValue**: The value to return if the key does not exist.
 
 #### Return Value
 
@@ -102,7 +122,7 @@ Adds or updates the value at the specified key.
 #### Syntax
 
 ```php
-public function Set(string|int $key, mixed $value): \Harmonia\Core\CArray
+public function Set(string|int $key, mixed $value): self
 ```
 
 #### Parameters
@@ -123,7 +143,7 @@ Removes an element by its key.
 #### Syntax
 
 ```php
-public function Delete(string|int $key): \Harmonia\Core\CArray
+public function Delete(string|int $key): self
 ```
 
 #### Parameters

@@ -56,8 +56,7 @@ Returns `true` if the index is within range, `false` otherwise.
 
 ### Get
 
-Returns the value at the specified index, or a default value if the
-index does not exist.
+Returns the value at the specified index.
 
 The `$index` parameter accepts both strings and integers to comply with
 the `CArray::Get` signature. However, if a string is provided, an
@@ -67,13 +66,43 @@ indexing.
 #### Syntax
 
 ```php
-public function Get(string|int $index, mixed $defaultValue = null): mixed
+public function Get(string|int $index): mixed
 ```
 
 #### Parameters
 
 - **$index**: The zero-based index to look up. If a string is given, an exception is thrown.
-- **$defaultValue**: (Optional) The value to return if the index does not exist. Defaults to `null`.
+
+#### Return Value
+
+The value at the specified index if it exists, or `null` if the index is out of range.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If the index is a string.
+
+---
+
+### GetOrDefault
+
+Returns the value at the specified index, or a default value if the
+index does not exist.
+
+The `$index` parameter accepts both strings and integers to comply with
+the `CArray::GetOrDefault` signature. However, if a string is provided,
+an exception is thrown because `CSequentialArray` only supports integer
+indexing.
+
+#### Syntax
+
+```php
+public function GetOrDefault(string|int $index, mixed $defaultValue): mixed
+```
+
+#### Parameters
+
+- **$index**: The zero-based index to look up. If a string is given, an exception is thrown.
+- **$defaultValue**: The value to return if the index does not exist.
 
 #### Return Value
 
@@ -97,7 +126,7 @@ indexing.
 #### Syntax
 
 ```php
-public function Set(string|int $index, mixed $value): \Harmonia\Core\CSequentialArray
+public function Set(string|int $index, mixed $value): self
 ```
 
 #### Parameters
@@ -127,7 +156,7 @@ indexing.
 #### Syntax
 
 ```php
-public function Delete(string|int $index): \Harmonia\Core\CSequentialArray
+public function Delete(string|int $index): self
 ```
 
 #### Parameters
@@ -151,7 +180,7 @@ Adds an element to the end of the array.
 #### Syntax
 
 ```php
-public function PushBack(mixed $element): \Harmonia\Core\CSequentialArray
+public function PushBack(mixed $element): self
 ```
 
 #### Parameters
@@ -171,7 +200,7 @@ Adds an element to the beginning of the array.
 #### Syntax
 
 ```php
-public function PushFront(mixed $element): \Harmonia\Core\CSequentialArray
+public function PushFront(mixed $element): self
 ```
 
 #### Parameters
@@ -223,7 +252,7 @@ Inserts a new element before an existing element at a specified index.
 #### Syntax
 
 ```php
-public function InsertBefore(int $index, mixed $element): \Harmonia\Core\CSequentialArray
+public function InsertBefore(int $index, mixed $element): self
 ```
 
 #### Parameters
@@ -244,7 +273,7 @@ Inserts a new element after an existing element at a specified index.
 #### Syntax
 
 ```php
-public function InsertAfter(int $index, mixed $element): \Harmonia\Core\CSequentialArray
+public function InsertAfter(int $index, mixed $element): self
 ```
 
 #### Parameters
