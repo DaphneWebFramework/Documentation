@@ -6,6 +6,10 @@ Browse the documentation of the modules that power the framework.
 
 A shared library providing reusable components and utilities to streamline web development.
 
+### [Charis](Charis/README.md)
+
+A library for defining HTML elements and reusable components using a declarative, server-side rendering approach.
+
 ### [TestToolkit](TestToolkit/README.md)
 
 A versatile collection of tools for PHP testing, including access utilities, data providers, and more.
