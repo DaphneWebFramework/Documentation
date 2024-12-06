@@ -1,6 +1,7 @@
 # Button
 
-Represents a Bootstrap Button component.
+Represents a Bootstrap [Button](https://getbootstrap.com/docs/5.3/components/buttons/)
+component.
 
 ## Methods
 

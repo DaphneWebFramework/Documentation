@@ -40,9 +40,9 @@ public static function ResolveClasses(string $defaultClasses, string $userClasse
 
 #### Parameters
 
-- **$defaultClasses**: A space-separated string of default class names defined by the component (e.g., `'btn btn-default'`).
+- **$defaultClasses**: A space-separated string of default class names defined by the component (e.g., `'btn btn-primary'`).
 - **$userClasses**: A space-separated string of user-defined class names (e.g., `'btn-lg btn-primary'`).
-- **$mutuallyExclusiveClassGroups**: (Optional) An array of space-separated strings representing mutually exclusive class groups (e.g., `['btn-default btn-primary btn-success', 'btn-sm btn-lg']`).
+- **$mutuallyExclusiveClassGroups**: (Optional) An array of space-separated strings representing mutually exclusive class groups (e.g., `['btn-primary btn-secondary btn-success', 'btn-sm btn-lg']`).
 
 #### Return Value
 
