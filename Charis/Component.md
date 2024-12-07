@@ -1,6 +1,16 @@
 # Component
 
-A class for defining and rendering HTML components on the server side.
+Abstract base class for defining and rendering HTML components.
+
+This class provides a foundation for creating server-side rendered HTML
+components. Subclasses must implement the `getTagName` method to define the
+specific HTML tag for the component. Optionally, subclasses can override:
+
+- `getDefaultAttributes`: Defines default attributes for the component.
+- `getMutuallyExclusiveClassGroups`: Defines class groups where only one
+  class from each group can be applied at a time.
+- `isSelfClosing`: Indicates whether the component is self-closing (e.g.,
+  `<img/>`). Defaults to `false`.
 
 ## Methods
 
@@ -11,15 +21,13 @@ Constructs a new instance.
 #### Syntax
 
 ```php
-public function __construct(string $tagName, array<string,bool|int|float|string>|null $attributes = null, string|\Charis\Component|(string|\Charis\Component)[]|null $content = null, bool $isSelfClosing = false)
+public function __construct(array<string,bool|int|float|string>|null $attributes = null, string|\Charis\Component|(string|\Charis\Component)[]|null $content = null)
 ```
 
 #### Parameters
 
-- **$tagName**: The HTML tag name for this component (e.g., "div", "span").
 - **$attributes**: (Optional) An associative array of HTML attributes, where keys are attribute names and values can be scalar types (`bool`, `int`, `float`, or `string`). Pass `null` or an empty array to indicate no attributes. Defaults to `null`.
 - **$content**: (Optional) The content of the component, which can be a string, a single `Component` instance, an array of strings and `Component` instances, or `null` for no content. Defaults to `null`.
-- **$isSelfClosing**: (Optional) Indicates whether this component is self-closing (e.g., `<img />`). Defaults to `false`.
 
 ---
 

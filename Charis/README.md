@@ -3,6 +3,7 @@
 - [ButtonGroup](ButtonGroup.md)
 - [Component](Component.md)
 - [ComponentHelper](ComponentHelper.md)
+- [Generic](Generic.md)
 
 ---
 
