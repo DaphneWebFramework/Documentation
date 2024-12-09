@@ -71,4 +71,27 @@ An array of class names. If the input string is empty or consists only of whites
 
 ---
 
+### ConsumePseudoAttribute
+
+Returns and removes the specified pseudo attribute from the given
+attributes array.
+
+#### Syntax
+
+```php
+public static function ConsumePseudoAttribute(array<string,bool|int|float|string>|null &$attributes, string $key, mixed $default = null): mixed
+```
+
+#### Parameters
+
+- **$attributes**: An associative array of attributes. The array will be modified in place by removing the specified pseudo attribute if found.
+- **$key**: The key of the pseudo attribute to consume. Keys must match the defined pattern and are case-sensitive.
+- **$default**: (Optional) The value to return if the key is not present or invalid. Defaults to `null`.
+
+#### Return Value
+
+The value of the consumed pseudo attribute, or the default value if not found.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
