@@ -1,7 +1,10 @@
 # ButtonGroup
 
-Represents a Bootstrap [Button Group](https://getbootstrap.com/docs/5.3/components/button-group/)
-component.
+Represents a Bootstrap Button Group component.
+
+#### See Also
+
+- [https://getbootstrap.com/docs/5.3/components/button-group/](https://getbootstrap.com/docs/5.3/components/button-group/)
 
 ---
 

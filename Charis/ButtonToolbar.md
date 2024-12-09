@@ -1,7 +1,10 @@
 # ButtonToolbar
 
-Represents a Bootstrap [Button Toolbar](https://getbootstrap.com/docs/5.3/components/button-group/#button-toolbar)
-component.
+Represents a Bootstrap Button Toolbar component.
+
+#### See Also
+
+- [https://getbootstrap.com/docs/5.3/components/button-group/#button-toolbar](https://getbootstrap.com/docs/5.3/components/button-group/#button-toolbar)
 
 ---
 
