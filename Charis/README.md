@@ -7,6 +7,7 @@
 - [FormCheck](FormCheck.md)
 - [FormCheckInput](FormCheckInput.md)
 - [FormCheckLabel](FormCheckLabel.md)
+- [FormCheckable](FormCheckable.md)
 - [FormControl](FormControl.md)
 - [FormInput](FormInput.md)
 - [FormLabel](FormLabel.md)
