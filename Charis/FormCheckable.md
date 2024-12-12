@@ -6,6 +6,8 @@ Abstract base class for checkable form components such as `FormCheck`,
 This component supports the following pseudo attributes in its constructor:
 
 - `:id`: A unique identifier for the input element. If omitted and a
+- `:name`: The name attribute for the input element, used for grouping
+  related inputs and identifying the input's value during form submission.
   `:label-text` is provided, an ID is generated automatically.
 - `:label-text`: Text for the associated `<label>` element. If omitted, no
   label is rendered.

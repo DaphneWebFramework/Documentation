@@ -11,6 +11,8 @@
 - [FormControl](FormControl.md)
 - [FormInput](FormInput.md)
 - [FormLabel](FormLabel.md)
+- [FormRadio](FormRadio.md)
+- [FormRadioInput](FormRadioInput.md)
 - [FormText](FormText.md)
 - [Generic](Generic.md)
 
