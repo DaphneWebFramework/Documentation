@@ -13,6 +13,8 @@
 - [FormLabel](FormLabel.md)
 - [FormRadio](FormRadio.md)
 - [FormRadioInput](FormRadioInput.md)
+- [FormSwitch](FormSwitch.md)
+- [FormSwitchInput](FormSwitchInput.md)
 - [FormText](FormText.md)
 - [Generic](Generic.md)
 
