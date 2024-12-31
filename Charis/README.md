@@ -8,6 +8,8 @@
 - [FormCheckInput](FormCheckInput.md)
 - [FormCheckLabel](FormCheckLabel.md)
 - [FormCheckable](FormCheckable.md)
+- [FormCheckableComposite](FormCheckableComposite.md)
+- [FormComposite](FormComposite.md)
 - [FormControl](FormControl.md)
 - [FormInput](FormInput.md)
 - [FormLabel](FormLabel.md)
