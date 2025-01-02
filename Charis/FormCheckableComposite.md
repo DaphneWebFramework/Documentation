@@ -1,6 +1,6 @@
 # FormCheckableComposite
 
-Abstract base class for checkable form components such as `FormCheck`,
+Abstract base class for checkable form components, such as `FormCheck`,
 `FormRadio`, and `FormSwitch`.
 
 Aside from HTML attributes that apply to the wrapper element, this component

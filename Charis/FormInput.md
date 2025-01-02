@@ -1,6 +1,6 @@
 # FormInput
 
-Represents an `<input>` element styled as a Bootstrap form control.
+Abstract base class for `<input>` elements styled as Bootstrap form controls.
 
 ---
 

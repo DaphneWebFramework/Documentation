@@ -27,47 +27,25 @@ Resolved attributes ready for rendering.
 
 ---
 
-### ResolveClasses
+### CombineClassAttributes
 
-Resolve classes by merging default classes with user-defined classes,
-handling duplicates and managing mutually exclusive groups.
-
-#### Syntax
-
-```php
-public static function ResolveClasses(string $defaultClasses, string $userClasses, string[] $mutuallyExclusiveClassGroups = []): string
-```
-
-#### Parameters
-
-- **$defaultClasses**: A space-separated string of default class names defined by the component (e.g., `'btn btn-primary'`).
-- **$userClasses**: A space-separated string of user-defined class names (e.g., `'btn-lg btn-primary'`).
-- **$mutuallyExclusiveClassGroups**: (Optional) An array of space-separated strings representing mutually exclusive class groups (e.g., `['btn-primary btn-secondary btn-success', 'btn-sm btn-lg']`).
-
-#### Return Value
-
-A resolved and merged class string with duplicates removed and mutually exclusive conflicts resolved.
-
----
-
-### ParseClassList
-
-Parses a space-separated class string into an array of individual class
-names, normalizing spaces and trimming extra whitespace.
+Merges two HTML `class` attribute strings into a single string with
+duplicates removed.
 
 #### Syntax
 
 ```php
-public static function ParseClassList(string $classes): string[]
+public static function CombineClassAttributes(string $classes1, string $classes2): string
 ```
 
 #### Parameters
 
-- **$classes**: A space-separated string of class names (e.g., 'btn btn-primary').
+- **$classes1**: A space-separated string of class names.
+- **$classes2**: Another space-separated string of class names.
 
 #### Return Value
 
-An array of class names. If the input string is empty or consists only of whitespace, an empty array is returned.
+A space-separated string containing all class names with duplicates removed.
 
 ---
 
@@ -79,14 +57,14 @@ attributes array.
 #### Syntax
 
 ```php
-public static function ConsumePseudoAttribute(array<string,bool|int|float|string>|null &$attributes, string $key, mixed $default = null): mixed
+public static function ConsumePseudoAttribute(array<string,bool|int|float|string>|null &$attributes, string $key, mixed $defaultValue = null): mixed
 ```
 
 #### Parameters
 
 - **$attributes**: An associative array of attributes. The array will be modified in place by removing the specified pseudo attribute if found.
 - **$key**: The key of the pseudo attribute to consume. Keys must match the defined pattern and are case-sensitive.
-- **$default**: (Optional) The value to return if the key is not present or invalid. Defaults to `null`.
+- **$defaultValue**: (Optional) The value to return if the key is not present or invalid. Defaults to `null`.
 
 #### Return Value
 
