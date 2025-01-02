@@ -11,13 +11,16 @@
 - [FormCheckableComposite](FormCheckableComposite.md)
 - [FormComposite](FormComposite.md)
 - [FormControl](FormControl.md)
+- [FormHelpText](FormHelpText.md)
 - [FormInput](FormInput.md)
 - [FormLabel](FormLabel.md)
 - [FormRadio](FormRadio.md)
 - [FormRadioInput](FormRadioInput.md)
+- [FormStandardComposite](FormStandardComposite.md)
 - [FormSwitch](FormSwitch.md)
 - [FormSwitchInput](FormSwitchInput.md)
 - [FormText](FormText.md)
+- [FormTextInput](FormTextInput.md)
 - [Generic](Generic.md)
 
 ---

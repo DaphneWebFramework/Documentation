@@ -1,4 +1,4 @@
-# FormText
+# FormStandardComposite
 
 Abstract base class for standard form components with a label, input, and
 optional help text.
@@ -18,6 +18,26 @@ supports the following pseudo attributes in its constructor:
   the input element when it is empty.
 - `:disabled`: Boolean indicating whether the input should be disabled.
   Defaults to `false`.
+
+#### See Also
+
+- [https://getbootstrap.com/docs/5.3/forms/form-control/](https://getbootstrap.com/docs/5.3/forms/form-control/)
+
+## Methods
+
+### __construct
+
+Constructs a new instance.
+
+#### Syntax
+
+```php
+public function __construct(array<string,bool|int|float|string>|null $attributes = null)
+```
+
+#### Parameters
+
+- **$attributes**: (Optional) An associative array where HTML attributes apply to the wrapper element, and pseudo attributes configure inner child elements.
 
 ---
 
