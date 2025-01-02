@@ -1,7 +1,6 @@
 # TestToolkit
 - [AccessHelper](AccessHelper.md)
 - [DataHelper](DataHelper.md)
-- [SingletonHelper](SingletonHelper.md)
 
 ---
 
