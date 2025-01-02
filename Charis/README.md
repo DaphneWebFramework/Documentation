@@ -8,6 +8,7 @@
 - [FormHelpText](FormHelpText.md)
 - [FormLabel](FormLabel.md)
 - [Generic](Generic.md)
+- [Label](Label.md)
 
 ## FormComposites
 - [FormCheck](FormComposites/FormCheck.md)
