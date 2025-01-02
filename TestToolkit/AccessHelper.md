@@ -178,7 +178,7 @@ In both cases, the object with the constructor invoked is returned.
 #### Syntax
 
 ```php
-public static function CallNonPublicConstructor(object|string $objectOrClassName, array $args = []): object
+public static function CallNonPublicConstructor(object|string $objectOrClassName, ?array $args = null): object
 ```
 
 #### Parameters
@@ -198,7 +198,7 @@ The object with its constructor invoked.
 
 ### CallNonPublicMethod
 
-Calls a non-public (private or protected) method on an object.
+Invokes a non-public (private or protected) method on an object.
 
 This method allows for the invocation of non-public methods, enabling
 unit testing or advanced manipulation of otherwise inaccessible logic.
@@ -206,13 +206,43 @@ unit testing or advanced manipulation of otherwise inaccessible logic.
 #### Syntax
 
 ```php
-public static function CallNonPublicMethod(object $object, string $methodName, array $args = []): mixed
+public static function CallNonPublicMethod(object $object, string $methodName, ?array $args = null): mixed
 ```
 
 #### Parameters
 
 - **$object**: The object instance on which to invoke the non-public method.
 - **$methodName**: The name of the non-public method to invoke.
+- **$args**: (Optional) An array of arguments to pass to the method.
+
+#### Return Value
+
+The result of the invoked method.
+
+#### Exceptions
+
+- **\ReflectionException**: If the method does not exist or cannot be accessed.
+
+---
+
+### CallNonPublicStaticMethod
+
+Invokes a non-public (private or protected) static method on a class.
+
+This method allows for the invocation of non-public static methods,
+enabling unit testing or advanced manipulation of otherwise inaccessible
+logic.
+
+#### Syntax
+
+```php
+public static function CallNonPublicStaticMethod(string $className, string $methodName, ?array $args = null): mixed
+```
+
+#### Parameters
+
+- **$className**: The name of the class on which to invoke the non-public static method.
+- **$methodName**: The name of the non-public static method to invoke.
 - **$args**: (Optional) An array of arguments to pass to the method.
 
 #### Return Value
