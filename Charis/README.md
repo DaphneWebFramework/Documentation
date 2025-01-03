@@ -3,11 +3,11 @@
 - [ButtonGroup](ButtonGroup.md)
 - [ButtonToolbar](ButtonToolbar.md)
 - [Component](Component.md)
-- [ComponentHelper](ComponentHelper.md)
 - [FormCheckLabel](FormCheckLabel.md)
 - [FormHelpText](FormHelpText.md)
 - [FormLabel](FormLabel.md)
 - [Generic](Generic.md)
+- [Helper](Helper.md)
 - [Label](Label.md)
 
 ## FormComposites

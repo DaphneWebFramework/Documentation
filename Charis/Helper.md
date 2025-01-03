@@ -1,4 +1,4 @@
-# ComponentHelper
+# Helper
 
 Provides helper functions for component classes.
 
