@@ -1,6 +1,6 @@
 # ButtonGroup
 
-Represents a Bootstrap Button Group component.
+Represents a group of buttons.
 
 #### See Also
 

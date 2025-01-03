@@ -1,6 +1,10 @@
 # FormCheckInput
 
-Represents an `<input>` element styled as a Bootstrap check input.
+Represents a check input.
+
+#### See Also
+
+- [https://getbootstrap.com/docs/5.3/forms/checks-radios/#checks](https://getbootstrap.com/docs/5.3/forms/checks-radios/#checks)
 
 ---
 

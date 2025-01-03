@@ -1,6 +1,10 @@
 # FormSwitchInput
 
-Represents an `<input>` element styled as a Bootstrap switch input.
+Represents a switch input.
+
+#### See Also
+
+- [https://getbootstrap.com/docs/5.3/forms/checks-radios/#switches](https://getbootstrap.com/docs/5.3/forms/checks-radios/#switches)
 
 ---
 

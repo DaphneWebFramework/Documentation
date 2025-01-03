@@ -1,6 +1,10 @@
 # FormRadioInput
 
-Represents an `<input>` element styled as a Bootstrap radio input.
+Represents a radio input.
+
+#### See Also
+
+- [https://getbootstrap.com/docs/5.3/forms/checks-radios/#radios](https://getbootstrap.com/docs/5.3/forms/checks-radios/#radios)
 
 ---
 

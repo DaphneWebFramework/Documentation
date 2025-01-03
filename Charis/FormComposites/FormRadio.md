@@ -1,6 +1,6 @@
 # FormRadio
 
-Represents a Bootstrap Radio component.
+Represents a radio input with a label and optional help text.
 
 #### See Also
 

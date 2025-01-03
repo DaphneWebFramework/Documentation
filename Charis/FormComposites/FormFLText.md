@@ -1,7 +1,6 @@
 # FormFLText
 
-Abstract base class for composite form components, such as `FormStandardComposite`,
-`FormFloatingLabelComposite`, and `FormCheckableComposite`.
+Represents a text input with a floating label and optional help text.
 
 ---
 

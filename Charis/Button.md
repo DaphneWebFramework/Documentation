@@ -1,6 +1,6 @@
 # Button
 
-Represents a Bootstrap Button component.
+Represents a button.
 
 #### See Also
 

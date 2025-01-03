@@ -1,6 +1,6 @@
 # FormTextInput
 
-Abstract base class for `<input>` elements styled as Bootstrap form controls.
+Represents a text input.
 
 ---
 

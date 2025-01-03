@@ -1,6 +1,7 @@
 # FormInput
 
-Abstract base class for `<input>` elements styled as Bootstrap form controls.
+Abstract base class for form input controls, serving as the foundation for
+specialized input types.
 
 ---
 

@@ -1,6 +1,6 @@
 # FormSwitch
 
-Represents a Bootstrap Switch component.
+Represents a switch input with a label and optional help text.
 
 #### See Also
 

@@ -1,6 +1,7 @@
 # FormControl
 
-Abstract base class for Bootstrap Form Control components.
+Abstract base class for form controls, defining common attributes and
+behaviors.
 
 #### See Also
 

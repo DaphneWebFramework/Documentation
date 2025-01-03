@@ -1,6 +1,10 @@
 # FormHelpText
 
-Represents contextual help text for a Bootstrap form control.
+Represents contextual help text for a form control.
+
+#### See Also
+
+- [https://getbootstrap.com/docs/5.3/forms/form-control/#form-text](https://getbootstrap.com/docs/5.3/forms/form-control/#form-text)
 
 ---
 

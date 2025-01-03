@@ -1,7 +1,10 @@
 # FormCheckLabel
 
-Represents a `<label>` element styled for use with Bootstrap check, radio, or
-switch inputs.
+Represents a label for checkable inputs, such as checks, radios, and switches.
+
+#### See Also
+
+- [https://getbootstrap.com/docs/5.3/forms/checks-radios/#approach](https://getbootstrap.com/docs/5.3/forms/checks-radios/#approach)
 
 ---
 

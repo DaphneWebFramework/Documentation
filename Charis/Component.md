@@ -2,15 +2,14 @@
 
 Abstract base class for defining and rendering HTML components.
 
-This class provides a foundation for creating server-side rendered HTML
-components. Subclasses must implement the `getTagName` method to define the
-specific HTML tag for the component. Optionally, subclasses can override:
+Subclasses must implement the `getTagName` method to specify the HTML tag
+for the component. Subclasses can optionally override:
 
-- `getDefaultAttributes`: Defines default attributes for the component.
-- `getMutuallyExclusiveClassAttributeGroups`: Defines class groups where only
-  one class from each group can be applied at a time.
+- `getDefaultAttributes`: Returns the default attributes for the component.
+- `getMutuallyExclusiveClassAttributeGroups`: Specifies groups of CSS classes
+  where only one class from each group can be applied simultaneously.
 - `isSelfClosing`: Indicates whether the component is self-closing (e.g.,
-  `<img/>`). Defaults to `false`.
+  `<input/>`, `<img/>`).
 
 ## Methods
 
@@ -75,7 +74,7 @@ The HTML string representation of the component.
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If the tag name is empty, contains invalid characters, an attribute name is not a string, is empty, an attribute value is not scalar, or the content array contains an item that is neither a string nor a `Component` instance.
+- **\InvalidArgumentException**: If the tag name does not match the required pattern, an attribute name is not a string or does not match the required pattern, an attribute value is not scalar, or the content array contains an item that is neither a string nor a `Component` instance.
 - **\LogicException**: If the component is self-closing but has non-empty content.
 
 ---

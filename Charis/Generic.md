@@ -1,6 +1,6 @@
 # Generic
 
-A component for rendering arbitrary HTML elements.
+Represents a general-purpose HTML element.
 
 ## Methods
 

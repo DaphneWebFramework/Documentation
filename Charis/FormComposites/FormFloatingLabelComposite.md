@@ -1,7 +1,7 @@
 # FormFloatingLabelComposite
 
-Abstract base class for composite form components, such as `FormStandardComposite`,
-`FormFloatingLabelComposite`, and `FormCheckableComposite`.
+Abstract base class for form composites, combining an input control with a
+floating label and optional help text.
 
 #### See Also
 

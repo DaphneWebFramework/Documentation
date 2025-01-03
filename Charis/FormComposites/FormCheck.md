@@ -1,6 +1,6 @@
 # FormCheck
 
-Represents a Bootstrap Check component.
+Represents a check input with a label and optional help text.
 
 #### See Also
 

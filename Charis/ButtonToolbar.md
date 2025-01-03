@@ -1,6 +1,6 @@
 # ButtonToolbar
 
-Represents a Bootstrap Button Toolbar component.
+Represents a toolbar for organizing button groups.
 
 #### See Also
 
