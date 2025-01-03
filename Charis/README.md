@@ -14,6 +14,8 @@
 - [FormCheck](FormComposites/FormCheck.md)
 - [FormCheckableComposite](FormComposites/FormCheckableComposite.md)
 - [FormComposite](FormComposites/FormComposite.md)
+- [FormFLText](FormComposites/FormFLText.md)
+- [FormFloatingLabelComposite](FormComposites/FormFloatingLabelComposite.md)
 - [FormRadio](FormComposites/FormRadio.md)
 - [FormStandardComposite](FormComposites/FormStandardComposite.md)
 - [FormSwitch](FormComposites/FormSwitch.md)
