@@ -166,14 +166,14 @@ The current instance.
 
 ---
 
-### InsertAt
+### InsertInPlace
 
 Inserts a substring at the specified offset.
 
 #### Syntax
 
 ```php
-public function InsertAt(int $offset, string|\Stringable $substring): self
+public function InsertInPlace(int $offset, string|\Stringable $substring): self
 ```
 
 #### Parameters
@@ -245,7 +245,7 @@ The current instance.
 #### See Also
 
 - [`Prepend`](#Prepend)
-- [`InsertAt`](#InsertAt)
+- [`InsertInPlace`](#InsertInPlace)
 
 ---
 
@@ -270,7 +270,7 @@ A new `CString` instance with the string prepended.
 #### See Also
 
 - [`PrependInPlace`](#PrependInPlace)
-- [`InsertAt`](#InsertAt)
+- [`InsertInPlace`](#InsertInPlace)
 
 ---
 
@@ -298,7 +298,7 @@ The current instance.
 #### See Also
 
 - [`Append`](#Append)
-- [`InsertAt`](#InsertAt)
+- [`InsertInPlace`](#InsertInPlace)
 
 ---
 
@@ -323,7 +323,7 @@ A new `CString` instance with the substring appended.
 #### See Also
 
 - [`AppendInPlace`](#AppendInPlace)
-- [`InsertAt`](#InsertAt)
+- [`InsertInPlace`](#InsertInPlace)
 
 ---
 
