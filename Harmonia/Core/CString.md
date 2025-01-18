@@ -196,31 +196,6 @@ The current instance.
 
 ---
 
-### DeleteInPlace
-
-Deletes a range of characters starting from the specified offset.
-
-#### Syntax
-
-```php
-public function DeleteInPlace(int $offset, int $count = 1): self
-```
-
-#### Parameters
-
-- **$offset**: The zero-based offset where the deletion will start. If the offset is negative or greater than or equal to the length of the string, no changes will be made.
-- **$count**: (Optional) The number of characters to delete. If this value is less than 1, no changes will be made. If it exceeds the remaining characters, it will delete up to the end. Defaults to 1.
-
-#### Return Value
-
-The current instance.
-
-#### Exceptions
-
-- **\ValueError**: If an error occurs due to encoding.
-
----
-
 ### PrependInPlace
 
 Inserts the specified string at the beginning.
@@ -324,6 +299,31 @@ A new `CString` instance with the substring appended.
 
 - [`AppendInPlace`](#AppendInPlace)
 - [`InsertInPlace`](#InsertInPlace)
+
+---
+
+### DeleteInPlace
+
+Deletes a range of characters starting from the specified offset.
+
+#### Syntax
+
+```php
+public function DeleteInPlace(int $offset, int $count = 1): self
+```
+
+#### Parameters
+
+- **$offset**: The zero-based offset where the deletion will start. If the offset is negative or greater than or equal to the length of the string, no changes will be made.
+- **$count**: (Optional) The number of characters to delete. If this value is less than 1, no changes will be made. If it exceeds the remaining characters, it will delete up to the end. Defaults to 1.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\ValueError**: If an error occurs due to encoding.
 
 ---
 
