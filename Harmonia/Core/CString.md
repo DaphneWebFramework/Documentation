@@ -109,14 +109,14 @@ The last character, or an empty string if the string is empty.
 
 ---
 
-### At
+### Get
 
 Returns the character at a specified offset.
 
 #### Syntax
 
 ```php
-public function At(int $offset): string
+public function Get(int $offset): string
 ```
 
 #### Parameters
@@ -162,7 +162,7 @@ The current instance.
 
 #### See Also
 
-- [`At`](#At)
+- [`Get`](#Get)
 
 ---
 
