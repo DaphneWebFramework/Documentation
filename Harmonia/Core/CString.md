@@ -133,18 +133,18 @@ The character at the specified offset, or an empty string if the offset is out o
 
 #### See Also
 
-- [`SetAt`](#SetAt)
+- [`SetInPlace`](#SetInPlace)
 
 ---
 
-### SetAt
+### SetInPlace
 
 Sets the character at the specified offset.
 
 #### Syntax
 
 ```php
-public function SetAt(int $offset, string $character): self
+public function SetInPlace(int $offset, string $character): self
 ```
 
 #### Parameters
