@@ -141,9 +141,15 @@ A `CArray` instance containing the URL components if parsing is successful, or `
 
 Returns the canonical absolute form of the URL.
 
-If the instance represents a relative URL, it will be converted into an
-absolute URL using the provided base URL. The path resolution is performed
-relative to the current working directory of the script (`getcwd()`).
+Converts the instance's value into an absolute URL using the provided
+base URL and base path. Typically, the base URL represents the web
+application's main address (e.g., "https://example.com"), and the base
+path corresponds to the directory where the application resides within
+the web server's document root.
+
+It is recommended to create a wrapper around this method to supply the
+base URL and base path from the application configuration, abstracting
+these details from the end user.
 
 #### Syntax
 
