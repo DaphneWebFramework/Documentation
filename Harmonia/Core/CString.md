@@ -196,14 +196,14 @@ The current instance.
 
 ---
 
-### DeleteAt
+### DeleteInPlace
 
 Deletes a range of characters starting from the specified offset.
 
 #### Syntax
 
 ```php
-public function DeleteAt(int $offset, int $count = 1): self
+public function DeleteInPlace(int $offset, int $count = 1): self
 ```
 
 #### Parameters
