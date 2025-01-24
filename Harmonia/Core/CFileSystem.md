@@ -57,7 +57,7 @@ Deletes a file.
 #### Syntax
 
 ```php
-public static function DeleteFile(string|\Stringable $filePath): bool
+public function DeleteFile(string|\Stringable $filePath): bool
 ```
 
 #### Parameters
@@ -67,6 +67,28 @@ public static function DeleteFile(string|\Stringable $filePath): bool
 #### Return Value
 
 Returns `true` on success, or `false` on failure.
+
+---
+
+### FindFiles
+
+Searches for files in a directory.
+
+#### Syntax
+
+```php
+public function FindFiles(string|\Stringable $directoryPath, string $wildcard, bool $recursive = false): \Generator
+```
+
+#### Parameters
+
+- **$directoryPath**: The path of the directory to search in.
+- **$wildcard**: A string containing wildcard characters (* ?).
+- **$recursive**: (Optional) If this parameter is `true`, the search is recursive, meaning it will include all subdirectories. Otherwise, only the root of the specified directory is searched. Defaults to `false`.
+
+#### Return Value
+
+A generator yielding `CPath` instances for each matching file.
 
 ---
 
