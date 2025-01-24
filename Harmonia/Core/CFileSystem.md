@@ -50,4 +50,24 @@ Returns `true` if the directory and its contents are deleted successfully. Other
 
 ---
 
+### DeleteFile
+
+Deletes a file.
+
+#### Syntax
+
+```php
+public static function DeleteFile(string|\Stringable $filePath): bool
+```
+
+#### Parameters
+
+- **$filePath**: The path of the file to be deleted.
+
+#### Return Value
+
+Returns `true` on success, or `false` on failure.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
