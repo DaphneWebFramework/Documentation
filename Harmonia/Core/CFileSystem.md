@@ -84,11 +84,11 @@ public function FindFiles(string|\Stringable $directoryPath, string $wildcard, b
 
 - **$directoryPath**: The path of the directory to search in.
 - **$wildcard**: A string containing wildcard characters (* ?).
-- **$recursive**: (Optional) If this parameter is `true`, the search is recursive, meaning it will include all subdirectories. Otherwise, only the root of the specified directory is searched. Defaults to `false`.
+- **$recursive**: (Optional) If `true`, the search will include all subdirectories. Otherwise, only the root of the specified directory is searched. Defaults to `false`.
 
 #### Return Value
 
-A generator yielding `CPath` instances for each matching file.
+A generator yielding the paths of matching files as strings.
 
 ---
 
