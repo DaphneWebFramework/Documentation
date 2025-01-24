@@ -1,4 +1,5 @@
 # Harmonia
+- [Config](Config.md)
 - [Server](Server.md)
 
 ## Core
