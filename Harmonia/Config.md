@@ -4,6 +4,22 @@ Provides structured access to configuration options.
 
 ## Methods
 
+### GetOptions
+
+Retrieves the configuration options.
+
+#### Syntax
+
+```php
+public function GetOptions(): \Harmonia\Core\CArray
+```
+
+#### Return Value
+
+The configuration options.
+
+---
+
 ### GetOptionsFilePath
 
 Retrieves the path to the configuration options file.
@@ -17,22 +33,6 @@ public function GetOptionsFilePath(): ?\Harmonia\Core\CPath
 #### Return Value
 
 The path to the configuration options file, or `null` if no file is loaded.
-
----
-
-### GetOptions
-
-Retrieves configuration options.
-
-#### Syntax
-
-```php
-public function GetOptions(): ?\Harmonia\Core\CArray
-```
-
-#### Return Value
-
-The configuration options, or `null` if no options are loaded.
 
 ---
 
@@ -69,6 +69,47 @@ public function Reload(): void
 #### Exceptions
 
 - **\RuntimeException**: If no configuration options file is loaded.
+
+---
+
+### GetOption
+
+Retrieves the value of a configuration option.
+
+#### Syntax
+
+```php
+public function GetOption(string $key): mixed
+```
+
+#### Parameters
+
+- **$key**: The key of the configuration option.
+
+#### Return Value
+
+The value of the configuration option, or `null` if the key is not found.
+
+---
+
+### SetOption
+
+Sets the value of a configuration option.
+
+#### Syntax
+
+```php
+public function SetOption(string $key, mixed $value): void
+```
+
+#### Parameters
+
+- **$key**: The key of the configuration option.
+- **$value**: The value of the configuration option.
+
+#### Exceptions
+
+- **\RuntimeException**: If the specified key is not found or if the value type does not match the existing value type.
 
 ---
 
