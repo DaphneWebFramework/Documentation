@@ -4,6 +4,38 @@ Provides structured access to configuration options.
 
 ## Methods
 
+### GetOptionsFilePath
+
+Retrieves the path to the configuration options file.
+
+#### Syntax
+
+```php
+public function GetOptionsFilePath(): ?\Harmonia\Core\CPath
+```
+
+#### Return Value
+
+The path to the configuration options file, or `null` if no file is loaded.
+
+---
+
+### GetOptions
+
+Retrieves configuration options.
+
+#### Syntax
+
+```php
+public function GetOptions(): ?\Harmonia\Core\CArray
+```
+
+#### Return Value
+
+The configuration options, or `null` if no options are loaded.
+
+---
+
 ### Load
 
 Loads configuration options from the specified file.
