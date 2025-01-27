@@ -27,12 +27,16 @@ Retrieves the web server's root URL, including the protocol and hostname.
 #### Syntax
 
 ```php
-public function Url(): string
+public function Url(): \Harmonia\Core\CUrl
 ```
 
 #### Return Value
 
-The fully qualified URL (e.g., "http://localhost" or "https://example.com").
+A new `CUrl` instance representing the root URL (e.g., "http://localhost" or "https://example.com").
+
+#### Exceptions
+
+- **\RuntimeException**: If the server name is not set.
 
 ---
 
@@ -43,12 +47,16 @@ Retrieves the web server's root directory path.
 #### Syntax
 
 ```php
-public function Path(): string
+public function Path(): \Harmonia\Core\CPath
 ```
 
 #### Return Value
 
-The root directory path (e.g., "C:/xampp/htdocs" or "/var/www/html").
+A new `CPath` instance representing the root directory path (e.g., "C:/xampp/htdocs" or "/var/www/html").
+
+#### Exceptions
+
+- **\RuntimeException**: If the document root is not set.
 
 ---
 
