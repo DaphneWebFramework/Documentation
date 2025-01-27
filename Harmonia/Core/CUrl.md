@@ -30,7 +30,7 @@ Joins multiple URL segments into a single URL.
 #### Syntax
 
 ```php
-public static function Join(string ...$segments): \Harmonia\Core\CUrl
+public static function Join(string|\Stringable ...$segments): \Harmonia\Core\CUrl
 ```
 
 #### Parameters
