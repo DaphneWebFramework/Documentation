@@ -30,7 +30,7 @@ Joins multiple path segments into a single path.
 #### Syntax
 
 ```php
-public static function Join(string ...$segments): \Harmonia\Core\CPath
+public static function Join(string|\Stringable ...$segments): \Harmonia\Core\CPath
 ```
 
 #### Parameters
