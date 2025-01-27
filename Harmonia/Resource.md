@@ -4,25 +4,6 @@ Provides access to application resources such as file system paths and URLs.
 
 ## Methods
 
-### __construct
-
-Constructs a new instance.
-
-The `Initialize` method must be called before using any method of this
-class.
-
-#### Syntax
-
-```php
-public function __construct()
-```
-
-#### See Also
-
-- [`Initialize`](#Initialize)
-
----
-
 ### Initialize
 
 Initializes the resource with the specified application path.
