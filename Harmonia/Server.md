@@ -16,55 +16,39 @@ public function IsSecure(): bool
 
 #### Return Value
 
-Returns `true` if the connection is secure (e.g., HTTPS); otherwise, returns `false`.
+Returns `true` if the connection is secure (e.g., HTTPS); otherwise, `false`.
 
 ---
 
-### HostName
+### Url
 
-Returns the hostname.
+Retrieves the web server's root URL, including the protocol and hostname.
 
 #### Syntax
 
 ```php
-public function HostName(): string
+public function Url(): string
 ```
 
 #### Return Value
 
-The server name as defined by the `SERVER_NAME` key in the `$_SERVER` superglobal. Returns an empty string if the key does not exist.
+The fully qualified URL (e.g., "http://localhost" or "https://example.com").
 
 ---
 
-### HostUrl
+### Path
 
-Returns the full server URL, including the protocol and hostname.
+Retrieves the web server's root directory path.
 
 #### Syntax
 
 ```php
-public function HostUrl(): string
+public function Path(): string
 ```
 
 #### Return Value
 
-The full URL constructed from the protocol (http/https) and the server name.
-
----
-
-### RootDirectory
-
-Returns the root directory path.
-
-#### Syntax
-
-```php
-public function RootDirectory(): string
-```
-
-#### Return Value
-
-The directory path as defined by the `DOCUMENT_ROOT` key in the `$_SERVER` superglobal, e.g., "C:/xampp/htdocs". Returns an empty string if the key does not exist.
+The root directory path (e.g., "C:/xampp/htdocs" or "/var/www/html").
 
 ---
 
