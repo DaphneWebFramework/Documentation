@@ -31,7 +31,7 @@ public function Initialize(string|\Stringable $appPath): void
 
 #### Exceptions
 
-- **\RuntimeException**: If the application path cannot be resolved.
+- **\RuntimeException**: If the resource is already initialized or the application path cannot be resolved.
 
 ---
 
