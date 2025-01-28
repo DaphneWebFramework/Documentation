@@ -15,15 +15,14 @@ or autoload.php) using `__DIR__` to pass the root directory path.
 For example:
 ```php
 use \Harmonia\Resource;
-use \Harmonia\Core\CPath;
 
-Resource::Instance()->Initialize(new CPath(__DIR__));
+Resource::Instance()->Initialize(__DIR__);
 ```
 
 #### Syntax
 
 ```php
-public function Initialize(\Harmonia\Core\CPath $appPath): void
+public function Initialize(string|\Stringable $appPath): void
 ```
 
 #### Parameters
