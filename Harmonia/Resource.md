@@ -31,7 +31,7 @@ public function Initialize(string|\Stringable $appPath): void
 
 #### Exceptions
 
-- **\RuntimeException**: If the resource is already initialized or the application path cannot be resolved.
+- **\RuntimeException**: If the resource is already initialized or the specified application path cannot be resolved.
 
 ---
 
@@ -78,7 +78,7 @@ The application relative path.
 
 #### Exceptions
 
-- **\RuntimeException**: If the resource is not initialized, the server path cannot be resolved, or the application path is not under the server path.
+- **\RuntimeException**: If the resource is not initialized, the server path is not available or cannot be resolved, or the application path is not under the server path.
 
 ---
 
@@ -107,7 +107,7 @@ The application URL.
 
 #### Exceptions
 
-- **\RuntimeException**: If the resource is not initialized, the server path cannot be resolved, or the application path is not under the server path.
+- **\RuntimeException**: If the server URL is not available, the resource is not initialized, the server path cannot be resolved, or the application path is not under the server path.
 
 ---
 
