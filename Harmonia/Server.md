@@ -59,12 +59,12 @@ Retrieves the request method.
 #### Syntax
 
 ```php
-public function RequestMethod(): ?string
+public function RequestMethod(): ?\Harmonia\Core\CString
 ```
 
 #### Return Value
 
-The request method (e.g., "GET", "POST", "PUT", "DELETE"), or `null` if the request method is not set.
+A `CString` instance representing the request method (e.g., "GET", "POST", "PUT", "DELETE"), or `null` if the request method is not set.
 
 ---
 
@@ -72,15 +72,18 @@ The request method (e.g., "GET", "POST", "PUT", "DELETE"), or `null` if the requ
 
 Retrieves the request URI.
 
+The request URI is the part of the URL that comes after the domain name,
+including the query string and fragment identifier.
+
 #### Syntax
 
 ```php
-public function RequestUri(): ?string
+public function RequestUri(): ?\Harmonia\Core\CString
 ```
 
 #### Return Value
 
-The request URI including the query string and fragment if any (e.g., "/index.php?foo=bar#section"), or `null` if the request URI is not set.
+A `CString` instance representing the request URI (e.g., "/index.php", "/index.php?foo=bar#section"), or `null` if the request URI is not set.
 
 ---
 
