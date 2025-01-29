@@ -12,6 +12,9 @@
 - [CString](Core/CString.md)
 - [CUrl](Core/CUrl.md)
 
+## Http
+- [Request](Http/Request.md)
+
 ## Patterns
 - [Singleton](Patterns/Singleton.md)
 
