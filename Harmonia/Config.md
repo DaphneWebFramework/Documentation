@@ -4,14 +4,14 @@ Provides structured access to configuration options.
 
 ## Methods
 
-### GetOptions
+### Options
 
 Retrieves the configuration options.
 
 #### Syntax
 
 ```php
-public function GetOptions(): \Harmonia\Core\CArray
+public function Options(): \Harmonia\Core\CArray
 ```
 
 #### Return Value
@@ -20,14 +20,14 @@ The configuration options.
 
 ---
 
-### GetOptionsFilePath
+### OptionsFilePath
 
 Retrieves the path to the configuration options file.
 
 #### Syntax
 
 ```php
-public function GetOptionsFilePath(): ?\Harmonia\Core\CPath
+public function OptionsFilePath(): ?\Harmonia\Core\CPath
 ```
 
 #### Return Value
@@ -72,14 +72,14 @@ public function Reload(): void
 
 ---
 
-### GetOption
+### Option
 
 Retrieves the value of a configuration option.
 
 #### Syntax
 
 ```php
-public function GetOption(string $key): mixed
+public function Option(string $key): mixed
 ```
 
 #### Parameters
