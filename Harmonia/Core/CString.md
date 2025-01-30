@@ -1008,6 +1008,28 @@ A new `CString` instance containing the result of the callable.
 
 ---
 
+### Match
+
+Matches the string against a regular expression pattern.
+
+#### Syntax
+
+```php
+public function Match(string $pattern, int $options = self::REGEX_OPTION_NONE, string $delimiter = '/'): ?array
+```
+
+#### Parameters
+
+- **$pattern**: The regular expression pattern to match. The pattern should not include delimiters. For example, use `^foo` instead of `/^foo/`. The delimiter can be specified separately using the `$delimiter` parameter.
+- **$options**: (Optional) Bitwise options for the regular expression match. The default is `REGEX_OPTION_NONE`. This value can be a combination of the following options: `REGEX_OPTION_CASE_INSENSITIVE`, `REGEX_OPTION_MULTILINE`.
+- **$delimiter**: (Optional) The delimiter to use for the regular expression pattern in single-byte mode. The default is `/`. If the encoding is multibyte, the delimiter is ignored.
+
+#### Return Value
+
+An array of matches if the pattern is found, or `null` if no match is found.
+
+---
+
 ### __toString
 
 Returns the string representation for use in string contexts.
