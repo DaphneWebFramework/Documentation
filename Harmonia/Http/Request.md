@@ -112,9 +112,11 @@ A `CArray` instance containing the cookies.
 
 Retrieves the HTTP headers.
 
-This method obtains headers using `apache_request_headers()` if available.
-Otherwise, it emulates the behavior by extracting headers from `$_SERVER`,
-specifically those prefixed with 'HTTP_'.
+If `apache_request_headers()` is available, it is used to fetch the
+headers. Otherwise, headers are retrieved from the `$_SERVER` superglobal.
+
+All header names are converted to lowercase to ensure predictable
+case-sensitive lookups.
 
 #### Syntax
 
@@ -124,7 +126,7 @@ public function Headers(): \Harmonia\Core\CArray
 
 #### Return Value
 
-A `CArray` instance containing the HTTP headers with keys formatted in title case with hyphens (e.g., "User-Agent", "Content-Type").
+A `CArray` instance where the keys are lowercase header names and the values are their respective header values.
 
 ---
 

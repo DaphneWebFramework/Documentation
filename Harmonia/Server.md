@@ -91,19 +91,11 @@ A `CString` instance representing the request URI (e.g., "/index.php", "/index.p
 
 Retrieves the HTTP headers from the request.
 
-This method iterates through the `$_SERVER` superglobal and extracts
-headers that start with 'HTTP_'. It then formats the header names by
-removing the 'HTTP_' prefix, converting underscores to hyphens, and
-capitalizing the first letter of each word while lowercasing the rest.
+This method extracts headers from `$_SERVER`, including those prefixed
+with 'HTTP_' and standard headers such as 'CONTENT_TYPE' and 'CONTENT_LENGTH'.
 
-Some headers, such as 'CONTENT_TYPE' and 'CONTENT_LENGTH', do not start
-with 'HTTP_' but are still included in the result.
-
-Example transformation:
-- "HTTP_USER_AGENT" → "User-Agent"
-- "X_CUSTOM_HEADER" → "X-Custom-Header"
-- "CONTENT_TYPE" → "Content-Type"
-- "CONTENT_LENGTH" → "Content-Length"
+All header names are converted to lowercase, with underscores (`_`)
+replaced by hyphens (`-`). Header values remain unchanged.
 
 #### Syntax
 
