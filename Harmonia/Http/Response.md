@@ -130,4 +130,21 @@ public function Send(): void
 
 ---
 
+### Redirect
+
+Redirects the client to a new URL.
+
+#### Syntax
+
+```php
+public function Redirect(string $url, bool $exitScript = true): void
+```
+
+#### Parameters
+
+- **$url**: The URL to redirect to.
+- **$exitScript**: (Optional) If `true`, the script will exit after sending the response. Default is `true`.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
