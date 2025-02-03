@@ -14,6 +14,7 @@
 
 ## Http
 - [Request](Http/Request.md)
+- [Response](Http/Response.md)
 
 ## Patterns
 - [Singleton](Patterns/Singleton.md)

@@ -1,0 +1,133 @@
+# Response
+
+Represents an HTTP response.
+
+## Methods
+
+### __construct
+
+Constructs a new instance.
+
+#### Syntax
+
+```php
+public function __construct()
+```
+
+---
+
+### SetStatusCode
+
+Sets the HTTP status code.
+
+#### Syntax
+
+```php
+public function SetStatusCode(\Harmonia\Http\StatusCode $statusCode): self
+```
+
+#### Parameters
+
+- **$statusCode**: The HTTP status code.
+
+#### Return Value
+
+The current instance.
+
+---
+
+### SetHeader
+
+Adds or updates an HTTP header.
+
+#### Syntax
+
+```php
+public function SetHeader(string $name, string $value): self
+```
+
+#### Parameters
+
+- **$name**: The header name.
+- **$value**: The header value.
+
+#### Return Value
+
+The current instance.
+
+---
+
+### SetCookie
+
+Adds or updates a cookie.
+
+#### Syntax
+
+```php
+public function SetCookie(string $name, string|false $value): self
+```
+
+#### Parameters
+
+- **$name**: The cookie name.
+- **$value**: The cookie value. If `false`, the cookie is deleted.
+
+#### Return Value
+
+The current instance.
+
+---
+
+### DeleteCookie
+
+Deletes a cookie.
+
+#### Syntax
+
+```php
+public function DeleteCookie(string $name): self
+```
+
+#### Parameters
+
+- **$name**: The cookie name.
+
+#### Return Value
+
+The current instance.
+
+---
+
+### SetBody
+
+Sets the response body.
+
+#### Syntax
+
+```php
+public function SetBody(string|\Stringable $body): self
+```
+
+#### Parameters
+
+- **$body**: The response body.
+
+#### Return Value
+
+The current instance.
+
+---
+
+### Send
+
+Sends the response.
+
+#### Syntax
+
+```php
+public function Send(): void
+```
+
+---
+
+*This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
