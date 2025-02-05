@@ -2,6 +2,7 @@
 - [Config](Config.md)
 - [Resource](Resource.md)
 - [Server](Server.md)
+- [Session](Session.md)
 
 ## Core
 - [CArray](Core/CArray.md)
