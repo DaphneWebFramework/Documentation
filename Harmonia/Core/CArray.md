@@ -136,19 +136,35 @@ The current instance.
 
 ---
 
-### Delete
+### Remove
 
 Removes an element by its key.
 
 #### Syntax
 
 ```php
-public function Delete(string|int $key): self
+public function Remove(string|int $key): self
 ```
 
 #### Parameters
 
 - **$key**: The key of the element to remove.
+
+#### Return Value
+
+The current instance.
+
+---
+
+### Clear
+
+Clears all elements from the array, making it empty.
+
+#### Syntax
+
+```php
+public function Clear(): self
+```
 
 #### Return Value
 

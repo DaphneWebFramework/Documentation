@@ -144,19 +144,19 @@ The current instance.
 
 ---
 
-### Delete
+### Remove
 
 Removes an element at the specified index.
 
 The `$index` parameter accepts both strings and integers to comply with
-the `CArray::Delete` signature. However, if a string is provided, an
+the `CArray::Remove` signature. However, if a string is provided, an
 exception is thrown because `CSequentialArray` only supports integer
 indexing.
 
 #### Syntax
 
 ```php
-public function Delete(string|int $index): self
+public function Remove(string|int $index): self
 ```
 
 #### Parameters
