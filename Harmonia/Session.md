@@ -104,7 +104,7 @@ public function Get(string $key, mixed $defaultValue = null): mixed
 #### Parameters
 
 - **$key**: The name of the session variable.
-- **$defaultValue**: The default value to return if the session variable does not exist.
+- **$defaultValue**: (Optional) The default value to return if the session variable does not exist. Defaults to `null`.
 
 #### Return Value
 
@@ -161,6 +161,10 @@ public function Destroy(): void
 #### Exceptions
 
 - **\RuntimeException**: If destroying the session fails.
+
+#### See Also
+
+- [`Name`](#Name)
 
 ---
 
