@@ -20,6 +20,9 @@
 ## Patterns
 - [Singleton](Patterns/Singleton.md)
 
+## Shutdown
+- [ShutdownHandler](Shutdown/ShutdownHandler.md)
+
 ---
 
 *This documentation index was automatically generated.*
