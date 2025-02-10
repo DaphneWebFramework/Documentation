@@ -1,6 +1,7 @@
 # Peneus
 
 ## Api
+- [Dispatcher](Api/Dispatcher.md)
 - [HandlerRegistry](Api/HandlerRegistry.md)
 
 ---
