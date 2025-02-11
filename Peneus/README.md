@@ -11,8 +11,10 @@
 - [TokenGuard](Api/Guards/TokenGuard.md)
 
 ## Services
-- [CsrfToken](Services/CsrfToken.md)
 - [SecurityService](Services/SecurityService.md)
+
+### Model
+- [CsrfToken](Services/Model/CsrfToken.md)
 
 ---
 
