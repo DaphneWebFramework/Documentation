@@ -7,6 +7,9 @@
 ### Actions
 - [Action](Api/Actions/Action.md)
 
+## Services
+- [SecurityService](Services/SecurityService.md)
+
 ---
 
 *This documentation index was automatically generated.*
