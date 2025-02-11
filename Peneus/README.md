@@ -8,6 +8,7 @@
 - [Action](Api/Actions/Action.md)
 
 ## Services
+- [CsrfToken](Services/CsrfToken.md)
 - [SecurityService](Services/SecurityService.md)
 
 ---

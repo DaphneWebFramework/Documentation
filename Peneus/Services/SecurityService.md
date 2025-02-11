@@ -46,7 +46,7 @@ public function GenerateToken(): string
 #### Syntax
 
 ```php
-public function GenerateCsrfToken(): \stdClass
+public function GenerateCsrfToken(): \Peneus\Services\CsrfToken
 ```
 
 ---
@@ -56,7 +56,7 @@ public function GenerateCsrfToken(): \stdClass
 #### Syntax
 
 ```php
-public function VerifyCsrfToken(\stdClass $csrfToken): bool
+public function VerifyCsrfToken(\Peneus\Services\CsrfToken $csrfToken): bool
 ```
 
 #### Parameters
