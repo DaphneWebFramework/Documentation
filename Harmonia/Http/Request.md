@@ -4,14 +4,17 @@ Represents an HTTP request.
 
 ## Methods
 
-### Method
+### Method_
 
 Retrieves the HTTP request method.
+
+PHPUnit 12 introduced a restriction preventing the use of "Method" as a
+method name. To comply with this, "Method_" was chosen instead.
 
 #### Syntax
 
 ```php
-public function Method(): ?\Harmonia\Http\RequestMethod
+public function Method_(): ?\Harmonia\Http\RequestMethod
 ```
 
 #### Return Value
