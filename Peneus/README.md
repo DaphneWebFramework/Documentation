@@ -7,6 +7,9 @@
 ### Actions
 - [Action](Api/Actions/Action.md)
 
+### Guards
+- [TokenGuard](Api/Guards/TokenGuard.md)
+
 ## Services
 - [CsrfToken](Services/CsrfToken.md)
 - [SecurityService](Services/SecurityService.md)
