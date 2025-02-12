@@ -4,47 +4,12 @@ Manages PHP session lifecycle and data access.
 
 ## Methods
 
-### IsStarted
-
-Checks whether a session has been started.
-
-#### Syntax
-
-```php
-public function IsStarted(): bool
-```
-
-#### Return Value
-
-Returns `true` if the session has been started, `false` otherwise.
-
----
-
-### Name
-
-Retrieves the current session name.
-
-The session name is used as the cookie name for storing the session ID.
-
-#### Syntax
-
-```php
-public function Name(): string
-```
-
-#### Return Value
-
-The current session name.
-
-#### Exceptions
-
-- **\RuntimeException**: If retrieving the session name fails.
-
----
-
 ### Start
 
 Starts a new session or resumes an existing one.
+
+If session support is disabled or the session is already started, this
+method does nothing.
 
 #### Syntax
 
@@ -54,13 +19,15 @@ public function Start(): void
 
 #### Exceptions
 
-- **\RuntimeException**: If starting the session fails.
+- **\RuntimeException**: If starting the session or regenerating the session ID fails.
 
 ---
 
 ### Close
 
 Saves session data and closes the session.
+
+If the session is not started, this method does nothing.
 
 #### Syntax
 
@@ -78,6 +45,8 @@ public function Close(): void
 
 Sets a session variable.
 
+If the session is not started, this method does nothing.
+
 #### Syntax
 
 ```php
@@ -94,6 +63,8 @@ public function Set(string $key, mixed $value): void
 ### Get
 
 Retrieves a session variable.
+
+If the session is not started, this method returns the default value.
 
 #### Syntax
 
@@ -116,6 +87,8 @@ The value of the session variable if it exists, the default value otherwise.
 
 Removes a session variable.
 
+If the session is not started, this method does nothing.
+
 #### Syntax
 
 ```php
@@ -131,6 +104,8 @@ public function Remove(string $key): void
 ### Clear
 
 Clears all session variables.
+
+If the session is not started, this method does nothing.
 
 #### Syntax
 
@@ -148,9 +123,7 @@ public function Clear(): void
 
 Destroys the current session.
 
-This method clears session data and completely destroys the session.
-Before calling this method, ensure that the session cookie is deleted
-using `Name()` to retrieve the session cookie name.
+If the session is not started, this method does nothing.
 
 #### Syntax
 
@@ -160,11 +133,7 @@ public function Destroy(): void
 
 #### Exceptions
 
-- **\RuntimeException**: If destroying the session fails.
-
-#### See Also
-
-- [`Name`](#Name)
+- **\RuntimeException**: If HTTP headers have already been sent, if obtaining the session name fails, if deleting the session cookie fails, if clearing session data fails, or if destroying the session fails.
 
 ---
 
