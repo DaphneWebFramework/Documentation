@@ -13,6 +13,12 @@
 - [CString](Core/CString.md)
 - [CUrl](Core/CUrl.md)
 
+## Database
+
+### Queries
+- [Query](Database/Queries/Query.md)
+- [SelectQuery](Database/Queries/SelectQuery.md)
+
 ## Http
 - [Request](Http/Request.md)
 - [Response](Http/Response.md)
