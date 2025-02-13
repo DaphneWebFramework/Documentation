@@ -37,7 +37,7 @@ public function Where(string $condition, array<string,mixed> $substitutions = []
 #### Parameters
 
 - **$condition**: The WHERE condition. For example, `"id = :id AND name = :name"`.
-- **$substitutions**: (Optional) Key-value pairs for placeholders in the condition.
+- **$substitutions**: (Optional) Key-value pairs for placeholders in the condition. For example, `['id' => 42, 'name' => 'John']`.
 
 #### Return Value
 
@@ -69,7 +69,7 @@ The current instance.
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If an invalid sorting direction is provided.
+- **\InvalidArgumentException**: If an invalid sorting direction is provided. Valid directions are 'ASC' and 'DESC'.
 
 ---
 
@@ -80,7 +80,7 @@ Adds a LIMIT clause to the query.
 #### Syntax
 
 ```php
-public function Limit(int $limit, int|null $offset = null): self
+public function Limit(int $limit, ?int $offset = null): self
 ```
 
 #### Parameters

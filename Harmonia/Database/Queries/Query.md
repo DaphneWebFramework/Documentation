@@ -43,12 +43,12 @@ Retrieves the parameter substitutions used in the query.
 #### Syntax
 
 ```php
-public function Substitutions(): array
+public function Substitutions(): array<string,mixed>
 ```
 
 #### Return Value
 
-An associative array of substitutions.
+An associative array of substitutions. For example, `['id' => 42, 'name' => 'John']`.
 
 ---
 
