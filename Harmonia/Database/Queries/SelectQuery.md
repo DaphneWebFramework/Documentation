@@ -45,7 +45,7 @@ The current instance.
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If a placeholder in the condition has no matching substitution, if a substitution is provided that does not match any placeholder, or if a substitution key does not follow identifier naming rules.
+- **\InvalidArgumentException**: If a placeholder in the condition has no matching substitution, if a substitution is provided that does not match any placeholder, if a substitution key does not follow identifier naming rules, or if a substitution value has an invalid type (e.g., array, resource, or an object without a `__toString()` method).
 
 ---
 
