@@ -36,8 +36,8 @@ public function Where(string $condition, array<string,mixed> $substitutions = []
 
 #### Parameters
 
-- **$condition**: The WHERE condition. For example, `"id = :id AND name = :name"`.
-- **$substitutions**: (Optional) Key-value pairs for placeholders in the condition. For example, `['id' => 42, 'name' => 'John']`.
+- **$condition**: The WHERE condition, which must be a valid SQL expression. It can contain fixed values or placeholders for dynamic values. To prevent SQL injection, dynamic values must be represented using placeholders prefixed with `:`. For example, `"id = :id AND name = :name"`.
+- **$substitutions**: (Optional) An associative array where keys are placeholders (without the `:` prefix) and values are their corresponding replacements. For example, `['id' => 42, 'name' => 'John']`.
 
 #### Return Value
 
@@ -45,7 +45,7 @@ The current instance.
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If placeholders in the condition do not match substitutions.
+- **\InvalidArgumentException**: If a placeholder in the condition has no matching substitution, if a substitution is provided that does not match any placeholder, or if a substitution key does not follow identifier naming rules.
 
 ---
 
