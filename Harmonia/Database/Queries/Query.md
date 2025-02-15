@@ -1,6 +1,6 @@
 # Query
 
-Base class for SQL query builders.
+Base class for SQL builders.
 
 ## Methods
 
@@ -27,28 +27,56 @@ Generates the SQL string representation of the query.
 #### Syntax
 
 ```php
-public abstract function ToSql(): string
+public final function ToSql(): string
 ```
 
 #### Return Value
 
-The SQL query string.
+The SQL string.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If a placeholder is missing a binding or vice versa.
 
 ---
 
-### Substitutions
+### Bindings
 
-Retrieves the parameter substitutions used in the query.
+Retrieves the parameter bindings used in the query.
 
 #### Syntax
 
 ```php
-public function Substitutions(): array<string,mixed>
+public function Bindings(): array<string,mixed>
 ```
 
 #### Return Value
 
-An associative array of substitutions. For example, `['id' => 42, 'name' => 'John']`.
+An associative array of bindings. For example, `['id' => 42, 'name' => 'John']`.
+
+---
+
+### Bind
+
+Binds values to named placeholders.
+
+#### Syntax
+
+```php
+public function Bind(array<string,mixed> $bindings): self
+```
+
+#### Parameters
+
+- **$bindings**: An associative array where keys are placeholders (without `:` prefix) and values are their corresponding replacements.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If a binding key is invalid, or if a binding value is an array, a resource, or an object without a `__toString()` method.
 
 ---
 

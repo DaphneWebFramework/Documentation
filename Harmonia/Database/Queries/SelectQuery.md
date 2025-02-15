@@ -16,7 +16,7 @@ public function Select(array<int,string> $columns): self
 
 #### Parameters
 
-- **$columns**: An array of column names or expressions. For example, `['column1', 'COUNT(*) AS count']`.
+- **$columns**: An array of column names or expressions. For example, `['column1', 'COUNT(*) AS count']`. If an empty array is provided, the selection remains unchanged, defaulting to `"*"` unless previously modified.
 
 #### Return Value
 
@@ -31,21 +31,16 @@ Adds a WHERE clause to the query.
 #### Syntax
 
 ```php
-public function Where(string $condition, array<string,mixed> $substitutions = []): self
+public function Where(string $condition): self
 ```
 
 #### Parameters
 
-- **$condition**: The WHERE condition, which must be a valid SQL expression. It can contain fixed values or placeholders for dynamic values. To prevent SQL injection, dynamic values must be represented using placeholders prefixed with `:`. For example, `"id = :id AND name = :name"`.
-- **$substitutions**: (Optional) An associative array where keys are placeholders (without the `:` prefix) and values are their corresponding replacements. For example, `['id' => 42, 'name' => 'John']`.
+- **$condition**: The WHERE condition.
 
 #### Return Value
 
 The current instance.
-
-#### Exceptions
-
-- **\InvalidArgumentException**: If a placeholder in the condition has no matching substitution, if a substitution is provided that does not match any placeholder, if a substitution key does not follow identifier naming rules, or if a substitution value has an invalid type (e.g., array, resource, or an object without a `__toString()` method).
 
 ---
 
@@ -95,22 +90,6 @@ The current instance.
 #### Exceptions
 
 - **\InvalidArgumentException**: If the limit or offset is negative.
-
----
-
-### ToSql
-
-Generates the SQL string representation of the query.
-
-#### Syntax
-
-```php
-public function ToSql(): string
-```
-
-#### Return Value
-
-The SQL query string.
 
 ---
 
