@@ -14,6 +14,10 @@
 - [CUrl](Core/CUrl.md)
 
 ## Database
+- [Connection](Database/Connection.md)
+- [MySQLiHandle](Database/MySQLiHandle.md)
+- [MySQLiResult](Database/MySQLiResult.md)
+- [MySQLiStatement](Database/MySQLiStatement.md)
 
 ### Queries
 - [Query](Database/Queries/Query.md)
