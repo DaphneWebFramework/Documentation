@@ -1,5 +1,7 @@
 # Connection
 
+Represents a connection to a MySQL server.
+
 ## Methods
 
 ### __construct
@@ -64,34 +66,6 @@ A `MySQLiResult` if the query produces a result set, `null` otherwise.
 #### Exceptions
 
 - **\RuntimeException**: If the query preparation or execution fails.
-
----
-
-### transformQuery
-
-Converts a query with named placeholders into MySQLi-compatible format.
-
-This method replaces named placeholders (e.g., `:id`, `:name`) with `?`
-for MySQLi `prepare()`, reorders binding values to match their appearance
-in the query, and generates a type string for `bind_param()`.
-
-#### Syntax
-
-```php
-public function transformQuery(\Harmonia\Database\Queries\Query $query): \stdClass
-```
-
-#### Parameters
-
-- **$query**: The query object containing SQL and its bindings.
-
-#### Return Value
-
-Returns an object with three properties: `sql`, which is the transformed SQL query with `?` placeholders for `prepare()`; `values`, which is an indexed array of ordered binding values for `bind_param()`; and `types`, which is a string representing the parameter types for `bind_param()` (e.g., `"isd"`).
-
-#### Exceptions
-
-- **\InvalidArgumentException**: If a placeholder in the SQL string has no matching binding, or if a binding is provided that does not match any placeholder.
 
 ---
 
