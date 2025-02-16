@@ -39,6 +39,26 @@ public function __destruct()
 
 ---
 
+### SelectDatabase
+
+Selects a database as the current database for the subsequent queries.
+
+#### Syntax
+
+```php
+public function SelectDatabase(string $databaseName): void
+```
+
+#### Parameters
+
+- **$databaseName**: The name of the database to select.
+
+#### Exceptions
+
+- **\RuntimeException**: If the database selection fails.
+
+---
+
 ### Execute
 
 Executes a query on the MySQL server.
