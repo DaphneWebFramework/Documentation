@@ -16,6 +16,7 @@
 ## Database
 - [Connection](Database/Connection.md)
 - [Database](Database/Database.md)
+- [ResultSet](Database/ResultSet.md)
 
 ### Proxies
 - [MySQLiHandle](Database/Proxies/MySQLiHandle.md)
