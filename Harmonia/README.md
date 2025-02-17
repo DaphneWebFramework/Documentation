@@ -15,6 +15,7 @@
 
 ## Database
 - [Connection](Database/Connection.md)
+- [Database](Database/Database.md)
 
 ### Proxies
 - [MySQLiHandle](Database/Proxies/MySQLiHandle.md)
