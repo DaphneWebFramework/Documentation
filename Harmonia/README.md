@@ -15,9 +15,11 @@
 
 ## Database
 - [Connection](Database/Connection.md)
-- [MySQLiHandle](Database/MySQLiHandle.md)
-- [MySQLiResult](Database/MySQLiResult.md)
-- [MySQLiStatement](Database/MySQLiStatement.md)
+
+### Proxies
+- [MySQLiHandle](Database/Proxies/MySQLiHandle.md)
+- [MySQLiResult](Database/Proxies/MySQLiResult.md)
+- [MySQLiStatement](Database/Proxies/MySQLiStatement.md)
 
 ### Queries
 - [Query](Database/Queries/Query.md)

@@ -72,7 +72,7 @@ execution failure results in an exception.
 #### Syntax
 
 ```php
-public function Execute(\Harmonia\Database\Queries\Query $query): ?\Harmonia\Database\MySQLiResult
+public function Execute(\Harmonia\Database\Queries\Query $query): ?\Harmonia\Database\Proxies\MySQLiResult
 ```
 
 #### Parameters

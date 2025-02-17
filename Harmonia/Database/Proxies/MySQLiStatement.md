@@ -21,7 +21,7 @@ public function __construct(\mysqli_stmt $object)
 #### Syntax
 
 ```php
-public function get_result(): ?\Harmonia\Database\MySQLiResult
+public function get_result(): ?\Harmonia\Database\Proxies\MySQLiResult
 ```
 
 ---
