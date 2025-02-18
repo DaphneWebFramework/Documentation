@@ -81,7 +81,7 @@ public function Execute(\Harmonia\Database\Queries\Query $query): ?\Harmonia\Dat
 
 #### Return Value
 
-A `MySQLiResult` if the query produces a result set, `null` otherwise.
+A `MySQLiResult` if the query produces a result set, or `null` if the query does not produce a result set.
 
 #### Exceptions
 

@@ -6,7 +6,7 @@ Base class for SQL builders.
 
 ### __construct
 
-Creates a new instance.
+Constructs a new instance.
 
 #### Syntax
 
