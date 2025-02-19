@@ -104,9 +104,10 @@ application's relative path. The resulting URL always includes a trailing
 slash to indicate a directory, ensuring compatibility with browsers and
 avoiding unnecessary 301 redirects.
 
-For example, if the server's root URL is "https://example.com" and the
-application relative path is "MyProjects/MyApp", this method will
-return "https://example.com/MyProjects/MyApp/".
+**Example**:
+  - Server URL: `https://example.com`
+  - Application relative path: `MyProjects/MyApp`
+  - Returns: `https://example.com/MyProjects/MyApp/`
 
 #### Syntax
 
@@ -120,7 +121,7 @@ The application URL.
 
 #### Exceptions
 
-- **\RuntimeException**: If the server URL is not available, the resource is not initialized, the server path cannot be resolved, or the application path is not under the server path.
+- **\RuntimeException**: If the server URL is not available, the resource is not initialized, the server path cannot be resolved, or the application path is neither under the server path nor accessible via a valid symlink inside the server directory.
 
 ---
 
