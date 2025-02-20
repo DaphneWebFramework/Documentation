@@ -1,6 +1,6 @@
 # ResultSet
 
-Represents a result set from a MySQL query.
+Represents a result set from a database query.
 
 ## Methods
 
@@ -16,7 +16,7 @@ public function __construct(?\Harmonia\Database\Proxies\MySQLiResult $result = n
 
 #### Parameters
 
-- **$result**: (Optional) A proxy object wrapping the real `\mysqli_result`, or `null` to represent an empty result set. Defaults to `null`.
+- **$result**: (Optional) A result object, or `null` to represent an empty result set. Defaults to `null`.
 
 ---
 

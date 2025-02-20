@@ -23,7 +23,7 @@ public function Execute(\Harmonia\Database\Queries\Query $query): ?\Harmonia\Dat
 
 #### Return Value
 
-A `ResultSet` object, or `null` if the connection is unavailable or execution fails.
+A `ResultSet` object, or `null` if a connection to the database server cannot be established or execution fails.
 
 ---
 

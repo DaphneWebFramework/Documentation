@@ -16,6 +16,35 @@ public function __construct(\mysqli $object)
 
 ---
 
+### prepare
+
+#### Syntax
+
+```php
+public function prepare(string $query): \Harmonia\Database\Proxies\MySQLiStatement|false
+```
+
+#### Parameters
+
+- **$query**
+
+---
+
+### execute_query
+
+#### Syntax
+
+```php
+public function execute_query(string $query, ?array $params): \Harmonia\Database\Proxies\MySQLiResult|bool
+```
+
+#### Parameters
+
+- **$query**
+- **$params**
+
+---
+
 ### __call
 
 #### Syntax
