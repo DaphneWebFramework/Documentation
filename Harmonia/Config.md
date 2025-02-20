@@ -92,6 +92,28 @@ The value of the configuration option, or `null` if the key is not found.
 
 ---
 
+### OptionOrDefault
+
+Retrieves the value of a configuration option, or a default value if the
+key does not exist.
+
+#### Syntax
+
+```php
+public function OptionOrDefault(string $key, mixed $defaultValue): mixed
+```
+
+#### Parameters
+
+- **$key**: The key of the configuration option.
+- **$defaultValue**: The value to return if the key does not exist.
+
+#### Return Value
+
+The value of the configuration option, or the default value if the key is not found.
+
+---
+
 ### SetOption
 
 Sets the value of a configuration option.
