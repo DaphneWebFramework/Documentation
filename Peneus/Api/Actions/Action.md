@@ -26,12 +26,12 @@ public function AddGuard(\Peneus\Api\Guards\IGuard $guard): self
 
 ---
 
-### Run
+### Execute
 
 #### Syntax
 
 ```php
-public function Run(): mixed
+public function Execute(): mixed
 ```
 
 ---

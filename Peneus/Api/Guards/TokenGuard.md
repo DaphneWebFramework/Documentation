@@ -17,12 +17,12 @@ public function __construct(string $token, string $cookieName)
 
 ---
 
-### Authorize
+### Verify
 
 #### Syntax
 
 ```php
-public function Authorize(): bool
+public function Verify(): bool
 ```
 
 ---

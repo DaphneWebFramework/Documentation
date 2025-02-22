@@ -12,12 +12,12 @@ public function __construct()
 
 ---
 
-### HandleRequest
+### DispatchRequest
 
 #### Syntax
 
 ```php
-public function HandleRequest(): void
+public function DispatchRequest(): void
 ```
 
 ---
