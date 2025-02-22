@@ -4,23 +4,54 @@ Class for building SQL SELECT queries.
 
 ## Methods
 
-### Select
+### Columns
 
 Specifies the columns to retrieve in the query.
+
+If this method is not called, the query defaults to selecting
+all columns (`*`).
 
 #### Syntax
 
 ```php
-public function Select(array<int,string> $columns): self
+public function Columns(string ...$columns): self
 ```
 
 #### Parameters
 
-- **$columns**: An array of column names or expressions. For example, `['column1', 'COUNT(*) AS count']`. If an empty array is provided, the selection remains unchanged, defaulting to `"*"` unless previously modified.
+- **$columns**: Column names or expressions to select. For example: `Columns('column1', 'COUNT(*) AS total')`.
 
 #### Return Value
 
 The current instance.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If no columns are provided or if any column name is empty.
+
+---
+
+### From
+
+Adds a FROM clause to the query.
+
+#### Syntax
+
+```php
+public function From(string $tableName): self
+```
+
+#### Parameters
+
+- **$tableName**: The name of the table.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If the table name is empty.
 
 ---
 
@@ -42,6 +73,10 @@ public function Where(string $condition): self
 
 The current instance.
 
+#### Exceptions
+
+- **\InvalidArgumentException**: If the condition is empty.
+
 ---
 
 ### OrderBy
@@ -51,12 +86,12 @@ Adds an ORDER BY clause to the query.
 #### Syntax
 
 ```php
-public function OrderBy(array<int|string,string> $columns): self
+public function OrderBy(string ...$columns): self
 ```
 
 #### Parameters
 
-- **$columns**: Associative or indexed array of column names and their sorting direction. For example, `['column1' => 'ASC', 'column2' => 'DESC', 'column3']`.
+- **$columns**: Column names and optional sorting directions, e.g., `OrderBy('column1 DESC', 'column2', 'column3 ASC')`.
 
 #### Return Value
 
@@ -64,7 +99,7 @@ The current instance.
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If an invalid sorting direction is provided. Valid directions are 'ASC' and 'DESC'.
+- **\InvalidArgumentException**: If no columns are provided or if any column name is empty.
 
 ---
 

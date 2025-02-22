@@ -4,22 +4,6 @@ Base class for SQL builders.
 
 ## Methods
 
-### __construct
-
-Constructs a new instance.
-
-#### Syntax
-
-```php
-public function __construct(string $tableName)
-```
-
-#### Parameters
-
-- **$tableName**: The name of the table associated with the query.
-
----
-
 ### ToSql
 
 Generates the SQL string representation of the query.
