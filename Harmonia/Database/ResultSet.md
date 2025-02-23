@@ -32,6 +32,22 @@ public function __destruct()
 
 ---
 
+### Columns
+
+Retrieves the column names of the result set.
+
+#### Syntax
+
+```php
+public function Columns(): string[]
+```
+
+#### Return Value
+
+An array of column names. Returns an empty array if the result set is empty.
+
+---
+
 ### Row
 
 Retrieves a single row from the result set.
