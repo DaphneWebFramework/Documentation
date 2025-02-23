@@ -48,6 +48,22 @@ An array of column names. Returns an empty array if the result set is empty.
 
 ---
 
+### RowCount
+
+Retrieves the number of rows in the result set.
+
+#### Syntax
+
+```php
+public function RowCount(): int
+```
+
+#### Return Value
+
+The number of rows in the result set. Returns `0` if the result set is empty.
+
+---
+
 ### Row
 
 Retrieves a single row from the result set.
