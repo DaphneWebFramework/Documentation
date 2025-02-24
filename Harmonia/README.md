@@ -27,6 +27,7 @@
 - [InsertQuery](Database/Queries/InsertQuery.md)
 - [Query](Database/Queries/Query.md)
 - [SelectQuery](Database/Queries/SelectQuery.md)
+- [UpdateQuery](Database/Queries/UpdateQuery.md)
 
 ## Http
 - [Request](Http/Request.md)
