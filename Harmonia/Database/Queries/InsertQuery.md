@@ -8,7 +8,7 @@ Inserting a new user with specified columns and values:
 
 ```php
 $query = (new InsertQuery)
-    ->Into('users')
+    ->Table('users')
     ->Columns('id', 'name', 'email', 'status', 'createdAt')
     ->Values(':id', ':name', ':email', ':status', ':createdAt')
     ->Bind([
@@ -28,14 +28,14 @@ VALUES (:id, :name, :email, :status, :createdAt)
 
 ## Methods
 
-### Into
+### Table
 
 Defines the table where data will be inserted.
 
 #### Syntax
 
 ```php
-public function Into(string $table): self
+public function Table(string $table): self
 ```
 
 #### Parameters

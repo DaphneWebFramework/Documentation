@@ -8,8 +8,8 @@ Fetching active users who registered after a specific date, sorted by their last
 
 ```php
 $query = (new SelectQuery)
+    ->Table('users')
     ->Columns('name', 'email', 'COUNT(*) AS loginCount')
-    ->From('users')
     ->Where('status = :status AND createdAt >= :startDate')
     ->OrderBy(
         'lastLogin DESC',
@@ -31,6 +31,30 @@ LIMIT 20 OFFSET 10
 ```
 
 ## Methods
+
+### Table
+
+Defines the table from which data will be selected.
+
+#### Syntax
+
+```php
+public function Table(string $table): self
+```
+
+#### Parameters
+
+- **$table**: The name of the table from which data will be retrieved.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If the table name is empty or contains only whitespace.
+
+---
 
 ### Columns
 
@@ -56,30 +80,6 @@ The current instance.
 #### Exceptions
 
 - **\InvalidArgumentException**: If no columns are provided or if any column is empty or contains only whitespace.
-
----
-
-### From
-
-Defines the table from which data will be selected.
-
-#### Syntax
-
-```php
-public function From(string $table): self
-```
-
-#### Parameters
-
-- **$table**: The name of the table from which data will be retrieved.
-
-#### Return Value
-
-The current instance.
-
-#### Exceptions
-
-- **\InvalidArgumentException**: If the table name is empty or contains only whitespace.
 
 ---
 
