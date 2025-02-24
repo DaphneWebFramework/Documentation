@@ -1,12 +1,40 @@
 # SelectQuery
 
-Class for building SQL SELECT queries.
+Class for building SQL queries to retrieve data from a table.
+
+#### Example
+
+Fetching active users who registered after a specific date, sorted by their last login:
+
+```php
+$query = (new SelectQuery)
+    ->Columns('name', 'email', 'COUNT(*) AS loginCount')
+    ->From('users')
+    ->Where('status = :status AND createdAt >= :startDate')
+    ->OrderBy(
+        'lastLogin DESC',
+        'name'
+    )
+    ->Limit(20, 10)
+    ->Bind([
+        'status'    => 'active',
+        'startDate' => '2025-01-01'
+    ]);
+```
+
+**Generated SQL:**
+```sql
+SELECT name, email, COUNT(*) AS loginCount FROM users
+WHERE status = :status AND createdAt >= :startDate
+ORDER BY lastLogin DESC, name
+LIMIT 20 OFFSET 10
+```
 
 ## Methods
 
 ### Columns
 
-Specifies the columns to retrieve in the query.
+Specifies which columns should be retrieved in the query.
 
 If this method is not called, the query defaults to selecting
 all columns (`*`).
@@ -19,7 +47,7 @@ public function Columns(string ...$columns): self
 
 #### Parameters
 
-- **$columns**: Column names or expressions to select. For example: `Columns('column1', 'COUNT(*) AS total')`.
+- **$columns**: One or more column names or expressions to retrieve.
 
 #### Return Value
 
@@ -27,23 +55,23 @@ The current instance.
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If no columns are provided or if any column name is empty.
+- **\InvalidArgumentException**: If no columns are provided or if any column is empty or contains only whitespace.
 
 ---
 
 ### From
 
-Adds a FROM clause to the query.
+Defines the table from which data will be selected.
 
 #### Syntax
 
 ```php
-public function From(string $tableName): self
+public function From(string $table): self
 ```
 
 #### Parameters
 
-- **$tableName**: The name of the table.
+- **$table**: The name of the table from which data will be retrieved.
 
 #### Return Value
 
@@ -51,13 +79,13 @@ The current instance.
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If the table name is empty.
+- **\InvalidArgumentException**: If the table name is empty or contains only whitespace.
 
 ---
 
 ### Where
 
-Adds a WHERE clause to the query.
+Filters the query results based on a condition.
 
 #### Syntax
 
@@ -67,7 +95,7 @@ public function Where(string $condition): self
 
 #### Parameters
 
-- **$condition**: The WHERE condition.
+- **$condition**: A condition used to filter the query results.
 
 #### Return Value
 
@@ -75,13 +103,13 @@ The current instance.
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If the condition is empty.
+- **\InvalidArgumentException**: If the condition is empty or contains only whitespace.
 
 ---
 
 ### OrderBy
 
-Adds an ORDER BY clause to the query.
+Sorts the query results based on one or more columns.
 
 #### Syntax
 
@@ -91,7 +119,7 @@ public function OrderBy(string ...$columns): self
 
 #### Parameters
 
-- **$columns**: Column names and optional sorting directions, e.g., `OrderBy('column1 DESC', 'column2', 'column3 ASC')`.
+- **$columns**: One or more column names, each optionally followed by a sorting direction (`ASC` or `DESC`).
 
 #### Return Value
 
@@ -99,13 +127,13 @@ The current instance.
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If no columns are provided or if any column name is empty.
+- **\InvalidArgumentException**: If no columns are provided or if any column is empty or contains only whitespace.
 
 ---
 
 ### Limit
 
-Adds a LIMIT clause to the query.
+Restricts the number of rows returned by the query.
 
 #### Syntax
 
@@ -116,7 +144,7 @@ public function Limit(int $limit, ?int $offset = null): self
 #### Parameters
 
 - **$limit**: The maximum number of rows to return.
-- **$offset**: (Optional) The number of rows to skip before starting to return rows.
+- **$offset**: (Optional) The number of rows to skip before returning results. If `null`, no offset is applied.
 
 #### Return Value
 
