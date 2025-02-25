@@ -1,0 +1,66 @@
+# Entity
+
+Base class for Active Record entities.
+
+This class provides common CRUD (Create, Read, Update, Delete) functionality
+for database-backed objects. It supports automatic property mapping, database
+persistence, and deletion.
+
+Subclasses should define public properties that correspond to table columns.
+
+## Methods
+
+### __construct
+
+Constructs an entity with the given data.
+
+#### Syntax
+
+```php
+public function __construct(?array $data = null)
+```
+
+#### Parameters
+
+- **$data**: (Optional) An associative array of property values. Keys must match the entity's public properties. If `id` is specified, it is also assigned.
+
+---
+
+### Save
+
+Saves the entity to the database.
+
+If `id` is `0`, a new record is inserted. Otherwise, an existing record
+is updated.
+
+#### Syntax
+
+```php
+public function Save(): bool
+```
+
+#### Return Value
+
+Returns `true` on success, `false` on failure.
+
+---
+
+### Delete
+
+Deletes the entity from the database.
+
+On successful deletion, the `id` property is set to `0`.
+
+#### Syntax
+
+```php
+public function Delete(): bool
+```
+
+#### Return Value
+
+Returns `true` if the entity was successfully deleted. Returns `false` if `id` is `0` or if deletion fails.
+
+---
+
+*This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*

@@ -10,6 +10,9 @@
 ### Guards
 - [TokenGuard](Api/Guards/TokenGuard.md)
 
+## Model
+- [Entity](Model/Entity.md)
+
 ## Services
 - [SecurityService](Services/SecurityService.md)
 
