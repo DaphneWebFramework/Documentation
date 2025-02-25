@@ -54,7 +54,7 @@ The current instance.
 
 ### Columns
 
-Specifies the columns to update.
+Specifies the columns whose values will be updated.
 
 #### Syntax
 
@@ -64,7 +64,7 @@ public function Columns(string ...$columns): self
 
 #### Parameters
 
-- **$columns**: One or more column names to be updated.
+- **$columns**: One or more column names that will have their values updated.
 
 #### Return Value
 
@@ -78,7 +78,7 @@ The current instance.
 
 ### Values
 
-Specifies the values for the update operation.
+Defines the new values to be assigned to the specified columns.
 
 #### Syntax
 
