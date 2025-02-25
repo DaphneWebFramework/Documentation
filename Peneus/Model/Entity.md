@@ -63,4 +63,70 @@ Returns `true` if the entity was successfully deleted. Returns `false` if `id` i
 
 ---
 
+### FindById
+
+Retrieves an entity by its primary key.
+
+#### Syntax
+
+```php
+public static function FindById(int $id): static|null
+```
+
+#### Parameters
+
+- **$id**: The primary key of the entity to retrieve.
+
+#### Return Value
+
+An instance of the called class if a matching record is found, `null` otherwise.
+
+---
+
+### FindFirst
+
+Retrieves the first entity that matches the given condition.
+
+#### Syntax
+
+```php
+public static function FindFirst(?string $condition = null, ?array $bindings = null, ?string $orderBy = null): ?static
+```
+
+#### Parameters
+
+- **$condition**: (Optional) A filtering expression that determines which entity to retrieve (e.g., `"status = :status"`). If `null` (default), no filtering is applied.
+- **$bindings**: (Optional) An associative array of values to replace placeholders in the condition (e.g., `['status' => 'active']`). If `null` (default), no parameters are bound.
+- **$orderBy**: (Optional) A sorting expression that determines which matching entity is returned first (e.g., `"createdAt DESC"`). If `null` (default), no ordering is applied.
+
+#### Return Value
+
+An instance of the called class if a matching record is found, `null` otherwise.
+
+---
+
+### Find
+
+Retrieves all entities that match the given condition.
+
+#### Syntax
+
+```php
+public static function Find(?string $condition = null, ?array $bindings = null, ?string $orderBy = null, ?int $limit = null, ?int $offset = null): array
+```
+
+#### Parameters
+
+- **$condition**: (Optional) A filtering expression that determines which entities to retrieve (e.g., `"status = :status"`). If `null` (default), no filtering is applied.
+- **$bindings**: (Optional) An associative array of values to replace placeholders in the condition (e.g., `['status' => 'active']`). If `null` (default), no parameters are bound.
+- **$orderBy**: (Optional) A sorting expression that determines the order of the returned entities (e.g., `"createdAt DESC"`). If `null` (default), no ordering is applied.
+- **$limit**: (Optional) The maximum number of entities to return. If `null` (default), all matching entities are returned.
+- **$offset**: (Optional) The number of entities to skip before returning results. If `null` (default), no offset is applied.
+
+#### Return Value
+
+An array of instances of the called class.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
