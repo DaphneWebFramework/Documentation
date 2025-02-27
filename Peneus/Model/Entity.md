@@ -14,6 +14,14 @@ Subclasses should define public properties that correspond to table columns.
 
 Constructs an entity with the given data.
 
+Date and time values in the provided data should be formatted as strings
+(e.g., `'2025-03-15 12:45:00'`, `'2025-03-15'`). If a corresponding
+property is an instance of `DateTime`, its value is updated using the
+given string. Any conversion errors are silently ignored.
+
+If a property assignment fails due to a type mismatch or other error,
+it is silently skipped.
+
 #### Syntax
 
 ```php
