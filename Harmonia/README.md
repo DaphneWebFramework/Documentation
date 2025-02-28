@@ -37,6 +37,9 @@
 ## Patterns
 - [Singleton](Patterns/Singleton.md)
 
+## Services
+- [CookieService](Services/CookieService.md)
+
 ## Shutdown
 - [ShutdownHandler](Shutdown/ShutdownHandler.md)
 
