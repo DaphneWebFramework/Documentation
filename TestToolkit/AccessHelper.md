@@ -3,17 +3,19 @@
 Provides access to non-public properties and methods using PHP's reflection
 API, enabling modification and retrieval of otherwise inaccessible values.
 
+While primarily intended for private and protected members, these methods
+can also be used to access public properties and methods.
+
 ## Methods
 
-### SetNonPublicProperty
+### SetProperty
 
-Sets the value of a non-public (private or protected) property in an
-object.
+Sets the value of a property in an object.
 
 #### Syntax
 
 ```php
-public static function SetNonPublicProperty(object $object, string $propertyName, mixed $propertyValue): void
+public static function SetProperty(object $object, string $propertyName, mixed $propertyValue): void
 ```
 
 #### Parameters
@@ -29,15 +31,14 @@ public static function SetNonPublicProperty(object $object, string $propertyName
 
 ---
 
-### GetNonPublicProperty
+### GetProperty
 
-Retrieves the value of a non-public (private or protected) property from
-an object.
+Retrieves the value of a property from an object.
 
 #### Syntax
 
 ```php
-public static function GetNonPublicProperty(object $object, string $propertyName): mixed
+public static function GetProperty(object $object, string $propertyName): mixed
 ```
 
 #### Parameters
@@ -55,15 +56,14 @@ The value of the specified property.
 
 ---
 
-### SetNonPublicStaticProperty
+### SetStaticProperty
 
-Sets the value of a non-public (private or protected) static property in
-a class.
+Sets the value of a static property in a class.
 
 #### Syntax
 
 ```php
-public static function SetNonPublicStaticProperty(string $className, string $propertyName, mixed $propertyValue): void
+public static function SetStaticProperty(string $className, string $propertyName, mixed $propertyValue): void
 ```
 
 #### Parameters
@@ -79,15 +79,14 @@ public static function SetNonPublicStaticProperty(string $className, string $pro
 
 ---
 
-### GetNonPublicStaticProperty
+### GetStaticProperty
 
-Retrieves the value of a non-public (private or protected) static
-property from a class.
+Retrieves the value of a static property from a class.
 
 #### Syntax
 
 ```php
-public static function GetNonPublicStaticProperty(string $className, string $propertyName): mixed
+public static function GetStaticProperty(string $className, string $propertyName): mixed
 ```
 
 #### Parameters
@@ -105,10 +104,9 @@ The value of the specified static property.
 
 ---
 
-### SetNonPublicMockProperty
+### SetMockProperty
 
-Sets the value of a non-public (private or protected) property in a mock
-object.
+Sets the value of a property in a mock object.
 
 This method is specifically designed for use with mock objects in unit
 tests, allowing for the modification of properties that are not publicly
@@ -117,7 +115,7 @@ accessible.
 #### Syntax
 
 ```php
-public static function SetNonPublicMockProperty(string $className, object $mockObject, string $propertyName, mixed $propertyValue): void
+public static function SetMockProperty(string $className, object $mockObject, string $propertyName, mixed $propertyValue): void
 ```
 
 #### Parameters
@@ -134,10 +132,9 @@ public static function SetNonPublicMockProperty(string $className, object $mockO
 
 ---
 
-### GetNonPublicMockProperty
+### GetMockProperty
 
-Retrieves the value of a non-public (private or protected) property from
-a mock object.
+Retrieves the value of a property from a mock object.
 
 This method is particularly useful in unit testing scenarios where there
 is a need to access properties of mock objects that are not publicly
@@ -146,7 +143,7 @@ accessible.
 #### Syntax
 
 ```php
-public static function GetNonPublicMockProperty(string $className, object $mockObject, string $propertyName): mixed
+public static function GetMockProperty(string $className, object $mockObject, string $propertyName): mixed
 ```
 
 #### Parameters
@@ -165,10 +162,9 @@ The value of the specified property.
 
 ---
 
-### CallNonPublicConstructor
+### CallConstructor
 
-Invokes the non-public (private or protected) constructor of a given
-object or class.
+Invokes the constructor of a given object or class.
 
 If the first argument is an object, it calls the non-public constructor
 of that object. If it's a string, it treats it as a class name and
@@ -178,7 +174,7 @@ In both cases, the object with the constructor invoked is returned.
 #### Syntax
 
 ```php
-public static function CallNonPublicConstructor(object|string $objectOrClassName, ?array $args = null): object
+public static function CallConstructor(object|string $objectOrClassName, ?array $args = null): object
 ```
 
 #### Parameters
@@ -196,9 +192,9 @@ The object with its constructor invoked.
 
 ---
 
-### CallNonPublicMethod
+### CallMethod
 
-Invokes a non-public (private or protected) method on an object.
+Invokes a method on an object.
 
 This method allows for the invocation of non-public methods, enabling
 unit testing or advanced manipulation of otherwise inaccessible logic.
@@ -206,7 +202,7 @@ unit testing or advanced manipulation of otherwise inaccessible logic.
 #### Syntax
 
 ```php
-public static function CallNonPublicMethod(object $object, string $methodName, ?array $args = null): mixed
+public static function CallMethod(object $object, string $methodName, ?array $args = null): mixed
 ```
 
 #### Parameters
@@ -225,9 +221,9 @@ The result of the invoked method.
 
 ---
 
-### CallNonPublicStaticMethod
+### CallStaticMethod
 
-Invokes a non-public (private or protected) static method on a class.
+Invokes a static method on a class.
 
 This method allows for the invocation of non-public static methods,
 enabling unit testing or advanced manipulation of otherwise inaccessible
@@ -236,7 +232,7 @@ logic.
 #### Syntax
 
 ```php
-public static function CallNonPublicStaticMethod(string $className, string $methodName, ?array $args = null): mixed
+public static function CallStaticMethod(string $className, string $methodName, ?array $args = null): mixed
 ```
 
 #### Parameters
