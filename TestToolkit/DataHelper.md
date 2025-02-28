@@ -24,6 +24,22 @@ class ExampleTest extends TestCase
 
 ## Methods
 
+### BooleanProvider
+
+Provides boolean values.
+
+#### Syntax
+
+```php
+public static function BooleanProvider(): array
+```
+
+#### Return Value
+
+Returns an array of boolean values.
+
+---
+
 ### NonStringProvider
 
 Provides non-string, non-Stringable values.
