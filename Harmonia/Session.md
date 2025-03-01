@@ -14,8 +14,12 @@ method does nothing.
 #### Syntax
 
 ```php
-public function Start(): void
+public function Start(): self
 ```
+
+#### Return Value
+
+The current instance.
 
 #### Exceptions
 
@@ -32,8 +36,12 @@ If the session is not started, this method does nothing.
 #### Syntax
 
 ```php
-public function Close(): void
+public function Close(): self
 ```
+
+#### Return Value
+
+The current instance.
 
 #### Exceptions
 
@@ -50,13 +58,17 @@ If the session is not started, this method does nothing.
 #### Syntax
 
 ```php
-public function Set(string $key, mixed $value): void
+public function Set(string $key, mixed $value): self
 ```
 
 #### Parameters
 
 - **$key**: The name of the session variable.
 - **$value**: The value of the session variable.
+
+#### Return Value
+
+The current instance.
 
 ---
 
@@ -92,12 +104,16 @@ If the session is not started, this method does nothing.
 #### Syntax
 
 ```php
-public function Remove(string $key): void
+public function Remove(string $key): self
 ```
 
 #### Parameters
 
 - **$key**: The name of the session variable.
+
+#### Return Value
+
+The current instance.
 
 ---
 
@@ -110,8 +126,12 @@ If the session is not started, this method does nothing.
 #### Syntax
 
 ```php
-public function Clear(): void
+public function Clear(): self
 ```
+
+#### Return Value
+
+The current instance.
 
 #### Exceptions
 
@@ -128,8 +148,12 @@ If the session is not started, this method does nothing.
 #### Syntax
 
 ```php
-public function Destroy(): void
+public function Destroy(): self
 ```
+
+#### Return Value
+
+The current instance.
 
 #### Exceptions
 
