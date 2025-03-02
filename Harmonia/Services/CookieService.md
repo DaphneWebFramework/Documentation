@@ -52,4 +52,32 @@ Returns `true` if the cookie is deleted successfully. Returns `false` if the HTT
 
 ---
 
+### GenerateCookieName
+
+Generates an application-specific cookie name combined with the given
+suffix.
+
+The application name is retrieved from the configuration. If no
+application name is set, a default value is used.
+
+#### Syntax
+
+```php
+public function GenerateCookieName(string $suffix): string
+```
+
+#### Parameters
+
+- **$suffix**: The suffix to append to the application name. This value cannot be empty.
+
+#### Return Value
+
+The generated cookie name, always in uppercase and following the `{APPNAME}_{SUFFIX}` format.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If the suffix is empty.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
