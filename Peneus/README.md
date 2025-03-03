@@ -8,6 +8,7 @@
 - [Action](Api/Actions/Action.md)
 
 ### Guards
+- [SessionGuard](Api/Guards/SessionGuard.md)
 - [TokenGuard](Api/Guards/TokenGuard.md)
 
 ## Model
