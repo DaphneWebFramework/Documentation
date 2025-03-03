@@ -1,8 +1,12 @@
 # HandlerRegistry
 
+Manages the registration and retrieval of API handlers.
+
 ## Methods
 
 ### RegisterHandler
+
+Registers a handler class by name.
 
 #### Syntax
 
@@ -12,12 +16,19 @@ public function RegisterHandler(string $handlerName, string $handlerClassName): 
 
 #### Parameters
 
-- **$handlerName**
-- **$handlerClassName**
+- **$handlerName**: The unique name of the handler.
+- **$handlerClassName**: The fully qualified class name of the handler.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If the handler name is empty, already registered, or the class does not implement `IHandler`.
+- **\RuntimeException**: If the specified handler class does not exist.
 
 ---
 
 ### FindHandler
+
+Finds and returns an instance of the requested handler.
 
 #### Syntax
 
@@ -27,7 +38,11 @@ public function FindHandler(string $handlerName): ?\Peneus\Api\Handlers\IHandler
 
 #### Parameters
 
-- **$handlerName**
+- **$handlerName**: The name of the handler.
+
+#### Return Value
+
+The handler instance if found, otherwise `null`.
 
 ---
 
