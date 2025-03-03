@@ -1,6 +1,6 @@
 # AccountService
 
-Provides account-related services.
+Provides account-related utilities.
 
 ## Methods
 
