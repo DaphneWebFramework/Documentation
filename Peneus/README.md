@@ -11,9 +11,11 @@
 - [TokenGuard](Api/Guards/TokenGuard.md)
 
 ## Model
+- [Account](Model/Account.md)
 - [Entity](Model/Entity.md)
 
 ## Services
+- [AccountService](Services/AccountService.md)
 - [SecurityService](Services/SecurityService.md)
 
 ### Model
