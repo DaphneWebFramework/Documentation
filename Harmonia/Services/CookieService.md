@@ -11,13 +11,13 @@ Adds or updates a cookie.
 #### Syntax
 
 ```php
-public function SetCookie(string $name, string|false $value): bool
+public function SetCookie(string $name, string $value): bool
 ```
 
 #### Parameters
 
 - **$name**: The cookie name.
-- **$value**: The cookie value. If `false`, the cookie is deleted.
+- **$value**: The cookie value. If empty, the cookie is deleted.
 
 #### Return Value
 
@@ -29,8 +29,7 @@ Returns `true` if the cookie is set successfully. Returns `false` if the HTTP he
 
 Deletes a cookie.
 
-This is a convenience method that calls `SetCookie` with the value set to
-`false`.
+This is a convenience method that calls `SetCookie` with an empty value.
 
 #### Syntax
 

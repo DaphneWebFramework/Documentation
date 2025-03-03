@@ -64,13 +64,13 @@ Adds or updates a cookie.
 #### Syntax
 
 ```php
-public function SetCookie(string $name, string|false $value): self
+public function SetCookie(string $name, string $value): self
 ```
 
 #### Parameters
 
 - **$name**: The cookie name.
-- **$value**: The cookie value. If `false`, the cookie is deleted.
+- **$value**: The cookie value. If empty, the cookie is deleted.
 
 #### Return Value
 
@@ -81,6 +81,8 @@ The current instance.
 ### DeleteCookie
 
 Deletes a cookie.
+
+This is a convenience method that calls `SetCookie` with an empty value.
 
 #### Syntax
 
