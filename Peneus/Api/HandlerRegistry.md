@@ -21,7 +21,7 @@ public function RegisterHandler(string $handlerName, string $handlerClassName): 
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If the handler name is empty, already registered, or the class does not implement `IHandler`.
+- **\InvalidArgumentException**: If the handler name is empty, already registered, or the class does not extend the `Handler` class.
 - **\RuntimeException**: If the specified handler class does not exist.
 
 ---
@@ -33,7 +33,7 @@ Finds and returns an instance of the requested handler.
 #### Syntax
 
 ```php
-public function FindHandler(string $handlerName): ?\Peneus\Api\Handlers\IHandler
+public function FindHandler(string $handlerName): ?\Peneus\Api\Handlers\Handler
 ```
 
 #### Parameters

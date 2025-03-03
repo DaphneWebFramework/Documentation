@@ -12,6 +12,9 @@
 - [SessionGuard](Api/Guards/SessionGuard.md)
 - [TokenGuard](Api/Guards/TokenGuard.md)
 
+### Handlers
+- [Handler](Api/Handlers/Handler.md)
+
 ## Model
 - [Account](Model/Account.md)
 - [Entity](Model/Entity.md)
