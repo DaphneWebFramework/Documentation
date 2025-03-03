@@ -6,6 +6,7 @@
 
 ### Actions
 - [Action](Api/Actions/Action.md)
+- [LogoutAction](Api/Actions/LogoutAction.md)
 
 ### Guards
 - [SessionGuard](Api/Guards/SessionGuard.md)
