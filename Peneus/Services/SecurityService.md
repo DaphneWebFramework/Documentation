@@ -1,8 +1,12 @@
 # SecurityService
 
+Provides security-related utilities.
+
 ## Methods
 
 ### HashPassword
+
+Hashes a password using a secure hashing algorithm.
 
 #### Syntax
 
@@ -12,11 +16,17 @@ public function HashPassword(string $password): string
 
 #### Parameters
 
-- **$password**
+- **$password**: The plaintext password.
+
+#### Return Value
+
+The hashed password.
 
 ---
 
 ### VerifyPassword
+
+Verifies a plaintext password against a hashed password.
 
 #### Syntax
 
@@ -26,12 +36,18 @@ public function VerifyPassword(string $password, string $hash): bool
 
 #### Parameters
 
-- **$password**
-- **$hash**
+- **$password**: The plaintext password.
+- **$hash**: The hashed password for comparison.
+
+#### Return Value
+
+Returns `true` if the password matches the hash, otherwise `false`.
 
 ---
 
 ### GenerateToken
+
+Generates a cryptographically secure random token.
 
 #### Syntax
 
@@ -39,9 +55,15 @@ public function VerifyPassword(string $password, string $hash): bool
 public function GenerateToken(): string
 ```
 
+#### Return Value
+
+A 64-character hexadecimal token.
+
 ---
 
 ### GenerateCsrfToken
+
+Generates a CSRF token and its hashed cookie value.
 
 #### Syntax
 
@@ -49,9 +71,15 @@ public function GenerateToken(): string
 public function GenerateCsrfToken(): \Peneus\Services\Model\CsrfToken
 ```
 
+#### Return Value
+
+A `CsrfToken` instance containing the token and its obfuscated hash.
+
 ---
 
 ### VerifyCsrfToken
+
+Verifies whether a CSRF token matches its expected hash.
 
 #### Syntax
 
@@ -61,7 +89,11 @@ public function VerifyCsrfToken(\Peneus\Services\Model\CsrfToken $csrfToken): bo
 
 #### Parameters
 
-- **$csrfToken**
+- **$csrfToken**: The CSRF token instance to verify.
+
+#### Return Value
+
+Returns `true` if the token is valid, otherwise `false`.
 
 ---
 
