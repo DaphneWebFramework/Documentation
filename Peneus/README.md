@@ -13,6 +13,7 @@
 - [TokenGuard](Api/Guards/TokenGuard.md)
 
 ### Handlers
+- [AccountHandler](Api/Handlers/AccountHandler.md)
 - [Handler](Api/Handlers/Handler.md)
 
 ## Model
