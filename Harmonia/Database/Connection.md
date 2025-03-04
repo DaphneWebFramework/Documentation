@@ -122,4 +122,52 @@ The number of rows affected by the last modifying query. Returns `0` if no rows 
 
 ---
 
+### BeginTransaction
+
+Initiates a transaction.
+
+#### Syntax
+
+```php
+public function BeginTransaction(): void
+```
+
+#### Exceptions
+
+- **\RuntimeException**: If the transaction initiation fails.
+
+---
+
+### CommitTransaction
+
+Commits the current transaction.
+
+#### Syntax
+
+```php
+public function CommitTransaction(): void
+```
+
+#### Exceptions
+
+- **\RuntimeException**: If the transaction commit fails.
+
+---
+
+### RollbackTransaction
+
+Rolls back the current transaction.
+
+#### Syntax
+
+```php
+public function RollbackTransaction(): void
+```
+
+#### Exceptions
+
+- **\RuntimeException**: If the transaction rollback fails.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
