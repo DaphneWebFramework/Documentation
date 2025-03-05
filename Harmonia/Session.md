@@ -157,7 +157,7 @@ The current instance.
 
 #### Exceptions
 
-- **\RuntimeException**: If HTTP headers have already been sent, if obtaining the session name fails, if deleting the session cookie fails, if clearing session data fails, or if destroying the session fails.
+- **\RuntimeException**: If obtaining the session name fails, if HTTP headers have already been sent, if deleting the session cookie fails, if clearing session data fails, or if destroying the session fails.
 
 ---
 

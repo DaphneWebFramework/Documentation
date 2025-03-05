@@ -11,7 +11,7 @@ Adds or updates a cookie.
 #### Syntax
 
 ```php
-public function SetCookie(string $name, string $value): bool
+public function SetCookie(string $name, string $value): void
 ```
 
 #### Parameters
@@ -19,9 +19,9 @@ public function SetCookie(string $name, string $value): bool
 - **$name**: The cookie name.
 - **$value**: The cookie value. If empty, the cookie is deleted.
 
-#### Return Value
+#### Exceptions
 
-Returns `true` if the cookie is set successfully. Returns `false` if the HTTP headers have already been sent or if the cookie could not be set for any other reason.
+- **\RuntimeException**: If the HTTP headers have already been sent or if the cookie could not be set for any other reason.
 
 ---
 
@@ -34,16 +34,16 @@ This is a convenience method that calls `SetCookie` with an empty value.
 #### Syntax
 
 ```php
-public function DeleteCookie(string $name): bool
+public function DeleteCookie(string $name): void
 ```
 
 #### Parameters
 
 - **$name**: The cookie name.
 
-#### Return Value
+#### Exceptions
 
-Returns `true` if the cookie is deleted successfully. Returns `false` if the HTTP headers have already been sent or if the cookie could not be deleted for any other reason.
+- **\RuntimeException**: If the HTTP headers have already been sent or if the cookie could not be deleted for any other reason.
 
 #### See Also
 
@@ -58,12 +58,12 @@ Deletes the CSRF cookie.
 #### Syntax
 
 ```php
-public function DeleteCsrfCookie(): bool
+public function DeleteCsrfCookie(): void
 ```
 
-#### Return Value
+#### Exceptions
 
-Returns `true` if the CSRF cookie is deleted successfully. Returns `false` if the HTTP headers have already been sent or if the cookie could not be deleted for any other reason.
+- **\RuntimeException**: If the HTTP headers have already been sent or if the cookie could not be deleted for any other reason.
 
 ---
 
