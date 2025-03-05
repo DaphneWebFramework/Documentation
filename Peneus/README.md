@@ -22,10 +22,6 @@
 
 ## Services
 - [AccountService](Services/AccountService.md)
-- [SecurityService](Services/SecurityService.md)
-
-### Model
-- [CsrfToken](Services/Model/CsrfToken.md)
 
 ---
 
