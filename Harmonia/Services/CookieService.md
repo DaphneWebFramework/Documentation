@@ -51,7 +51,7 @@ Returns `true` if the cookie is deleted successfully. Returns `false` if the HTT
 
 ---
 
-### GenerateCookieName
+### AppSpecificCookieName
 
 Generates an application-specific cookie name combined with the given
 suffix.
@@ -62,7 +62,7 @@ application name is set, a default value is used.
 #### Syntax
 
 ```php
-public function GenerateCookieName(string $suffix): string
+public function AppSpecificCookieName(string $suffix): string
 ```
 
 #### Parameters
