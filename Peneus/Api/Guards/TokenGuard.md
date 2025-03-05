@@ -1,13 +1,15 @@
 # TokenGuard
 
-A guard that verifies a token against its hashed counterpart stored in a
-cookie, ensuring protection against session hijacking and CSRF attacks.
+A guard that verifies a token against a hash value stored in a cookie.
+
+This class ensures protection against session hijacking and CSRF attacks by
+comparing the provided token with its hashed counterpart stored in a cookie.
 
 ## Methods
 
 ### __construct
 
-Constructs a new instance.
+Constructs a new instance with the specified token and cookie name.
 
 #### Syntax
 

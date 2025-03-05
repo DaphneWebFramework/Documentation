@@ -9,6 +9,7 @@
 - [LogoutAction](Api/Actions/LogoutAction.md)
 
 ### Guards
+- [FormTokenGuard](Api/Guards/FormTokenGuard.md)
 - [SessionGuard](Api/Guards/SessionGuard.md)
 - [TokenGuard](Api/Guards/TokenGuard.md)
 
