@@ -51,6 +51,22 @@ Returns `true` if the cookie is deleted successfully. Returns `false` if the HTT
 
 ---
 
+### DeleteCsrfCookie
+
+Deletes the CSRF cookie.
+
+#### Syntax
+
+```php
+public function DeleteCsrfCookie(): bool
+```
+
+#### Return Value
+
+Returns `true` if the CSRF cookie is deleted successfully. Returns `false` if the HTTP headers have already been sent or if the cookie could not be deleted for any other reason.
+
+---
+
 ### AppSpecificCookieName
 
 Generates an application-specific cookie name combined with the given
@@ -76,6 +92,22 @@ The generated cookie name, always in uppercase and following the `{APPNAME}_{SUF
 #### Exceptions
 
 - **\InvalidArgumentException**: If the suffix is empty.
+
+---
+
+### CsrfCookieName
+
+Retrieves the CSRF cookie name.
+
+#### Syntax
+
+```php
+public function CsrfCookieName(): string
+```
+
+#### Return Value
+
+The CSRF cookie name.
 
 ---
 
