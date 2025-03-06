@@ -6,6 +6,7 @@
 
 ### Actions
 - [Action](Api/Actions/Action.md)
+- [LoginAction](Api/Actions/LoginAction.md)
 - [LogoutAction](Api/Actions/LogoutAction.md)
 
 ### Guards
