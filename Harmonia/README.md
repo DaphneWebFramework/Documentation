@@ -47,6 +47,9 @@
 ## Shutdown
 - [ShutdownHandler](Shutdown/ShutdownHandler.md)
 
+## Validation
+- [NativeFunctions](Validation/NativeFunctions.md)
+
 ---
 
 *This documentation index was automatically generated.*
