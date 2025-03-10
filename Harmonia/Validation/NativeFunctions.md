@@ -1,5 +1,10 @@
 # NativeFunctions
 
+Provides thin wrappers for native PHP functions to validate various data types.
+
+This ensures a unified interface for validation while keeping logic minimal
+and testable, without adding extra behavior beyond the underlying PHP functions.
+
 ## Methods
 
 ### IsNumeric
