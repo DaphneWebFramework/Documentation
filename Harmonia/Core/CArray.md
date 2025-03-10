@@ -172,6 +172,66 @@ The current instance.
 
 ---
 
+### ApplyInPlace
+
+Applies a function to the current value.
+
+This version of the method directly modifies the current instance.
+
+#### Syntax
+
+```php
+public function ApplyInPlace(callable $function, mixed ...$args): self
+```
+
+#### Parameters
+
+- **$function**: The function to apply to the current value. It must accept an array as its first parameter. Any additional arguments passed to this method will be forwarded to the applied function.
+- **$args**: Additional arguments to pass to the applied function.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\UnexpectedValueException**: If the applied function returns a value that is not an array.
+
+#### See Also
+
+- [`Apply`](#Apply)
+
+---
+
+### Apply
+
+Applies a function to the current value.
+
+#### Syntax
+
+```php
+public function Apply(callable $function, mixed ...$args): \Harmonia\Core\CArray
+```
+
+#### Parameters
+
+- **$function**: The function to apply to the current value. It must accept an array as its first parameter. Any additional arguments passed to this method will be forwarded to the applied function.
+- **$args**: Additional arguments to pass to the applied function.
+
+#### Return Value
+
+A new `CArray` instance containing the result of the applied function.
+
+#### Exceptions
+
+- **\UnexpectedValueException**: If the applied function returns a value that is not an array.
+
+#### See Also
+
+- [`ApplyInPlace`](#ApplyInPlace)
+
+---
+
 ### offsetExists
 
 Provides array-like access to check if a value exists at a given key.
