@@ -23,7 +23,7 @@ Opens a file and returns a new `CFile` instance.
 #### Syntax
 
 ```php
-public static function Open(string $filename, string $mode = self::MODE_READ): ?\Harmonia\Core\CFile
+public static function Open(string|\Stringable $filename, string $mode = self::MODE_READ): ?\Harmonia\Core\CFile
 ```
 
 #### Parameters
