@@ -200,8 +200,7 @@ The current instance.
 
 Inserts the specified string at the beginning.
 
-This version of the method directly modifies the current instance,
-instead of creating and returning a new one.
+This version of the method directly modifies the current instance.
 
 #### Syntax
 
@@ -253,8 +252,7 @@ A new `CString` instance with the string prepended.
 
 Inserts the specified string at the end.
 
-This version of the method directly modifies the current instance,
-instead of creating and returning a new one.
+This version of the method directly modifies the current instance.
 
 #### Syntax
 
@@ -422,8 +420,7 @@ A new `CString` instance with the specified middle characters, or an empty insta
 
 Trims whitespace or specified characters from both sides of the string.
 
-This version of the method directly modifies the current instance,
-instead of creating and returning a new one.
+This version of the method directly modifies the current instance.
 
 #### Syntax
 
@@ -486,8 +483,7 @@ A new `CString` instance with the trimmed string.
 Trims whitespace or specified characters from the start (left) of the
 string.
 
-This version of the method directly modifies the current instance,
-instead of creating and returning a new one.
+This version of the method directly modifies the current instance.
 
 #### Syntax
 
@@ -551,8 +547,7 @@ A new `CString` instance with the trimmed string.
 Trims whitespace or specified characters from the end (right) of the
 string.
 
-This version of the method directly modifies the current instance,
-instead of creating and returning a new one.
+This version of the method directly modifies the current instance.
 
 #### Syntax
 
@@ -615,8 +610,7 @@ A new `CString` instance with the trimmed string.
 
 Converts to lowercase.
 
-This version of the method directly modifies the current instance,
-instead of creating and returning a new one.
+This version of the method directly modifies the current instance.
 
 #### Syntax
 
@@ -668,8 +662,7 @@ A new `CString` instance with all characters converted to lowercase.
 
 Converts to uppercase.
 
-This version of the method directly modifies the current instance,
-instead of creating and returning a new one.
+This version of the method directly modifies the current instance.
 
 #### Syntax
 
@@ -831,8 +824,7 @@ The zero-based offset of the search string, or `null` if not found.
 Replaces all occurrences of a specified search string with a replacement
 string.
 
-This version of the method directly modifies the current instance,
-instead of creating and returning a new one.
+This version of the method directly modifies the current instance.
 
 #### Syntax
 
@@ -957,10 +949,9 @@ An array of `CString` instances for each substring.
 
 ### ApplyInPlace
 
-Applies a callable function to the current value.
+Applies a function to the current value.
 
-This version of the method directly modifies the current instance,
-instead of creating and returning a new one.
+This version of the method directly modifies the current instance.
 
 #### Syntax
 
@@ -970,12 +961,16 @@ public function ApplyInPlace(callable $function, mixed ...$args): self
 
 #### Parameters
 
-- **$function**: The function to apply to the current value. The function must accept a `string` as its first parameter. Any additional arguments passed to this method will be forwarded to the callable.
-- **$args**: Additional arguments to pass to the callable.
+- **$function**: The function to apply to the current value. It must accept a string as its first parameter. Any additional arguments passed to this method will be forwarded to the applied function.
+- **$args**: Additional arguments to pass to the applied function.
 
 #### Return Value
 
 The current instance.
+
+#### Exceptions
+
+- **\UnexpectedValueException**: If the applied function returns a value that is not a string.
 
 #### See Also
 
@@ -985,7 +980,7 @@ The current instance.
 
 ### Apply
 
-Applies a callable function to the current value.
+Applies a function to the current value.
 
 #### Syntax
 
@@ -995,12 +990,16 @@ public function Apply(callable $function, mixed ...$args): \Harmonia\Core\CStrin
 
 #### Parameters
 
-- **$function**: The function to apply to the current value. The function must accept a `string` as its first parameter. Any additional arguments passed to this method will be forwarded to the callable.
-- **$args**: Additional arguments to pass to the callable.
+- **$function**: The function to apply to the current value. It must accept a string as its first parameter. Any additional arguments passed to this method will be forwarded to the applied function.
+- **$args**: Additional arguments to pass to the applied function.
 
 #### Return Value
 
-A new `CString` instance containing the result of the callable.
+A new `CString` instance containing the result of the applied function.
+
+#### Exceptions
+
+- **\UnexpectedValueException**: If the applied function returns a value that is not a string.
 
 #### See Also
 
