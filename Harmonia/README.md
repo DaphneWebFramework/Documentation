@@ -52,6 +52,7 @@
 - [DataAccessor](Validation/DataAccessor.md)
 - [Messages](Validation/Messages.md)
 - [NativeFunctions](Validation/NativeFunctions.md)
+- [RuleFactory](Validation/RuleFactory.md)
 - [RuleParser](Validation/RuleParser.md)
 
 ### Rules
