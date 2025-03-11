@@ -1,0 +1,75 @@
+# DataAccessor
+
+Provides access to structured data, supporting nested field resolution.
+
+## Methods
+
+### __construct
+
+Constructs a new instance with structured data.
+
+#### Syntax
+
+```php
+public function __construct(array|object $data)
+```
+
+#### Parameters
+
+- **$data**: The data to be accessed, either as an associative array or an object.
+
+---
+
+### HasField
+
+Checks if the specified field exists in the data.
+
+Supports nested fields using dot notation (e.g., `'user.profile.name'`).
+
+#### Syntax
+
+```php
+public function HasField(int|string $field): bool
+```
+
+#### Parameters
+
+- **$field**: The field name or index to check.
+
+#### Return Value
+
+Returns `true` if the field exists, `false` otherwise.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If the field name is neither a string nor an integer.
+
+---
+
+### GetField
+
+Retrieves the value of the specified field.
+
+Supports nested fields using dot notation (e.g., `'user.profile.name'`).
+
+#### Syntax
+
+```php
+public function GetField(int|string $field): mixed
+```
+
+#### Parameters
+
+- **$field**: The field name or index to retrieve.
+
+#### Return Value
+
+Returns the value of the field.
+
+#### Exceptions
+
+- **\RuntimeException**: If the field does not exist.
+
+---
+
+*This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*

@@ -49,6 +49,7 @@
 - [ShutdownHandler](Shutdown/ShutdownHandler.md)
 
 ## Validation
+- [DataAccessor](Validation/DataAccessor.md)
 - [Messages](Validation/Messages.md)
 - [NativeFunctions](Validation/NativeFunctions.md)
 - [RuleParser](Validation/RuleParser.md)

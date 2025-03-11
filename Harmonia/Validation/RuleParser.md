@@ -11,7 +11,7 @@ Parses a rule string into its name and optional parameter.
 #### Syntax
 
 ```php
-public static function Parse(string $rule): array{: string, : ?string}
+public static function Parse(string $rule): array<int,?string>
 ```
 
 #### Parameters
@@ -20,7 +20,7 @@ public static function Parse(string $rule): array{: string, : ?string}
 
 #### Return Value
 
-The first element is the rule name. The second element is the optional rule parameter (`null` if absent).
+A tuple where the first element is the rule name and the second is the optional rule parameter (`null` if absent).
 
 #### Exceptions
 
