@@ -29,7 +29,7 @@ Supports nested fields using dot notation (e.g., `'user.profile.name'`).
 #### Syntax
 
 ```php
-public function HasField(int|string $field): bool
+public function HasField(string|int $field): bool
 ```
 
 #### Parameters
@@ -39,10 +39,6 @@ public function HasField(int|string $field): bool
 #### Return Value
 
 Returns `true` if the field exists, `false` otherwise.
-
-#### Exceptions
-
-- **\InvalidArgumentException**: If the field name is neither a string nor an integer.
 
 ---
 
@@ -55,7 +51,7 @@ Supports nested fields using dot notation (e.g., `'user.profile.name'`).
 #### Syntax
 
 ```php
-public function GetField(int|string $field): mixed
+public function GetField(string|int $field): mixed
 ```
 
 #### Parameters

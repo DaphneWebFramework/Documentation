@@ -54,6 +54,21 @@
 - [NativeFunctions](Validation/NativeFunctions.md)
 - [RuleParser](Validation/RuleParser.md)
 
+### Rules
+- [ArrayRule](Validation/Rules/ArrayRule.md)
+- [DatetimeRule](Validation/Rules/DatetimeRule.md)
+- [EmailRule](Validation/Rules/EmailRule.md)
+- [FileRule](Validation/Rules/FileRule.md)
+- [IntegerRule](Validation/Rules/IntegerRule.md)
+- [MaxRule](Validation/Rules/MaxRule.md)
+- [MaxlengthRule](Validation/Rules/MaxlengthRule.md)
+- [MinRule](Validation/Rules/MinRule.md)
+- [MinlengthRule](Validation/Rules/MinlengthRule.md)
+- [NumericRule](Validation/Rules/NumericRule.md)
+- [RegexRule](Validation/Rules/RegexRule.md)
+- [Rule](Validation/Rules/Rule.md)
+- [StringRule](Validation/Rules/StringRule.md)
+
 ---
 
 *This documentation index was automatically generated.*
