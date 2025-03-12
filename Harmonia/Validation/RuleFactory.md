@@ -28,7 +28,7 @@ Returns the rule object associated with the given name, or `null` if the rule do
 
 #### Exceptions
 
-- **\InvalidArgumentException**: When the provided rule name is an empty string.
+- **\AssertionError**: If the rule name is empty, contains leading or trailing spaces, or contains uppercase letters.
 
 ---
 
