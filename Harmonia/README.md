@@ -55,6 +55,7 @@
 - [NativeFunctions](Validation/NativeFunctions.md)
 - [RuleFactory](Validation/RuleFactory.md)
 - [RuleParser](Validation/RuleParser.md)
+- [Validator](Validation/Validator.md)
 
 ### MetaRules
 - [CustomMetaRule](Validation/MetaRules/CustomMetaRule.md)

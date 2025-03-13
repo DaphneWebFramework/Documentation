@@ -23,7 +23,7 @@ public function __construct(string|int $field, \Harmonia\Validation\MetaRules\IM
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If a `requiredWithout` rule is defined without a field name.
+- **\InvalidArgumentException**: If a `requiredWithout` rule is defined without a field name, or if the field references itself as a `requiredWithout` field.
 
 ---
 
