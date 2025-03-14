@@ -16,7 +16,7 @@ public function __construct(array|object $data)
 
 #### Parameters
 
-- **$data**: The data to be accessed, either as an associative array or an object.
+- **$data**: The data to be accessed, either as an associative array or an object. If the data is an instance of `CArray`, it is converted to an array.
 
 ---
 
