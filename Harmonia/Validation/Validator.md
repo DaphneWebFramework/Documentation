@@ -58,12 +58,16 @@ Validates the provided data against the compiled rules.
 #### Syntax
 
 ```php
-public function Validate(array|object $data): void
+public function Validate(array|object $data): \Harmonia\Validation\DataAccessor
 ```
 
 #### Parameters
 
-- **$data**: The data to validate, provided as an array or an object.
+- **$data**: The data to validate, provided as an array or an object. If the data is an instance of `CArray`, it is converted to an array.
+
+#### Return Value
+
+Returns a data accessor object that provides access to the validated data fields.
 
 #### Exceptions
 
