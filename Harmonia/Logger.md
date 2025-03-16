@@ -10,6 +10,8 @@ Logging behavior is controlled via configuration:
   - `1`: Logs only error messages.
   - `2`: Logs warnings and errors.
   - `3`: Logs info, warnings, and errors.
+- `IsDebug`: Enables debug mode. When `true`, debug messages are logged
+  regardless of `LogLevel`.
 
 #### Examples
 
@@ -34,8 +36,9 @@ Logger::Instance()->Info(fn() => heavyComputation());
 
 Logs a debug message.
 
-Debug messages are logged only if the `IsDebug` configuration option is
-enabled.
+This method writes a log entry when the `IsDebug` configuration option
+is enabled. Unlike other log methods, the configured `LogLevel` does not
+affect debug messages.
 
 #### Syntax
 
@@ -53,6 +56,9 @@ public function Debug(string|callable $message): void
 
 Logs an informational message.
 
+This method writes a log entry when the configured `LogLevel` is set to
+`LEVEL_INFO` (3).
+
 #### Syntax
 
 ```php
@@ -69,6 +75,9 @@ public function Info(string|callable $message): void
 
 Logs a warning message.
 
+This method writes a log entry when the configured `LogLevel` is set to
+`LEVEL_WARNING` (2) or higher.
+
 #### Syntax
 
 ```php
@@ -84,6 +93,9 @@ public function Warning(string|callable $message): void
 ### Error
 
 Logs an error message.
+
+This method writes a log entry when the configured `LogLevel` is set to
+`LEVEL_ERROR` (1) or higher.
 
 #### Syntax
 
