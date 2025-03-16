@@ -13,16 +13,41 @@ Logging behavior is controlled via configuration:
 
 #### Examples
 
+Logging a debug message (effective only in debug mode):
 ```php
-Logger::Instance()->Info('Application started.');
+Logger::Instance()->Debug("Fetching user data for ID: {$userId}");
 ```
 
-Avoids unnecessary computation in case logging is disabled:
+Logging an error:
+```php
+Logger::Instance()->Error('Database connection failed.');
+```
+
+Avoiding unnecessary computation in case logging is disabled:
 ```php
 Logger::Instance()->Info(fn() => heavyComputation());
 ```
 
 ## Methods
+
+### Debug
+
+Logs a debug message.
+
+Debug messages are logged only if the `IsDebug` configuration option is
+enabled.
+
+#### Syntax
+
+```php
+public function Debug(string|callable $message): void
+```
+
+#### Parameters
+
+- **$message**: The debug message to log, or a callable returning the message.
+
+---
 
 ### Info
 
