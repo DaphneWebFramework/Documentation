@@ -1,5 +1,6 @@
 # Harmonia
 - [Config](Config.md)
+- [Logger](Logger.md)
 - [Resource](Resource.md)
 - [Server](Server.md)
 - [Session](Session.md)
