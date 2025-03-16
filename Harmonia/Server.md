@@ -109,4 +109,20 @@ A `CArray` instance where the keys are formatted header names and the values are
 
 ---
 
+### ClientAddress
+
+Retrieves the client's IP address.
+
+#### Syntax
+
+```php
+public function ClientAddress(): string
+```
+
+#### Return Value
+
+The client's IP address.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
