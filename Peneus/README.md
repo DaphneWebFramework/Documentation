@@ -1,4 +1,5 @@
 # Peneus
+- [Resource](Resource.md)
 - [Translation](Translation.md)
 
 ## Api
