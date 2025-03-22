@@ -4,11 +4,11 @@ Represents a web page and manages its basic properties and rendering flow.
 
 #### Example
 ```php
+<?php
 require '../../bootstrap.php';
 
 use \Peneus\Systems\PageSystem\Page;
 
-<?php
 $page = (new Page)
     ->SetTitle('Home')
     ->SetMasterPage('basic');
@@ -50,7 +50,7 @@ public function SetTitle(string $title): self
 
 #### Parameters
 
-- **$title**: The title of the page. It will be substituted into the title template when the final title is retrieved.
+- **$title**: The title of the page. It will be substituted into the title template when the final page title is generated.
 
 #### Return Value
 
@@ -118,8 +118,8 @@ The returned string is produced by substituting the title (set via
 `SetTitle`) and the application name (retrieved from configuration)
 into the title template (set via `SetTitleTemplate`).
 
-If the application name is empty, only the title is returned.
-If the title is empty, only the application name is returned.
+If the application name is empty, only the title is returned. If the
+title is empty, only the application name is returned.
 
 #### Syntax
 
@@ -129,7 +129,7 @@ public function Title(): string
 
 #### Return Value
 
-The generated title string.
+The generated page title.
 
 #### See Also
 
