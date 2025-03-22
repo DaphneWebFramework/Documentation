@@ -27,6 +27,12 @@
 ## Services
 - [AccountService](Services/AccountService.md)
 
+## Systems
+
+### PageSystem
+- [Page](Systems/PageSystem/Page.md)
+- [Renderer](Systems/PageSystem/Renderer.md)
+
 ---
 
 *This documentation index was automatically generated.*
