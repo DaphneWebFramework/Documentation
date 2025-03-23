@@ -78,4 +78,36 @@ The absolute path to the masterpage file.
 
 ---
 
+### FrontendDirectoryPath
+
+Returns the absolute path to the frontend directory.
+
+#### Syntax
+
+```php
+public function FrontendDirectoryPath(): \Harmonia\Core\CPath
+```
+
+#### Return Value
+
+The absolute path to the frontend directory.
+
+---
+
+### FrontendLibrariesManifestFilePath
+
+Returns the absolute path to the frontend libraries manifest file.
+
+#### Syntax
+
+```php
+public function FrontendLibrariesManifestFilePath(): \Harmonia\Core\CPath
+```
+
+#### Return Value
+
+The absolute path to the frontend libraries manifest file.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
