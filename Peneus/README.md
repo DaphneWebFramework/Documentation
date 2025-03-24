@@ -30,6 +30,8 @@
 ## Systems
 
 ### PageSystem
+- [LibraryItem](Systems/PageSystem/LibraryItem.md)
+- [LibraryManifest](Systems/PageSystem/LibraryManifest.md)
 - [Page](Systems/PageSystem/Page.md)
 - [Renderer](Systems/PageSystem/Renderer.md)
 

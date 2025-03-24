@@ -94,19 +94,19 @@ The absolute path to the frontend directory.
 
 ---
 
-### FrontendLibrariesManifestFilePath
+### FrontendManifestFilePath
 
-Returns the absolute path to the frontend libraries manifest file.
+Returns the absolute path to the frontend manifest file.
 
 #### Syntax
 
 ```php
-public function FrontendLibrariesManifestFilePath(): \Harmonia\Core\CPath
+public function FrontendManifestFilePath(): \Harmonia\Core\CPath
 ```
 
 #### Return Value
 
-The absolute path to the frontend libraries manifest file.
+The absolute path to the frontend manifest file.
 
 ---
 
