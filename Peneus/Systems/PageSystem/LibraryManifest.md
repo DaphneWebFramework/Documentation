@@ -51,43 +51,39 @@ public function __construct()
 
 #### Exceptions
 
-- **\RuntimeException**: If the file cannot be read or contains invalid structure.
+- **\RuntimeException**: If the file cannot be opened, read, decoded, or validated.
 
 ---
 
-### Get
+### Items
 
-Retrieves a library item by name.
+Returns all libraries defined in the manifest.
 
 #### Syntax
 
 ```php
-public function Get(string $name): ?\Peneus\Systems\PageSystem\LibraryItem
+public function Items(): \Harmonia\Core\CArray
 ```
-
-#### Parameters
-
-- **$name**: The name of the library.
 
 #### Return Value
 
-The matching `LibraryItem`, or `null` if not found.
+An array of library names mapped to `LibraryItem` instances. The items are ordered according to their declaration in the manifest file.
 
 ---
 
 ### Defaults
 
-Retrieves all library items marked as default.
+Returns the names of libraries marked as default in the manifest.
 
 #### Syntax
 
 ```php
-public function Defaults(): \Harmonia\Core\CArray<string,\Peneus\Systems\PageSystem\LibraryItem>
+public function Defaults(): \Harmonia\Core\CSequentialArray
 ```
 
 #### Return Value
 
-A new `CArray` containing `LibraryItem` instances which are marked as default in the manifest.
+A sequential array of library names.
 
 ---
 
