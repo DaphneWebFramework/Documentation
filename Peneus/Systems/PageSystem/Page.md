@@ -276,6 +276,9 @@ manifest or explicitly added using `AddLibrary`, and not removed using
 `RemoveLibrary`. The libraries are returned in the order they appear in
 the manifest.
 
+> This method is intended to support the renderer and is typically not
+required in page-level code.
+
 #### Syntax
 
 ```php

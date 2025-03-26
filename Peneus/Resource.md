@@ -34,7 +34,7 @@ The result of the delegated method call.
 
 #### Exceptions
 
-- **\BadMethodCallException**: If the method does not exist on the base resource.
+- **\Error**: If the method does not exist on the base resource.
 
 ---
 
