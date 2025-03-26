@@ -92,4 +92,27 @@ A generator yielding the paths of matching files as strings.
 
 ---
 
+### ModificationTime
+
+Returns the last modification time of a file or directory.
+
+This method clears the stat cache for the given path before retrieving
+the timestamp.
+
+#### Syntax
+
+```php
+public function ModificationTime(string|\Stringable $path): int
+```
+
+#### Parameters
+
+- **$path**: The path to the file or directory.
+
+#### Return Value
+
+The UNIX timestamp of the last modification, or `0` if unavailable.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
