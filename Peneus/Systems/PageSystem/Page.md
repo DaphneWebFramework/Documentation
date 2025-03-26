@@ -11,7 +11,8 @@ use \Peneus\Systems\PageSystem\Page;
 
 $page = (new Page)
     ->SetTitle('Home')
-    ->SetMasterPage('basic');
+    ->SetMasterPage('basic')
+    ->AddLibrary('dataTables');
 ?>
 
 <?php $page->Begin()?>
@@ -29,12 +30,13 @@ Constructs a new instance.
 #### Syntax
 
 ```php
-public function __construct(?\Peneus\Systems\PageSystem\Renderer $renderer = null)
+public function __construct(?\Peneus\Systems\PageSystem\Renderer $renderer = null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = null)
 ```
 
 #### Parameters
 
 - **$renderer**: (Optional) The renderer to use. If not specified, a default instance is created.
+- **$libraryManager**: (Optional) The library manager to use. If not specified, a default instance is created.
 
 ---
 
@@ -195,6 +197,94 @@ Ends content capture and renders the page.
 ```php
 public function End(): void
 ```
+
+---
+
+### AddLibrary
+
+Adds a library to the list of libraries to be included in the page.
+
+#### Syntax
+
+```php
+public function AddLibrary(string $libraryName): self
+```
+
+#### Parameters
+
+- **$libraryName**: The name of the library to add.
+
+#### Return Value
+
+The current instance.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If the library name does not exist in the manifest.
+
+---
+
+### RemoveLibrary
+
+Removes a library from the set of included libraries.
+
+This method can be used to exclude libraries that were automatically
+included by default, or to undo a manual addition. If the library is
+not currently included, the method does nothing.
+
+#### Syntax
+
+```php
+public function RemoveLibrary(string $libraryName): self
+```
+
+#### Parameters
+
+- **$libraryName**: The name of the library to remove.
+
+#### Return Value
+
+The current instance.
+
+---
+
+### RemoveAllLibraries
+
+Removes all included libraries.
+
+This method can be used to exclude all libraries that were automatically
+included by default, as well as any that were added manually.
+
+#### Syntax
+
+```php
+public function RemoveAllLibraries(): self
+```
+
+#### Return Value
+
+The current instance.
+
+---
+
+### IncludedLibraries
+
+Returns the list of libraries to be included in the page.
+
+This list consists of all libraries that were marked as default in the
+manifest or explicitly added using `AddLibrary`, and not removed using
+`RemoveLibrary`. The libraries are returned in the order they appear in
+the manifest.
+
+#### Syntax
+
+```php
+public function IncludedLibraries(): \Harmonia\Core\CSequentialArray
+```
+
+#### Return Value
+
+A list of `LibraryItem` instances.
 
 ---
 

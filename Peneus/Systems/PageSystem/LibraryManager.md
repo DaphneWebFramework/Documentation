@@ -51,8 +51,8 @@ public function Add(string $name): void
 Removes a library from the set of included libraries.
 
 This method can be used to exclude libraries that were automatically
-included by default, or to undo a manual addition. If the library is not
-currently included, the method does nothing.
+included by default, or to undo a manual addition. If the library is
+not currently included, the method does nothing.
 
 #### Syntax
 
@@ -66,9 +66,9 @@ public function Remove(string $name): void
 
 ---
 
-### Clear
+### RemoveAll
 
-Clears all libraries from the set of included libraries.
+Removes all included libraries.
 
 This method can be used to exclude all libraries that were automatically
 included by default, as well as any that were added manually.
@@ -76,14 +76,14 @@ included by default, as well as any that were added manually.
 #### Syntax
 
 ```php
-public function Clear(): void
+public function RemoveAll(): void
 ```
 
 ---
 
 ### Included
 
-Returns the list of libraries to be included in a web page.
+Returns the list of libraries to be included in the page.
 
 This list consists of all libraries that were marked as default in the
 manifest or explicitly added using `Add`, and not removed using `Remove`.
@@ -97,7 +97,7 @@ public function Included(): \Harmonia\Core\CSequentialArray
 
 #### Return Value
 
-A list of `LibraryItem` instances to be included in the page, in the same order as declared in the manifest.
+A list of `LibraryItem` instances.
 
 ---
 
