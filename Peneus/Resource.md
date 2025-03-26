@@ -78,22 +78,6 @@ The absolute path to the masterpage file.
 
 ---
 
-### FrontendDirectoryPath
-
-Returns the absolute path to the frontend directory.
-
-#### Syntax
-
-```php
-public function FrontendDirectoryPath(): \Harmonia\Core\CPath
-```
-
-#### Return Value
-
-The absolute path to the frontend directory.
-
----
-
 ### FrontendManifestFilePath
 
 Returns the absolute path to the frontend manifest file.
@@ -107,6 +91,27 @@ public function FrontendManifestFilePath(): \Harmonia\Core\CPath
 #### Return Value
 
 The absolute path to the frontend manifest file.
+
+---
+
+### FrontendLibraryFileUrl
+
+Returns the URL to a frontend library file, with a cache buster query
+parameter based on the file's modification time.
+
+#### Syntax
+
+```php
+public function FrontendLibraryFileUrl(string $relativePath): string
+```
+
+#### Parameters
+
+- **$relativePath**: The path relative to the frontend directory (e.g. 'bootstrap/css/bootstrap').
+
+#### Return Value
+
+The absolute URL to the asset, with cache-busting query if the file exists.
 
 ---
 
