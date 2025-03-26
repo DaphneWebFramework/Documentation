@@ -5,6 +5,19 @@ masterpage.
 
 ## Methods
 
+### __construct
+
+Constructs a new instance by initializing the configuration, resource,
+and logger.
+
+#### Syntax
+
+```php
+public function __construct()
+```
+
+---
+
 ### Render
 
 Renders the complete page output.
