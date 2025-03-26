@@ -127,8 +127,7 @@ The application URL.
 
 ### AppSubdirectoryPath
 
-Returns the absolute path to the specified subdirectory within the app
-directory.
+Returns the absolute path to a subdirectory under the application root.
 
 #### Syntax
 
@@ -143,6 +142,26 @@ public function AppSubdirectoryPath(string $subdirectory): \Harmonia\Core\CPath
 #### Return Value
 
 The absolute path to the subdirectory.
+
+---
+
+### AppSubdirectoryUrl
+
+Returns the absolute URL to a subdirectory under the application root.
+
+#### Syntax
+
+```php
+public function AppSubdirectoryUrl(string $subdirectory): \Harmonia\Core\CUrl
+```
+
+#### Parameters
+
+- **$subdirectory**: The name of the subdirectory.
+
+#### Return Value
+
+The URL to the subdirectory.
 
 ---
 
