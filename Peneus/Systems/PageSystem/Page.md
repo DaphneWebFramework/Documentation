@@ -5,7 +5,7 @@ Represents a web page and manages its basic properties and rendering flow.
 #### Example
 ```php
 <?php
-require '../../bootstrap.php';
+require '../../autoload.php';
 
 use \Peneus\Systems\PageSystem\Page;
 
