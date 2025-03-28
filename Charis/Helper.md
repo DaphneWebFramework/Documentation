@@ -13,14 +13,14 @@ mutually exclusive class groups.
 #### Syntax
 
 ```php
-public static function MergeAttributes(array<string,bool|int|float|string> $defaultAttributes, array<string,bool|int|float|string>|null $userAttributes = null, string[] $mutuallyExclusiveClassGroups = []): array<string,bool|int|float|string>
+public static function MergeAttributes(array<string,bool|int|float|string>|null $userAttributes, array<string,bool|int|float|string> $defaultAttributes, string[] $mutuallyExclusiveClassGroups): array<string,bool|int|float|string>
 ```
 
 #### Parameters
 
+- **$userAttributes**: Attributes provided by the user.
 - **$defaultAttributes**: Default attributes defined by the component.
-- **$userAttributes**: (Optional) Attributes provided by the user.
-- **$mutuallyExclusiveClassGroups**: (Optional) Mutually exclusive class groups to resolve conflicts.
+- **$mutuallyExclusiveClassGroups**: Mutually exclusive class groups to resolve conflicts.
 
 #### Return Value
 
