@@ -7,24 +7,25 @@ and its subclasses.
 
 ### MergeAttributes
 
-Resolves attributes by merging defaults, resolving classes, and handling
-mutually exclusive class groups.
+Merges user-provided attributes with default attributes, resolving the
+`class` attribute if present and eliminating conflicts using mutually
+exclusive class groups.
 
 #### Syntax
 
 ```php
-public static function MergeAttributes(array<string,bool|int|float|string>|null $userAttributes, array<string,bool|int|float|string> $defaultAttributes, string[] $mutuallyExclusiveClassGroups): array<string,bool|int|float|string>
+public static function MergeAttributes(array<string,bool|int|float|string>|null $userAttributes, array<string,bool|int|float|string> $defaultAttributes, array<int,string> $mutuallyExclusiveClassGroups): array<string,bool|int|float|string>
 ```
 
 #### Parameters
 
-- **$userAttributes**: Attributes provided by the user.
+- **$userAttributes**: Attributes provided by the user. May be `null`.
 - **$defaultAttributes**: Default attributes defined by the component.
-- **$mutuallyExclusiveClassGroups**: Mutually exclusive class groups to resolve conflicts.
+- **$mutuallyExclusiveClassGroups**: Mutually exclusive class groups to resolve conflicts. Each group is a space-separated class names where only one class should survive.
 
 #### Return Value
 
-Resolved attributes ready for rendering.
+Final resolved attributes, suitable for rendering.
 
 ---
 
