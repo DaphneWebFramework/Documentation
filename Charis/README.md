@@ -3,12 +3,15 @@
 - [ButtonGroup](ButtonGroup.md)
 - [ButtonToolbar](ButtonToolbar.md)
 - [Component](Component.md)
+- [Container](Container.md)
 - [FormCheckLabel](FormCheckLabel.md)
 - [FormHelpText](FormHelpText.md)
 - [FormLabel](FormLabel.md)
 - [Generic](Generic.md)
 - [Helper](Helper.md)
 - [Label](Label.md)
+- [Navbar](Navbar.md)
+- [NavbarBrand](NavbarBrand.md)
 
 ## FormComposites
 - [FormCheck](FormComposites/FormCheck.md)
