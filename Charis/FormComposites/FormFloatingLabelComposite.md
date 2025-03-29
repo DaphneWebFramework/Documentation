@@ -16,12 +16,12 @@ Constructs a new instance.
 #### Syntax
 
 ```php
-public function __construct(array<string,bool|int|float|string>|null $attributes = null)
+public function __construct(?array<string,mixed> $attributes = null)
 ```
 
 #### Parameters
 
-- **$attributes**: (Optional) An associative array where HTML attributes apply to the wrapper element, and pseudo attributes configure inner child elements.
+- **$attributes**: (Optional) An associative array where standard HTML attributes apply to the wrapper element, and pseudo attributes configure inner components. Pass `null` or an empty array to indicate no attributes. Defaults to `null`.
 
 ---
 

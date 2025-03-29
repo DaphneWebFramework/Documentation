@@ -20,13 +20,13 @@ Constructs a new instance.
 #### Syntax
 
 ```php
-public function __construct(array<string,bool|int|float|string>|null $attributes = null, string|\Charis\Component|(string|\Charis\Component)[]|null $content = null)
+public function __construct(?array<string,mixed> $attributes = null, string|\Charis\Component|(string|\Charis\Component)[]|null $content = null)
 ```
 
 #### Parameters
 
-- **$attributes**: (Optional) An associative array of HTML attributes, where keys are attribute names and values can be scalar types (`bool`, `int`, `float`, or `string`). Pass `null` or an empty array to indicate no attributes. Defaults to `null`.
-- **$content**: (Optional) The content of the component, which can be a string, a single `Component` instance, an array of strings and `Component` instances, or `null` for no content. Defaults to `null`.
+- **$attributes**: (Optional) An associative array of HTML attributes, where keys are attribute names and values can be of type `bool`, `int`, `float`, `string`, or `Stringable`. Pass `null` or an empty array to indicate no attributes. Defaults to `null`.
+- **$content**: (Optional) The content or child elements of the component. This can be a string, a `Component` instance, an array of strings and `Component` instances, or `null` for no content. Defaults to `null`.
 
 ---
 
