@@ -7,9 +7,16 @@ and its subclasses.
 
 ### MergeAttributes
 
-Merges user-provided attributes with default attributes, resolving the
-`class` attribute if present and eliminating conflicts using mutually
-exclusive class groups.
+Merges user-provided attributes with default attributes, producing a
+final set of HTML attributes suitable for rendering.
+
+If the `class` attribute is present, its values from both sources
+are combined. When a mutually exclusive class group is defined
+(e.g., `'btn-primary btn-secondary btn-success'`), only one class
+from the group will be retained. User-supplied negative class directives
+(e.g., `-btn-primary`) remove matching classes from the default list.
+Additionally, if the user provides `false` as the class value, the entire
+class attribute is removed from the result, overriding any default.
 
 #### Syntax
 
