@@ -115,4 +115,24 @@ The absolute URL to the asset, with cache-busting query if the file exists.
 
 ---
 
+### PageUrl
+
+Returns the URL to a page directory.
+
+#### Syntax
+
+```php
+public function PageUrl(string $pageName): \Harmonia\Core\CUrl
+```
+
+#### Parameters
+
+- **$pageName**: The name of the page directory.
+
+#### Return Value
+
+The URL to the page directory with a trailing slash.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
