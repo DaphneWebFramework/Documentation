@@ -9,7 +9,6 @@
 - [FormHelpText](FormHelpText.md)
 - [FormLabel](FormLabel.md)
 - [Generic](Generic.md)
-- [Helper](Helper.md)
 - [Label](Label.md)
 - [Navbar](Navbar.md)
 - [NavbarBrand](NavbarBrand.md)
