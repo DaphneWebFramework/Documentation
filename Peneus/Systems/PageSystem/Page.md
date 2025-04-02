@@ -160,14 +160,14 @@ The masterpage name.
 
 ---
 
-### Contents
+### Content
 
 Returns the captured page content.
 
 #### Syntax
 
 ```php
-public function Contents(): string
+public function Content(): string
 ```
 
 #### Return Value
