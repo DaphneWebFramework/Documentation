@@ -30,6 +30,7 @@
 ## Systems
 
 ### PageSystem
+- [Assets](Systems/PageSystem/Assets.md)
 - [LibraryItem](Systems/PageSystem/LibraryItem.md)
 - [LibraryManager](Systems/PageSystem/LibraryManager.md)
 - [LibraryManifest](Systems/PageSystem/LibraryManifest.md)

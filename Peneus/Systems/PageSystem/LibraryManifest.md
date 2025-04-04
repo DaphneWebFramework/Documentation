@@ -7,12 +7,12 @@ Loads and provides access to metadata for all frontend libraries defined in
 ```json
 {
   "jquery": {
-    "default": true,
     "css": "jquery-ui-1.12.1.custom/jquery-ui",
     "js": [
       "jquery-3.5.1/jquery",
       "jquery-ui-1.12.1.custom/jquery-ui"
-    ]
+    ],
+    "default": true
   },
   "selectize": {
     "css": "selectize-0.13.6/css/selectize.bootstrap4.css",
