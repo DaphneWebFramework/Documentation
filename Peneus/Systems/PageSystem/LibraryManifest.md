@@ -26,16 +26,21 @@ Loads and provides access to metadata for all frontend libraries defined in
 }
 ```
 
-CSS and JS paths listed in the manifest may omit file extensions. If so, the
-framework will append `.css` / `.js` or their minified equivalents (e.g.,
-`.min.js`) based on the `IsDebug` configuration option.
+CSS and JS paths listed in the manifest may omit file extensions. In debug
+mode (when the `IsDebug` configuration option is enabled), the framework will
+append `.css` or `.js` automatically if no extension is present. For example,
+the entry `"js": "lib/foo"` will resolve to `lib/foo.js`. If a file path
+already includes a full extension (such as `.min.js` or `.css`), the system
+uses it as-is.
 
-For example, the entry `"js": "lib/foo"` becomes:
-- `lib/foo.js` in development
-- `lib/foo.min.js` in production
+In production mode (when the `IsDebug` configuration option is disabled),
+the framework resolves paths to minified variants by appending `.min` before
+the extension. For example, `"js": "lib/foo"` will resolve to `lib/foo.min.js`.
 
-If a file path already includes a full extension (e.g., `.min.js` or `.css`),
-the system uses it as-is without modification.
+Unlike page-level assets, library assets are not bundled or minified by the
+deployer tool. Instead, the deployer preserves the structure of the manifest
+and only ensures the correct file extension is applied based on the debug
+configuration.
 
 ## Methods
 

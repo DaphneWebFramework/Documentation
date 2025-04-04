@@ -22,14 +22,14 @@ public function __construct(string|array|null $css, string|array|null $js, strin
 
 - **$css**: One or more relative paths to CSS files, or `null` if none.
 - **$js**: One or more relative paths to JavaScript files, or `null` if none.
-- **$extras**: One or more additional asset paths (e.g., fonts, maps, localization files), or `null` if none.
+- **$extras**: One or more additional asset paths (e.g., fonts, map files), or `null` if none.
 - **$isDefault**: Indicates whether this library is marked to be included by default.
 
 ---
 
 ### Css
 
-Returns an array of CSS file paths associated with this library.
+Returns an array of CSS file paths.
 
 #### Syntax
 
@@ -45,7 +45,7 @@ The list of CSS file paths (relative or absolute).
 
 ### Js
 
-Returns an array of JavaScript file paths associated with this library.
+Returns an array of JavaScript file paths.
 
 #### Syntax
 
@@ -61,7 +61,7 @@ The list of JavaScript file paths (relative or absolute).
 
 ### Extras
 
-Returns an array of extra resources associated with this library.
+Returns an array of extra resources.
 
 These may include fonts, source maps, or other supplementary assets
 (e.g., `.woff2`, `.min.js.map`, `.min.css.map`, `.json`, `.png`) that
