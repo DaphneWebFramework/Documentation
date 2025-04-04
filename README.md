@@ -6,6 +6,10 @@ Browse the documentation of the modules that power the framework.
 
 A shared library providing reusable components and utilities to streamline web development.
 
+### [Peneus](Peneus/README.md)
+
+The core backend of Daphne, providing essential components that define the framework's architecture.
+
 ### [Charis](Charis/README.md)
 
 A library for defining HTML elements and reusable components using a declarative, server-side rendering approach.
