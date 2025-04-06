@@ -111,27 +111,90 @@ public function FrontendLibraryFileUrl(string $relativePath): string
 
 #### Return Value
 
-The absolute URL to the asset, with cache-busting query if the file exists.
+The URL to the asset, with cache-busting query if the file exists.
 
 ---
 
-### PageUrl
+### PageDirectoryPath
+
+Returns the absolute path to a page directory.
+
+#### Syntax
+
+```php
+public function PageDirectoryPath(string $pageId): \Harmonia\Core\CPath
+```
+
+#### Parameters
+
+- **$pageId**: The identifier (folder name) of the page, e.g. `home`.
+
+#### Return Value
+
+The absolute path to the page directory.
+
+---
+
+### PageDirectoryUrl
 
 Returns the URL to a page directory.
 
 #### Syntax
 
 ```php
-public function PageUrl(string $pageName): \Harmonia\Core\CUrl
+public function PageDirectoryUrl(string $pageId): \Harmonia\Core\CUrl
 ```
 
 #### Parameters
 
-- **$pageName**: The name of the page directory.
+- **$pageId**: The identifier (folder name) of the page, e.g. `home`.
 
 #### Return Value
 
 The URL to the page directory with a trailing slash.
+
+---
+
+### PageFilePath
+
+Returns the absolute path to a file within a page directory.
+
+#### Syntax
+
+```php
+public function PageFilePath(string $pageId, string $relativePath): \Harmonia\Core\CPath
+```
+
+#### Parameters
+
+- **$pageId**: The identifier (folder name) of the page, e.g. `home`.
+- **$relativePath**: The path relative to the page directory, e.g., 'style.css'.
+
+#### Return Value
+
+The absolute path to the file.
+
+---
+
+### PageFileUrl
+
+Returns the URL to a page-specific asset file with a cache buster query
+parameter based on the file's modification time.
+
+#### Syntax
+
+```php
+public function PageFileUrl(string $pageId, string $relativePath): \Harmonia\Core\CUrl
+```
+
+#### Parameters
+
+- **$pageId**: The identifier (folder name) of the page, e.g. `home`.
+- **$relativePath**: The path relative to the page directory, e.g., 'style.css'.
+
+#### Return Value
+
+The URL to the asset, with cache-busting query if the file exists.
 
 ---
 
