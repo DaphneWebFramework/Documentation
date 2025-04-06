@@ -221,34 +221,4 @@ The base name of the path.
 
 ---
 
-### ToAbsolute
-
-Returns the canonical absolute form of the path.
-
-Resolves the path to its absolute and canonical form by expanding all
-symbolic links, resolving `/./`, `/../`, and extra `/` characters. On
-success, trailing slashes are also removed.
-
-If the instance's value is empty, this method returns the current working
-directory.
-
-This method fails if the path does not exist or if the script lacks
-sufficient permissions to access directories in the hierarchy.
-
-#### Syntax
-
-```php
-public function ToAbsolute(string|\Stringable|null $basePath = null): ?\Harmonia\Core\CPath
-```
-
-#### Parameters
-
-- **$basePath**: (Optional) Base directory to resolve the path relative to. If omitted, the current working directory is used as the base path.
-
-#### Return Value
-
-A new `CPath` instance containing the canonical absolute path if successful, or `null` if the method fails.
-
----
-
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
