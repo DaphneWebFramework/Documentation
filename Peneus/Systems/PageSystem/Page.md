@@ -9,7 +9,7 @@ require '../../autoload.php';
 
 use \Peneus\Systems\PageSystem\Page;
 
-$page = (new Page)
+$page = (new Page(__DIR__))
     ->SetTitle('Home')
     ->SetMasterPage('basic')
     ->AddLibrary('dataTables');
@@ -30,13 +30,15 @@ Constructs a new instance.
 #### Syntax
 
 ```php
-public function __construct(?\Peneus\Systems\PageSystem\Renderer $renderer = null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = null)
+public function __construct(string $directory, ?\Peneus\Systems\PageSystem\Renderer $renderer = null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = null, ?\Peneus\Systems\PageSystem\PageManifest $pageManifest = null)
 ```
 
 #### Parameters
 
+- **$directory**: The absolute path to the directory where the page's `index.php` file is located. Typically, the `__DIR__` constant is used to specify this path.
 - **$renderer**: (Optional) The renderer to use. If not specified, a default instance is created.
 - **$libraryManager**: (Optional) The library manager to use. If not specified, a default instance is created.
+- **$pageManifest**: (Optional) The page manifest to use. If not specified, a default instance is created.
 
 ---
 
@@ -112,6 +114,25 @@ The current instance.
 
 ---
 
+### Id
+
+Returns the unique identifier of the page.
+
+This corresponds to the name of the subdirectory under `pages/` where the
+page's `index.php`, `manifest.json`, and related files reside.
+
+#### Syntax
+
+```php
+public function Id(): string
+```
+
+#### Return Value
+
+The page identifier (e.g., `'home'`, `'login'`, `'about'`).
+
+---
+
 ### Title
 
 Returns the generated page title.
@@ -173,6 +194,52 @@ public function Content(): string
 #### Return Value
 
 The content between calls to `Begin()` and `End()`.
+
+---
+
+### IncludedLibraries
+
+Returns the list of libraries to be included in the page.
+
+This list consists of all libraries that were marked as default in the
+manifest or explicitly added using `AddLibrary`, and not removed using
+`RemoveLibrary`. The libraries are returned in the order they appear in
+the manifest.
+
+> This method is intended to support the renderer and is typically not
+required in page-level code.
+
+#### Syntax
+
+```php
+public function IncludedLibraries(): \Harmonia\Core\CSequentialArray
+```
+
+#### Return Value
+
+A list of `LibraryItem` instances.
+
+---
+
+### Manifest
+
+Returns the page-level manifest.
+
+This provides access to any page-specific CSS, JS, or extra assets
+defined in the page's local `manifest.json` file.
+
+> This method is intended to support the renderer and is typically not
+required in page-level code.
+
+#### Syntax
+
+```php
+public function Manifest(): \Peneus\Systems\PageSystem\PageManifest
+```
+
+#### Return Value
+
+The associated page manifest instance.
 
 ---
 
@@ -264,30 +331,6 @@ public function RemoveAllLibraries(): self
 #### Return Value
 
 The current instance.
-
----
-
-### IncludedLibraries
-
-Returns the list of libraries to be included in the page.
-
-This list consists of all libraries that were marked as default in the
-manifest or explicitly added using `AddLibrary`, and not removed using
-`RemoveLibrary`. The libraries are returned in the order they appear in
-the manifest.
-
-> This method is intended to support the renderer and is typically not
-required in page-level code.
-
-#### Syntax
-
-```php
-public function IncludedLibraries(): \Harmonia\Core\CSequentialArray
-```
-
-#### Return Value
-
-A list of `LibraryItem` instances.
 
 ---
 

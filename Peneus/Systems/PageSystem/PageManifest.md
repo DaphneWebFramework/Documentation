@@ -36,12 +36,12 @@ directory.
 #### Syntax
 
 ```php
-public function __construct(string|\Stringable $pageDir)
+public function __construct(string $pageId)
 ```
 
 #### Parameters
 
-- **$pageDir**: The absolute path of the page directory.
+- **$pageId**: The unique identifier of the page.
 
 ---
 

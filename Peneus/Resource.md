@@ -127,7 +127,7 @@ public function PageDirectoryPath(string $pageId): \Harmonia\Core\CPath
 
 #### Parameters
 
-- **$pageId**: The identifier (folder name) of the page, e.g. `home`.
+- **$pageId**: The identifier (folder name) of the page, e.g. `'home'`.
 
 #### Return Value
 
@@ -147,7 +147,7 @@ public function PageDirectoryUrl(string $pageId): \Harmonia\Core\CUrl
 
 #### Parameters
 
-- **$pageId**: The identifier (folder name) of the page, e.g. `home`.
+- **$pageId**: The identifier (folder name) of the page, e.g. `'home'`.
 
 #### Return Value
 
@@ -167,8 +167,8 @@ public function PageFilePath(string $pageId, string $relativePath): \Harmonia\Co
 
 #### Parameters
 
-- **$pageId**: The identifier (folder name) of the page, e.g. `home`.
-- **$relativePath**: The path relative to the page directory, e.g., 'style.css'.
+- **$pageId**: The identifier (folder name) of the page, e.g. `'home'`.
+- **$relativePath**: The path relative to the page directory, e.g., `'style.css'`.
 
 #### Return Value
 
@@ -189,8 +189,8 @@ public function PageFileUrl(string $pageId, string $relativePath): \Harmonia\Cor
 
 #### Parameters
 
-- **$pageId**: The identifier (folder name) of the page, e.g. `home`.
-- **$relativePath**: The path relative to the page directory, e.g., 'style.css'.
+- **$pageId**: The identifier (folder name) of the page, e.g. `'home'`.
+- **$relativePath**: The path relative to the page directory, e.g., `'style.css'`.
 
 #### Return Value
 
