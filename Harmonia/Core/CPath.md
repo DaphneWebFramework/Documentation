@@ -180,26 +180,4 @@ A new `CPath` instance containing the target of the symbolic link if successful,
 
 ---
 
-### BaseName
-
-Returns the trailing name component of the path.
-
-The base name is the last component of a path, which is typically the
-file or directory name.
-
-This method operates on the input string, and is not aware of the actual
-filesystem.
-
-#### Syntax
-
-```php
-public function BaseName(): string
-```
-
-#### Return Value
-
-The base name of the path.
-
----
-
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
