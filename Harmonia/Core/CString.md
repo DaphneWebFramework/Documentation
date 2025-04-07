@@ -20,8 +20,8 @@ public function __construct(string|\Stringable $value = '', ?string $encoding = 
 
 #### Parameters
 
-- **$value**: (Optional) The string value to store. If omitted, defaults to an empty string. If given a `CString` instance, its value, encoding, and single-byte/multibyte status are copied. If given a `Stringable` instance, its string representation is used, and for a native string, the value is used directly.
-- **$encoding**: (Optional) The encoding to use (e.g., 'UTF-8', 'ISO-8859-1'). If omitted or set to `null`, defaults to the return value of `mb_internal_encoding`. This parameter is ignored when `$value` is an instance of `CString`. Note that encoding names are case-insensitive.
+- **$value**: (Optional) The string value to store. If omitted, defaults to an empty string. If given an instance of `CString` or a subclass, its value, encoding, and single-byte/multibyte status are copied. If given a `Stringable` instance, its string representation is used, and for a native string, the value is used directly.
+- **$encoding**: (Optional) The encoding to use (e.g., 'UTF-8', 'ISO-8859-1'). If omitted or set to `null`, defaults to the return value of `mb_internal_encoding`. This parameter is ignored when `$value` is an instance of `CString` or a subclass. Note that encoding names are case-insensitive.
 
 ---
 
@@ -230,7 +230,7 @@ Inserts the specified string at the beginning.
 #### Syntax
 
 ```php
-public function Prepend(string|\Stringable $substring): \Harmonia\Core\CString
+public function Prepend(string|\Stringable $substring): static
 ```
 
 #### Parameters
@@ -239,7 +239,7 @@ public function Prepend(string|\Stringable $substring): \Harmonia\Core\CString
 
 #### Return Value
 
-A new `CString` instance with the string prepended.
+A new instance with the string prepended.
 
 #### See Also
 
@@ -282,7 +282,7 @@ Inserts the specified string at the end.
 #### Syntax
 
 ```php
-public function Append(string|\Stringable $substring): \Harmonia\Core\CString
+public function Append(string|\Stringable $substring): static
 ```
 
 #### Parameters
@@ -291,7 +291,7 @@ public function Append(string|\Stringable $substring): \Harmonia\Core\CString
 
 #### Return Value
 
-A new `CString` instance with the substring appended.
+A new instance with the substring appended.
 
 #### See Also
 
@@ -333,7 +333,7 @@ string.
 #### Syntax
 
 ```php
-public function Left(int $count): \Harmonia\Core\CString
+public function Left(int $count): static
 ```
 
 #### Parameters
@@ -342,7 +342,7 @@ public function Left(int $count): \Harmonia\Core\CString
 
 #### Return Value
 
-A new `CString` instance with the leftmost characters, or an empty instance if `$count` is not positive.
+A new instance with the leftmost characters, or an empty instance if `$count` is not positive.
 
 #### Exceptions
 
@@ -363,7 +363,7 @@ string.
 #### Syntax
 
 ```php
-public function Right(int $count): \Harmonia\Core\CString
+public function Right(int $count): static
 ```
 
 #### Parameters
@@ -372,7 +372,7 @@ public function Right(int $count): \Harmonia\Core\CString
 
 #### Return Value
 
-A new `CString` instance with the rightmost characters, or an empty instance if `$count` is not positive.
+A new instance with the rightmost characters, or an empty instance if `$count` is not positive.
 
 #### Exceptions
 
@@ -393,7 +393,7 @@ offset.
 #### Syntax
 
 ```php
-public function Middle(int $offset, int $count = PHP_INT_MAX): \Harmonia\Core\CString
+public function Middle(int $offset, int $count = PHP_INT_MAX): static
 ```
 
 #### Parameters
@@ -403,7 +403,7 @@ public function Middle(int $offset, int $count = PHP_INT_MAX): \Harmonia\Core\CS
 
 #### Return Value
 
-A new `CString` instance with the specified middle characters, or an empty instance if `$offset` is out of range or `$count` is not positive.
+A new instance with the specified middle characters, or an empty instance if `$offset` is out of range or `$count` is not positive.
 
 #### Exceptions
 
@@ -455,7 +455,7 @@ Trims whitespace or specified characters from both sides of the string.
 #### Syntax
 
 ```php
-public function Trim(?string $characters = null): \Harmonia\Core\CString
+public function Trim(?string $characters = null): static
 ```
 
 #### Parameters
@@ -464,7 +464,7 @@ public function Trim(?string $characters = null): \Harmonia\Core\CString
 
 #### Return Value
 
-A new `CString` instance with the trimmed string.
+A new instance with the trimmed string.
 
 #### Exceptions
 
@@ -519,7 +519,7 @@ string.
 #### Syntax
 
 ```php
-public function TrimLeft(?string $characters = null): \Harmonia\Core\CString
+public function TrimLeft(?string $characters = null): static
 ```
 
 #### Parameters
@@ -528,7 +528,7 @@ public function TrimLeft(?string $characters = null): \Harmonia\Core\CString
 
 #### Return Value
 
-A new `CString` instance with the trimmed string.
+A new instance with the trimmed string.
 
 #### Exceptions
 
@@ -583,7 +583,7 @@ string.
 #### Syntax
 
 ```php
-public function TrimRight(?string $characters = null): \Harmonia\Core\CString
+public function TrimRight(?string $characters = null): static
 ```
 
 #### Parameters
@@ -592,7 +592,7 @@ public function TrimRight(?string $characters = null): \Harmonia\Core\CString
 
 #### Return Value
 
-A new `CString` instance with the trimmed string.
+A new instance with the trimmed string.
 
 #### Exceptions
 
@@ -640,12 +640,12 @@ Converts to lowercase.
 #### Syntax
 
 ```php
-public function Lowercase(): \Harmonia\Core\CString
+public function Lowercase(): static
 ```
 
 #### Return Value
 
-A new `CString` instance with all characters converted to lowercase.
+A new instance with all characters converted to lowercase.
 
 #### Exceptions
 
@@ -692,12 +692,12 @@ Converts to uppercase.
 #### Syntax
 
 ```php
-public function Uppercase(): \Harmonia\Core\CString
+public function Uppercase(): static
 ```
 
 #### Return Value
 
-A new `CString` instance with all characters converted to uppercase.
+A new instance with all characters converted to uppercase.
 
 #### Exceptions
 
@@ -860,7 +860,7 @@ string.
 #### Syntax
 
 ```php
-public function Replace(string|\Stringable $searchString, string|\Stringable $replacement, bool $caseSensitive = true): \Harmonia\Core\CString
+public function Replace(string|\Stringable $searchString, string|\Stringable $replacement, bool $caseSensitive = true): static
 ```
 
 #### Parameters
@@ -871,7 +871,7 @@ public function Replace(string|\Stringable $searchString, string|\Stringable $re
 
 #### Return Value
 
-A new `CString` instance with the replacements made.
+A new instance with the replacements made.
 
 #### Exceptions
 
@@ -886,7 +886,7 @@ A new `CString` instance with the replacements made.
 ### Split
 
 Splits the string by a given delimiter, yielding each substring as a
-`CString` instance.
+new instance.
 
 This method provides memory-efficient processing by yielding each
 substring one at a time, making it suitable for large strings.
@@ -907,7 +907,7 @@ public function Split(string $delimiter, int $options = self::SPLIT_OPTION_NONE)
 
 #### Return Value
 
-A generator yielding `CString` instances for each substring.
+A generator yielding new instances for each substring.
 
 #### See Also
 
@@ -918,10 +918,10 @@ A generator yielding `CString` instances for each substring.
 ### SplitToArray
 
 Splits the string by a given delimiter and returns the result as an array
-of `CString` instances.
+of new instances.
 
 This method is a convenient alternative to `Split`, returning the results
-directly as an array of `CString` instances.
+directly as an array of new instances.
 
 By default, it performs a straightforward split without trimming or
 excluding empty results. These behaviors can be customized with options.
@@ -929,7 +929,7 @@ excluding empty results. These behaviors can be customized with options.
 #### Syntax
 
 ```php
-public function SplitToArray(string $delimiter, int $options = self::SPLIT_OPTION_NONE): \Harmonia\Core\CString[]
+public function SplitToArray(string $delimiter, int $options = self::SPLIT_OPTION_NONE): static[]
 ```
 
 #### Parameters
@@ -939,7 +939,7 @@ public function SplitToArray(string $delimiter, int $options = self::SPLIT_OPTIO
 
 #### Return Value
 
-An array of `CString` instances for each substring.
+An array of new instances for each substring.
 
 #### See Also
 
@@ -985,7 +985,7 @@ Applies a function to the current value.
 #### Syntax
 
 ```php
-public function Apply(callable $function, mixed ...$args): \Harmonia\Core\CString
+public function Apply(callable $function, mixed ...$args): static
 ```
 
 #### Parameters
@@ -995,7 +995,7 @@ public function Apply(callable $function, mixed ...$args): \Harmonia\Core\CStrin
 
 #### Return Value
 
-A new `CString` instance containing the result of the applied function.
+A new instance containing the result of the applied function.
 
 #### Exceptions
 
