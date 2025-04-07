@@ -82,7 +82,7 @@ link and compute the relative path accordingly.
 #### Syntax
 
 ```php
-public function AppRelativePath(): \Harmonia\Core\CString
+public function AppRelativePath(): \Harmonia\Core\CPath
 ```
 
 #### Return Value
