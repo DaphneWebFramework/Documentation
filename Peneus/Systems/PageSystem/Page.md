@@ -248,6 +248,9 @@ The associated page manifest instance.
 
 Returns the meta tag definitions.
 
+This method guarantees that the `og:title` tag is present based on the
+page's current title, unless it has been explicitly defined elsewhere.
+
 > This method is intended to support the renderer and is typically not
 required in page-level code.
 
@@ -366,7 +369,7 @@ public function AddMeta(string $name, string $content, string $type = 'name'): s
 
 #### Parameters
 
-- **$name**: The name of the meta tag (e.g., `description`, `viewport`, `og:title`).
+- **$name**: The name of the meta tag (e.g., `description`, `og:title`).
 - **$content**: The content of the meta tag.
 - **$type**: (Optional) The attribute type (e.g., `name`, `property`, `itemprop`). Defaults to `name`.
 

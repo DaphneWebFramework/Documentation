@@ -16,6 +16,27 @@ public function __construct()
 
 ---
 
+### Has
+
+Determines whether a meta tag with the given name and type exists.
+
+#### Syntax
+
+```php
+public function Has(string $name, string $type): bool
+```
+
+#### Parameters
+
+- **$name**: The name of the meta tag (e.g., `description`, `og:title`).
+- **$type**: The meta tag type (e.g., `name`, `property`, `itemprop`).
+
+#### Return Value
+
+Returns `true` if the meta tag exists, `false` otherwise.
+
+---
+
 ### Add
 
 Adds or replaces a meta tag.
@@ -28,7 +49,7 @@ public function Add(string $name, string $content, string $type = 'name'): void
 
 #### Parameters
 
-- **$name**: The name of the meta tag (e.g., `description`, `viewport`, `og:title`).
+- **$name**: The name of the meta tag (e.g., `description`, `og:title`).
 - **$content**: The content of the meta tag.
 - **$type**: (Optional) The attribute type (e.g., `name`, `property`, `itemprop`). Defaults to `name`.
 
