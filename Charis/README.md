@@ -17,6 +17,8 @@
 - [FormCheck](FormComposites/FormCheck.md)
 - [FormCheckableComposite](FormComposites/FormCheckableComposite.md)
 - [FormComposite](FormComposites/FormComposite.md)
+- [FormEmail](FormComposites/FormEmail.md)
+- [FormFLEmail](FormComposites/FormFLEmail.md)
 - [FormFLText](FormComposites/FormFLText.md)
 - [FormFloatingLabelComposite](FormComposites/FormFloatingLabelComposite.md)
 - [FormRadio](FormComposites/FormRadio.md)
@@ -27,6 +29,7 @@
 ## FormControls
 - [FormCheckInput](FormControls/FormCheckInput.md)
 - [FormControl](FormControls/FormControl.md)
+- [FormEmailInput](FormControls/FormEmailInput.md)
 - [FormInput](FormControls/FormInput.md)
 - [FormRadioInput](FormControls/FormRadioInput.md)
 - [FormSwitchInput](FormControls/FormSwitchInput.md)
