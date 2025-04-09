@@ -1,0 +1,84 @@
+# MetaCollection
+
+Stores and manages page-level meta tags.
+
+## Methods
+
+### __construct
+
+Constructs a new instance and applies default tags from configuration.
+
+#### Syntax
+
+```php
+public function __construct()
+```
+
+---
+
+### Add
+
+Adds or replaces a meta tag.
+
+#### Syntax
+
+```php
+public function Add(string $name, string $content, string $type = 'name'): void
+```
+
+#### Parameters
+
+- **$name**: The name of the meta tag (e.g., `description`, `viewport`, `og:title`).
+- **$content**: The content of the meta tag.
+- **$type**: (Optional) The attribute type, which can be `name`, `property`, or `itemprop`. Defaults to `name`.
+
+---
+
+### Remove
+
+Removes a specific meta tag.
+
+If the tag does not exist, the method does nothing.
+
+#### Syntax
+
+```php
+public function Remove(string $name, string $type): void
+```
+
+#### Parameters
+
+- **$name**: The name of the tag to remove.
+- **$type**: The attribute type, which can be `name`, `property`, or `itemprop`.
+
+---
+
+### Clear
+
+Removes all stored meta tags.
+
+#### Syntax
+
+```php
+public function Clear(): void
+```
+
+---
+
+### Items
+
+Returns all stored meta tags grouped by attribute type.
+
+#### Syntax
+
+```php
+public function Items(): \Harmonia\Core\CArray
+```
+
+#### Return Value
+
+A `CArray` of meta tag groups. Each key is the type (`name`, `property`, or `itemprop`) and each value is a `CArray` of tag names mapped to their contents.
+
+---
+
+*This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*

@@ -34,6 +34,7 @@
 - [LibraryItem](Systems/PageSystem/LibraryItem.md)
 - [LibraryManager](Systems/PageSystem/LibraryManager.md)
 - [LibraryManifest](Systems/PageSystem/LibraryManifest.md)
+- [MetaCollection](Systems/PageSystem/MetaCollection.md)
 - [Page](Systems/PageSystem/Page.md)
 - [PageManifest](Systems/PageSystem/PageManifest.md)
 - [Renderer](Systems/PageSystem/Renderer.md)
