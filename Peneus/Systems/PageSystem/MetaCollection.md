@@ -30,7 +30,7 @@ public function Add(string $name, string $content, string $type = 'name'): void
 
 - **$name**: The name of the meta tag (e.g., `description`, `viewport`, `og:title`).
 - **$content**: The content of the meta tag.
-- **$type**: (Optional) The attribute type, which can be `name`, `property`, or `itemprop`. Defaults to `name`.
+- **$type**: (Optional) The attribute type (e.g., `name`, `property`, `itemprop`). Defaults to `name`.
 
 ---
 
@@ -49,18 +49,18 @@ public function Remove(string $name, string $type): void
 #### Parameters
 
 - **$name**: The name of the tag to remove.
-- **$type**: The attribute type, which can be `name`, `property`, or `itemprop`.
+- **$type**: The attribute type (e.g., `name`, `property`, `itemprop`).
 
 ---
 
-### Clear
+### RemoveAll
 
 Removes all stored meta tags.
 
 #### Syntax
 
 ```php
-public function Clear(): void
+public function RemoveAll(): void
 ```
 
 ---
@@ -77,7 +77,7 @@ public function Items(): \Harmonia\Core\CArray
 
 #### Return Value
 
-A `CArray` of meta tag groups. Each key is the type (`name`, `property`, or `itemprop`) and each value is a `CArray` of tag names mapped to their contents.
+A `CArray` of meta tag groups. Each key is the type (e.g., `name`, `property`, `itemprop`) and each value is a `CArray` of tag names mapped to their contents.
 
 ---
 

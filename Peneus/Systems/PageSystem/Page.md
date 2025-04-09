@@ -30,7 +30,7 @@ Constructs a new instance.
 #### Syntax
 
 ```php
-public function __construct(string $directory, ?\Peneus\Systems\PageSystem\Renderer $renderer = null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = null, ?\Peneus\Systems\PageSystem\PageManifest $pageManifest = null)
+public function __construct(string $directory, ?\Peneus\Systems\PageSystem\Renderer $renderer = null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = null, ?\Peneus\Systems\PageSystem\PageManifest $pageManifest = null, ?\Peneus\Systems\PageSystem\MetaCollection $metaCollection = null)
 ```
 
 #### Parameters
@@ -39,6 +39,7 @@ public function __construct(string $directory, ?\Peneus\Systems\PageSystem\Rende
 - **$renderer**: (Optional) The renderer to use. If not specified, a default instance is created.
 - **$libraryManager**: (Optional) The library manager to use. If not specified, a default instance is created.
 - **$pageManifest**: (Optional) The page manifest to use. If not specified, a default instance is created.
+- **$metaCollection**: (Optional) The meta collection to use. If not specified, a default instance is created.
 
 ---
 
@@ -243,6 +244,25 @@ The associated page manifest instance.
 
 ---
 
+### MetaItems
+
+Returns the meta tag definitions.
+
+> This method is intended to support the renderer and is typically not
+required in page-level code.
+
+#### Syntax
+
+```php
+public function MetaItems(): \Harmonia\Core\CArray
+```
+
+#### Return Value
+
+A `CArray` of meta tag groups. Each key is the type (e.g., `name`, `property`, `itemprop`) and each value is a `CArray` of tag names mapped to their contents.
+
+---
+
 ### Begin
 
 Begins capturing the page content using output buffering.
@@ -326,6 +346,67 @@ included by default, as well as any that were added manually.
 
 ```php
 public function RemoveAllLibraries(): self
+```
+
+#### Return Value
+
+The current instance.
+
+---
+
+### AddMeta
+
+Adds or replaces a meta tag.
+
+#### Syntax
+
+```php
+public function AddMeta(string $name, string $content, string $type = 'name'): self
+```
+
+#### Parameters
+
+- **$name**: The name of the meta tag (e.g., `description`, `viewport`, `og:title`).
+- **$content**: The content of the meta tag.
+- **$type**: (Optional) The attribute type (e.g., `name`, `property`, `itemprop`). Defaults to `name`.
+
+#### Return Value
+
+The current instance.
+
+---
+
+### RemoveMeta
+
+Removes a specific meta tag.
+
+If the tag does not exist, the method does nothing.
+
+#### Syntax
+
+```php
+public function RemoveMeta(string $name, string $type): self
+```
+
+#### Parameters
+
+- **$name**: The name of the meta tag to remove (e.g., `description`, `og:title`).
+- **$type**: The attribute type of the tag (e.g., `name`, `property`, `itemprop`).
+
+#### Return Value
+
+The current instance.
+
+---
+
+### RemoveAllMetas
+
+Removes all meta tags.
+
+#### Syntax
+
+```php
+public function RemoveAllMetas(): self
 ```
 
 #### Return Value
