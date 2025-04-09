@@ -1,6 +1,6 @@
-# FormEmailInput
+# FormPasswordInput
 
-Represents an email input.
+Represents a password input.
 
 ---
 

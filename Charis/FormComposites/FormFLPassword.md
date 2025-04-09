@@ -1,6 +1,6 @@
-# FormEmailInput
+# FormFLPassword
 
-Represents an email input.
+Represents a password input with a floating label and optional help text.
 
 ---
 
