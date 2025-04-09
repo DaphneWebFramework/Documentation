@@ -37,14 +37,14 @@ Returns `true` if the meta tag exists, `false` otherwise.
 
 ---
 
-### Add
+### Set
 
 Adds or replaces a meta tag.
 
 #### Syntax
 
 ```php
-public function Add(string $name, string $content, string $type = 'name'): void
+public function Set(string $name, string $content, string $type = 'name'): void
 ```
 
 #### Parameters

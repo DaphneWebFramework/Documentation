@@ -249,7 +249,7 @@ The associated page manifest instance.
 Returns the meta tag definitions.
 
 This method guarantees that the `og:title` tag is present based on the
-page's current title, unless it has been explicitly defined elsewhere.
+page's current title, unless it has been explicitly set elsewhere.
 
 > This method is intended to support the renderer and is typically not
 required in page-level code.
@@ -357,14 +357,14 @@ The current instance.
 
 ---
 
-### AddMeta
+### SetMeta
 
 Adds or replaces a meta tag.
 
 #### Syntax
 
 ```php
-public function AddMeta(string $name, string $content, string $type = 'name'): self
+public function SetMeta(string $name, string $content, string $type = 'name'): self
 ```
 
 #### Parameters
