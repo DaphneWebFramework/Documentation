@@ -18,6 +18,8 @@ supports the following pseudo attributes in its constructor:
   Defaults to `false`.
 - `:disabled`: Boolean indicating whether the input should be disabled.
   Defaults to `false`.
+- ':required': Boolean indicating whether the input is required. Defaults to
+  `false`.
 
 #### See Also
 

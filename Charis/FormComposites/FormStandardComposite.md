@@ -8,8 +8,8 @@ supports the following pseudo attributes in its constructor:
 
 - `:id`: A unique identifier for the input element. If omitted and a `:label`
   is provided, an ID is generated automatically.
-- `:name`: The name attribute for the input element, used for grouping
-  related inputs and identifying the input's value during form submission.
+- `:name`: The name attribute for the input element, used to identify the
+  input's value during form submission.
 - `:label`: Text for the associated `<label>` element. If omitted, no label
   is rendered.
 - `:help`: Additional descriptive text. If provided, a `<div>` element with
@@ -18,6 +18,8 @@ supports the following pseudo attributes in its constructor:
   the input element when it is empty.
 - `:disabled`: Boolean indicating whether the input should be disabled.
   Defaults to `false`.
+- ':required': Boolean indicating whether the input is required. Defaults to
+  `false`.
 
 #### See Also
 
