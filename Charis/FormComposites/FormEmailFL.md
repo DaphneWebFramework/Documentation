@@ -1,6 +1,6 @@
-# FormFLText
+# FormEmailFL
 
-Represents a text input with a floating label and optional help text.
+Represents an email input with a floating label and optional help text.
 
 ---
 
