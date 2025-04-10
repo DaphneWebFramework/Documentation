@@ -32,10 +32,14 @@ public function __construct(?array<string,mixed> $attributes = null, string|\Cha
 
 ### __toString
 
-Converts the component to its HTML string representation.
+Converts the component to its HTML string representation, followed by a
+newline.
 
-This method simply calls the `Render` method, performs no additional
-processing.
+This method calls the `Render` method and appends a newline character to
+address a common output issue where the PHP closing tag (`?>`) consumes
+a trailing newline in the rendered output. By appending the newline here,
+components produce properly formatted HTML when echoed or embedded in
+templates.
 
 #### Syntax
 
@@ -45,7 +49,7 @@ public function __toString(): string
 
 #### Return Value
 
-The HTML string representation of the component.
+The HTML string representation of the component, followed by a newline.
 
 #### Exceptions
 
