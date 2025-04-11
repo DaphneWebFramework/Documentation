@@ -51,22 +51,6 @@ public function DeleteCookie(string $name): void
 
 ---
 
-### DeleteCsrfCookie
-
-Deletes the CSRF cookie.
-
-#### Syntax
-
-```php
-public function DeleteCsrfCookie(): void
-```
-
-#### Exceptions
-
-- **\RuntimeException**: If the HTTP headers have already been sent or if the cookie could not be deleted for any other reason.
-
----
-
 ### AppSpecificCookieName
 
 Generates an application-specific cookie name combined with the given
@@ -92,6 +76,42 @@ The generated cookie name, always in uppercase and following the `{APPNAME}_{SUF
 #### Exceptions
 
 - **\InvalidArgumentException**: If the suffix is empty.
+
+---
+
+### SetCsrfCookie
+
+Adds or updates the CSRF cookie.
+
+#### Syntax
+
+```php
+public function SetCsrfCookie(string $value): void
+```
+
+#### Parameters
+
+- **$value**: The CSRF cookie value. If empty, the cookie is deleted.
+
+#### Exceptions
+
+- **\RuntimeException**: If the HTTP headers have already been sent or if the cookie could not be set for any other reason.
+
+---
+
+### DeleteCsrfCookie
+
+Deletes the CSRF cookie.
+
+#### Syntax
+
+```php
+public function DeleteCsrfCookie(): void
+```
+
+#### Exceptions
+
+- **\RuntimeException**: If the HTTP headers have already been sent or if the cookie could not be deleted for any other reason.
 
 ---
 
