@@ -32,6 +32,7 @@
 - [FormCheckInput](FormControls/FormCheckInput.md)
 - [FormControl](FormControls/FormControl.md)
 - [FormEmailInput](FormControls/FormEmailInput.md)
+- [FormHiddenInput](FormControls/FormHiddenInput.md)
 - [FormInput](FormControls/FormInput.md)
 - [FormPasswordInput](FormControls/FormPasswordInput.md)
 - [FormRadioInput](FormControls/FormRadioInput.md)
