@@ -6,8 +6,8 @@ Represents a user account.
 CREATE TABLE `account` (
   `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `email` TEXT,
-  `username` TEXT,
   `passwordHash` TEXT,
+  `displayName` TEXT,
   `timeActivated` DATETIME,
   `timeLastLogin` DATETIME
 ) ENGINE = InnoDB;
