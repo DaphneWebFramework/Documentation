@@ -43,6 +43,28 @@ public function __construct(string $directory, ?\Peneus\Systems\PageSystem\Rende
 
 ---
 
+### Id
+
+Returns the unique identifier of the page.
+
+This corresponds to the name of the subdirectory under `pages/` where the
+page's `index.php`, `manifest.json`, and related files reside.
+
+> This method is intended to support the renderer and is typically not
+required in page-level code.
+
+#### Syntax
+
+```php
+public function Id(): string
+```
+
+#### Return Value
+
+The page identifier (e.g., `'home'`, `'login'`, `'about'`).
+
+---
+
 ### SetTitle
 
 Sets the page title.
@@ -95,6 +117,37 @@ The current instance.
 
 ---
 
+### Title
+
+Returns the generated page title.
+
+The returned string is produced by substituting the title (set via
+`SetTitle`) and the application name (retrieved from configuration)
+into the title template (set via `SetTitleTemplate`).
+
+If the application name is empty, only the title is returned. If the
+title is empty, only the application name is returned.
+
+> This method is intended to support the renderer and is typically not
+required in page-level code.
+
+#### Syntax
+
+```php
+public function Title(): string
+```
+
+#### Return Value
+
+The generated page title.
+
+#### See Also
+
+- [`SetTitle`](#SetTitle)
+- [`SetTitleTemplate`](#SetTitleTemplate)
+
+---
+
 ### SetMasterpage
 
 Sets the masterpage used to layout the page content.
@@ -115,56 +168,12 @@ The current instance.
 
 ---
 
-### Id
-
-Returns the unique identifier of the page.
-
-This corresponds to the name of the subdirectory under `pages/` where the
-page's `index.php`, `manifest.json`, and related files reside.
-
-#### Syntax
-
-```php
-public function Id(): string
-```
-
-#### Return Value
-
-The page identifier (e.g., `'home'`, `'login'`, `'about'`).
-
----
-
-### Title
-
-Returns the generated page title.
-
-The returned string is produced by substituting the title (set via
-`SetTitle`) and the application name (retrieved from configuration)
-into the title template (set via `SetTitleTemplate`).
-
-If the application name is empty, only the title is returned. If the
-title is empty, only the application name is returned.
-
-#### Syntax
-
-```php
-public function Title(): string
-```
-
-#### Return Value
-
-The generated page title.
-
-#### See Also
-
-- [`SetTitle`](#SetTitle)
-- [`SetTitleTemplate`](#SetTitleTemplate)
-
----
-
 ### Masterpage
 
 Returns the selected masterpage name.
+
+> This method is intended to support the renderer and is typically not
+required in page-level code.
 
 #### Syntax
 
@@ -186,6 +195,9 @@ The masterpage name.
 
 Returns the captured page content.
 
+> This method is intended to support the renderer and is typically not
+required in page-level code.
+
 #### Syntax
 
 ```php
@@ -195,74 +207,6 @@ public function Content(): string
 #### Return Value
 
 The content between calls to `Begin()` and `End()`.
-
----
-
-### IncludedLibraries
-
-Returns the list of libraries to be included in the page.
-
-This list consists of all libraries that were marked as default in the
-manifest or explicitly added using `AddLibrary`, and not removed using
-`RemoveLibrary`. The libraries are returned in the order they appear in
-the manifest.
-
-> This method is intended to support the renderer and is typically not
-required in page-level code.
-
-#### Syntax
-
-```php
-public function IncludedLibraries(): \Harmonia\Core\CSequentialArray
-```
-
-#### Return Value
-
-A list of `LibraryItem` instances.
-
----
-
-### Manifest
-
-Returns the page-level manifest.
-
-This provides access to any page-specific CSS, JS, or extra assets
-defined in the page's local `manifest.json` file.
-
-> This method is intended to support the renderer and is typically not
-required in page-level code.
-
-#### Syntax
-
-```php
-public function Manifest(): \Peneus\Systems\PageSystem\PageManifest
-```
-
-#### Return Value
-
-The associated page manifest instance.
-
----
-
-### MetaItems
-
-Returns the meta tag definitions.
-
-This method guarantees that the `og:title` tag is present based on the
-page's current title, unless it has been explicitly set elsewhere.
-
-> This method is intended to support the renderer and is typically not
-required in page-level code.
-
-#### Syntax
-
-```php
-public function MetaItems(): \Harmonia\Core\CArray
-```
-
-#### Return Value
-
-A `CArray` of meta tag groups. Each key is the type (e.g., `name`, `property`, `itemprop`) and each value is a `CArray` of tag names mapped to their contents.
 
 ---
 
@@ -357,6 +301,52 @@ The current instance.
 
 ---
 
+### IncludedLibraries
+
+Returns the list of libraries to be included in the page.
+
+This list consists of all libraries that were marked as default in the
+manifest or explicitly added using `AddLibrary`, and not removed using
+`RemoveLibrary`. The libraries are returned in the order they appear in
+the manifest.
+
+> This method is intended to support the renderer and is typically not
+required in page-level code.
+
+#### Syntax
+
+```php
+public function IncludedLibraries(): \Harmonia\Core\CSequentialArray
+```
+
+#### Return Value
+
+A list of `LibraryItem` instances.
+
+---
+
+### Manifest
+
+Returns the page-level manifest.
+
+This provides access to any page-specific CSS, JS, or extra assets
+defined in the page's local `manifest.json` file.
+
+> This method is intended to support the renderer and is typically not
+required in page-level code.
+
+#### Syntax
+
+```php
+public function Manifest(): \Peneus\Systems\PageSystem\PageManifest
+```
+
+#### Return Value
+
+The associated page manifest instance.
+
+---
+
 ### SetMeta
 
 Adds or replaces a meta tag.
@@ -415,6 +405,28 @@ public function RemoveAllMetas(): self
 #### Return Value
 
 The current instance.
+
+---
+
+### MetaItems
+
+Returns the meta tag definitions.
+
+This method guarantees that the `og:title` tag is present based on the
+page's current title, unless it has been explicitly set elsewhere.
+
+> This method is intended to support the renderer and is typically not
+required in page-level code.
+
+#### Syntax
+
+```php
+public function MetaItems(): \Harmonia\Core\CArray
+```
+
+#### Return Value
+
+A `CArray` of meta tag groups. Each key is the type (e.g., `name`, `property`, `itemprop`) and each value is a `CArray` of tag names mapped to their contents.
 
 ---
 
