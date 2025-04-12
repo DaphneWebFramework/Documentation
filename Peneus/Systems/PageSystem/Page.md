@@ -430,4 +430,42 @@ A `CArray` of meta tag groups. Each key is the type (e.g., `name`, `property`, `
 
 ---
 
+### CsrfTokenName
+
+Returns the CSRF token name.
+
+This is the name of the form field that will contain the CSRF token
+when submitted.
+
+#### Syntax
+
+```php
+public function CsrfTokenName(): string
+```
+
+#### Return Value
+
+The CSRF token name.
+
+---
+
+### CsrfTokenValue
+
+Returns a uniquely generated CSRF token value.
+
+Aside from token generation, this method also sets the CSRF cookie, which
+is used to verify the token when the form is submitted.
+
+#### Syntax
+
+```php
+public function CsrfTokenValue(): string
+```
+
+#### Return Value
+
+The CSRF token value.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
