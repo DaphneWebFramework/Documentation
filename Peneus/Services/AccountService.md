@@ -26,7 +26,7 @@ The session integrity cookie name.
 
 ---
 
-### GetAuthenticatedAccount
+### AuthenticatedAccount
 
 Retrieves the currently authenticated account.
 
@@ -40,7 +40,7 @@ is destroyed to prevent unauthorized access.
 #### Syntax
 
 ```php
-public function GetAuthenticatedAccount(): ?\Peneus\Model\Account
+public function AuthenticatedAccount(): ?\Peneus\Model\Account
 ```
 
 #### Return Value
