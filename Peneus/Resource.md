@@ -115,14 +115,14 @@ The URL to the asset, with cache-busting query if the file exists.
 
 ---
 
-### PageDirectoryPath
+### PagePath
 
 Returns the absolute path to a page directory.
 
 #### Syntax
 
 ```php
-public function PageDirectoryPath(string $pageId): \Harmonia\Core\CPath
+public function PagePath(string $pageId): \Harmonia\Core\CPath
 ```
 
 #### Parameters
@@ -135,14 +135,14 @@ The absolute path to the page directory.
 
 ---
 
-### PageDirectoryUrl
+### PageUrl
 
 Returns the URL to a page directory.
 
 #### Syntax
 
 ```php
-public function PageDirectoryUrl(string $pageId): \Harmonia\Core\CUrl
+public function PageUrl(string $pageId): \Harmonia\Core\CUrl
 ```
 
 #### Parameters
@@ -152,6 +152,23 @@ public function PageDirectoryUrl(string $pageId): \Harmonia\Core\CUrl
 #### Return Value
 
 The URL to the page directory with a trailing slash.
+
+---
+
+### LoginPageUrl
+
+Returns the URL to the login page, including a "redirect" query parameter
+that points to the current request URI.
+
+#### Syntax
+
+```php
+public function LoginPageUrl(): \Harmonia\Core\CUrl
+```
+
+#### Return Value
+
+The URL to the login page with a "redirect" query parameter.
 
 ---
 
