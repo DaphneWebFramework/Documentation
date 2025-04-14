@@ -96,22 +96,24 @@ The absolute path to the frontend manifest file.
 
 ### FrontendLibraryFileUrl
 
-Returns the URL to a frontend library file, with a cache buster query
-parameter based on the file's modification time.
+Returns the URL to a frontend library file.
+
+This method appends a cache-busting query parameter to the URL, based on
+the file's modification time.
 
 #### Syntax
 
 ```php
-public function FrontendLibraryFileUrl(string $relativePath): string
+public function FrontendLibraryFileUrl(string $relativePath): \Harmonia\Core\CUrl
 ```
 
 #### Parameters
 
-- **$relativePath**: The path relative to the frontend directory (e.g. 'bootstrap/css/bootstrap').
+- **$relativePath**: The path relative to the frontend directory, e.g., `'bootstrap/css/bootstrap'`.
 
 #### Return Value
 
-The URL to the asset, with cache-busting query if the file exists.
+The URL to the file with a cache-busting query parameter.
 
 ---
 
@@ -127,7 +129,7 @@ public function PagePath(string $pageId): \Harmonia\Core\CPath
 
 #### Parameters
 
-- **$pageId**: The identifier (folder name) of the page, e.g. `'home'`.
+- **$pageId**: The identifier (folder name) of the page, e.g., `'home'`.
 
 #### Return Value
 
@@ -139,6 +141,9 @@ The absolute path to the page directory.
 
 Returns the URL to a page directory.
 
+This method ensures that the resulting URL ends with a trailing slash,
+which helps avoid unnecessary 301 redirects in web browsers.
+
 #### Syntax
 
 ```php
@@ -147,18 +152,20 @@ public function PageUrl(string $pageId): \Harmonia\Core\CUrl
 
 #### Parameters
 
-- **$pageId**: The identifier (folder name) of the page, e.g. `'home'`.
+- **$pageId**: The identifier (folder name) of the page, e.g., `'home'`.
 
 #### Return Value
 
-The URL to the page directory with a trailing slash.
+The URL to the page directory.
 
 ---
 
 ### LoginPageUrl
 
-Returns the URL to the login page, including a "redirect" query parameter
-that points to the current request URI.
+Returns the URL to the login page.
+
+This method appends a "redirect" query parameter to the URL, pointing
+to the current request URI.
 
 #### Syntax
 
@@ -184,7 +191,7 @@ public function PageFilePath(string $pageId, string $relativePath): \Harmonia\Co
 
 #### Parameters
 
-- **$pageId**: The identifier (folder name) of the page, e.g. `'home'`.
+- **$pageId**: The identifier (folder name) of the page, e.g., `'home'`.
 - **$relativePath**: The path relative to the page directory, e.g., `'style.css'`.
 
 #### Return Value
@@ -195,8 +202,10 @@ The absolute path to the file.
 
 ### PageFileUrl
 
-Returns the URL to a page-specific asset file with a cache buster query
-parameter based on the file's modification time.
+Returns the URL to a file within a page directory.
+
+This method appends a cache-busting query parameter to the URL, based on
+the file's modification time.
 
 #### Syntax
 
@@ -206,12 +215,12 @@ public function PageFileUrl(string $pageId, string $relativePath): \Harmonia\Cor
 
 #### Parameters
 
-- **$pageId**: The identifier (folder name) of the page, e.g. `'home'`.
+- **$pageId**: The identifier (folder name) of the page, e.g., `'home'`.
 - **$relativePath**: The path relative to the page directory, e.g., `'style.css'`.
 
 #### Return Value
 
-The URL to the asset, with cache-busting query if the file exists.
+The URL to the file with a cache-busting query parameter.
 
 ---
 
