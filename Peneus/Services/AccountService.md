@@ -49,7 +49,27 @@ The authenticated account, or `null` if authentication fails.
 
 #### Exceptions
 
-- **\RuntimeException**: If the session cannot be started or destroyed.
+- **\RuntimeException**: If the session cannot be started, closed, or destroyed.
+
+---
+
+### RoleOfAuthenticatedAccount
+
+Retrieves the role of the authenticated account.
+
+#### Syntax
+
+```php
+public function RoleOfAuthenticatedAccount(): ?\Peneus\Model\Role
+```
+
+#### Return Value
+
+The role of the authenticated account, or `null` if not set in the session.
+
+#### Exceptions
+
+- **\RuntimeException**: If the session cannot be started or closed.
 
 ---
 
