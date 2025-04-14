@@ -22,6 +22,7 @@
 
 ## Model
 - [Account](Model/Account.md)
+- [AccountRole](Model/AccountRole.md)
 - [Entity](Model/Entity.md)
 
 ## Services
