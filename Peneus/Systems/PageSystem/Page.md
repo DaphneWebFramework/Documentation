@@ -30,12 +30,13 @@ Constructs a new instance.
 #### Syntax
 
 ```php
-public function __construct(string $directory, ?\Peneus\Systems\PageSystem\Renderer $renderer = null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = null, ?\Peneus\Systems\PageSystem\PageManifest $pageManifest = null, ?\Peneus\Systems\PageSystem\MetaCollection $metaCollection = null)
+public function __construct(string $directory, \Peneus\Systems\PageSystem\AccessPolicies\IAccessPolicy $accessPolicy = null, ?\Peneus\Systems\PageSystem\Renderer $renderer = null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = null, ?\Peneus\Systems\PageSystem\PageManifest $pageManifest = null, ?\Peneus\Systems\PageSystem\MetaCollection $metaCollection = null)
 ```
 
 #### Parameters
 
 - **$directory**: The absolute path to the directory where the page's `index.php` file is located. Typically, the `__DIR__` constant is used to specify this path.
+- **$accessPolicy**: (Optional) The access policy to enforce. If not specified, the `AnyonePolicy` is used, allowing access to all users.
 - **$renderer**: (Optional) The renderer to use. If not specified, a default instance is created.
 - **$libraryManager**: (Optional) The library manager to use. If not specified, a default instance is created.
 - **$pageManifest**: (Optional) The page manifest to use. If not specified, a default instance is created.
