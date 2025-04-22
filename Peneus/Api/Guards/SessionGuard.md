@@ -1,12 +1,12 @@
 # SessionGuard
 
-A guard that verifies whether a request is from an authenticated user.
+A guard that verifies whether the request is from a logged-in user.
 
 ## Methods
 
 ### Verify
 
-Verifies whether the request is from an authenticated user.
+Verifies whether the request is from a logged-in user.
 
 #### Syntax
 
@@ -16,7 +16,7 @@ public function Verify(): bool
 
 #### Return Value
 
-Returns `true` if the request is from an authenticated user, otherwise `false`.
+Returns `true` if the request is from a logged-in user, otherwise `false`.
 
 ---
 

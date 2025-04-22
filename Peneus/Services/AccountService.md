@@ -26,9 +26,9 @@ The session integrity cookie name.
 
 ---
 
-### AuthenticatedAccount
+### LoggedInAccount
 
-Retrieves the currently authenticated account.
+Retrieves the currently logged-in user's account.
 
 This method first verifies session integrity by checking whether the
 session integrity token matches its hashed counterpart stored in the
@@ -40,12 +40,12 @@ is destroyed to prevent unauthorized access.
 #### Syntax
 
 ```php
-public function AuthenticatedAccount(): ?\Peneus\Model\Account
+public function LoggedInAccount(): ?\Peneus\Model\Account
 ```
 
 #### Return Value
 
-The authenticated account, or `null` if authentication fails.
+The logged-in user's account, or `null` if no user is logged in or the session is compromised.
 
 #### Exceptions
 
@@ -53,19 +53,19 @@ The authenticated account, or `null` if authentication fails.
 
 ---
 
-### RoleOfAuthenticatedAccount
+### RoleOfLoggedInAccount
 
-Retrieves the role of the authenticated account.
+Retrieves the role of the logged-in user's account.
 
 #### Syntax
 
 ```php
-public function RoleOfAuthenticatedAccount(): ?\Peneus\Model\Role
+public function RoleOfLoggedInAccount(): ?\Peneus\Model\Role
 ```
 
 #### Return Value
 
-The role of the authenticated account, or `null` if not set in the session.
+The role of the logged-in user's account, or `null` if not set in the session.
 
 #### Exceptions
 
