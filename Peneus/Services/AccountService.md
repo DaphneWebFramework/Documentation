@@ -53,14 +53,14 @@ The logged-in user's account, or `null` if no user is logged in or the session i
 
 ---
 
-### RoleOfLoggedInAccount
+### LoggedInAccountRole
 
 Retrieves the role of the logged-in user's account.
 
 #### Syntax
 
 ```php
-public function RoleOfLoggedInAccount(): ?\Peneus\Model\Role
+public function LoggedInAccountRole(): ?\Peneus\Model\Role
 ```
 
 #### Return Value
