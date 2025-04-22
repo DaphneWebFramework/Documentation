@@ -32,6 +32,7 @@
 
 ### PageSystem
 - [Assets](Systems/PageSystem/Assets.md)
+- [AuthManager](Systems/PageSystem/AuthManager.md)
 - [LibraryItem](Systems/PageSystem/LibraryItem.md)
 - [LibraryManager](Systems/PageSystem/LibraryManager.md)
 - [LibraryManifest](Systems/PageSystem/LibraryManifest.md)
@@ -39,11 +40,6 @@
 - [Page](Systems/PageSystem/Page.md)
 - [PageManifest](Systems/PageSystem/PageManifest.md)
 - [Renderer](Systems/PageSystem/Renderer.md)
-
-#### AccessPolicies
-- [AnyonePolicy](Systems/PageSystem/AccessPolicies/AnyonePolicy.md)
-- [CustomPolicy](Systems/PageSystem/AccessPolicies/CustomPolicy.md)
-- [MembersPolicy](Systems/PageSystem/AccessPolicies/MembersPolicy.md)
 
 ---
 

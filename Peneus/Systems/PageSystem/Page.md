@@ -30,17 +30,17 @@ Constructs a new instance.
 #### Syntax
 
 ```php
-public function __construct(string $directory, \Peneus\Systems\PageSystem\AccessPolicies\IAccessPolicy $accessPolicy = null, ?\Peneus\Systems\PageSystem\Renderer $renderer = null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = null, ?\Peneus\Systems\PageSystem\PageManifest $pageManifest = null, ?\Peneus\Systems\PageSystem\MetaCollection $metaCollection = null)
+public function __construct(string $directory, ?\Peneus\Systems\PageSystem\Renderer $renderer = null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = null, ?\Peneus\Systems\PageSystem\PageManifest $pageManifest = null, ?\Peneus\Systems\PageSystem\MetaCollection $metaCollection = null, ?\Peneus\Systems\PageSystem\AuthManager $authManager = null)
 ```
 
 #### Parameters
 
 - **$directory**: The absolute path to the directory where the page's `index.php` file is located. Typically, the `__DIR__` constant is used to specify this path.
-- **$accessPolicy**: (Optional) The access policy to enforce. If not specified, the `AnyonePolicy` is used, allowing access to all users.
 - **$renderer**: (Optional) The renderer to use. If not specified, a default instance is created.
 - **$libraryManager**: (Optional) The library manager to use. If not specified, a default instance is created.
 - **$pageManifest**: (Optional) The page manifest to use. If not specified, a default instance is created.
 - **$metaCollection**: (Optional) The meta collection to use. If not specified, a default instance is created.
+- **$authManager**: (Optional) The authentication manager to use. If not specified, a default instance is created.
 
 ---
 
@@ -428,6 +428,63 @@ public function MetaItems(): \Harmonia\Core\CArray
 #### Return Value
 
 A `CArray` of meta tag groups. Each key is the type (e.g., `name`, `property`, `itemprop`) and each value is a `CArray` of tag names mapped to their contents.
+
+---
+
+### LoggedInAccount
+
+Returns the currently logged-in user's account.
+
+The result is cached after the first retrieval.
+
+#### Syntax
+
+```php
+public function LoggedInAccount(): ?\Peneus\Model\Account
+```
+
+#### Return Value
+
+An `Account` object associated with the logged-in user, or `null` if no user is logged in.
+
+---
+
+### LoggedInAccountRole
+
+Returns the role associated with the currently logged-in user's account.
+
+The result is cached after the first retrieval.
+
+#### Syntax
+
+```php
+public function LoggedInAccountRole(): \Peneus\Model\Role
+```
+
+#### Return Value
+
+The role of the current user, or `Role::None` if no user is logged in or a role is not explicitly assigned to the account.
+
+---
+
+### RequireLogin
+
+Restricts access to logged-in users.
+
+If no user is logged in, the user is redirected to the login page. If a
+minimum role is specified, the logged-in user's role is checked against
+it. If the user's role is insufficient, the user is redirected to the
+error page with an HTTP 401 Unauthorized response.
+
+#### Syntax
+
+```php
+public function RequireLogin(\Peneus\Model\Role $minimumRole = Role::None): self
+```
+
+#### Parameters
+
+- **$minimumRole**: (Optional) The minimum role required to access the page. Defaults to `Role::None`.
 
 ---
 
