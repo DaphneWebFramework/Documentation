@@ -15,7 +15,7 @@ Returns the cached value if available; otherwise, resolves and caches it.
 #### Syntax
 
 ```php
-public function Get(callable $resolver): ?\Harmonia\Patterns\T
+public function Get(callable $resolver): mixed
 ```
 
 #### Parameters
@@ -37,7 +37,7 @@ Useful for test injection or manually assigning a known value.
 #### Syntax
 
 ```php
-public function Set(?\Harmonia\Patterns\T $value): void
+public function Set(mixed $value): void
 ```
 
 #### Parameters
