@@ -37,6 +37,7 @@
 - [Response](Http/Response.md)
 
 ## Patterns
+- [CachedValue](Patterns/CachedValue.md)
 - [Singleton](Patterns/Singleton.md)
 
 ## Services
