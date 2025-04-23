@@ -13,6 +13,8 @@
 - [Navbar](Navbar.md)
 - [NavbarBrand](NavbarBrand.md)
 - [NavbarCollapse](NavbarCollapse.md)
+- [NavbarItem](NavbarItem.md)
+- [NavbarNav](NavbarNav.md)
 - [NavbarToggler](NavbarToggler.md)
 
 ## FormComposites
