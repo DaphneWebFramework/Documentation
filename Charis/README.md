@@ -2,6 +2,7 @@
 - [Button](Button.md)
 - [ButtonGroup](ButtonGroup.md)
 - [ButtonToolbar](ButtonToolbar.md)
+- [Collapse](Collapse.md)
 - [Component](Component.md)
 - [Container](Container.md)
 - [FormCheckLabel](FormCheckLabel.md)
@@ -11,6 +12,8 @@
 - [Label](Label.md)
 - [Navbar](Navbar.md)
 - [NavbarBrand](NavbarBrand.md)
+- [NavbarCollapse](NavbarCollapse.md)
+- [NavbarToggler](NavbarToggler.md)
 
 ## FormComposites
 - [FormCheck](FormComposites/FormCheck.md)
