@@ -4,7 +4,6 @@
 - [ButtonToolbar](ButtonToolbar.md)
 - [Component](Component.md)
 - [Container](Container.md)
-- [Footer](Footer.md)
 - [FormCheckLabel](FormCheckLabel.md)
 - [FormHelpText](FormHelpText.md)
 - [FormLabel](FormLabel.md)
