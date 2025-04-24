@@ -1,6 +1,6 @@
 # NavbarCollapse
 
-Represents the collapsible container inside a navbar.
+Represents the collapsible section of a navigation bar.
 
 #### See Also
 

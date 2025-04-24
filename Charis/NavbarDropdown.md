@@ -1,13 +1,18 @@
 # NavbarDropdown
 
-Represents a dropdown navigation item inside a navbar.
+Represents a dropdown menu in a navigation bar.
 
 Aside from HTML attributes that apply to the wrapper element, this component
 supports the following pseudo attributes in its constructor:
 
-- `:label`: The text for the dropdown. Defaults to an empty string.
+- `:label`: The text for the dropdown toggle link. Defaults to an empty
+  string.
 - `:disabled`: Boolean indicating whether the dropdown is disabled. Defaults
   to `false`.
+
+#### See Also
+
+- [https://getbootstrap.com/docs/5.3/components/navbar/#nav](https://getbootstrap.com/docs/5.3/components/navbar/#nav)
 
 ## Methods
 

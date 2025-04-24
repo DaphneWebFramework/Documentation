@@ -10,6 +10,10 @@ supports the following pseudo attributes in its constructor:
 - `:disabled`: Boolean indicating whether the link is disabled. Defaults to
   `false`.
 
+#### See Also
+
+- [https://getbootstrap.com/docs/5.3/components/navbar/#nav](https://getbootstrap.com/docs/5.3/components/navbar/#nav)
+
 ## Methods
 
 ### __construct

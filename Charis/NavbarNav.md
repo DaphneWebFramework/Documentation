@@ -1,6 +1,6 @@
 # NavbarNav
 
-Represents a container for navigation items inside a navbar.
+Represents a group of navigation items in a navigation bar.
 
 #### See Also
 

@@ -1,6 +1,6 @@
 # NavbarToggler
 
-Represents a toggle button for collapsing navbar content.
+Represents a toggle button for a collapsible section in a navigation bar.
 
 #### See Also
 

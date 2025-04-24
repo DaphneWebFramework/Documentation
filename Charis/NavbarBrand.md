@@ -1,6 +1,6 @@
 # NavbarBrand
 
-Represents a brand element inside a navigation bar.
+Represents the brand element inside a navigation bar.
 
 #### See Also
 
