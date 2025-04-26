@@ -7,6 +7,7 @@ supports the following pseudo attributes in its constructor:
 
 - `:label`: The text for the link. Defaults to an empty string.
 - `:href`: The URL for the link. Defaults to `#`.
+- `:id`: The ID attribute for the link. Defaults to `null`.
 - `:active`: Boolean indicating whether the link represents the current page.
   Defaults to `false`.
 - `:disabled`: Boolean indicating whether the link is disabled. Defaults to
