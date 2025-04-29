@@ -14,6 +14,8 @@ supports the following pseudo attributes in its constructor:
   is rendered.
 - `:help`: Additional descriptive text. If provided, a `<div>` element with
   the "form-text" class is rendered.
+- `:autocomplete`: Provides a hint to browsers for autofilling the input
+  field with previously entered data.
 - `:disabled`: Boolean indicating whether the input should be disabled.
   Defaults to `false`.
 - `:required`: Boolean indicating whether the input is required. Defaults to
