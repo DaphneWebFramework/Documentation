@@ -137,4 +137,25 @@ An array of instances of the called class.
 
 ---
 
+### Count
+
+Returns the number of rows in the associated table that match a condition.
+
+#### Syntax
+
+```php
+public static function Count(?string $condition = null, ?array $bindings = null): int
+```
+
+#### Parameters
+
+- **$condition**: (Optional) A filtering expression for rows to count (e.g., `"status = :status"`). If `null`, all rows are counted.
+- **$bindings**: (Optional) An associative array of values to bind to placeholders in the condition (e.g., `['status' => 'active']`). If `null`, no bindings are applied.
+
+#### Return Value
+
+The number of matching rows. Returns `0` if the query fails.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
