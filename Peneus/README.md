@@ -10,6 +10,7 @@
 - [Action](Api/Actions/Action.md)
 - [LoginAction](Api/Actions/LoginAction.md)
 - [LogoutAction](Api/Actions/LogoutAction.md)
+- [RegisterAccountAction](Api/Actions/RegisterAccountAction.md)
 
 ### Guards
 - [FormTokenGuard](Api/Guards/FormTokenGuard.md)
@@ -24,6 +25,7 @@
 - [Account](Model/Account.md)
 - [AccountRole](Model/AccountRole.md)
 - [Entity](Model/Entity.md)
+- [PendingAccount](Model/PendingAccount.md)
 
 ## Services
 - [AccountService](Services/AccountService.md)
