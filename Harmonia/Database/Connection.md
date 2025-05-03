@@ -11,12 +11,12 @@ Opens a connection to a MySQL server.
 #### Syntax
 
 ```php
-public function __construct(string $hostname, string $username, string $password, ?string $charset = null)
+public function __construct(string $host, string $username, string $password, ?string $charset = null)
 ```
 
 #### Parameters
 
-- **$hostname**: The host name or IP address of the MySQL server.
+- **$host**: The host name or IP address of the MySQL server.
 - **$username**: The username for the MySQL authentication.
 - **$password**: The password for the MySQL authentication.
 - **$charset**: (Optional) The character set to use for the connection.

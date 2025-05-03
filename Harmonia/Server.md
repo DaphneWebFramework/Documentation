@@ -22,7 +22,8 @@ Returns `true` if the connection is secure (e.g., HTTPS); otherwise, `false`.
 
 ### Url
 
-Retrieves the web server's root URL, including the protocol and hostname.
+Retrieves the web server's root URL, including the protocol and host name
+or IP address.
 
 #### Syntax
 
