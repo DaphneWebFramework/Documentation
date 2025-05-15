@@ -29,21 +29,30 @@ $validator = new Validator([
 ]);
 ```
 ```php
-$validator = new Validator([
-    'coordinates.latitude' => ['numeric', 'min:-90', 'max:90'],
-    'coordinates.longitude' => ['numeric', 'min:-180', 'max:180']
-]);
+$validator = new Validator(
+    [
+        'coordinates.latitude' => ['numeric', 'min:-90', 'max:90'],
+        'coordinates.longitude' => ['numeric', 'min:-180', 'max:180']
+    ],
+    [
+        'coordinates.latitude.min' => 'Latitude must be at least -90 degrees.',
+        'coordinates.latitude.max' => 'Latitude cannot exceed 90 degrees.',
+        'coordinates.longitude.min' => 'Longitude must be at least -180 degrees.',
+        'coordinates.longitude.max' => 'Longitude cannot exceed 180 degrees.'
+    ]
+);
 ```
 
 #### Syntax
 
 ```php
-public function __construct(array<string|int,string|\Closure|(string|\Closure)[]> $userDefinedRules)
+public function __construct(array<string|int,string|\Closure|(string|\Closure)[]> $userDefinedRules, ?array<string,string> $customMessages = null)
 ```
 
 #### Parameters
 
 - **$userDefinedRules**: An associative array where each key represents a field, and each value is either a single rule (string or closure) or an array of rules.
+- **$customMessages**: (Optional) An associative array mapping 'field.rule' keys to custom error messages.
 
 #### Exceptions
 

@@ -11,13 +11,14 @@ Constructs a new instance with the provided rule name and parameter.
 #### Syntax
 
 ```php
-public function __construct(string $name, mixed $param)
+public function __construct(string $name, mixed $param, ?string $customMessage = null)
 ```
 
 #### Parameters
 
 - **$name**: The name of the rule.
 - **$param**: The parameter for the rule.
+- **$customMessage**: (Optional) A custom message to override the default message.
 
 ---
 
