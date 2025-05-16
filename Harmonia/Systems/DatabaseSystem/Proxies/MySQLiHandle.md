@@ -21,7 +21,7 @@ public function __construct(\mysqli $object)
 #### Syntax
 
 ```php
-public function prepare(string $query): \Harmonia\Database\Proxies\MySQLiStatement|false
+public function prepare(string $query): \Harmonia\Systems\DatabaseSystem\Proxies\MySQLiStatement|false
 ```
 
 #### Parameters
@@ -35,7 +35,7 @@ public function prepare(string $query): \Harmonia\Database\Proxies\MySQLiStateme
 #### Syntax
 
 ```php
-public function execute_query(string $query, ?array $params): \Harmonia\Database\Proxies\MySQLiResult|bool
+public function execute_query(string $query, ?array $params): \Harmonia\Systems\DatabaseSystem\Proxies\MySQLiResult|bool
 ```
 
 #### Parameters

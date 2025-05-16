@@ -15,23 +15,6 @@
 - [CString](Core/CString.md)
 - [CUrl](Core/CUrl.md)
 
-## Database
-- [Connection](Database/Connection.md)
-- [Database](Database/Database.md)
-- [ResultSet](Database/ResultSet.md)
-
-### Proxies
-- [MySQLiHandle](Database/Proxies/MySQLiHandle.md)
-- [MySQLiResult](Database/Proxies/MySQLiResult.md)
-- [MySQLiStatement](Database/Proxies/MySQLiStatement.md)
-
-### Queries
-- [DeleteQuery](Database/Queries/DeleteQuery.md)
-- [InsertQuery](Database/Queries/InsertQuery.md)
-- [Query](Database/Queries/Query.md)
-- [SelectQuery](Database/Queries/SelectQuery.md)
-- [UpdateQuery](Database/Queries/UpdateQuery.md)
-
 ## Http
 - [Request](Http/Request.md)
 - [Response](Http/Response.md)
@@ -51,6 +34,23 @@
 - [ShutdownHandler](Shutdown/ShutdownHandler.md)
 
 ## Systems
+
+### DatabaseSystem
+- [Connection](Systems/DatabaseSystem/Connection.md)
+- [Database](Systems/DatabaseSystem/Database.md)
+- [ResultSet](Systems/DatabaseSystem/ResultSet.md)
+
+#### Proxies
+- [MySQLiHandle](Systems/DatabaseSystem/Proxies/MySQLiHandle.md)
+- [MySQLiResult](Systems/DatabaseSystem/Proxies/MySQLiResult.md)
+- [MySQLiStatement](Systems/DatabaseSystem/Proxies/MySQLiStatement.md)
+
+#### Queries
+- [DeleteQuery](Systems/DatabaseSystem/Queries/DeleteQuery.md)
+- [InsertQuery](Systems/DatabaseSystem/Queries/InsertQuery.md)
+- [Query](Systems/DatabaseSystem/Queries/Query.md)
+- [SelectQuery](Systems/DatabaseSystem/Queries/SelectQuery.md)
+- [UpdateQuery](Systems/DatabaseSystem/Queries/UpdateQuery.md)
 
 ### ValidationSystem
 - [CompiledRules](Systems/ValidationSystem/CompiledRules.md)

@@ -14,7 +14,7 @@ Executes a query on the database.
 #### Syntax
 
 ```php
-public function Execute(\Harmonia\Database\Queries\Query $query): ?\Harmonia\Database\Proxies\MySQLiResult
+public function Execute(\Harmonia\Systems\DatabaseSystem\Queries\Query $query): ?\Harmonia\Systems\DatabaseSystem\Proxies\MySQLiResult
 ```
 
 #### Parameters

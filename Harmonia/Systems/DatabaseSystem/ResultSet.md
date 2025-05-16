@@ -11,7 +11,7 @@ Constructs a new instance.
 #### Syntax
 
 ```php
-public function __construct(?\Harmonia\Database\Proxies\MySQLiResult $result = null)
+public function __construct(?\Harmonia\Systems\DatabaseSystem\Proxies\MySQLiResult $result = null)
 ```
 
 #### Parameters
