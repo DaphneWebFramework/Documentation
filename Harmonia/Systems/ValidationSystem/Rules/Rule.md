@@ -11,7 +11,7 @@ Constructs a new instance with a reference to the native functions utility.
 #### Syntax
 
 ```php
-public function __construct(\Harmonia\Validation\NativeFunctions $nativeFunctions)
+public function __construct(\Harmonia\Systems\ValidationSystem\NativeFunctions $nativeFunctions)
 ```
 
 #### Parameters

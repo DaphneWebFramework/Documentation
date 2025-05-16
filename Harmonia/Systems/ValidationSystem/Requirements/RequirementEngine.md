@@ -12,7 +12,7 @@ presence.
 #### Syntax
 
 ```php
-public function __construct(string|int $field, \Harmonia\Validation\MetaRules\IMetaRule[] $metaRules, \Harmonia\Validation\DataAccessor $dataAccessor)
+public function __construct(string|int $field, \Harmonia\Systems\ValidationSystem\MetaRules\IMetaRule[] $metaRules, \Harmonia\Systems\ValidationSystem\DataAccessor $dataAccessor)
 ```
 
 #### Parameters
@@ -69,7 +69,7 @@ validations in the validator.
 #### Syntax
 
 ```php
-public function FilterOutRequirementRules(\Harmonia\Validation\MetaRules\IMetaRule[] $metaRules): \Harmonia\Validation\MetaRules\IMetaRule[]
+public function FilterOutRequirementRules(\Harmonia\Systems\ValidationSystem\MetaRules\IMetaRule[] $metaRules): \Harmonia\Systems\ValidationSystem\MetaRules\IMetaRule[]
 ```
 
 #### Parameters

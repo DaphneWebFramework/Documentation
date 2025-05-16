@@ -16,7 +16,7 @@ validation rules.
 #### Syntax
 
 ```php
-public static function FromMetaRules(\Harmonia\Validation\MetaRules\IMetaRule[] $metaRules): self
+public static function FromMetaRules(\Harmonia\Systems\ValidationSystem\MetaRules\IMetaRule[] $metaRules): self
 ```
 
 #### Parameters

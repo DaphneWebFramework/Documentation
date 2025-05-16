@@ -15,7 +15,7 @@ Creates or retrieves a rule object based on the given rule name.
 #### Syntax
 
 ```php
-public static function Create(string $ruleName): ?\Harmonia\Validation\Rules\Rule
+public static function Create(string $ruleName): ?\Harmonia\Systems\ValidationSystem\Rules\Rule
 ```
 
 #### Parameters

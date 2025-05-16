@@ -35,7 +35,7 @@ Retrieves the compiled meta rules collection.
 #### Syntax
 
 ```php
-public function MetaRulesCollection(): array<string|int,\Harmonia\Validation\IMetaRule[]>
+public function MetaRulesCollection(): array<string|int,\Harmonia\Systems\ValidationSystem\IMetaRule[]>
 ```
 
 #### Return Value

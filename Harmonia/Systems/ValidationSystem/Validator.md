@@ -67,7 +67,7 @@ Validates the provided data against the compiled rules.
 #### Syntax
 
 ```php
-public function Validate(array|object $data): \Harmonia\Validation\DataAccessor
+public function Validate(array|object $data): \Harmonia\Systems\ValidationSystem\DataAccessor
 ```
 
 #### Parameters
