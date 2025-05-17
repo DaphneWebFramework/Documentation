@@ -30,9 +30,6 @@
 ### Security
 - [CsrfToken](Services/Security/CsrfToken.md)
 
-## Shutdown
-- [ShutdownHandler](Shutdown/ShutdownHandler.md)
-
 ## Systems
 
 ### DatabaseSystem
@@ -51,6 +48,9 @@
 - [Query](Systems/DatabaseSystem/Queries/Query.md)
 - [SelectQuery](Systems/DatabaseSystem/Queries/SelectQuery.md)
 - [UpdateQuery](Systems/DatabaseSystem/Queries/UpdateQuery.md)
+
+### ShutdownSystem
+- [ShutdownHandler](Systems/ShutdownSystem/ShutdownHandler.md)
 
 ### ValidationSystem
 - [CompiledRules](Systems/ValidationSystem/CompiledRules.md)

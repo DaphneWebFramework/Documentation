@@ -15,7 +15,7 @@ Adds a listener to the shutdown process.
 #### Syntax
 
 ```php
-public function AddListener(\Harmonia\Shutdown\IShutdownListener $listener): void
+public function AddListener(\Harmonia\Systems\ShutdownSystem\IShutdownListener $listener): void
 ```
 
 #### Parameters
