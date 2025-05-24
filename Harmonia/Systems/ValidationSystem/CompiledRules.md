@@ -14,13 +14,12 @@ Constructs a new instance by compiling the provided rules into meta rules.
 #### Syntax
 
 ```php
-public function __construct(array<string|int,string|\Closure|(string|\Closure)[]> $userDefinedRules, ?array<string,string> $customMessages = null)
+public function __construct(array<string|int,string|\Closure|(string|\Closure)[]> $userDefinedRules)
 ```
 
 #### Parameters
 
 - **$userDefinedRules**: An associative array where each key represents a field, and each value is either a single rule (string or closure) or an array of rules.
-- **$customMessages**: (Optional) An associative array mapping 'field.rule' keys to custom error messages.
 
 #### Exceptions
 
