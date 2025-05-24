@@ -8,6 +8,7 @@
 
 ### Actions
 - [Action](Api/Actions/Action.md)
+- [ActivateAccountAction](Api/Actions/ActivateAccountAction.md)
 - [LoginAction](Api/Actions/LoginAction.md)
 - [LogoutAction](Api/Actions/LogoutAction.md)
 - [RegisterAccountAction](Api/Actions/RegisterAccountAction.md)
