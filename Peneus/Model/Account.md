@@ -5,11 +5,11 @@ Represents a user account.
 ```sql
 CREATE TABLE `account` (
   `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `email` TEXT,
-  `passwordHash` TEXT,
-  `displayName` TEXT,
-  `timeActivated` DATETIME,
-  `timeLastLogin` DATETIME
+  `email` TEXT NOT NULL,
+  `passwordHash` TEXT NOT NULL,
+  `displayName` TEXT NOT NULL,
+  `timeActivated` DATETIME NOT NULL,
+  `timeLastLogin` DATETIME NULL
 ) ENGINE = InnoDB;
 ```
 
