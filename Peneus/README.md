@@ -12,6 +12,7 @@
 - [LoginAction](Api/Actions/LoginAction.md)
 - [LogoutAction](Api/Actions/LogoutAction.md)
 - [RegisterAccountAction](Api/Actions/RegisterAccountAction.md)
+- [ResetPasswordAction](Api/Actions/ResetPasswordAction.md)
 - [SendPasswordResetAction](Api/Actions/SendPasswordResetAction.md)
 
 ### Guards
