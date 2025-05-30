@@ -37,6 +37,10 @@
 - [Database](Systems/DatabaseSystem/Database.md)
 - [ResultSet](Systems/DatabaseSystem/ResultSet.md)
 
+#### Fakes
+- [FakeDatabase](Systems/DatabaseSystem/Fakes/FakeDatabase.md)
+- [FakeResultSet](Systems/DatabaseSystem/Fakes/FakeResultSet.md)
+
 #### Proxies
 - [MySQLiHandle](Systems/DatabaseSystem/Proxies/MySQLiHandle.md)
 - [MySQLiResult](Systems/DatabaseSystem/Proxies/MySQLiResult.md)
