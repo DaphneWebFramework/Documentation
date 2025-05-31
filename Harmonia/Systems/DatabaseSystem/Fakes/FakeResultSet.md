@@ -1,28 +1,33 @@
 # FakeResultSet
 
-Represents a result set from a database query.
+Simulates a database result set for testing purposes.
+
+This class is used by `FakeDatabase` to simulate the result of a database
+query without requiring a real database connection. It provides an in-memory
+result stream that mimics the behavior of `ResultSet`.
 
 ## Methods
 
 ### __construct
 
-Constructs a new instance.
+Constructs a new instance with the given row data and initializes the
+internal cursor.
 
 #### Syntax
 
 ```php
-public function __construct(array $rows = [])
+public function __construct(array<int,array<string,mixed>> $rows = [])
 ```
 
 #### Parameters
 
-- **$rows**
+- **$rows**: (Optional) The list of result rows. Defaults to an empty list.
 
 ---
 
 ### Columns
 
-Retrieves the column names of the result set.
+Retrieves the column names from the first row.
 
 #### Syntax
 
@@ -32,13 +37,13 @@ public function Columns(): string[]
 
 #### Return Value
 
-An array of column names. Returns an empty array if the result set is empty.
+An array of column names. Returns an empty array if no rows are defined.
 
 ---
 
 ### RowCount
 
-Retrieves the number of rows in the result set.
+Retrieves the number of rows.
 
 #### Syntax
 
@@ -48,33 +53,37 @@ public function RowCount(): int
 
 #### Return Value
 
-The number of rows in the result set. Returns `0` if the result set is empty.
+The number of rows. Returns `0` if no rows are defined.
 
 ---
 
 ### Row
 
-Retrieves a single row from the result set.
+Retrieves the current row and advances the internal cursor.
 
 #### Syntax
 
 ```php
-public function Row(int $mode = parent::ROW_MODE_ASSOCIATIVE): array<string,mixed>|array<int,mixed>|null
+public function Row(int $mode = self::ROW_MODE_ASSOCIATIVE): array<string,mixed>|array<int,mixed>|null
 ```
 
 #### Parameters
 
-- **$mode**: (Optional) Determines how keys in the returned array are indexed. Possible values are `ROW_MODE_ASSOCIATIVE` (default) for associative arrays and `ROW_MODE_NUMERIC` for numerically indexed arrays.
+- **$mode**: (Optional) Row mode. Use `ROW_MODE_ASSOCIATIVE` (default) to return rows as associative arrays, or `ROW_MODE_NUMERIC` for numerically indexed arrays.
 
 #### Return Value
 
-An associative or indexed array representing the row, or `null` if the result set is empty or if the end of the result set has been reached.
+The current row, or `null` if there are no more rows.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If an invalid row mode is provided.
 
 ---
 
 ### getIterator
 
-Returns an iterator for traversing the result set row by row.
+Returns an iterator for traversing row by row.
 
 #### Syntax
 

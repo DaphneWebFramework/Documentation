@@ -84,7 +84,7 @@ An associative or indexed array representing the row, or `null` if the result se
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If an invalid key mode is provided.
+- **\InvalidArgumentException**: If an invalid row mode is provided.
 
 ---
 
