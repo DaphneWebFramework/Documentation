@@ -8,30 +8,26 @@ parameter bindings, and the results to be returned.
 
 #### Example
 ```php
-use PHPUnit\Framework\TestCase;
+use \Harmonia\Systems\DatabaseSystem\Fakes\FakeDatabase;
+use \Harmonia\Systems\DatabaseSystem\Database;
+use \Peneus\Model\Account;
 
-use Peneus\Model\Account;
-
-use Harmonia\Systems\DatabaseSystem\Database;
-use Harmonia\Systems\DatabaseSystem\Fakes\FakeDatabase;
-
-class AccountTest extends TestCase
+class AccountTest extends \PHPUnit\Framework\TestCase
 {
-    function testEmailIsRegistered()
+    function testIsRegistered()
     {
-        Database::ReplaceInstance(new FakeDatabase());
-
-        Database::Instance()->Expect(
-            'SELECT COUNT(*) FROM account WHERE email = :email',
-            ['email' => 'john@example.com'],
-            [[1]]
+        $fakeDatabase = new FakeDatabase();
+        $fakeDatabase->Expect(
+            sql: 'SELECT COUNT(*) FROM account WHERE email = :email',
+            bindings: ['email' => 'john@example.com'],
+            result: [[1]]
         );
+        Database::ReplaceInstance($fakeDatabase);
 
         $count = Account::Count(
             condition: 'email = :email',
             bindings: ['email' => 'john@example.com']
         );
-
         $this->assertSame(1, $count);
     }
 }
