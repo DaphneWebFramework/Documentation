@@ -162,20 +162,24 @@ The URL to the page directory.
 
 ### LoginPageUrl
 
-Returns the URL to the login page.
+Returns the URL to the login page with a "redirect" query parameter.
 
-This method appends a "redirect" query parameter to the URL, pointing
-to the current request URI.
+If a page ID is provided, the "redirect" parameter will point to that
+page. Otherwise, it will point to the current request URI.
 
 #### Syntax
 
 ```php
-public function LoginPageUrl(): \Harmonia\Core\CUrl
+public function LoginPageUrl(?string $redirectPageId = null): \Harmonia\Core\CUrl
 ```
+
+#### Parameters
+
+- **$redirectPageId**: (Optional) Page ID to redirect to after login (e.g. 'home'). If `null`, uses the current request URI.
 
 #### Return Value
 
-The URL to the login page with a "redirect" query parameter.
+The login page URL with a "redirect" query parameter. For example: `https://example.com/pages/login/?redirect=%2Fpages%2Fhome%2F`
 
 ---
 
