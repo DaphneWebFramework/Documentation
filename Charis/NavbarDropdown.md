@@ -9,6 +9,8 @@ supports the following pseudo attributes in its constructor:
   string.
 - `:disabled`: Boolean indicating whether the dropdown is disabled. Defaults
   to `false`.
+- `:alignRight`: Boolean indicating whether the dropdown menu should be
+  aligned to the right. Defaults to `false`.
 
 #### See Also
 
