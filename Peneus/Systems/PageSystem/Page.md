@@ -488,6 +488,62 @@ public function RequireLogin(\Peneus\Model\Role $minimumRole = Role::None): self
 
 ---
 
+### SetProperty
+
+Sets the value of a property.
+
+This allows the page to pass a value to the masterpage, which can then
+adjust its layout, structure, or styling accordingly.
+
+#### Syntax
+
+```php
+public function SetProperty(string $key, mixed $value): self
+```
+
+#### Parameters
+
+- **$key**: The name of the property.
+- **$value**: The value of the property.
+
+#### Return Value
+
+The current instance.
+
+#### See Also
+
+- [`Property`](#Property)
+
+---
+
+### Property
+
+Returns the value of a property.
+
+This is typically used in the masterpage to access values set by the
+page and render content conditionally.
+
+#### Syntax
+
+```php
+public function Property(string $key, mixed $default = null): mixed
+```
+
+#### Parameters
+
+- **$key**: The name of the property.
+- **$default**: (Optional) The value to return if the property is not defined.
+
+#### Return Value
+
+The property value, or the default value if the property is not defined.
+
+#### See Also
+
+- [`SetProperty`](#SetProperty)
+
+---
+
 ### CsrfTokenName
 
 Returns the CSRF token name.
