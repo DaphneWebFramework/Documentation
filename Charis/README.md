@@ -22,6 +22,7 @@
 - [PillTab](PillTab.md)
 - [TabPane](TabPane.md)
 - [TabPanes](TabPanes.md)
+- [VerticalPillTabLayout](VerticalPillTabLayout.md)
 - [VerticalPillTabs](VerticalPillTabs.md)
 
 ## FormComposites
