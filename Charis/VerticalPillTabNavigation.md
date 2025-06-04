@@ -1,4 +1,4 @@
-# VerticalPillTabLayout
+# VerticalPillTabNavigation
 
 Represents the layout container for a vertically oriented pill-based tab
 navigation.
