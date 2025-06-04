@@ -20,6 +20,7 @@
 - [NavbarNav](NavbarNav.md)
 - [NavbarToggler](NavbarToggler.md)
 - [PillTab](PillTab.md)
+- [TabContent](TabContent.md)
 - [TabPane](TabPane.md)
 
 ## FormComposites
