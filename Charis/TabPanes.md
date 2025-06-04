@@ -1,4 +1,4 @@
-# TabContent
+# TabPanes
 
 Represents a container for tab panes in a tab navigation.
 
