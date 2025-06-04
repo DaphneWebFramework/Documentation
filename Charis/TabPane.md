@@ -1,13 +1,13 @@
-# PillTab
+# TabPane
 
-Represents a tab item in a pill-based tab navigation.
+Represents a content pane in a tab navigation.
 
 Aside from HTML attributes, this component supports the following pseudo
 attributes in its constructor:
 
-- `:key` (string, required): A unique name used to associate this item with
-  its corresponding content pane.
-- `:active` (boolean): Indicates whether this item is initially active.
+- `:key` (string, required): A unique name used to associate this pane with
+  its corresponding tab item.
+- `:active` (boolean): Indicates whether this pane is initially visible.
   Defaults to `false`.
 
 #### See Also
