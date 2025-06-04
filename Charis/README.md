@@ -19,6 +19,7 @@
 - [NavbarItem](NavbarItem.md)
 - [NavbarNav](NavbarNav.md)
 - [NavbarToggler](NavbarToggler.md)
+- [PillTab](PillTab.md)
 
 ## FormComposites
 - [FormCheck](FormComposites/FormCheck.md)
