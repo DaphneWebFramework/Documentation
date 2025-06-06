@@ -11,6 +11,7 @@
 
 #### Account
 - [ActivateAction](Api/Actions/Account/ActivateAction.md)
+- [ChangeDisplayNameAction](Api/Actions/Account/ChangeDisplayNameAction.md)
 - [LoginAction](Api/Actions/Account/LoginAction.md)
 - [LogoutAction](Api/Actions/Account/LogoutAction.md)
 - [RegisterAction](Api/Actions/Account/RegisterAction.md)
