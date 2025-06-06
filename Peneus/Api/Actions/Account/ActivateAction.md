@@ -1,6 +1,6 @@
-# RegisterAccountAction
+# ActivateAction
 
-Registers a new user account and sends an activation email.
+Handles account activation via activation code.
 
 ---
 

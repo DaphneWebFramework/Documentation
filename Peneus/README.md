@@ -8,12 +8,14 @@
 
 ### Actions
 - [Action](Api/Actions/Action.md)
-- [ActivateAccountAction](Api/Actions/ActivateAccountAction.md)
-- [LoginAction](Api/Actions/LoginAction.md)
-- [LogoutAction](Api/Actions/LogoutAction.md)
-- [RegisterAccountAction](Api/Actions/RegisterAccountAction.md)
-- [ResetPasswordAction](Api/Actions/ResetPasswordAction.md)
-- [SendPasswordResetAction](Api/Actions/SendPasswordResetAction.md)
+
+#### Account
+- [ActivateAction](Api/Actions/Account/ActivateAction.md)
+- [LoginAction](Api/Actions/Account/LoginAction.md)
+- [LogoutAction](Api/Actions/Account/LogoutAction.md)
+- [RegisterAction](Api/Actions/Account/RegisterAction.md)
+- [ResetPasswordAction](Api/Actions/Account/ResetPasswordAction.md)
+- [SendPasswordResetAction](Api/Actions/Account/SendPasswordResetAction.md)
 
 ### Guards
 - [FormTokenGuard](Api/Guards/FormTokenGuard.md)
