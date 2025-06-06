@@ -10,6 +10,7 @@ supports the following pseudo attributes in its constructor:
   is provided, an ID is generated automatically.
 - `:name`: The name attribute for the input element, used to identify the
   input's value during form submission.
+- `:value`: The initial value of the input element.
 - `:label`: Text for the associated `<label>` element. If omitted, no label
   is rendered.
 - `:help`: Additional descriptive text. If provided, a `<div>` element with
