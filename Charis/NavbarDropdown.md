@@ -7,6 +7,7 @@ supports the following pseudo attributes in its constructor:
 
 - `:label`: The text for the dropdown toggle link. Defaults to an empty
   string.
+- `:labelId`: The ID for the dropdown toggle link.
 - `:disabled`: Boolean indicating whether the dropdown is disabled. Defaults
   to `false`.
 - `:alignRight`: Boolean indicating whether the dropdown menu should be
