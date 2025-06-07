@@ -13,6 +13,7 @@
 - [ActivateAction](Api/Actions/Account/ActivateAction.md)
 - [ChangeDisplayNameAction](Api/Actions/Account/ChangeDisplayNameAction.md)
 - [ChangePasswordAction](Api/Actions/Account/ChangePasswordAction.md)
+- [DeleteAction](Api/Actions/Account/DeleteAction.md)
 - [LoginAction](Api/Actions/Account/LoginAction.md)
 - [LogoutAction](Api/Actions/Account/LogoutAction.md)
 - [RegisterAction](Api/Actions/Account/RegisterAction.md)
@@ -27,6 +28,9 @@
 ### Handlers
 - [AccountHandler](Api/Handlers/AccountHandler.md)
 - [Handler](Api/Handlers/Handler.md)
+
+### Hooks
+- [AccountRoleDeletionHook](Api/Hooks/AccountRoleDeletionHook.md)
 
 ## Model
 - [Account](Model/Account.md)

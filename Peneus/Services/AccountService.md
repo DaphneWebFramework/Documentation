@@ -73,4 +73,36 @@ The role of the logged-in user's account, or `null` if not set in the session.
 
 ---
 
+### RegisterDeletionHook
+
+Registers a hook to be triggered during account deletion.
+
+#### Syntax
+
+```php
+public function RegisterDeletionHook(\Peneus\Api\Hooks\IAccountDeletionHook $hook): void
+```
+
+#### Parameters
+
+- **$hook**: The hook implementation to be registered.
+
+---
+
+### DeletionHooks
+
+Returns all registered account deletion hooks.
+
+#### Syntax
+
+```php
+public function DeletionHooks(): \Peneus\Api\Hooks\IAccountDeletionHook[]
+```
+
+#### Return Value
+
+An array of registered deletion hook instances.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
