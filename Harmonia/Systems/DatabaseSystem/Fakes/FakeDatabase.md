@@ -62,7 +62,7 @@ matching query and bindings, the configured result will be returned.
 #### Syntax
 
 ```php
-public function Expect(string $sql, array<string,mixed> $bindings = [], ?array<int,array<string,mixed>> $result = [], int $lastInsertId = 0, int $lastAffectedRowCount = 0, ?int $times = self::UNLIMITED): void
+public function Expect(string $sql, array<string,mixed> $bindings = [], ?array<int,array<string,mixed>> $result = [], int $lastInsertId = 0, int $lastAffectedRowCount = 0, ?int $times = self::UNLIMITED_TIMES): void
 ```
 
 #### Parameters
@@ -73,6 +73,22 @@ public function Expect(string $sql, array<string,mixed> $bindings = [], ?array<i
 - **$lastInsertId**: (Optional) The value to be returned from `LastInsertId` after the query is executed. Defaults to `0`, simulating no last insert ID.
 - **$lastAffectedRowCount**: (Optional) The value to be returned from `LastAffectedRowCount` after the query is executed. Use `-1` to simulate a query failure. Defaults to `0`, indicating no rows were affected.
 - **$times**: (Optional) The number of times this expectation may be matched. If set to a positive integer, the expectation will only match that many times; exceeding it will throw an exception. If `null`, the expectation may be matched unlimited times.
+
+---
+
+### VerifyAllExpectationsMet
+
+Verifies that all expectations were fully consumed.
+
+#### Syntax
+
+```php
+public function VerifyAllExpectationsMet(): void
+```
+
+#### Exceptions
+
+- **\RuntimeException**: If any expectation was not matched the required number of times.
 
 ---
 
