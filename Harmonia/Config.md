@@ -4,22 +4,6 @@ Provides structured access to configuration options.
 
 ## Methods
 
-### Options
-
-Retrieves the configuration options.
-
-#### Syntax
-
-```php
-public function Options(): \Harmonia\Core\CArray
-```
-
-#### Return Value
-
-The configuration options.
-
----
-
 ### OptionsFilePath
 
 Retrieves the path to the configuration options file.
