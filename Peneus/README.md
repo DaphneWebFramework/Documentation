@@ -20,6 +20,9 @@
 - [ResetPasswordAction](Api/Actions/Account/ResetPasswordAction.md)
 - [SendPasswordResetAction](Api/Actions/Account/SendPasswordResetAction.md)
 
+#### Language
+- [ChangeAction](Api/Actions/Language/ChangeAction.md)
+
 ### Guards
 - [FormTokenGuard](Api/Guards/FormTokenGuard.md)
 - [SessionGuard](Api/Guards/SessionGuard.md)
@@ -28,6 +31,7 @@
 ### Handlers
 - [AccountHandler](Api/Handlers/AccountHandler.md)
 - [Handler](Api/Handlers/Handler.md)
+- [LanguageHandler](Api/Handlers/LanguageHandler.md)
 
 ### Hooks
 - [AccountRoleDeletionHook](Api/Hooks/AccountRoleDeletionHook.md)
@@ -41,6 +45,7 @@
 
 ## Services
 - [AccountService](Services/AccountService.md)
+- [LanguageService](Services/LanguageService.md)
 
 ## Systems
 
