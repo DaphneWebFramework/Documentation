@@ -1,30 +1,25 @@
 # PageManifest
 
-Loads and provides access to metadata for assets defined in a page-level
-`manifest.json`.
+Loads and provides access to CSS and JavaScript asset references defined in a
+page-level `manifest.json`.
 
 **Example JSON structure:**
 ```json
 {
   "css": ["index", "theme"],
-  "js": ["Model", "View", "Controller"],
-  "*": "localization.json"
+  "js": ["Model", "View", "Controller"]
 }
 ```
 
 CSS and JS paths listed in the manifest may omit file extensions. In debug
 mode (when the `IsDebug` configuration option is enabled), the framework will
-append `.css` or `.js` automatically if no extension is present. For example,
-the entry `"js": "View"` will resolve to `View.js`. If a file path already
-includes a full extension (such as `.min.js` or `.css`), the system uses it
-as-is.
+append `.css` or `.js` automatically if no extension is present. If a file
+path already includes a full extension (such as `.min.js` or `.css`), the
+system uses it as-is.
 
-In production mode (when the `IsDebug` configuration option is disabled),
-unlike library assets, the page system does not resolve or append `.min`
-suffixes for specific assets. Instead, it assumes the deployer tool has
-already minified and combined all CSS and JavaScript files into two optimized
-bundles named `page.min.css` and `page.min.js`, which are then included in
-place of individual files.
+In production mode (when `IsDebug` is disabled), it is assumed that the
+deployer has already combined and minified all assets into `page.min.css`
+and `page.min.js`, which are included instead of individual files.
 
 ## Methods
 
@@ -47,7 +42,7 @@ public function __construct(string $pageId)
 
 ### Css
 
-Returns an array of CSS file paths.
+Returns an array of CSS asset references.
 
 #### Syntax
 
@@ -57,13 +52,13 @@ public function Css(): string[]
 
 #### Return Value
 
-The list of CSS file paths (relative or absolute).
+A list of paths or URLs. Each item is either a relative path (with or without extension, resolved against the page directory) or a URL (e.g., CDN links).
 
 ---
 
 ### Js
 
-Returns an array of JavaScript file paths.
+Returns an array of JavaScript asset references.
 
 #### Syntax
 
@@ -73,31 +68,7 @@ public function Js(): string[]
 
 #### Return Value
 
-The list of JavaScript file paths (relative or absolute).
-
----
-
-### Extras
-
-Returns an array of extra resources.
-
-These may include fonts, source maps, or other supplementary assets
-(e.g., `.woff2`, `.min.js.map`, `.min.css.map`, `.json`, `.png`) that
-are required at runtime by the production version of the application
-and must be copied alongside the main assets during deployment.
-
-File paths may contain wildcard characters (e.g., `*`, `?`), which are
-matched against the filesystem during deployment.
-
-#### Syntax
-
-```php
-public function Extras(): string[]
-```
-
-#### Return Value
-
-The list of extra asset paths (relative or absolute). Paths may include wildcard patterns (e.g., `*`, `?`).
+A list of paths or URLs. Each item is either a relative path (with or without extension, resolved against the page directory) or a URL (e.g., CDN links).
 
 ---
 

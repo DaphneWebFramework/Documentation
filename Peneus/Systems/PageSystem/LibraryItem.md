@@ -1,35 +1,33 @@
 # LibraryItem
 
-Represents the metadata for a frontend library declared in `manifest.json`.
+Represents a single frontend library's CSS and JavaScript asset references.
 
-This class holds normalized data for a single frontend library (e.g.,
-Bootstrap, jQuery), including its associated CSS and JavaScript file paths,
-any additional supporting assets, and default inclusion status.
+Used by the library manifest loader to return parsed paths or URLs for each
+library (e.g., Bootstrap, jQuery) defined in `frontend/manifest.json`.
 
 ## Methods
 
 ### __construct
 
-Constructs a new instance.
+Constructs a new instance with CSS and JavaScript inputs.
 
 #### Syntax
 
 ```php
-public function __construct(string|array|null $css, string|array|null $js, string|array|null $extras, bool $isDefault)
+public function __construct(string|array|null $css, string|array|null $js, bool $isDefault)
 ```
 
 #### Parameters
 
-- **$css**: One or more relative paths to CSS files, or `null` if none.
-- **$js**: One or more relative paths to JavaScript files, or `null` if none.
-- **$extras**: One or more additional asset paths (e.g., fonts, map files), or `null` if none.
-- **$isDefault**: Indicates whether this library is marked to be included by default.
+- **$css**: A string, array of strings, or `null`, representing one or more CSS paths or URLs.
+- **$js**: A string, array of strings, or `null`, representing one or more JavaScript paths or URLs.
+- **$isDefault**: Indicates whether the library is marked as default in the manifest.
 
 ---
 
 ### Css
 
-Returns an array of CSS file paths.
+Returns an array of CSS asset references.
 
 #### Syntax
 
@@ -39,13 +37,13 @@ public function Css(): string[]
 
 #### Return Value
 
-The list of CSS file paths (relative or absolute).
+A list of paths or URLs. Each item is either a relative path (with or without extension, resolved against the frontend directory) or a URL (e.g., CDN links).
 
 ---
 
 ### Js
 
-Returns an array of JavaScript file paths.
+Returns an array of JavaScript asset references.
 
 #### Syntax
 
@@ -55,37 +53,13 @@ public function Js(): string[]
 
 #### Return Value
 
-The list of JavaScript file paths (relative or absolute).
-
----
-
-### Extras
-
-Returns an array of extra resources.
-
-These may include fonts, source maps, or other supplementary assets
-(e.g., `.woff2`, `.min.js.map`, `.min.css.map`, `.json`, `.png`) that
-are required at runtime by the production version of the application
-and must be copied alongside the main assets during deployment.
-
-File paths may contain wildcard characters (e.g., `*`, `?`), which are
-matched against the filesystem during deployment.
-
-#### Syntax
-
-```php
-public function Extras(): string[]
-```
-
-#### Return Value
-
-The list of extra asset paths (relative or absolute). Paths may include wildcard patterns (e.g., `*`, `?`).
+A list of paths or URLs. Each item is either a relative path (with or without extension, resolved against the frontend directory) or a URL (e.g., CDN links).
 
 ---
 
 ### IsDefault
 
-Indicates whether the library is included by default.
+Indicates whether the library is marked as default in the manifest.
 
 #### Syntax
 
@@ -95,7 +69,7 @@ public function IsDefault(): bool
 
 #### Return Value
 
-Returns `true` if the library is marked as default in the manifest, `false` otherwise.
+Returns `true` if the library should be included by default, `false` otherwise.
 
 ---
 

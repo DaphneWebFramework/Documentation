@@ -1,34 +1,33 @@
 # Assets
 
-Encapsulates asset file paths such as CSS, JavaScript, and extra resources.
+Represents normalized CSS and JavaScript asset references.
 
-This class is used to represent normalized asset definitions for both
-frontend libraries and individual pages. Paths may be specified as a string,
-an array of strings, or `null`.
+Used by both page-level and library-level manifest loaders to store and
+return parsed paths or URLs. Input values may be strings, arrays of strings,
+or `null`, and are normalized internally to consistent arrays.
 
 ## Methods
 
 ### __construct
 
-Constructs a new instance.
+Constructs a new instance with CSS and JavaScript inputs.
 
 #### Syntax
 
 ```php
-public function __construct(string|array|null $css = null, string|array|null $js = null, string|array|null $extras = null)
+public function __construct(string|array|null $css = null, string|array|null $js = null)
 ```
 
 #### Parameters
 
-- **$css**: (Optional) One or more relative paths to CSS files, or `null` if none.
-- **$js**: (Optional) One or more relative paths to JavaScript files, or `null` if none.
-- **$extras**: (Optional) One or more additional asset paths (e.g., fonts, map files), or `null` if none.
+- **$css**: (Optional) A string, array of strings, or `null`, representing one or more CSS paths or URLs. Defaults to `null`.
+- **$js**: (Optional) A string, array of strings, or `null`, representing one or more JavaScript paths or URLs. Defaults to `null`.
 
 ---
 
 ### Css
 
-Returns an array of CSS file paths.
+Returns an array of CSS asset references.
 
 #### Syntax
 
@@ -38,13 +37,13 @@ public function Css(): string[]
 
 #### Return Value
 
-The list of CSS file paths (relative or absolute).
+A list of paths or URLs. Each item is either a relative path (with or without extension, resolved relative to its context) or a URL (e.g., CDN links).
 
 ---
 
 ### Js
 
-Returns an array of JavaScript file paths.
+Returns an array of JavaScript asset references.
 
 #### Syntax
 
@@ -54,31 +53,7 @@ public function Js(): string[]
 
 #### Return Value
 
-The list of JavaScript file paths (relative or absolute).
-
----
-
-### Extras
-
-Returns an array of extra resources.
-
-These may include fonts, source maps, or other supplementary assets
-(e.g., `.woff2`, `.min.js.map`, `.min.css.map`, `.json`, `.png`) that
-are required at runtime by the production version of the application
-and must be copied alongside the main assets during deployment.
-
-File paths may contain wildcard characters (e.g., `*`, `?`), which are
-matched against the filesystem during deployment.
-
-#### Syntax
-
-```php
-public function Extras(): string[]
-```
-
-#### Return Value
-
-The list of extra asset paths (relative or absolute). Paths may include wildcard patterns (e.g., `*`, `?`).
+A list of paths or URLs. Each item is either a relative path (with or without extension, resolved relative to its context) or a URL (e.g., CDN links).
 
 ---
 

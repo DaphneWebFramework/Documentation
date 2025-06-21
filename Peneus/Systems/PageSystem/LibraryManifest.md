@@ -1,7 +1,7 @@
 # LibraryManifest
 
-Loads and provides access to metadata for all frontend libraries defined in
-`manifest.json`.
+Loads and provides access to CSS and JavaScript asset references defined in
+the `frontend/manifest.json` file.
 
 **Example JSON structure:**
 ```json
@@ -20,27 +20,20 @@ Loads and provides access to metadata for all frontend libraries defined in
   },
   "audiojs": {
     "css": "audiojs-1.0.1/audio",
-    "js": "audiojs-1.0.1/audio",
-    "*": "audiojs-1.0.1/player-graphics.gif"
+    "js": "audiojs-1.0.1/audio"
   }
 }
 ```
 
 CSS and JS paths listed in the manifest may omit file extensions. In debug
 mode (when the `IsDebug` configuration option is enabled), the framework will
-append `.css` or `.js` automatically if no extension is present. For example,
-the entry `"js": "lib/foo"` will resolve to `lib/foo.js`. If a file path
-already includes a full extension (such as `.min.js` or `.css`), the system
-uses it as-is.
+append `.css` or `.js` automatically if no extension is present. If a file
+path already includes a full extension (such as `.min.js` or `.css`), the
+system uses it as-is.
 
-In production mode (when the `IsDebug` configuration option is disabled),
-the framework resolves paths to minified variants by appending `.min` before
-the extension. For example, `"js": "lib/foo"` will resolve to `lib/foo.min.js`.
-
-Unlike page-level assets, library assets are not bundled or minified by the
-deployer tool. Instead, the deployer preserves the structure of the manifest
-and only ensures the correct file extension is applied based on the debug
-configuration.
+In production mode (when `IsDebug` is disabled), if a path has no extension,
+the framework attempts to resolve it to a `.min.js` or `.min.css` version.
+If the path already ends with a full extension, it is used as-is.
 
 ## Methods
 
