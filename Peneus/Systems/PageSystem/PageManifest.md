@@ -11,15 +11,10 @@ page-level `manifest.json`.
 }
 ```
 
-CSS and JS paths listed in the manifest may omit file extensions. In debug
-mode (when the `IsDebug` configuration option is enabled), the framework will
-append `.css` or `.js` automatically if no extension is present. If a file
-path already includes a full extension (such as `.min.js` or `.css`), the
-system uses it as-is.
-
-In production mode (when `IsDebug` is disabled), it is assumed that the
-deployer has already combined and minified all assets into `page.min.css`
-and `page.min.js`, which are included instead of individual files.
+If an asset path omits a file extension, the framework appends `.css` or
+`.js` automatically based on the asset type. In production mode, a `.min`
+suffix is also added before the extension. If the path already specifies
+a full filename with extension, it is used as-is.
 
 ## Methods
 
