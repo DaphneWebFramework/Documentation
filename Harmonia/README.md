@@ -50,6 +50,7 @@
 - [DeleteQuery](Systems/DatabaseSystem/Queries/DeleteQuery.md)
 - [InsertQuery](Systems/DatabaseSystem/Queries/InsertQuery.md)
 - [Query](Systems/DatabaseSystem/Queries/Query.md)
+- [RawQuery](Systems/DatabaseSystem/Queries/RawQuery.md)
 - [SelectQuery](Systems/DatabaseSystem/Queries/SelectQuery.md)
 - [UpdateQuery](Systems/DatabaseSystem/Queries/UpdateQuery.md)
 

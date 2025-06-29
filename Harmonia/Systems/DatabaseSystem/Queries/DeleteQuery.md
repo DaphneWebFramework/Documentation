@@ -7,7 +7,7 @@ Class for building SQL queries to delete data from a table.
 Deleting a user by ID:
 
 ```php
-$query = (new DeleteQuery())
+$query = (new DeleteQuery)
     ->Table('users')
     ->Where('id = :id')
     ->Bind(['id' => 101]);
