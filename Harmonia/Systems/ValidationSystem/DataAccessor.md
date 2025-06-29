@@ -60,11 +60,35 @@ public function GetField(string|int $field): mixed
 
 #### Return Value
 
-Returns the value of the field.
+The field value if it exists.
 
 #### Exceptions
 
 - **\RuntimeException**: If the field does not exist.
+
+---
+
+### GetFieldOrDefault
+
+Retrieves the value of the specified field or returns a default if not
+found.
+
+Supports nested fields using dot notation (e.g., `'user.profile.name'`).
+
+#### Syntax
+
+```php
+public function GetFieldOrDefault(string|int $field, mixed $defaultValue = null): mixed
+```
+
+#### Parameters
+
+- **$field**: The field name or index to retrieve.
+- **$defaultValue**: The default value to return if the field does not exist.
+
+#### Return Value
+
+The field value if it exists, otherwise the default value.
 
 ---
 
