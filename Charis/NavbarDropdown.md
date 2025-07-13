@@ -10,7 +10,7 @@ component supports the following pseudo attributes in its constructor:
   Defaults to `false`.
 - `:link:*` (mixed): Additional HTML attributes forwarded to the internal
   `<a>` element.
-- ':menu:*' (mixed): Additional HTML attributes forwarded to the internal
+- `:menu:*` (mixed): Additional HTML attributes forwarded to the internal
   `<ul>` element.
 
 #### See Also
