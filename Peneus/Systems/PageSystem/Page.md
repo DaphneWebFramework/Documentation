@@ -486,6 +486,10 @@ public function RequireLogin(\Peneus\Model\Role $minimumRole = Role::None): self
 
 - **$minimumRole**: (Optional) The minimum role required to access the page. Defaults to `Role::None`.
 
+#### Return Value
+
+The current instance.
+
 ---
 
 ### SetProperty

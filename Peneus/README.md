@@ -23,6 +23,9 @@
 #### Language
 - [ChangeAction](Api/Actions/Language/ChangeAction.md)
 
+#### Management
+- [ListRecordsAction](Api/Actions/Management/ListRecordsAction.md)
+
 ### Guards
 - [FormTokenGuard](Api/Guards/FormTokenGuard.md)
 - [SessionGuard](Api/Guards/SessionGuard.md)
@@ -32,6 +35,7 @@
 - [AccountHandler](Api/Handlers/AccountHandler.md)
 - [Handler](Api/Handlers/Handler.md)
 - [LanguageHandler](Api/Handlers/LanguageHandler.md)
+- [ManagementHandler](Api/Handlers/ManagementHandler.md)
 
 ### Hooks
 - [AccountRoleDeletionHook](Api/Hooks/AccountRoleDeletionHook.md)
