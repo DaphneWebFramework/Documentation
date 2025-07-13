@@ -29,7 +29,7 @@ public function Sql(string $sql): self
 
 #### Parameters
 
-- **$sql**: The SQL string. May include named placeholders (e.g., :name).
+- **$sql**: The SQL string. May include named placeholders (e.g., `:name`).
 
 #### Return Value
 
