@@ -104,6 +104,22 @@ Returns an array of non-integer values.
 
 ---
 
+### NonIntegerExcludingNumericStringProvider
+
+Provides non-integer values, excluding strings that represent integers.
+
+#### Syntax
+
+```php
+public static function NonIntegerExcludingNumericStringProvider(): array
+```
+
+#### Return Value
+
+Returns an array of values that are neither integers nor stringified integers.
+
+---
+
 ### NonStringOrIntegerProvider
 
 Provides non-string, non-integer values.
