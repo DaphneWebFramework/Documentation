@@ -71,6 +71,37 @@ Returns `true` if the entity was successfully deleted. Returns `false` if `id` i
 
 ---
 
+### TableName
+
+Returns the table name of the entity.
+
+By default, the table name is derived from the entity's class name,
+converted to lowercase. Subclasses can override this method to specify
+a custom table name.
+
+#### Example
+```php
+class CustomEntity extends Entity
+{
+    public static function TableName(): string
+    {
+        return 'custom_table_name';
+    }
+}
+```
+
+#### Syntax
+
+```php
+public static function TableName(): string
+```
+
+#### Return Value
+
+The table name associated with the entity.
+
+---
+
 ### FindById
 
 Retrieves an entity by its primary key.
