@@ -149,12 +149,12 @@ the PUT method instead.
 #### Syntax
 
 ```php
-public function Body(): ?\Harmonia\Core\CString
+public function Body(): ?string
 ```
 
 #### Return Value
 
-A `CString` instance containing the raw body data, or `null` if an error occurs.
+The raw body content, or `null` if an error occurs.
 
 ---
 
