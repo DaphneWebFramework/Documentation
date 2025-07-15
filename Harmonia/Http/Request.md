@@ -158,4 +158,40 @@ The raw body content, or `null` if an error occurs.
 
 ---
 
+### JsonBody
+
+Decodes the request body as JSON and returns it as an associative array.
+
+#### Syntax
+
+```php
+public function JsonBody(): array
+```
+
+#### Return Value
+
+The decoded JSON data, or an empty array if the request's media type is not `application/json`, if the body content cannot be read, or if the JSON is invalid.
+
+---
+
+### IsMediaType
+
+Checks whether the request's media type matches the given type.
+
+#### Syntax
+
+```php
+public function IsMediaType(string $expectedType): bool
+```
+
+#### Parameters
+
+- **$expectedType**: The expected media type (e.g., 'application/json').
+
+#### Return Value
+
+Return `true` if the request's media type matches, `false` otherwise.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
