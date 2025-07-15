@@ -102,6 +102,27 @@ The table name associated with the entity.
 
 ---
 
+### Columns
+
+Returns the column names associated with the entity.
+
+The `id` column is always placed first, followed by all other public,
+non-static, non-readonly properties whose values are considered bindable.
+Bindable values exclude arrays, resources, and objects lacking a
+`__toString()` method.
+
+#### Syntax
+
+```php
+public static function Columns(): string[]
+```
+
+#### Return Value
+
+An ordered list of column names.
+
+---
+
 ### FindById
 
 Retrieves an entity by its primary key.
