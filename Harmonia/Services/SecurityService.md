@@ -97,27 +97,4 @@ Returns `true` if the token is valid, otherwise `false`.
 
 ---
 
-### IsValidToken
-
-Determines whether the given string is a valid token.
-
-A valid token is a 64-character string composed exclusively of
-lowercase hexadecimal digits (a–f, 0–9).
-
-#### Syntax
-
-```php
-public static function IsValidToken(string $value): bool
-```
-
-#### Parameters
-
-- **$value**: The token string to validate.
-
-#### Return Value
-
-Returns `true` if the string matches the expected format, `false` otherwise.
-
----
-
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
