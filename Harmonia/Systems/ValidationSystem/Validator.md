@@ -15,7 +15,7 @@ $validator = new Validator([
     'id' => ['required', 'integer', 'min:1'],
     'token' => 'regex:/^[a-f0-9]{64}$/',
     'countryCode' => function($value) {
-        return \in_array($value, ['US', 'CA', 'MX']);
+        return \in_array($value, ['US', 'CA', 'MX'], true);
     }
 ]);
 ```
@@ -46,7 +46,7 @@ $validator = new Validator(
 #### Syntax
 
 ```php
-public function __construct(array<string|int,string|\Closure|(string|\Closure)[]> $userDefinedRules, ?array<string,string> $customMessages = null)
+public function __construct(array<string|int,string|\Closure|array<int,string|\Closure>> $userDefinedRules, ?array<string,string> $customMessages = null)
 ```
 
 #### Parameters

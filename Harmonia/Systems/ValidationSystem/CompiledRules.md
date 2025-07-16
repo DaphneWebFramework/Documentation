@@ -14,7 +14,7 @@ Constructs a new instance by compiling the provided rules into meta rules.
 #### Syntax
 
 ```php
-public function __construct(array<string|int,string|\Closure|(string|\Closure)[]> $userDefinedRules)
+public function __construct(array<string|int,string|\Closure|array<int,string|\Closure>> $userDefinedRules)
 ```
 
 #### Parameters
