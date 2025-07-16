@@ -20,6 +20,22 @@ public function __construct(array|object $data)
 
 ---
 
+### Data
+
+Returns the underlying data source.
+
+#### Syntax
+
+```php
+public function Data(): array|object
+```
+
+#### Return Value
+
+The data source being accessed, which can be an array or an object.
+
+---
+
 ### HasField
 
 Checks if the specified field exists in the data.
