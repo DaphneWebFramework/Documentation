@@ -24,6 +24,7 @@
 - [ChangeAction](Api/Actions/Language/ChangeAction.md)
 
 #### Management
+- [AddRecordAction](Api/Actions/Management/AddRecordAction.md)
 - [ListRecordsAction](Api/Actions/Management/ListRecordsAction.md)
 
 ### Guards
