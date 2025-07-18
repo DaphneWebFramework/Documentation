@@ -25,6 +25,7 @@
 
 #### Management
 - [AddRecordAction](Api/Actions/Management/AddRecordAction.md)
+- [DeleteRecordAction](Api/Actions/Management/DeleteRecordAction.md)
 - [ListRecordsAction](Api/Actions/Management/ListRecordsAction.md)
 
 ### Guards
