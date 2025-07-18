@@ -34,6 +34,30 @@ public function __construct(?array $data = null)
 
 ---
 
+### Populate
+
+Populates the entity's properties with the given data.
+
+Date and time values in the provided data should be formatted as strings
+(e.g., `'2025-03-15 12:45:00'`, `'2025-03-15'`). If a corresponding
+property is an instance of `DateTime`, its value is updated using the
+given string. Any conversion errors are silently ignored.
+
+If a property assignment fails due to a type mismatch or other error,
+it is silently skipped.
+
+#### Syntax
+
+```php
+public function Populate(array $data): void
+```
+
+#### Parameters
+
+- **$data**: An associative array of property values. Keys must match the entity's public properties. If `id` is specified, it is also assigned.
+
+---
+
 ### Save
 
 Saves the entity to the database.
