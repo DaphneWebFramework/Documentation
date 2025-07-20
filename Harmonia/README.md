@@ -80,6 +80,7 @@
 - [ArrayRule](Systems/ValidationSystem/Rules/ArrayRule.md)
 - [DatetimeRule](Systems/ValidationSystem/Rules/DatetimeRule.md)
 - [EmailRule](Systems/ValidationSystem/Rules/EmailRule.md)
+- [EnumRule](Systems/ValidationSystem/Rules/EnumRule.md)
 - [FileRule](Systems/ValidationSystem/Rules/FileRule.md)
 - [IntegerRule](Systems/ValidationSystem/Rules/IntegerRule.md)
 - [MaxRule](Systems/ValidationSystem/Rules/MaxRule.md)

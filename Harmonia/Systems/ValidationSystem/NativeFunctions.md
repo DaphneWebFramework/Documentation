@@ -19,7 +19,7 @@ public function IsNumeric(mixed $value): bool
 
 #### Parameters
 
-- **$value**: The value to check.
+- **$value**: The value to check for numeric type.
 
 #### Return Value
 
@@ -39,7 +39,7 @@ public function IsString(mixed $value): bool
 
 #### Parameters
 
-- **$value**: The value to check.
+- **$value**: The value to check for string type.
 
 #### Return Value
 
@@ -60,7 +60,7 @@ public function IsIntegerLike(mixed $value): bool
 
 #### Parameters
 
-- **$value**: The value to check.
+- **$value**: The value to validate as an integer or integer string.
 
 #### Return Value
 
@@ -80,7 +80,7 @@ public function IsEmailAddress(mixed $value): bool
 
 #### Parameters
 
-- **$value**: The value to check.
+- **$value**: The value to validate as an email address.
 
 #### Return Value
 
@@ -100,7 +100,7 @@ public function IsArray(mixed $value): bool
 
 #### Parameters
 
-- **$value**: The value to check.
+- **$value**: The value to check for array type.
 
 #### Return Value
 
@@ -120,7 +120,7 @@ public function IsUploadedFile(mixed $value): bool
 
 #### Parameters
 
-- **$value**: The value to check.
+- **$value**: The value to validate as a file upload array.
 
 #### Return Value
 
@@ -141,7 +141,7 @@ public function MatchRegex(string $value, string $param): bool
 
 #### Parameters
 
-- **$value**: The value to be matched against the regular expression.
+- **$value**: The string value to validate against the regular expression pattern.
 - **$param**: The regular expression pattern.
 
 #### Return Value
@@ -163,7 +163,7 @@ public function MatchDateTime(string $value, string $param): bool
 
 #### Parameters
 
-- **$value**: The date/time string to be validated.
+- **$value**: The string value to validate as a date/time.
 - **$param**: The format string that the date/time should adhere to, as per `DateTime::createFromFormat` documentation.
 
 #### Return Value
@@ -173,6 +173,31 @@ Returns `true` if `$value` matches the format specified in `$param`, `false` oth
 #### See Also
 
 - [https://www.php.net/manual/en/datetime.formats.php](https://www.php.net/manual/en/datetime.formats.php)
+
+---
+
+### IsEnumValue
+
+Validates whether a given value is a valid case of a specified enum class.
+
+Supports both backed and pure enums. For backed enums, the value must
+match the enum's backing type exactly and exist in its defined cases.
+For pure enums, the value must match the name of a defined case.
+
+#### Syntax
+
+```php
+public function IsEnumValue(mixed $value, string $enumClass): bool
+```
+
+#### Parameters
+
+- **$value**: The value to validate as an enum case.
+- **$enumClass**: The fully qualified name of the enum class.
+
+#### Return Value
+
+Returns `true` if the value matches a valid enum case, `false` otherwise.
 
 ---
 
