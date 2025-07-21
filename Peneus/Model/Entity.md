@@ -209,7 +209,7 @@ public static function Find(?string $condition = null, ?array $bindings = null, 
 
 #### Return Value
 
-An array of instances of the called class.
+An array of instances of the called class. Returns an empty array if no matching rows are found or if the query fails.
 
 ---
 
@@ -230,7 +230,7 @@ public static function Count(?string $condition = null, ?array $bindings = null)
 
 #### Return Value
 
-The number of matching rows. Returns `0` if the query fails.
+The number of matching rows. Returns `0` if no matching rows are found or if the query fails.
 
 ---
 
