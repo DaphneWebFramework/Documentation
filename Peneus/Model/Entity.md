@@ -95,6 +95,28 @@ Returns `true` if the entity was successfully deleted. Returns `false` if `id` i
 
 ---
 
+### jsonSerialize
+
+Specifies how the entity should be serialized to JSON.
+
+Converts `DateTimeInterface` properties to strings using the standard
+date-time format. Preserves `null` for uninitialized date-time fields.
+Only properties eligible as database columns are included in the output.
+
+This method implements the `JsonSerializable` interface.
+
+#### Syntax
+
+```php
+public function jsonSerialize(): array
+```
+
+#### Return Value
+
+An associative array of property names and their serialized values.
+
+---
+
 ### TableName
 
 Returns the table name of the entity.
