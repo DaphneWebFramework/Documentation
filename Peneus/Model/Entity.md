@@ -99,11 +99,9 @@ Returns `true` if the entity was successfully deleted. Returns `false` if `id` i
 
 Specifies how the entity should be serialized to JSON.
 
-Converts `DateTimeInterface` properties to strings using the standard
-date-time format. Preserves `null` for uninitialized date-time fields.
-Only properties eligible as database columns are included in the output.
-
-This method implements the `JsonSerializable` interface.
+Converts `DateTime` properties to strings using the standard
+date-time format. Preserves `null` for nullable date-time fields.
+Only properties with supported types are included in the output.
 
 #### Syntax
 
@@ -153,8 +151,7 @@ The table name associated with the entity.
 Returns the column names associated with the entity.
 
 The `id` column is always placed first, followed by all other public,
-non-static, non-readonly properties whose types are eligible to be mapped
-to database columns.
+non-static, non-readonly properties with supported types.
 
 #### Syntax
 
