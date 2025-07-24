@@ -165,6 +165,22 @@ An ordered list of column names.
 
 ---
 
+### CreateTable
+
+Creates the database table for the entity.
+
+#### Syntax
+
+```php
+public static function CreateTable(): bool
+```
+
+#### Return Value
+
+Returns `true` on success or if the table already exists. Returns `false` if the entity has no properties suitable for table creation, or if query execution fails.
+
+---
+
 ### FindById
 
 Retrieves an entity by its primary key.
