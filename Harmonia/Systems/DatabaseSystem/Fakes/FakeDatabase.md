@@ -18,7 +18,7 @@ class AccountTest extends \PHPUnit\Framework\TestCase
     {
         $fakeDatabase = new FakeDatabase();
         $fakeDatabase->Expect(
-            sql: 'SELECT COUNT(*) FROM account WHERE email = :email',
+            sql: 'SELECT COUNT(*) FROM `account` WHERE `email` = :email',
             bindings: ['email' => 'john@example.com'],
             result: [[1]]
         );
