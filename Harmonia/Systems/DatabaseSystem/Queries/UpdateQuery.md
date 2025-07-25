@@ -21,7 +21,7 @@ $query = (new UpdateQuery)
 
 **Generated SQL:**
 ```sql
-UPDATE users
+UPDATE `users`
 SET email = :email, status = :status
 WHERE id = :id
 ```

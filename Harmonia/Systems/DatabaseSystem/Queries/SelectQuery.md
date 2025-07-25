@@ -4,7 +4,8 @@ Class for building SQL queries to retrieve data from a table.
 
 #### Example
 
-Fetching active users who registered after a specific date, sorted by their last login:
+Fetching active users who registered after a specific date, sorted by their
+last login:
 
 ```php
 $query = (new SelectQuery)
@@ -24,7 +25,7 @@ $query = (new SelectQuery)
 
 **Generated SQL:**
 ```sql
-SELECT name, email, COUNT(*) AS loginCount FROM users
+SELECT name, email, COUNT(*) AS loginCount FROM `users`
 WHERE status = :status AND createdAt >= :startDate
 ORDER BY lastLogin DESC, name
 LIMIT 20 OFFSET 10

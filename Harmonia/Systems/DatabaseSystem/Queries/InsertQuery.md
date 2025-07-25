@@ -22,7 +22,7 @@ $query = (new InsertQuery)
 
 **Generated SQL:**
 ```sql
-INSERT INTO users (id, name, email, status, createdAt)
+INSERT INTO `users` (id, name, email, status, createdAt)
 VALUES (:id, :name, :email, :status, :createdAt)
 ```
 

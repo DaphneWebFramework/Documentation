@@ -15,7 +15,7 @@ $query = (new DeleteQuery)
 
 **Generated SQL:**
 ```sql
-DELETE FROM users WHERE id = :id
+DELETE FROM `users` WHERE id = :id
 ```
 
 ## Methods
