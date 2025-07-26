@@ -21,6 +21,7 @@
 - [NavbarNav](NavbarNav.md)
 - [NavbarToggler](NavbarToggler.md)
 - [PillTab](PillTab.md)
+- [Spinner](Spinner.md)
 - [TabPane](TabPane.md)
 - [TabPanes](TabPanes.md)
 - [VerticalPillTabNavigation](VerticalPillTabNavigation.md)
