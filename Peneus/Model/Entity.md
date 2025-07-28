@@ -177,7 +177,7 @@ public static function CreateTable(): bool
 
 #### Return Value
 
-Returns `true` on success or if the table already exists. Returns `false` if the entity has no properties suitable for table creation, or if query execution fails.
+Returns `true` on success. Returns `false` if the table already exists, if the entity has no properties suitable for table creation, or if query execution fails.
 
 ---
 
