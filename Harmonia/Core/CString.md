@@ -1153,4 +1153,20 @@ An iterator yielding each character.
 
 ---
 
+### jsonSerialize
+
+Returns the string representation for JSON serialization.
+
+#### Syntax
+
+```php
+public function jsonSerialize(): string
+```
+
+#### Return Value
+
+The string value stored in the instance.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
