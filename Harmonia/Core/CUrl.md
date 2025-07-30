@@ -26,79 +26,71 @@ A new `CUrl` instance representing the joined URL.
 
 ### EnsureLeadingSlash
 
-Ensures the URL starts with a leading slash.
+Ensures the URL starts with a slash.
 
 If the URL does not already start with a slash, one is inserted at the
 beginning.
 
-This method directly modifies the current instance.
-
 #### Syntax
 
 ```php
-public function EnsureLeadingSlash(): self
+public function EnsureLeadingSlash(): static
 ```
 
 #### Return Value
 
-The current instance.
+A new instance that starts with a slash.
 
 ---
 
 ### EnsureTrailingSlash
 
-Ensures the URL ends with a trailing slash.
+Ensures the URL ends with a slash.
 
 If the URL does not already end with a slash, one is appended at the
 end.
 
-This method directly modifies the current instance.
-
 #### Syntax
 
 ```php
-public function EnsureTrailingSlash(): self
+public function EnsureTrailingSlash(): static
 ```
 
 #### Return Value
 
-The current instance.
+A new instance that ends with a slash.
 
 ---
 
 ### TrimLeadingSlashes
 
-Removes all leading slashes.
-
-This method directly modifies the current instance.
+Removes slashes from the start of the URL.
 
 #### Syntax
 
 ```php
-public function TrimLeadingSlashes(): self
+public function TrimLeadingSlashes(): static
 ```
 
 #### Return Value
 
-The current instance.
+A new instance without slashes at the start.
 
 ---
 
 ### TrimTrailingSlashes
 
-Removes all trailing slashes.
-
-This method directly modifies the current instance.
+Removes slashes from the end of the URL.
 
 #### Syntax
 
 ```php
-public function TrimTrailingSlashes(): self
+public function TrimTrailingSlashes(): static
 ```
 
 #### Return Value
 
-The current instance.
+A new instance without slashes at the end.
 
 ---
 
