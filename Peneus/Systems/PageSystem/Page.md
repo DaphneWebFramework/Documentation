@@ -355,7 +355,7 @@ Adds or replaces a meta tag.
 #### Syntax
 
 ```php
-public function SetMeta(string $name, string $content, string $type = 'name'): self
+public function SetMeta(string $name, string|\Stringable $content, string $type = 'name'): self
 ```
 
 #### Parameters

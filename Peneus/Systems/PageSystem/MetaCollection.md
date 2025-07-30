@@ -44,7 +44,7 @@ Adds or replaces a meta tag.
 #### Syntax
 
 ```php
-public function Set(string $name, string $content, string $type = 'name'): void
+public function Set(string $name, string|\Stringable $content, string $type = 'name'): void
 ```
 
 #### Parameters
