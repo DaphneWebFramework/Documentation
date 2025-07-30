@@ -1007,6 +1007,32 @@ A new instance containing the result of the applied function.
 
 ---
 
+### Call
+
+Calls a function using the current value.
+
+#### Syntax
+
+```php
+public function Call(callable $function, mixed ...$args): mixed
+```
+
+#### Parameters
+
+- **$function**: The function to call. It must accept a string as its first parameter. Any additional arguments passed to this method will be forwarded to the called function.
+- **$args**: Additional arguments to pass to the called function.
+
+#### Return Value
+
+The return value of the called function.
+
+#### See Also
+
+- [`Apply`](#Apply)
+- [`ApplyInPlace`](#ApplyInPlace)
+
+---
+
 ### Match
 
 Matches the string against a regular expression pattern.
