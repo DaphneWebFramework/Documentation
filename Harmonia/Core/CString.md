@@ -975,6 +975,7 @@ The current instance.
 #### See Also
 
 - [`Apply`](#Apply)
+- [`Call`](#Call)
 
 ---
 
@@ -1004,6 +1005,7 @@ A new instance containing the result of the applied function.
 #### See Also
 
 - [`ApplyInPlace`](#ApplyInPlace)
+- [`Call`](#Call)
 
 ---
 
