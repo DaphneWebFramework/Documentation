@@ -184,6 +184,23 @@ An ordered list of column names.
 
 ---
 
+### TableExists
+
+Checks whether the entity's associated table or view exists in the
+database.
+
+#### Syntax
+
+```php
+public static function TableExists(): bool
+```
+
+#### Return Value
+
+Returns `true` if a table or view with the matching name exists, `false` otherwise.
+
+---
+
 ### CreateTable
 
 Creates the database table or view for the entity.
