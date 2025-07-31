@@ -177,4 +177,28 @@ The return value of the callback, or `false` if an exception was thrown.
 
 ---
 
+### EscapeString
+
+Simulates MySQL's `real_escape_string()` behavior.
+
+Unlike the real method, this simulation does not account for connection
+charset or collation. However, it closely approximates the escaping
+behavior for testing purposes.
+
+#### Syntax
+
+```php
+public function EscapeString(string $string): string
+```
+
+#### Parameters
+
+- **$string**: The input string to escape.
+
+#### Return Value
+
+A simulated escaped string.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
