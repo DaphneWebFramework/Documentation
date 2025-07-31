@@ -115,6 +115,25 @@ An associative array of property names and their serialized values.
 
 ---
 
+### IsView
+
+Determines whether the entity represents a view.
+
+This method checks if the entity class extends `ViewEntity`, indicating
+that it should be treated as a database view rather than a regular table.
+
+#### Syntax
+
+```php
+public static function IsView(): bool
+```
+
+#### Return Value
+
+Returns `true` if the entity is a view, `false` if it is a regular table entity.
+
+---
+
 ### TableName
 
 Returns the table name of the entity.
@@ -167,7 +186,12 @@ An ordered list of column names.
 
 ### CreateTable
 
-Creates the database table for the entity.
+Creates the database table or view for the entity.
+
+If the entity is a view (extends `ViewEntity`), a `CREATE OR REPLACE VIEW`
+statement is executed using the SQL returned from `ViewDefinition` method.
+Otherwise, a `CREATE TABLE` statement is generated based on the entity's
+properties.
 
 #### Syntax
 
@@ -177,7 +201,7 @@ public static function CreateTable(): bool
 
 #### Return Value
 
-Returns `true` on success. Returns `false` if the table already exists, if the entity has no properties suitable for table creation, or if query execution fails.
+Returns `true` on success. Returns `false` if the entity is not a view and defines no properties (other than `id`) that can be used for table creation, or if query execution fails.
 
 ---
 

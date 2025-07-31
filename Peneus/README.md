@@ -49,6 +49,7 @@
 - [Entity](Model/Entity.md)
 - [PasswordReset](Model/PasswordReset.md)
 - [PendingAccount](Model/PendingAccount.md)
+- [ViewEntity](Model/ViewEntity.md)
 
 ## Services
 - [AccountService](Services/AccountService.md)
