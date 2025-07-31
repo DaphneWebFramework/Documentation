@@ -63,12 +63,6 @@ public function SelectDatabase(string $databaseName): void
 
 Executes a query on the MySQL server.
 
-This method prepares and executes the given query. If the query produces
-a result set (such as `SELECT`, `SHOW`, `DESCRIBE`, or `EXPLAIN`), it
-returns a `MySQLiResult` object. For queries that do not produce a result
-set (such as `INSERT`, `UPDATE`, or `DELETE`), it returns `null`. Any
-execution failure results in an exception.
-
 #### Syntax
 
 ```php
@@ -81,7 +75,7 @@ public function Execute(\Harmonia\Systems\DatabaseSystem\Queries\Query $query): 
 
 #### Return Value
 
-A `MySQLiResult` if the query produces a result set, or `null` if the query does not produce a result set.
+A `MySQLiResult` if the query produces a result set (such as `SELECT`, `SHOW`, `DESCRIBE`, `EXPLAIN`), or `null` if the query does not produce a result set (such as `INSERT`, `UPDATE`, `DELETE`, `REPLACE`).
 
 #### Exceptions
 
@@ -101,7 +95,7 @@ public function LastInsertId(): int
 
 #### Return Value
 
-The auto-generated ID from the last successful `INSERT` query. If the last query was not an `INSERT` or no `AUTO_INCREMENT` value was generated, this method returns `0`.
+The auto-generated ID from the last successful `INSERT` query. Returns `0` if the last query was not an `INSERT` or no `AUTO_INCREMENT` value was generated.
 
 ---
 
@@ -118,7 +112,7 @@ public function LastAffectedRowCount(): int
 
 #### Return Value
 
-The number of rows affected by the last modifying query. Returns `0` if no rows were affected. Returns `-1` if the query failed.
+The number of rows affected by the last modifying query. Returns `0` if no rows were affected. Returns `-1` if the query fails.
 
 ---
 
