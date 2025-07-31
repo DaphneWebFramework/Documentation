@@ -165,25 +165,6 @@ The table name associated with the entity.
 
 ---
 
-### Columns
-
-Returns the column names associated with the entity.
-
-The `id` column is always placed first, followed by all other public,
-non-static, non-readonly properties with supported types.
-
-#### Syntax
-
-```php
-public static function Columns(): string[]
-```
-
-#### Return Value
-
-An ordered list of column names.
-
----
-
 ### Metadata
 
 Returns metadata for all supported properties of the entity.
