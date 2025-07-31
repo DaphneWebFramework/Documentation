@@ -184,6 +184,27 @@ An ordered list of column names.
 
 ---
 
+### Metadata
+
+Returns metadata for all supported properties of the entity.
+
+The `id` column is always placed first, followed by all other public,
+non-static, non-readonly properties with supported types. Each entry
+contains the property's name, corresponding SQL type, and nullability
+information.
+
+#### Syntax
+
+```php
+public static function Metadata(): array<int,array<string,mixed>>
+```
+
+#### Return Value
+
+An ordered array of metadata entries for each property. Each entry is an associative array with keys `name`, `type`, and `nullable`.
+
+---
+
 ### TableExists
 
 Checks whether the entity's associated table or view exists in the
