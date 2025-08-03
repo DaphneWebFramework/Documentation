@@ -224,6 +224,22 @@ Returns `true` on success. Returns `false` if the entity is not a view and defin
 
 ---
 
+### DropTable
+
+Drops the database table or view associated with the entity.
+
+#### Syntax
+
+```php
+public static function DropTable(): bool
+```
+
+#### Return Value
+
+Returns `true` on success, `false` on failure.
+
+---
+
 ### FindById
 
 Retrieves an entity by its primary key.
