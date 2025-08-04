@@ -25,6 +25,7 @@
 
 #### Management
 - [AddRecordAction](Api/Actions/Management/AddRecordAction.md)
+- [CreateTableAction](Api/Actions/Management/CreateTableAction.md)
 - [DeleteRecordAction](Api/Actions/Management/DeleteRecordAction.md)
 - [EditRecordAction](Api/Actions/Management/EditRecordAction.md)
 - [ListEntityMappingsAction](Api/Actions/Management/ListEntityMappingsAction.md)
