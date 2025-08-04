@@ -34,12 +34,12 @@ beginning.
 #### Syntax
 
 ```php
-public function EnsureLeadingSlash(): static
+public function EnsureLeadingSlash(): self
 ```
 
 #### Return Value
 
-A new instance that starts with a slash.
+If the instance already starts with a slash.
 
 ---
 
@@ -53,12 +53,12 @@ end.
 #### Syntax
 
 ```php
-public function EnsureTrailingSlash(): static
+public function EnsureTrailingSlash(): self
 ```
 
 #### Return Value
 
-A new instance that ends with a slash.
+If the instance already ends with a slash.
 
 ---
 
@@ -72,12 +72,12 @@ the operating system.
 #### Syntax
 
 ```php
-public function TrimLeadingSlashes(): static
+public function TrimLeadingSlashes(): self
 ```
 
 #### Return Value
 
-A new instance without slashes at the start.
+If the instance has no leading slashes.
 
 ---
 
@@ -91,12 +91,12 @@ the operating system.
 #### Syntax
 
 ```php
-public function TrimTrailingSlashes(): static
+public function TrimTrailingSlashes(): self
 ```
 
 #### Return Value
 
-A new instance without slashes at the end.
+If the instance has no trailing slashes.
 
 ---
 
