@@ -11,6 +11,7 @@
 - [FormLabel](FormLabel.md)
 - [Generic](Generic.md)
 - [Label](Label.md)
+- [Modal](Modal.md)
 - [Navbar](Navbar.md)
 - [NavbarBrand](NavbarBrand.md)
 - [NavbarCollapse](NavbarCollapse.md)
