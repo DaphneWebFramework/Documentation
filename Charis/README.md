@@ -41,6 +41,8 @@
 - [FormStandardComposite](FormComposites/FormStandardComposite.md)
 - [FormSwitch](FormComposites/FormSwitch.md)
 - [FormText](FormComposites/FormText.md)
+- [FormTextArea](FormComposites/FormTextArea.md)
+- [FormTextAreaFL](FormComposites/FormTextAreaFL.md)
 - [FormTextFL](FormComposites/FormTextFL.md)
 
 ## FormControls
@@ -52,6 +54,7 @@
 - [FormPasswordInput](FormControls/FormPasswordInput.md)
 - [FormRadioInput](FormControls/FormRadioInput.md)
 - [FormSwitchInput](FormControls/FormSwitchInput.md)
+- [FormTextAreaControl](FormControls/FormTextAreaControl.md)
 - [FormTextInput](FormControls/FormTextInput.md)
 
 ---
