@@ -11,13 +11,18 @@ constructor:
 - `:body` (mixed): The content of the modal body. Can be a string, a
   `Component` instance, or an array of components. Defaults to an empty
   string.
-- `:footer-secondary-button-label` (string): The label for the secondary
-  footer button. Defaults to "Close".
-- `:footer-primary-button-label` (string): The label for the primary
-  footer button. Defaults to "Save changes".
+- `:secondary-button:*` (mixed): Additional HTML attributes forwarded to
+  the secondary footer button.
+- `:secondary-button-label` (string): The label for the secondary footer
+  button. Defaults to "Close".
+- `:primary-button:*` (mixed): Additional HTML attributes forwarded to
+  the primary footer button.
+- `:primary-button-label` (string): The label for the primary footer button.
+  Defaults to "Save changes".
 - `:footer` (mixed): The entire content of the footer. When provided,
   completely overrides the default secondary/primary buttons. Can be a
-  string, a `Component` instance, or an array of components.
+  string, a `Component` instance, or an array of components. If set to
+  `false`, the footer is entirely omitted.
 - `:dialog:*` (mixed): Additional HTML attributes forwarded to the internal
   `<div class="modal-dialog">` element.
 
