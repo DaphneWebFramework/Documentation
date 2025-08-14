@@ -5,8 +5,9 @@ Represents a content pane in a tab navigation.
 Aside from HTML attributes, this component supports the following pseudo
 attributes in its constructor:
 
-- `:key` (string, required): A unique name used to associate this pane with
-  its corresponding tab item.
+- `:key` (string): A unique name used to associate this pane with its
+  corresponding tab item. This must be provided and must be a non-empty
+  string.
 - `:active` (boolean): Indicates whether this pane is initially visible.
   Defaults to `false`.
 
@@ -30,6 +31,10 @@ public function __construct(?array<string,mixed> $attributes = null, string|\Cha
 
 - **$attributes**: (Optional) An associative array of HTML attributes and pseudo attributes. Defaults to `null`.
 - **$content**: (Optional) The content or child elements of the component. This can be a string, a `Component` instance, an array of strings and `Component` instances, or `null` for no content. Defaults to `null`.
+
+#### Exceptions
+
+- **\InvalidArgumentException**: If the `:key` pseudo attribute is not provided or is an empty string.
 
 ---
 
