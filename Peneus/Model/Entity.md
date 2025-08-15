@@ -115,6 +115,30 @@ An associative array of property names and their serialized values.
 
 ---
 
+### Without
+
+Serializes the entity to an associative array, excluding specified
+properties.
+
+Uses the same logic as `jsonSerialize` (e.g., DateTime formatting),
+but allows certain fields to be omitted dynamically.
+
+#### Syntax
+
+```php
+public function Without(string ...$excludes): array
+```
+
+#### Parameters
+
+- **$excludes**: Property names to exclude from the result.
+
+#### Return Value
+
+An associative array of property names and their serialized values, excluding any specified properties.
+
+---
+
 ### IsView
 
 Determines whether the entity represents a view.
