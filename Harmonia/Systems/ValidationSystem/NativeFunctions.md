@@ -7,6 +7,26 @@ and testable, without adding extra behavior beyond the underlying PHP functions.
 
 ## Methods
 
+### IsInteger
+
+Determines if the given value is of integer type.
+
+#### Syntax
+
+```php
+public function IsInteger(mixed $value): bool
+```
+
+#### Parameters
+
+- **$value**: The value to check for integer type.
+
+#### Return Value
+
+Returns `true` if the value is an integer, `false` otherwise.
+
+---
+
 ### IsNumeric
 
 Determines if the given value is of a numeric type.

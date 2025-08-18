@@ -6,7 +6,7 @@ Validates whether a given field contains an integer-like value.
 
 ### Validate
 
-Validates that the field contains an integer-like value.
+Validates that the field contains an integer or an integer-like string.
 
 #### Syntax
 
@@ -18,11 +18,11 @@ public function Validate(string|int $field, mixed $value, mixed $param): void
 
 - **$field**: The field name or index to validate.
 - **$value**: The value of the field to validate.
-- **$param**: Unused in this rule.
+- **$param**: Optional parameter to specify validation mode. If set to 'strict', the value must be an integer. If omitted, both integers and integer-like strings are accepted.
 
 #### Exceptions
 
-- **\RuntimeException**: If the value is not an integer or an integer-like string.
+- **\RuntimeException**: If the parameter is 'strict' and the value is not an integer; or if no parameter is given and the value is not an integer or an integer-like string; or if an invalid parameter is given.
 
 ---
 
