@@ -1,6 +1,6 @@
 # AddRecordAction
 
-Creates and persists a new record into a specified table.
+Creates a new record in a specified table.
 
 ---
 
