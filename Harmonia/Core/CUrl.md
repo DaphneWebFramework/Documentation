@@ -11,7 +11,7 @@ Joins multiple URL segments into a single URL.
 #### Syntax
 
 ```php
-public static function Join(string|\Stringable ...$segments): \Harmonia\Core\CUrl
+public static function Join(string|\Stringable ...$segments): static
 ```
 
 #### Parameters
@@ -20,7 +20,64 @@ public static function Join(string|\Stringable ...$segments): \Harmonia\Core\CUr
 
 #### Return Value
 
-A new `CUrl` instance representing the joined URL.
+A new instance representing the joined URL.
+
+#### See Also
+
+- [`ExtendInPlace`](#ExtendInPlace)
+- [`Extend`](#Extend)
+
+---
+
+### ExtendInPlace
+
+Appends one or more segments to the current URL.
+
+This version of the method directly modifies the current instance.
+
+#### Syntax
+
+```php
+public function ExtendInPlace(string|\Stringable ...$segments): self
+```
+
+#### Parameters
+
+- **$segments**: One or more URL segments to append.
+
+#### Return Value
+
+The current instance.
+
+#### See Also
+
+- [`ExtendInPlace`](#ExtendInPlace)
+- [`Join`](#Join)
+
+---
+
+### Extend
+
+Appends one or more segments to the current URL.
+
+#### Syntax
+
+```php
+public function Extend(string|\Stringable ...$segments): static
+```
+
+#### Parameters
+
+- **$segments**: One or more URL segments to append.
+
+#### Return Value
+
+A new instance with the segments appended.
+
+#### See Also
+
+- [`ExtendInPlace`](#ExtendInPlace)
+- [`Join`](#Join)
 
 ---
 
@@ -39,7 +96,7 @@ public function EnsureLeadingSlash(): self
 
 #### Return Value
 
-If the instance already starts with a slash.
+The current instance if the instance already starts with a slash.
 
 ---
 
@@ -58,7 +115,7 @@ public function EnsureTrailingSlash(): self
 
 #### Return Value
 
-If the instance already ends with a slash.
+The current instance if the instance already ends with a slash.
 
 ---
 
@@ -74,7 +131,7 @@ public function TrimLeadingSlashes(): self
 
 #### Return Value
 
-If the instance has no leading slashes.
+The current instance if the instance has no leading slashes.
 
 ---
 
@@ -90,7 +147,7 @@ public function TrimTrailingSlashes(): self
 
 #### Return Value
 
-If the instance has no trailing slashes.
+The current instance if the instance has no trailing slashes.
 
 ---
 

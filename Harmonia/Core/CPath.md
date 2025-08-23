@@ -11,7 +11,7 @@ Joins multiple path segments into a single path.
 #### Syntax
 
 ```php
-public static function Join(string|\Stringable ...$segments): \Harmonia\Core\CPath
+public static function Join(string|\Stringable ...$segments): static
 ```
 
 #### Parameters
@@ -20,7 +20,64 @@ public static function Join(string|\Stringable ...$segments): \Harmonia\Core\CPa
 
 #### Return Value
 
-A new `CPath` instance representing the joined path.
+A new instance representing the joined path.
+
+#### See Also
+
+- [`ExtendInPlace`](#ExtendInPlace)
+- [`Extend`](#Extend)
+
+---
+
+### ExtendInPlace
+
+Appends one or more segments to the current path.
+
+This version of the method directly modifies the current instance.
+
+#### Syntax
+
+```php
+public function ExtendInPlace(string|\Stringable ...$segments): self
+```
+
+#### Parameters
+
+- **$segments**: One or more path segments to append.
+
+#### Return Value
+
+The current instance.
+
+#### See Also
+
+- [`ExtendInPlace`](#ExtendInPlace)
+- [`Join`](#Join)
+
+---
+
+### Extend
+
+Appends one or more segments to the current path.
+
+#### Syntax
+
+```php
+public function Extend(string|\Stringable ...$segments): static
+```
+
+#### Parameters
+
+- **$segments**: One or more path segments to append.
+
+#### Return Value
+
+A new instance with the segments appended.
+
+#### See Also
+
+- [`ExtendInPlace`](#ExtendInPlace)
+- [`Join`](#Join)
 
 ---
 
@@ -39,7 +96,7 @@ public function EnsureLeadingSlash(): self
 
 #### Return Value
 
-If the instance already starts with a slash.
+The current instance if the instance already starts with a slash.
 
 ---
 
@@ -58,7 +115,7 @@ public function EnsureTrailingSlash(): self
 
 #### Return Value
 
-If the instance already ends with a slash.
+The current instance if the instance already ends with a slash.
 
 ---
 
@@ -77,7 +134,7 @@ public function TrimLeadingSlashes(): self
 
 #### Return Value
 
-If the instance has no leading slashes.
+The current instance if the instance has no leading slashes.
 
 ---
 
@@ -96,7 +153,7 @@ public function TrimTrailingSlashes(): self
 
 #### Return Value
 
-If the instance has no trailing slashes.
+The current instance if the instance has no trailing slashes.
 
 ---
 
