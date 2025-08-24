@@ -24,35 +24,7 @@ A new instance representing the joined URL.
 
 #### See Also
 
-- [`ExtendInPlace`](#ExtendInPlace)
 - [`Extend`](#Extend)
-
----
-
-### ExtendInPlace
-
-Appends one or more segments to the current URL.
-
-This version of the method directly modifies the current instance.
-
-#### Syntax
-
-```php
-public function ExtendInPlace(string|\Stringable ...$segments): self
-```
-
-#### Parameters
-
-- **$segments**: One or more URL segments to append.
-
-#### Return Value
-
-The current instance.
-
-#### See Also
-
-- [`ExtendInPlace`](#ExtendInPlace)
-- [`Join`](#Join)
 
 ---
 
@@ -76,7 +48,6 @@ A new instance with the segments appended.
 
 #### See Also
 
-- [`ExtendInPlace`](#ExtendInPlace)
 - [`Join`](#Join)
 
 ---
