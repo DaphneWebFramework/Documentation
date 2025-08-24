@@ -34,6 +34,7 @@
 
 ### Guards
 - [FormTokenGuard](Api/Guards/FormTokenGuard.md)
+- [HeaderTokenGuard](Api/Guards/HeaderTokenGuard.md)
 - [SessionGuard](Api/Guards/SessionGuard.md)
 - [TokenGuard](Api/Guards/TokenGuard.md)
 
