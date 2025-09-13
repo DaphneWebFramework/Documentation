@@ -19,6 +19,7 @@
 - [RegisterAction](Api/Actions/Account/RegisterAction.md)
 - [ResetPasswordAction](Api/Actions/Account/ResetPasswordAction.md)
 - [SendPasswordResetAction](Api/Actions/Account/SendPasswordResetAction.md)
+- [SignInWithGoogleAction](Api/Actions/Account/SignInWithGoogleAction.md)
 
 #### Language
 - [ChangeAction](Api/Actions/Language/ChangeAction.md)
