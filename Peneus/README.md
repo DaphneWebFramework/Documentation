@@ -1,6 +1,5 @@
 # Peneus
 - [Resource](Resource.md)
-- [Translation](Translation.md)
 
 ## Api
 - [Dispatcher](Api/Dispatcher.md)
