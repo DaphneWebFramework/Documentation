@@ -4,7 +4,6 @@
 - [Resource](Resource.md)
 - [Server](Server.md)
 - [Session](Session.md)
-- [Translation](Translation.md)
 
 ## Core
 - [CArray](Core/CArray.md)
