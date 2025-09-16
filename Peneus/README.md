@@ -21,9 +21,6 @@
 - [SendPasswordResetAction](Api/Actions/Account/SendPasswordResetAction.md)
 - [SignInWithGoogleAction](Api/Actions/Account/SignInWithGoogleAction.md)
 
-#### Language
-- [ChangeAction](Api/Actions/Language/ChangeAction.md)
-
 #### Management
 - [AddRecordAction](Api/Actions/Management/AddRecordAction.md)
 - [CreateTableAction](Api/Actions/Management/CreateTableAction.md)
@@ -42,7 +39,6 @@
 ### Handlers
 - [AccountHandler](Api/Handlers/AccountHandler.md)
 - [Handler](Api/Handlers/Handler.md)
-- [LanguageHandler](Api/Handlers/LanguageHandler.md)
 - [ManagementHandler](Api/Handlers/ManagementHandler.md)
 
 ### Hooks
@@ -58,7 +54,6 @@
 
 ## Services
 - [AccountService](Services/AccountService.md)
-- [LanguageService](Services/LanguageService.md)
 
 ## Systems
 
