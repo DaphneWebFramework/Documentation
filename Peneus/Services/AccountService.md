@@ -26,6 +26,33 @@ The session integrity cookie name.
 
 ---
 
+### EstablishSessionIntegrity
+
+Establishes session integrity for a newly logged-in account.
+
+This method binds the server-side session to the authenticated user by
+generating a cryptographically strong integrity token, storing it in the
+session, and setting its corresponding cookie on the client. The token is
+later verified on each request to detect and prevent session hijacking or
+fixation attacks. In addition, the method stores the account ID and role
+in the session to support authorization checks.
+
+#### Syntax
+
+```php
+public function EstablishSessionIntegrity(\Peneus\Model\Account $account): bool
+```
+
+#### Parameters
+
+- **$account**: The authenticated account for which to establish session integrity.
+
+#### Return Value
+
+Returns `true` if the session integrity was successfully established, or `false` if an error occurred during the process.
+
+---
+
 ### LoggedInAccount
 
 Retrieves the currently logged-in user's account.
