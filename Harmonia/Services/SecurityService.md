@@ -47,17 +47,42 @@ Returns `true` if the password matches the hash, otherwise `false`.
 
 ### GenerateToken
 
-Generates a cryptographically secure random token.
+Generates a cryptographically secure random token of a given byte length.
 
 #### Syntax
 
 ```php
-public function GenerateToken(): string
+public function GenerateToken(int $byteLength = 32): string
 ```
+
+#### Parameters
+
+- **$byteLength**: (Optional) The number of bytes to generate. Defaults to 32.
 
 #### Return Value
 
-A 64-character hexadecimal token.
+A hexadecimal string representing the random bytes. Since each byte is encoded as two hexadecimal characters, the resulting string length is exactly twice the specified byte length.
+
+---
+
+### TokenPattern
+
+Returns a regular expression pattern for validating tokens of a given
+byte length.
+
+#### Syntax
+
+```php
+public static function TokenPattern(int $byteLength = 32): string
+```
+
+#### Parameters
+
+- **$byteLength**: (Optional) The number of bytes to validate. Defaults to 32.
+
+#### Return Value
+
+A regular expression that matches hexadecimal strings of the appropriate length. Because each byte corresponds to two hexadecimal characters, the pattern enforces a string length of twice the specified byte length.
 
 ---
 
