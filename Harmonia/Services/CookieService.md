@@ -11,13 +11,14 @@ Adds or updates a cookie.
 #### Syntax
 
 ```php
-public function SetCookie(string $name, string $value): void
+public function SetCookie(string $name, string $value, ?int $expires = null): void
 ```
 
 #### Parameters
 
 - **$name**: The cookie name.
 - **$value**: The cookie value. If empty, the cookie is deleted.
+- **$expires**: (Optional) The cookie's expiration time, in seconds since the Unix epoch. If not specified, the cookie will expire at the end of the browser session.
 
 #### Exceptions
 
