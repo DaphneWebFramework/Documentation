@@ -73,7 +73,7 @@ byte length.
 #### Syntax
 
 ```php
-public static function TokenPattern(int $byteLength = 32): string
+public function TokenPattern(int $byteLength = 32): string
 ```
 
 #### Parameters

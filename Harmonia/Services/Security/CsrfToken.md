@@ -6,7 +6,7 @@ Represents a CSRF token and its hashed counterpart stored in a cookie.
 
 ### __construct
 
-Creates a new instance.
+Constructs a new instance.
 
 #### Syntax
 
