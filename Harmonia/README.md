@@ -26,9 +26,6 @@
 - [CookieService](Services/CookieService.md)
 - [SecurityService](Services/SecurityService.md)
 
-### Security
-- [CsrfToken](Services/Security/CsrfToken.md)
-
 ## Systems
 
 ### DatabaseSystem
