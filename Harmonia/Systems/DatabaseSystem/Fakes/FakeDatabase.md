@@ -164,16 +164,16 @@ The callback is invoked immediately without starting a real transaction.
 #### Syntax
 
 ```php
-public function WithTransaction(callable $callback): mixed
+public function WithTransaction(callable $callback): void
 ```
 
 #### Parameters
 
-- **$callback**: The operation to simulate within a transaction block.
+- **$callback**: The callback function to execute. It may throw an exception to signal an error.
 
-#### Return Value
+#### Exceptions
 
-The return value of the callback, or `false` if an exception was thrown.
+- **\Throwable**: If the callback throws an exception.
 
 ---
 
