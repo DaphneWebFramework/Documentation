@@ -4,65 +4,84 @@ Provides account-related utilities.
 
 ## Methods
 
-### IntegrityCookieName
+### CreateSession
 
-Returns the name of the session integrity cookie.
-
-This cookie stores a hashed version of the session integrity token,
-ensuring that the session has not been hijacked or tampered with.
-
-The generated name includes the application name to avoid conflicts
-when multiple applications share the same framework.
+Creates a new session for an authenticated user.
 
 #### Syntax
 
 ```php
-public function IntegrityCookieName(): string
-```
-
-#### Return Value
-
-The session integrity cookie name.
-
----
-
-### EstablishSessionIntegrity
-
-Establishes session integrity for a newly logged-in account.
-
-This method binds the server-side session to the authenticated user by
-generating a cryptographically strong integrity token, storing it in the
-session, and setting its corresponding cookie on the client. The token is
-later verified on each request to detect and prevent session hijacking or
-fixation attacks. In addition, the method stores the account ID and role
-in the session to support authorization checks.
-
-#### Syntax
-
-```php
-public function EstablishSessionIntegrity(\Peneus\Model\Account $account): bool
+public function CreateSession(\Peneus\Model\Account $account): void
 ```
 
 #### Parameters
 
-- **$account**: The authenticated account for which to establish session integrity.
+- **$account**: The account of an authenticated user.
 
-#### Return Value
+#### Exceptions
 
-Returns `true` if the session integrity was successfully established, or `false` if an error occurred during the process.
+- **\RuntimeException**: If an error occurs while establishing the session or setting the associated cookie.
+
+---
+
+### DeleteSession
+
+Deletes the session of the currently logged-in user.
+
+#### Syntax
+
+```php
+public function DeleteSession(): void
+```
+
+#### Exceptions
+
+- **\RuntimeException**: If an error occurs while deleting the session or the associated cookie.
+
+---
+
+### CreatePersistentLogin
+
+Creates a new persistent login for an authenticated user.
+
+#### Syntax
+
+```php
+public function CreatePersistentLogin(\Peneus\Model\Account $account): void
+```
+
+#### Parameters
+
+- **$account**: The account of an authenticated user.
+
+#### Exceptions
+
+- **\RuntimeException**: If an error occurs while storing the persistent login or setting the associated cookie.
+
+---
+
+### DeletePersistentLogin
+
+Deletes the persistent login of the currently logged-in user.
+
+#### Syntax
+
+```php
+public function DeletePersistentLogin(): void
+```
+
+#### Exceptions
+
+- **\RuntimeException**: If an error occurs while deleting the persistent login or the associated cookie.
 
 ---
 
 ### LoggedInAccount
 
-Retrieves the currently logged-in user's account.
+Retrieves the account of the currently logged-in user.
 
-This method first verifies session integrity by checking whether the
-session integrity token matches its hashed counterpart stored in the
-cookie. If validation succeeds, the associated account is retrieved.
-
-If the session is compromised or no account is found, the session
-is destroyed to prevent unauthorized access.
+This method first tries to resolve the account from the session. If not
+found, it attempts to log in the user using the persistent login feature.
 
 #### Syntax
 
@@ -72,17 +91,13 @@ public function LoggedInAccount(): ?\Peneus\Model\Account
 
 #### Return Value
 
-The logged-in user's account, or `null` if no user is logged in or the session is compromised.
-
-#### Exceptions
-
-- **\RuntimeException**: If the session cannot be started, closed, or destroyed.
+The account of the currently logged-in user, or `null` if no valid session or persistent login is available.
 
 ---
 
 ### LoggedInAccountRole
 
-Retrieves the role of the logged-in user's account.
+Retrieves the role of the currently logged-in user's account.
 
 #### Syntax
 
@@ -92,11 +107,7 @@ public function LoggedInAccountRole(): ?\Peneus\Model\Role
 
 #### Return Value
 
-The role of the logged-in user's account, or `null` if not set in the session.
-
-#### Exceptions
-
-- **\RuntimeException**: If the session cannot be started or closed.
+The role of the currently logged-in user's account, or `null` if no user is currently logged in or if no role is assigned.
 
 ---
 

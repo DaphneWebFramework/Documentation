@@ -1,6 +1,18 @@
 # LoginAction
 
-Logs in a user with provided credentials.
+Authenticates a user with email and password credentials.
+
+## Methods
+
+### __construct
+
+Constructs a new instance by initializing dependencies.
+
+#### Syntax
+
+```php
+public function __construct()
+```
 
 ---
 

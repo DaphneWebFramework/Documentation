@@ -1,6 +1,18 @@
 # LogoutAction
 
-Logs out the current user.
+Logs out the currently logged-in user.
+
+## Methods
+
+### __construct
+
+Constructs a new instance by initializing dependencies.
+
+#### Syntax
+
+```php
+public function __construct()
+```
 
 ---
 

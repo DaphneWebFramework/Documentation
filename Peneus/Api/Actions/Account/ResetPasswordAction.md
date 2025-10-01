@@ -1,6 +1,18 @@
 # ResetPasswordAction
 
-Resets a user's password using a previously issued reset code.
+Changes a user's password after verifying a previously issued reset code.
+
+## Methods
+
+### __construct
+
+Constructs a new instance by initializing dependencies.
+
+#### Syntax
+
+```php
+public function __construct()
+```
 
 ---
 
