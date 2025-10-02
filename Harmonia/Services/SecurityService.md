@@ -92,7 +92,7 @@ Creates a token and its corresponding cookie value.
 
 Returns a token (to be included in forms or request headers) and a
 matching value for storing in a cookie. Together, these values can
-later be verified to help mitigate cross‑site request forgery (CSRF)
+later be verified to help mitigate cross-site request forgery (CSRF)
 attacks by ensuring the request originated from the same client.
 
 #### Syntax
@@ -117,7 +117,7 @@ Verifies a token against its corresponding cookie value.
 
 Compares the provided token with the value stored in the cookie. If
 they match, the request is considered authentic. This check is used
-to mitigate cross‑site request forgery (CSRF) attacks by validating
+to mitigate cross-site request forgery (CSRF) attacks by validating
 that the request was issued by the same client that received the token.
 
 #### Syntax
