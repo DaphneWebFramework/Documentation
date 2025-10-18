@@ -73,6 +73,30 @@ The current instance.
 
 ---
 
+### Has
+
+Checks if a session variable exists.
+
+This method does not require the session to be currently started; it
+allows read access even after the session has been closed, as long as
+the `$_SESSION` superglobal is still available.
+
+#### Syntax
+
+```php
+public function Has(string $key): bool
+```
+
+#### Parameters
+
+- **$key**: The name of the session variable.
+
+#### Return Value
+
+Returns `true` if the session variable exists, otherwise `false`.
+
+---
+
 ### Get
 
 Retrieves a session variable.
