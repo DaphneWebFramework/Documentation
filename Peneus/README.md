@@ -46,6 +46,7 @@
 ## Model
 - [Account](Model/Account.md)
 - [AccountRole](Model/AccountRole.md)
+- [AccountView](Model/AccountView.md)
 - [Entity](Model/Entity.md)
 - [PasswordReset](Model/PasswordReset.md)
 - [PendingAccount](Model/PendingAccount.md)
