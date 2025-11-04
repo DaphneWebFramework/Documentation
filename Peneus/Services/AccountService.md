@@ -11,12 +11,12 @@ Creates a new session for an authenticated user.
 #### Syntax
 
 ```php
-public function CreateSession(\Peneus\Model\Account $account): void
+public function CreateSession(int $accountId): void
 ```
 
 #### Parameters
 
-- **$account**: The account of an authenticated user.
+- **$accountId**: The account ID of an authenticated user.
 
 #### Exceptions
 
@@ -47,12 +47,12 @@ Creates a new persistent login for an authenticated user.
 #### Syntax
 
 ```php
-public function CreatePersistentLogin(\Peneus\Model\Account $account): void
+public function CreatePersistentLogin(int $accountId): void
 ```
 
 #### Parameters
 
-- **$account**: The account of an authenticated user.
+- **$accountId**: The account ID of an authenticated user.
 
 #### Exceptions
 
