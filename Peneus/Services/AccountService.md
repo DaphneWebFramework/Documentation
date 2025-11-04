@@ -41,7 +41,7 @@ public function DeleteSession(): void
 
 ---
 
-### LoggedInAccount
+### SessionAccount
 
 Retrieves the account of the currently logged-in user.
 
@@ -51,7 +51,7 @@ found, it attempts to log in the user using the persistent login feature.
 #### Syntax
 
 ```php
-public function LoggedInAccount(): ?\Peneus\Model\AccountView
+public function SessionAccount(): ?\Peneus\Model\AccountView
 ```
 
 #### Return Value

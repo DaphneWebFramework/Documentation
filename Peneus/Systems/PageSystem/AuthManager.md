@@ -17,7 +17,7 @@ public function __construct()
 
 ---
 
-### LoggedInAccount
+### SessionAccount
 
 Returns the currently logged-in user's account.
 
@@ -26,7 +26,7 @@ The result is cached after the first retrieval.
 #### Syntax
 
 ```php
-public function LoggedInAccount(): ?\Peneus\Model\AccountView
+public function SessionAccount(): ?\Peneus\Model\AccountView
 ```
 
 #### Return Value
