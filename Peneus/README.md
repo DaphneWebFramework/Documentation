@@ -55,6 +55,7 @@
 
 ## Services
 - [AccountService](Services/AccountService.md)
+- [PersistentLoginManager](Services/PersistentLoginManager.md)
 
 ## Systems
 
