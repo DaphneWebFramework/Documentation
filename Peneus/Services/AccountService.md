@@ -11,16 +11,17 @@ Creates a new session for an authenticated user.
 #### Syntax
 
 ```php
-public function CreateSession(int $accountId): void
+public function CreateSession(int $accountId, bool $persistent = false): void
 ```
 
 #### Parameters
 
 - **$accountId**: The account ID of an authenticated user.
+- **$persistent**: (Optional) If `true`, a persistent login record will also be created and the associated cookie set. Defaults to `false`.
 
 #### Exceptions
 
-- **\RuntimeException**: If an error occurs while establishing the session or setting the associated cookie.
+- **\RuntimeException**: If an error occurs while establishing the session, setting the session‑binding cookie, storing the persistent login record, or setting the persistent login cookie.
 
 ---
 
@@ -36,43 +37,7 @@ public function DeleteSession(): void
 
 #### Exceptions
 
-- **\RuntimeException**: If an error occurs while deleting the session or the associated cookie.
-
----
-
-### CreatePersistentLogin
-
-Creates a new persistent login entry for an authenticated user.
-
-#### Syntax
-
-```php
-public function CreatePersistentLogin(int $accountId): void
-```
-
-#### Parameters
-
-- **$accountId**: The account ID of an authenticated user.
-
-#### Exceptions
-
-- **\RuntimeException**: If an error occurs while storing the persistent login record or setting the associated cookie.
-
----
-
-### DeletePersistentLogin
-
-Deletes the persistent login entry of the currently logged-in user.
-
-#### Syntax
-
-```php
-public function DeletePersistentLogin(): void
-```
-
-#### Exceptions
-
-- **\RuntimeException**: If an error occurs while deleting the persistent login record or the associated cookie.
+- **\RuntimeException**: If an error occurs while deleting the session, removing the session-binding cookie, deleting the persistent login record, or removing the persistent login cookie.
 
 ---
 
