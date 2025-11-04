@@ -12,20 +12,19 @@ Constructs a new instance with an optional minimum role.
 #### Syntax
 
 ```php
-public function __construct(?\Peneus\Model\Role $minimumRole = null)
+public function __construct(\Peneus\Model\Role $minimumRole = Role::None)
 ```
 
 #### Parameters
 
-- **$minimumRole**: (Optional) The minimum role required for the request. If not provided, the guard will only check if the user is logged in without enforcing a specific role. If a role is provided, the guard will ensure that the logged-in user's role meets or exceeds this minimum requirement.
+- **$minimumRole**: (Optional) The minimum role required for the request. Defaults to `Role::None`. When `Role::None` is specified, only login status is enforced.
 
 ---
 
 ### Verify
 
-Verifies that the request is from a logged-in user.
-
-If a minimum role is set, also ensures the user has at least that role.
+Verifies that the request is from a logged-in user and optionally
+enforces a minimum role requirement.
 
 #### Syntax
 

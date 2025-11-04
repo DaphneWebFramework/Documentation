@@ -42,7 +42,7 @@ public function DeleteSession(): void
 
 ### CreatePersistentLogin
 
-Creates a new persistent login for an authenticated user.
+Creates a new persistent login entry for an authenticated user.
 
 #### Syntax
 
@@ -56,13 +56,13 @@ public function CreatePersistentLogin(int $accountId): void
 
 #### Exceptions
 
-- **\RuntimeException**: If an error occurs while storing the persistent login or setting the associated cookie.
+- **\RuntimeException**: If an error occurs while storing the persistent login record or setting the associated cookie.
 
 ---
 
 ### DeletePersistentLogin
 
-Deletes the persistent login of the currently logged-in user.
+Deletes the persistent login entry of the currently logged-in user.
 
 #### Syntax
 
@@ -72,7 +72,7 @@ public function DeletePersistentLogin(): void
 
 #### Exceptions
 
-- **\RuntimeException**: If an error occurs while deleting the persistent login or the associated cookie.
+- **\RuntimeException**: If an error occurs while deleting the persistent login record or the associated cookie.
 
 ---
 
@@ -86,28 +86,12 @@ found, it attempts to log in the user using the persistent login feature.
 #### Syntax
 
 ```php
-public function LoggedInAccount(): ?\Peneus\Model\Account
+public function LoggedInAccount(): ?\Peneus\Model\AccountView
 ```
 
 #### Return Value
 
-The account of the currently logged-in user, or `null` if no valid session or persistent login is available.
-
----
-
-### LoggedInAccountRole
-
-Retrieves the role of the currently logged-in user's account.
-
-#### Syntax
-
-```php
-public function LoggedInAccountRole(): ?\Peneus\Model\Role
-```
-
-#### Return Value
-
-The role of the currently logged-in user's account, or `null` if no user is currently logged in or if no role is assigned.
+The account of the currently logged-in user, or `null` if no valid session or persistent login entry is available.
 
 ---
 

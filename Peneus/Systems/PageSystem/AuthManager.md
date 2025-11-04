@@ -26,30 +26,12 @@ The result is cached after the first retrieval.
 #### Syntax
 
 ```php
-public function LoggedInAccount(): ?\Peneus\Model\Account
+public function LoggedInAccount(): ?\Peneus\Model\AccountView
 ```
 
 #### Return Value
 
-An `Account` object associated with the logged-in user, or `null` if no user is logged in.
-
----
-
-### LoggedInAccountRole
-
-Returns the role associated with the currently logged-in user's account.
-
-The result is cached after the first retrieval.
-
-#### Syntax
-
-```php
-public function LoggedInAccountRole(): \Peneus\Model\Role
-```
-
-#### Return Value
-
-The role of the current user, or `Role::None` if no user is logged in or a role is not explicitly assigned to the account.
+An `AccountView` object associated with the logged-in user, or `null` if no user is logged in.
 
 ---
 
