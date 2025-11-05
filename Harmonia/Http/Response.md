@@ -134,18 +134,21 @@ public function Send(): void
 
 ### Redirect
 
-Redirects the client to a new URL.
+Redirects the client to a new URL and terminates script execution.
 
 #### Syntax
 
 ```php
-public function Redirect(string $url, bool $exitScript = true): void
+public static function Redirect(string|\Stringable $url): never
 ```
 
 #### Parameters
 
 - **$url**: The URL to redirect to.
-- **$exitScript**: (Optional) If `true`, the script will exit after sending the response. Default is `true`.
+
+#### Return Value
+
+This method does not return; it exits the script.
 
 ---
 
