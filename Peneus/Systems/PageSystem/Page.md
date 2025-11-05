@@ -30,7 +30,7 @@ Constructs a new instance.
 #### Syntax
 
 ```php
-public function __construct(string $directory, ?\Peneus\Systems\PageSystem\Renderer $renderer = null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = null, ?\Peneus\Systems\PageSystem\PageManifest $pageManifest = null, ?\Peneus\Systems\PageSystem\MetaCollection $metaCollection = null, ?\Peneus\Systems\PageSystem\AuthManager $authManager = null)
+public function __construct(string $directory, ?\Peneus\Systems\PageSystem\Renderer $renderer = null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = null, ?\Peneus\Systems\PageSystem\PageManifest $pageManifest = null, ?\Peneus\Systems\PageSystem\MetaCollection $metaCollection = null)
 ```
 
 #### Parameters
@@ -40,7 +40,6 @@ public function __construct(string $directory, ?\Peneus\Systems\PageSystem\Rende
 - **$libraryManager**: (Optional) The library manager to use. If not specified, a default instance is created.
 - **$pageManifest**: (Optional) The page manifest to use. If not specified, a default instance is created.
 - **$metaCollection**: (Optional) The meta collection to use. If not specified, a default instance is created.
-- **$authManager**: (Optional) The authentication manager to use. If not specified, a default instance is created.
 
 ---
 
@@ -434,8 +433,6 @@ A `CArray` of meta tag groups. Each key is the type (e.g., `name`, `property`, `
 ### SessionAccount
 
 Returns the currently logged-in user's account.
-
-The result is cached after the first retrieval.
 
 #### Syntax
 

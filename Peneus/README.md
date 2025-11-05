@@ -67,7 +67,6 @@
 
 ### PageSystem
 - [Assets](Systems/PageSystem/Assets.md)
-- [AuthManager](Systems/PageSystem/AuthManager.md)
 - [LibraryItem](Systems/PageSystem/LibraryItem.md)
 - [LibraryManager](Systems/PageSystem/LibraryManager.md)
 - [LibraryManifest](Systems/PageSystem/LibraryManifest.md)
