@@ -48,6 +48,11 @@ Retrieves the account of the currently logged-in user.
 This method first tries to resolve the account from the session. If not
 found, it attempts to log in the user using the persistent login feature.
 
+The result of this method is cached for the lifetime of the request,
+avoiding unnecessary database queries; subsequent calls return the same
+cached result (including `null`) until the cache is reset when session
+state changes (e.g. login or logout).
+
 #### Syntax
 
 ```php
