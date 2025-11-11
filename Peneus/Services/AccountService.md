@@ -21,7 +21,7 @@ public function CreateSession(int $accountId, bool $persistent = false): void
 
 #### Exceptions
 
-- **\RuntimeException**: If an error occurs while establishing the session, setting the session‑binding cookie, storing the persistent login record, or setting the persistent login cookie.
+- **\RuntimeException**: If an error occurs while establishing the session, setting the session-binding cookie, storing the persistent login record, or setting the persistent login cookie.
 
 ---
 
