@@ -128,6 +128,26 @@ Returns `true` if the value is an array, `false` otherwise.
 
 ---
 
+### IsDateTime
+
+Determines if the given value is a valid datetime string.
+
+#### Syntax
+
+```php
+public function IsDateTime(mixed $value): bool
+```
+
+#### Parameters
+
+- **$value**: The value to validate as a datetime string.
+
+#### Return Value
+
+Returns `true` if the value is a valid datetime string, `false` otherwise.
+
+---
+
 ### IsUploadedFile
 
 Determines if the given value represents an uploaded file.
@@ -172,7 +192,7 @@ Returns `true` if the value matches the pattern, `false` otherwise.
 
 ### MatchDateTime
 
-Validates whether a specified string represents a date/time that matches
+Validates whether a specified string represents a datetime that matches
 a given format.
 
 #### Syntax
@@ -183,8 +203,8 @@ public function MatchDateTime(string $value, string $param): bool
 
 #### Parameters
 
-- **$value**: The string value to validate as a date/time.
-- **$param**: The format string that the date/time should adhere to, as per `DateTime::createFromFormat` documentation.
+- **$value**: The string value to validate as a datetime.
+- **$param**: The format string that the datetime should adhere to, as per `DateTime::createFromFormat` documentation.
 
 #### Return Value
 

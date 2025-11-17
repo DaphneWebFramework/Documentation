@@ -1,12 +1,16 @@
 # DatetimeRule
 
-Validates whether a given field matches a specified datetime format.
+Validates whether a given field contains a datetime string.
+
+If a format string is provided as the optional parameter, the value must
+match that format exactly (per `DateTime::createFromFormat`). If no format
+is provided, any string that PHP can parse into a datetime is accepted.
 
 ## Methods
 
 ### Validate
 
-Validates that the field matches a specified datetime format.
+Validates that the field contains a datetime string.
 
 #### Syntax
 
@@ -18,11 +22,11 @@ public function Validate(string|int $field, mixed $value, mixed $param): void
 
 - **$field**: The field name or index to validate.
 - **$value**: The value of the field to validate.
-- **$param**: The expected datetime format.
+- **$param**: Optional format string. When provided, the value must match it exactly. When omitted, any PHP‑parsable datetime string is accepted.
 
 #### Exceptions
 
-- **\RuntimeException**: If the value is not a string, the format is not a string, or the value does not match the format.
+- **\RuntimeException**: If a format is provided and the value does not match it exactly; or if no format is provided and the value is not a valid datetime string; or if an invalid parameter is given.
 
 ---
 
