@@ -201,4 +201,44 @@ Returns `true` if the cursor was successfully moved, `false` otherwise.
 
 ---
 
+### WithReadLock
+
+Executes a callback with a read lock.
+
+#### Syntax
+
+```php
+public function WithReadLock(callable $callback): mixed
+```
+
+#### Parameters
+
+- **$callback**: The callback to execute while holding the lock.
+
+#### Return Value
+
+The result of the callback, or `null` if locking fails.
+
+---
+
+### WithWriteLock
+
+Executes a callback with a write lock.
+
+#### Syntax
+
+```php
+public function WithWriteLock(callable $callback): mixed
+```
+
+#### Parameters
+
+- **$callback**: The callback to execute while holding the lock.
+
+#### Return Value
+
+The result of the callback, or `null` if locking fails.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
