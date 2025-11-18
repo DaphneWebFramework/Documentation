@@ -23,7 +23,7 @@ Dispatches the request to the appropriate handler.
 The request must include `handler` and `action` query parameters. If a
 handler cannot be found, the action is unknown, or another error occurs
 during execution, the response body will contain a JSON-formatted string
-with an `error` property. Otherwise, the response body will contain the
+with a `message` property. Otherwise, the response body will contain the
 action result as a JSON-formatted string.
 
 This method does not send the response. The final response is sent
