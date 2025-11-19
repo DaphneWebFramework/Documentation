@@ -34,6 +34,7 @@
 - [HeaderTokenGuard](Api/Guards/HeaderTokenGuard.md)
 - [SessionGuard](Api/Guards/SessionGuard.md)
 - [TokenGuard](Api/Guards/TokenGuard.md)
+- [WhitelistGuard](Api/Guards/WhitelistGuard.md)
 
 ### Handlers
 - [AccountHandler](Api/Handlers/AccountHandler.md)
