@@ -15,6 +15,7 @@
 - [CUrl](Core/CUrl.md)
 
 ## Http
+- [Client](Http/Client.md)
 - [Request](Http/Request.md)
 - [Response](Http/Response.md)
 
