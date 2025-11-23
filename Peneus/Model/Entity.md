@@ -21,12 +21,12 @@ using a provided value in string format (e.g., `'2025-03-15 12:45:00'`,
 #### Syntax
 
 ```php
-public function __construct(?array $data = \Peneus\Model\null)
+public function __construct(array|object|null $data = \Peneus\Model\null)
 ```
 
 #### Parameters
 
-- **$data**: (Optional) An associative array of property values. Keys must match the entity's public properties. If `id` is specified, it is also assigned.
+- **$data**: (Optional) An associative array or an object containing values for the entity's public properties. Keys (for arrays) or property names (for objects) must match the entity's public properties. If `id` is specified, it is also assigned.
 
 #### Exceptions
 
@@ -45,12 +45,12 @@ using a provided value in string format (e.g., `'2025-03-15 12:45:00'`,
 #### Syntax
 
 ```php
-public function Populate(array $data): void
+public function Populate(array|object $data): void
 ```
 
 #### Parameters
 
-- **$data**: An associative array of property values. Keys must match the entity's public properties. If `id` is specified, it is also assigned.
+- **$data**: An associative array or an object containing values for the entity's public properties. Keys (for arrays) or property names (for objects) must match the entity's public properties. If `id` is specified, it is also assigned.
 
 #### Exceptions
 
