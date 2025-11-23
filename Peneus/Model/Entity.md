@@ -26,7 +26,7 @@ public function __construct(array|object|null $data = \Peneus\Model\null)
 
 #### Parameters
 
-- **$data**: (Optional) An associative array or an object containing values for the entity's public properties. Keys (for arrays) or property names (for objects) must match the entity's public properties. If `id` is specified, it is also assigned.
+- **$data**: (Optional) An associative array or an object containing values for the entity's public properties. Keys (for arrays) or property names (for objects) must match the entity's property names. If `id` is specified, it is also assigned.
 
 #### Exceptions
 
@@ -50,7 +50,7 @@ public function Populate(array|object $data): void
 
 #### Parameters
 
-- **$data**: An associative array or an object containing values for the entity's public properties. Keys (for arrays) or property names (for objects) must match the entity's public properties. If `id` is specified, it is also assigned.
+- **$data**: An associative array or an object containing values for the entity's public properties. Keys (for arrays) or property names (for objects) must match the entity's property names. If `id` is specified, it is also assigned.
 
 #### Exceptions
 
