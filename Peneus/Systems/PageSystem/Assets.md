@@ -15,7 +15,7 @@ Constructs a new instance with CSS and JavaScript inputs.
 #### Syntax
 
 ```php
-public function __construct(string|array|null $css = null, string|array|null $js = null)
+public function __construct(string|array|null $css = \Peneus\Systems\PageSystem\null, string|array|null $js = \Peneus\Systems\PageSystem\null)
 ```
 
 #### Parameters

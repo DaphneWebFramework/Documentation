@@ -17,7 +17,7 @@ libraries marked as default in the manifest.
 #### Syntax
 
 ```php
-public function __construct(?\Peneus\Systems\PageSystem\LibraryManifest $manifest = null)
+public function __construct(?\Peneus\Systems\PageSystem\LibraryManifest $manifest = \Peneus\Systems\PageSystem\null)
 ```
 
 #### Parameters

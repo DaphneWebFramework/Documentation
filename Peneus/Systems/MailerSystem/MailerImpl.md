@@ -12,7 +12,7 @@ configuration values.
 #### Syntax
 
 ```php
-public function __construct(\Peneus\Systems\MailerSystem\MailerConfig $mailerConfig, ?\PHPMailer\PHPMailer\PHPMailer $phpMailer = null)
+public function __construct(\Peneus\Systems\MailerSystem\MailerConfig $mailerConfig, ?\PHPMailer\PHPMailer\PHPMailer $phpMailer = \Peneus\Systems\MailerSystem\null)
 ```
 
 #### Parameters

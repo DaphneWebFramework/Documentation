@@ -15,8 +15,12 @@ Constructs a new instance by initializing dependencies.
 #### Syntax
 
 ```php
-public function __construct()
+public function __construct(?\Harmonia\Http\Client $client = \Peneus\Api\Actions\Account\null)
 ```
+
+#### Parameters
+
+- **$client**: (Optional) The HTTP client to use. If not provided, a new default instance is created.
 
 ---
 

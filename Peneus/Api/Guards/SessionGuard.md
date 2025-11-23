@@ -12,7 +12,7 @@ Constructs a new instance with an optional minimum role.
 #### Syntax
 
 ```php
-public function __construct(\Peneus\Model\Role $minimumRole = Role::None)
+public function __construct(\Peneus\Model\Role $minimumRole = \Role::None)
 ```
 
 #### Parameters

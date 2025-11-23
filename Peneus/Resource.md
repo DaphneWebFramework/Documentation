@@ -170,7 +170,7 @@ page. Otherwise, it will point to the current request URI.
 #### Syntax
 
 ```php
-public function LoginPageUrl(?string $redirectPageId = null): \Harmonia\Core\CUrl
+public function LoginPageUrl(?string $redirectPageId = \Peneus\null): \Harmonia\Core\CUrl
 ```
 
 #### Parameters
