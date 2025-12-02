@@ -21,7 +21,7 @@ using a provided value in string format (e.g., `'2025-03-15 12:45:00'`,
 #### Syntax
 
 ```php
-public function __construct(array|object|null $data = \Peneus\Model\null)
+public function __construct(array|object|null $data = null)
 ```
 
 #### Parameters
@@ -291,7 +291,7 @@ Retrieves the first entity that matches the given condition.
 #### Syntax
 
 ```php
-public static function FindFirst(?string $condition = \Peneus\Model\null, ?array $bindings = \Peneus\Model\null, ?string $orderBy = \Peneus\Model\null): ?static
+public static function FindFirst(?string $condition = null, ?array $bindings = null, ?string $orderBy = null): ?static
 ```
 
 #### Parameters
@@ -313,7 +313,7 @@ Retrieves all entities that match the given condition.
 #### Syntax
 
 ```php
-public static function Find(?string $condition = \Peneus\Model\null, ?array $bindings = \Peneus\Model\null, ?string $orderBy = \Peneus\Model\null, ?int $limit = \Peneus\Model\null, ?int $offset = \Peneus\Model\null): array
+public static function Find(?string $condition = null, ?array $bindings = null, ?string $orderBy = null, ?int $limit = null, ?int $offset = null): array
 ```
 
 #### Parameters
@@ -337,7 +337,7 @@ Returns the number of rows in the associated table that match a condition.
 #### Syntax
 
 ```php
-public static function Count(?string $condition = \Peneus\Model\null, ?array $bindings = \Peneus\Model\null): int
+public static function Count(?string $condition = null, ?array $bindings = null): int
 ```
 
 #### Parameters

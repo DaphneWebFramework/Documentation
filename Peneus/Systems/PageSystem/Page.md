@@ -30,7 +30,7 @@ Constructs a new instance.
 #### Syntax
 
 ```php
-public function __construct(string $directory, ?\Peneus\Systems\PageSystem\Renderer $renderer = \Peneus\Systems\PageSystem\null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = \Peneus\Systems\PageSystem\null, ?\Peneus\Systems\PageSystem\PageManifest $pageManifest = \Peneus\Systems\PageSystem\null, ?\Peneus\Systems\PageSystem\MetaCollection $metaCollection = \Peneus\Systems\PageSystem\null)
+public function __construct(string $directory, ?\Peneus\Systems\PageSystem\Renderer $renderer = null, ?\Peneus\Systems\PageSystem\LibraryManager $libraryManager = null, ?\Peneus\Systems\PageSystem\PageManifest $pageManifest = null, ?\Peneus\Systems\PageSystem\MetaCollection $metaCollection = null)
 ```
 
 #### Parameters
@@ -458,7 +458,7 @@ error page with an HTTP 401 Unauthorized response.
 #### Syntax
 
 ```php
-public function RequireLogin(\Peneus\Model\Role $minimumRole = \Role::None): self
+public function RequireLogin(\Peneus\Model\Role $minimumRole = \Peneus\Model\Role::None): self
 ```
 
 #### Parameters
@@ -509,7 +509,7 @@ page and render content conditionally.
 #### Syntax
 
 ```php
-public function Property(string $key, mixed $default = \Peneus\Systems\PageSystem\null): mixed
+public function Property(string $key, mixed $default = null): mixed
 ```
 
 #### Parameters

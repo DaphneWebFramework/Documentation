@@ -11,7 +11,7 @@ Creates a new session for an authenticated user.
 #### Syntax
 
 ```php
-public function CreateSession(int $accountId, bool $persistent = \Peneus\Services\false): void
+public function CreateSession(int $accountId, bool $persistent = false): void
 ```
 
 #### Parameters
