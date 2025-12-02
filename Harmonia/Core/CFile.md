@@ -23,7 +23,7 @@ Opens a file and returns a new `CFile` instance.
 #### Syntax
 
 ```php
-public static function Open(string|\Stringable $filename, string $mode = self::MODE_READ): ?\Harmonia\Core\CFile
+public static function Open(string|\Stringable $filename, string $mode = \self::MODE_READ): ?\Harmonia\Core\CFile
 ```
 
 #### Parameters
@@ -187,7 +187,7 @@ Sets the cursor to a specified position.
 #### Syntax
 
 ```php
-public function SetCursor(int $offset, int $origin = self::ORIGIN_BEGIN): bool
+public function SetCursor(int $offset, int $origin = \self::ORIGIN_BEGIN): bool
 ```
 
 #### Parameters

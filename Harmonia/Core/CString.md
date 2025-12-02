@@ -393,7 +393,7 @@ offset.
 #### Syntax
 
 ```php
-public function Middle(int $offset, int $count = PHP_INT_MAX): static
+public function Middle(int $offset, int $count = \PHP_INT_MAX): static
 ```
 
 #### Parameters
@@ -897,7 +897,7 @@ excluding empty results. These behaviors can be customized with options.
 #### Syntax
 
 ```php
-public function Split(string $delimiter, int $options = self::SPLIT_OPTION_NONE): \Generator
+public function Split(string $delimiter, int $options = \self::SPLIT_OPTION_NONE): \Generator
 ```
 
 #### Parameters
@@ -929,7 +929,7 @@ excluding empty results. These behaviors can be customized with options.
 #### Syntax
 
 ```php
-public function SplitToArray(string $delimiter, int $options = self::SPLIT_OPTION_NONE): static[]
+public function SplitToArray(string $delimiter, int $options = \self::SPLIT_OPTION_NONE): static[]
 ```
 
 #### Parameters
@@ -1042,7 +1042,7 @@ Matches the string against a regular expression pattern.
 #### Syntax
 
 ```php
-public function Match(string $pattern, int $options = self::REGEX_OPTION_NONE, string $delimiter = '/'): ?array
+public function Match(string $pattern, int $options = \self::REGEX_OPTION_NONE, string $delimiter = '/'): ?array
 ```
 
 #### Parameters

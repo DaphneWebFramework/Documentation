@@ -64,7 +64,7 @@ Retrieves the current row and advances the internal cursor.
 #### Syntax
 
 ```php
-public function Row(int $mode = self::ROW_MODE_ASSOCIATIVE): array<string,mixed>|array<int,mixed>|null
+public function Row(int $mode = \self::ROW_MODE_ASSOCIATIVE): array<string,mixed>|array<int,mixed>|null
 ```
 
 #### Parameters

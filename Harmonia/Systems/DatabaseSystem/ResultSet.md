@@ -71,7 +71,7 @@ Retrieves a single row from the result set.
 #### Syntax
 
 ```php
-public function Row(int $mode = self::ROW_MODE_ASSOCIATIVE): array<string,mixed>|array<int,mixed>|null
+public function Row(int $mode = \self::ROW_MODE_ASSOCIATIVE): array<string,mixed>|array<int,mixed>|null
 ```
 
 #### Parameters

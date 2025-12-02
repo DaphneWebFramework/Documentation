@@ -8,7 +8,7 @@ Performs HTTP requests.
 
 Constructs a new instance.
 
-By default the request method is initialized to "GET".
+The request method is initialized to "GET" by default.
 
 #### Syntax
 
@@ -73,6 +73,48 @@ The current instance.
 
 ---
 
+### Get
+
+Sets the request method to "GET".
+
+#### Syntax
+
+```php
+public function Get(): self
+```
+
+#### Return Value
+
+The current instance.
+
+#### See Also
+
+- [`Post`](#Post)
+- [`Method_`](#Method_)
+
+---
+
+### Post
+
+Sets the request method to "POST".
+
+#### Syntax
+
+```php
+public function Post(): self
+```
+
+#### Return Value
+
+The current instance.
+
+#### See Also
+
+- [`Get`](#Get)
+- [`Method_`](#Method_)
+
+---
+
 ### Url
 
 Sets the request URL.
@@ -125,7 +167,8 @@ results in no payload being sent.
 When passing an array, it will always be encoded as `multipart/form-data`
 with an automatically generated boundary. To send URL‑encoded form data,
 you must encode the array yourself (e.g., with `http_build_query()`) and
-pass the resulting string instead.
+pass the resulting string instead. Passing an empty array results in no
+payload being sent.
 
 #### Syntax
 

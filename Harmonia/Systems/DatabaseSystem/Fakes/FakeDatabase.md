@@ -62,7 +62,7 @@ matching query and bindings, the configured result will be returned.
 #### Syntax
 
 ```php
-public function Expect(string $sql, array<string,mixed> $bindings = [], ?array<int,array<string,mixed>> $result = [], int $lastInsertId = 0, int $lastAffectedRowCount = 0, ?int $times = self::UNLIMITED_TIMES): void
+public function Expect(string $sql, array<string,mixed> $bindings = [], ?array<int,array<string,mixed>> $result = [], int $lastInsertId = 0, int $lastAffectedRowCount = 0, ?int $times = \self::UNLIMITED_TIMES): void
 ```
 
 #### Parameters
