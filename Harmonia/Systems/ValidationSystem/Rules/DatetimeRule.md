@@ -22,7 +22,7 @@ public function Validate(string|int $field, mixed $value, mixed $param): void
 
 - **$field**: The field name or index to validate.
 - **$value**: The value of the field to validate.
-- **$param**: Optional format string. When provided, the value must match it exactly. When omitted, any PHP‑parsable datetime string is accepted.
+- **$param**: Optional format string. When provided, the value must match it exactly. When omitted, any PHP-parsable datetime string is accepted.
 
 #### Exceptions
 

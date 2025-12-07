@@ -14,12 +14,12 @@ method name. To comply with this, "Method_" was chosen instead.
 #### Syntax
 
 ```php
-public function Method_(): ?\Harmonia\Http\RequestMethod
+public function Method_(): ?\Harmonia\Core\CString
 ```
 
 #### Return Value
 
-The request method, or `null` if the request method is not available or unsupported.
+The request method, or `null` if the request method is not available.
 
 ---
 
