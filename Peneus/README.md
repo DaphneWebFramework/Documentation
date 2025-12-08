@@ -2,6 +2,7 @@
 - [Resource](Resource.md)
 
 ## Api
+- [DashboardRegistry](Api/DashboardRegistry.md)
 - [Dispatcher](Api/Dispatcher.md)
 - [HandlerRegistry](Api/HandlerRegistry.md)
 
