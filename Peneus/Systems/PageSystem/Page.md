@@ -565,4 +565,25 @@ The CSRF token value.
 
 ---
 
+### When
+
+Executes a callback only if the given condition is met.
+
+#### Syntax
+
+```php
+public function When(bool $condition, callable $callback): self
+```
+
+#### Parameters
+
+- **$condition**: The condition to check. If evaluates to `true`, the callback will be executed.
+- **$callback**: The callback to execute if the condition evaluates to `true`. It receives the current `Page` object as its only argument.
+
+#### Return Value
+
+The current instance.
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
