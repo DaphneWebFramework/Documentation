@@ -114,6 +114,20 @@ A `CArray` instance where the keys are formatted header names and the values are
 
 Retrieves the client's IP address.
 
+When an application is running behind a reverse proxy (like Nginx, a load
+balancer, or services like ngrok), the "REMOTE_ADDR" server variable will
+often contain the proxy's IP address, not the original client's IP. In
+these scenarios, the original client IP usually exists in a separate
+header, commonly "HTTP_X_FORWARDED_FOR". In such cases, you can use the
+following code, ideally in an early bootstrapping file, to overwrite
+"REMOTE_ADDR":
+```php
+if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $ips = \explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+    $_SERVER['REMOTE_ADDR'] = \trim($ips[0]);
+}
+```
+
 #### Syntax
 
 ```php
