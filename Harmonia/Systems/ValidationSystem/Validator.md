@@ -80,10 +80,8 @@ Returns a data accessor object that provides access to the validated data fields
 
 #### Exceptions
 
-- **\InvalidArgumentException**: If a `requiredWithout` rule is defined without a field name, or if the field references itself as a `requiredWithout` field.
-- **\RuntimeException**: If the field fails any requirement rule. This includes cases where a required field is missing, the field and any mutually exclusive field are both present, or neither the field nor any mutually exclusive fields are present.
-- **\RuntimeException**: If the rule does not exist or validation fails.
-- **\RuntimeException**: If the user-defined closure returns `false`.
+- **\InvalidArgumentException**: If a validation rule is incorrectly defined.
+- **\RuntimeException**: If the validation fails. These exceptions are thrown with the code set to 400 (Bad Request).
 
 ---
 
