@@ -26,6 +26,7 @@ public function Validate(string|int $field, mixed $value, mixed $param): void
 
 #### Exceptions
 
+- **\InvalidArgumentException**: If the parameter is not numeric.
 - **\RuntimeException**: If the value is not numeric, the specified maximum is not numeric, or the value exceeds the specified maximum.
 
 ---

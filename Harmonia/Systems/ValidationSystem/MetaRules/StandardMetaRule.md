@@ -70,7 +70,8 @@ public function Validate(string|int $field, mixed $value): void
 
 #### Exceptions
 
-- **\RuntimeException**: If the rule does not exist or validation fails.
+- **\InvalidArgumentException**: If the rule name is empty, contains leading or trailing spaces, contains uppercase letters, or the rule does not exist.
+- **\RuntimeException**: If the validation fails.
 
 ---
 

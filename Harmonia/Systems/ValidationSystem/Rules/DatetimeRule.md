@@ -26,6 +26,7 @@ public function Validate(string|int $field, mixed $value, mixed $param): void
 
 #### Exceptions
 
+- **\InvalidArgumentException**: If the parameter is neither a string nor `null`.
 - **\RuntimeException**: If a format is provided and the value does not match it exactly; or if no format is provided and the value is not a valid datetime string; or if an invalid parameter is given.
 
 ---

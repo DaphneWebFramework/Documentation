@@ -38,7 +38,8 @@ public abstract function Validate(string|int $field, mixed $value, mixed $param)
 
 #### Exceptions
 
-- **\RuntimeException**: If validation fails.
+- **\InvalidArgumentException**: If the parameter is invalid.
+- **\RuntimeException**: If the validation fails.
 
 ---
 

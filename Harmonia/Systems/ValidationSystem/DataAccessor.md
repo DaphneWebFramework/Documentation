@@ -80,7 +80,7 @@ The field value if it exists.
 
 #### Exceptions
 
-- **\RuntimeException**: If the field does not exist.
+- **\InvalidArgumentException**: If the field does not exist.
 
 ---
 

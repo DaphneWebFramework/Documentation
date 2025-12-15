@@ -22,6 +22,7 @@ public function Validate(string|int $field, mixed $value, mixed $param): void
 
 #### Exceptions
 
+- **\InvalidArgumentException**: If the parameter is not a string.
 - **\RuntimeException**: If the value is not a string, the pattern is not a string, or the value does not match the pattern.
 
 ---

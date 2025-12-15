@@ -26,6 +26,7 @@ public function Validate(string|int $field, mixed $value, mixed $param): void
 
 #### Exceptions
 
+- **\InvalidArgumentException**: If the parameter is not a string.
 - **\RuntimeException**: If the parameter is not a valid class name, or the value is not valid for the enum.
 
 ---

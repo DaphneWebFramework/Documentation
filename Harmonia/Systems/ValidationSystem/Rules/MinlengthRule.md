@@ -26,6 +26,7 @@ public function Validate(string|int $field, mixed $value, mixed $param): void
 
 #### Exceptions
 
+- **\InvalidArgumentException**: If the parameter is not an integer.
 - **\RuntimeException**: If the value is not a string, the specified length is not an integer-like value, or the value is shorter than the specified length.
 
 ---
