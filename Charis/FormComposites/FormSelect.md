@@ -11,7 +11,7 @@ Constructs a new instance.
 #### Syntax
 
 ```php
-public function __construct(?array<string,mixed> $attributes = null, \Charis\FormComposites\Option[]|null $options = null)
+public function __construct(?array<string,mixed> $attributes = null, \Charis\Option[]|null $options = null)
 ```
 
 #### Parameters
