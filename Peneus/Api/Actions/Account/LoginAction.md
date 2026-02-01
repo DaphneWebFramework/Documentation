@@ -1,4 +1,4 @@
-# LoginAction
+# LogInAction
 
 Authenticates a user with email and password credentials.
 

@@ -1,4 +1,4 @@
-# LogoutAction
+# LogOutAction
 
 Logs out the currently logged-in user.
 
