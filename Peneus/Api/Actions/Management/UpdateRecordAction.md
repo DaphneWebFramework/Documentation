@@ -1,6 +1,6 @@
-# AddRecordAction
+# UpdateRecordAction
 
-Creates a new record in a specified table.
+Updates an existing record in a specified table.
 
 ---
 

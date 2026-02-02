@@ -22,13 +22,13 @@
 - [SignInWithGoogleAction](Api/Actions/Account/SignInWithGoogleAction.md)
 
 #### Management
-- [AddRecordAction](Api/Actions/Management/AddRecordAction.md)
+- [CreateRecordAction](Api/Actions/Management/CreateRecordAction.md)
 - [CreateTableAction](Api/Actions/Management/CreateTableAction.md)
 - [DeleteRecordAction](Api/Actions/Management/DeleteRecordAction.md)
 - [DropTableAction](Api/Actions/Management/DropTableAction.md)
-- [EditRecordAction](Api/Actions/Management/EditRecordAction.md)
 - [ListEntityMappingsAction](Api/Actions/Management/ListEntityMappingsAction.md)
 - [ListRecordsAction](Api/Actions/Management/ListRecordsAction.md)
+- [UpdateRecordAction](Api/Actions/Management/UpdateRecordAction.md)
 
 ### Guards
 - [FormTokenGuard](Api/Guards/FormTokenGuard.md)
