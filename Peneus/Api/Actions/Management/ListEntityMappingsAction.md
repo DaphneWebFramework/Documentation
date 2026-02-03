@@ -6,7 +6,8 @@ Scans backend modules and lists mappings between entities and database tables.
 
 ### __construct
 
-Constructs a new instance by initializing the backend path.
+Constructs a new instance by initializing the backend path and the
+dependencies.
 
 #### Syntax
 
