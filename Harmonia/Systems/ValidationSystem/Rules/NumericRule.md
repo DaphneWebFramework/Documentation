@@ -1,12 +1,17 @@
 # NumericRule
 
-Validates whether a given field contains a numeric value.
+Validates whether a given field contains a number or a numeric string.
+
+By default, both native numbers (integers and floats) and string
+representations of numbers (referred to as numeric) are valid. If the
+optional parameter "strict" is provided, only native numbers are considered
+valid.
 
 ## Methods
 
 ### Validate
 
-Validates that the field contains a numeric value.
+Validates that the field contains a number or a numeric string.
 
 #### Syntax
 
@@ -18,11 +23,12 @@ public function Validate(string|int $field, mixed $value, mixed $param): void
 
 - **$field**: The field name or index to validate.
 - **$value**: The value of the field to validate.
-- **$param**: Unused in this rule.
+- **$param**: Optional parameter to specify validation mode. If set to "strict", the value must be a number. If omitted, both numbers and numeric strings are accepted.
 
 #### Exceptions
 
-- **\RuntimeException**: If the value is not numeric.
+- **\InvalidArgumentException**: If the parameter is neither "strict" nor `null`.
+- **\RuntimeException**: If the parameter is "strict" and the value is not a number; or if no parameter is given and the value is not a number or numeric string; or if an invalid parameter is given.
 
 ---
 

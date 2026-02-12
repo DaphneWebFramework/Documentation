@@ -27,6 +27,30 @@ Returns `true` if the value is an integer, `false` otherwise.
 
 ---
 
+### IsNumber
+
+Determines if the given value is a native numeric type.
+
+This method validates only native PHP numeric values, meaning integers
+and floating-point numbers. String representations of numbers are not
+considered numeric by this method.
+
+#### Syntax
+
+```php
+public function IsNumber(mixed $value): bool
+```
+
+#### Parameters
+
+- **$value**: The value to check for native numeric type.
+
+#### Return Value
+
+Returns `true` if the value is an integer or a float, `false` otherwise.
+
+---
+
 ### IsNumeric
 
 Determines if the given value is of a numeric type.
