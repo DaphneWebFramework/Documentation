@@ -191,6 +191,49 @@ The masterpage name.
 
 ---
 
+### SetCanonicalSuffix
+
+Sets the suffix appended to the page's canonical URL.
+
+This value represents the URL segment added after the page's base URL
+when generating the canonical URL. If not set, the canonical URL consists
+only of the page's base URL.
+
+#### Syntax
+
+```php
+public function SetCanonicalSuffix(string $canonicalSuffix): self
+```
+
+#### Parameters
+
+- **$canonicalSuffix**: The suffix used when constructing the canonical URL.
+
+#### Return Value
+
+The current instance.
+
+---
+
+### CanonicalUrl
+
+Returns the canonical URL of the page.
+
+The canonical URL is constructed from the page's base URL and, if
+defined, the canonical suffix.
+
+#### Syntax
+
+```php
+public function CanonicalUrl(): string
+```
+
+#### Return Value
+
+The canonical URL of the page, always ending with a trailing slash.
+
+---
+
 ### Content
 
 Returns the captured page content.
