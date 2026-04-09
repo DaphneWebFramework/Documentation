@@ -8,6 +8,31 @@ can also be used to access public properties and methods.
 
 ## Methods
 
+### GetConstant
+
+Retrieves the value of a constant from a class.
+
+#### Syntax
+
+```php
+public static function GetConstant(string $className, string $constantName): mixed
+```
+
+#### Parameters
+
+- **$className**: The name of the class from which to retrieve the non-public constant value.
+- **$constantName**: The name of the non-public constant.
+
+#### Return Value
+
+The value of the specified constant.
+
+#### Exceptions
+
+- **\ReflectionException**: If the constant does not exist or cannot be accessed.
+
+---
+
 ### SetProperty
 
 Sets the value of a property in an object.
