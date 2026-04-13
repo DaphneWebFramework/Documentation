@@ -1,12 +1,15 @@
 # AccountRoleDeletionHook
 
-Hook for removing role associations during account deletion.
+Hook for removing role records during account deletion.
 
 ## Methods
 
 ### OnDeleteAccount
 
-Deletes all records related to the account's assigned roles.
+Deletes all role records associated with the given account.
+
+This method must be called inside a transaction to avoid an inconsistent
+state in case of failure during cascading deletions.
 
 #### Syntax
 
@@ -20,7 +23,7 @@ public function OnDeleteAccount(\Peneus\Model\Account $account): void
 
 #### Exceptions
 
-- **\RuntimeException**: If any role entry could not be deleted.
+- **\RuntimeException**: If any role record could not be deleted.
 
 ---
 
