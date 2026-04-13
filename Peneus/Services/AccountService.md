@@ -65,6 +65,38 @@ The account of the currently logged-in user, or `null` if no valid session or pe
 
 ---
 
+### RegisterActivationHook
+
+Registers a hook to be triggered during account activation.
+
+#### Syntax
+
+```php
+public function RegisterActivationHook(\Peneus\Api\Hooks\IAccountActivationHook $hook): void
+```
+
+#### Parameters
+
+- **$hook**: The hook implementation to be registered.
+
+---
+
+### ActivationHooks
+
+Returns all registered account activation hooks.
+
+#### Syntax
+
+```php
+public function ActivationHooks(): \Peneus\Api\Hooks\IAccountActivationHook[]
+```
+
+#### Return Value
+
+An array of registered activation hook instances.
+
+---
+
 ### RegisterDeletionHook
 
 Registers a hook to be triggered during account deletion.
