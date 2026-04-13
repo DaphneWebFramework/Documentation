@@ -14,12 +14,8 @@ Constructs a new instance by initializing dependencies.
 #### Syntax
 
 ```php
-public function __construct(\Peneus\Api\Hooks\ICaptchaHook|null $captchaHook = null)
+public function __construct()
 ```
-
-#### Parameters
-
-- **$captchaHook**: (Optional) A hook for verifying captchas.
 
 ---
 

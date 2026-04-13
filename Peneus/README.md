@@ -35,6 +35,7 @@
 - [HeaderTokenGuard](Api/Guards/HeaderTokenGuard.md)
 - [SessionGuard](Api/Guards/SessionGuard.md)
 - [TokenGuard](Api/Guards/TokenGuard.md)
+- [TurnstileGuard](Api/Guards/TurnstileGuard.md)
 - [WhitelistGuard](Api/Guards/WhitelistGuard.md)
 
 ### Handlers
