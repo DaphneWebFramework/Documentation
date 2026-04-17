@@ -39,8 +39,11 @@ public function __construct(array|object|null $data = null)
 Populates the entity's properties with the given data.
 
 If a corresponding property is a `DateTime` instance, it will be updated
-using a provided value in string format (e.g., `'2025-03-15 12:45:00'`,
-`'2025-03-15'`).
+using either a `DateTime` instance or a string in format "2025-03-15" or
+"2025-03-15 12:45:00".
+
+Backed enum properties accept either an enum case or a scalar value of
+the same backing type (int or string).
 
 #### Syntax
 
@@ -98,10 +101,6 @@ Returns `true` if the entity was successfully deleted. Returns `false` if `id` i
 ### jsonSerialize
 
 Specifies how the entity should be serialized to JSON.
-
-Converts `DateTime` properties to strings using the standard
-date-time format. Preserves `null` for nullable date-time fields.
-Only properties with supported types are included in the output.
 
 #### Syntax
 
@@ -163,8 +162,9 @@ Returns `true` if the entity is a view, `false` if it is a regular table entity.
 Returns the table name of the entity.
 
 By default, the table name is derived from the entity's class name,
-converted to lowercase. Subclasses can override this method to specify
-a custom table name.
+converted to lowercase.
+
+Subclasses can override this method to specify a custom table name.
 
 #### Example
 ```php
@@ -185,7 +185,7 @@ public static function TableName(): string
 
 #### Return Value
 
-The table name associated with the entity.
+The table name for the entity.
 
 ---
 
@@ -193,10 +193,10 @@ The table name associated with the entity.
 
 Returns metadata for all supported properties of the entity.
 
-The `id` column is always placed first, followed by all other public,
-non-static, non-readonly properties with supported types. Each entry
-contains the property's name, corresponding SQL type, and nullability
-information.
+The `id` column is always placed first, followed by other properties.
+Each entry contains the property's name, its SQL type ("BIT", "INT",
+"DOUBLE", "TEXT", or "DATETIME"), and its nullability flag. Backed enums
+are mapped to "INT" or "TEXT" based on their backing type.
 
 #### Syntax
 
