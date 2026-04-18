@@ -17,7 +17,7 @@ public function __construct(\Peneus\Model\Role $minimumRole = \Peneus\Model\Role
 
 #### Parameters
 
-- **$minimumRole**: (Optional) The minimum role required for the request. Defaults to `Role::None`. When `Role::None` is specified, only login status is enforced.
+- **$minimumRole**: (Optional) The minimum role required for the request. Defaults to `Role::None`.
 
 ---
 
