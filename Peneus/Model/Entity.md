@@ -286,7 +286,7 @@ public static function FindById(int $id): static|null
 
 #### Return Value
 
-An instance of the called class if a matching record is found, `null` otherwise.
+Returns an instance of the called class if a matching record is found and the entity can be populated from it; `null` otherwise.
 
 ---
 
@@ -308,7 +308,7 @@ public static function FindFirst(?string $condition = null, ?array $bindings = n
 
 #### Return Value
 
-An instance of the called class if a matching record is found, `null` otherwise.
+Returns an instance of the called class if a matching record is found and the entity can be populated from it; `null` otherwise.
 
 ---
 
@@ -319,7 +319,7 @@ Retrieves all entities that match the given condition.
 #### Syntax
 
 ```php
-public static function Find(?string $condition = null, ?array $bindings = null, ?string $orderBy = null, ?int $limit = null, ?int $offset = null): array
+public static function Find(?string $condition = null, ?array $bindings = null, ?string $orderBy = null, ?int $limit = null, ?int $offset = null): static[]
 ```
 
 #### Parameters
@@ -332,7 +332,7 @@ public static function Find(?string $condition = null, ?array $bindings = null, 
 
 #### Return Value
 
-An array of instances of the called class. Returns an empty array if no matching rows are found or if the query fails.
+Returns an array of instances of the called class for all matching records. Only entities that can be populated from these records are included. Returns an empty array if no matching rows are found, the query fails, or no entities can be populated.
 
 ---
 
