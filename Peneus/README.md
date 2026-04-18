@@ -56,6 +56,9 @@
 - [PersistentLogin](Model/PersistentLogin.md)
 - [ViewEntity](Model/ViewEntity.md)
 
+### Core
+- [EntityPropertyInfo](Model/Core/EntityPropertyInfo.md)
+
 ## Services
 - [AccountService](Services/AccountService.md)
 - [PersistentLoginManager](Services/PersistentLoginManager.md)

@@ -14,10 +14,6 @@ Subclasses should define public properties that correspond to table columns.
 
 Constructs an entity with the given data.
 
-If a corresponding property is a `DateTime` instance, it will be updated
-using a provided value in string format (e.g., `'2025-03-15 12:45:00'`,
-`'2025-03-15'`).
-
 #### Syntax
 
 ```php
@@ -32,15 +28,21 @@ public function __construct(array|object|null $data = null)
 
 - **\InvalidArgumentException**: If a property assignment fails due to an invalid value or type mismatch.
 
+#### See Also
+
+- [`Populate`](#Populate)
+
 ---
 
 ### Populate
 
 Populates the entity's properties with the given data.
 
-If a corresponding property is a `DateTime` instance, it will be updated
-using either a `DateTime` instance or a string in format "2025-03-15" or
-"2025-03-15 12:45:00".
+If a property is a scalar (`bool`, `int`, `float`, `string`), the value
+is cast to that scalar type.
+
+If a property is a `DateTime`, the value may be a `DateTime` instance or
+a string in "YYYY-MM-DD" or "YYYY-MM-DD HH:MM:SS" format.
 
 Backed enum properties accept either an enum case or a scalar value of
 the same backing type (int or string).
@@ -119,8 +121,8 @@ An associative array of property names and their serialized values.
 Serializes the entity to an associative array, excluding specified
 properties.
 
-Uses the same logic as `jsonSerialize` (e.g., DateTime formatting),
-but allows certain fields to be omitted dynamically.
+Uses the same logic as `jsonSerialize`, but allows certain fields to be
+omitted dynamically.
 
 #### Syntax
 
@@ -135,6 +137,10 @@ public function Without(string ...$excludes): array
 #### Return Value
 
 An associative array of property names and their serialized values, excluding any specified properties.
+
+#### See Also
+
+- [`jsonSerialize`](#jsonSerialize)
 
 ---
 
