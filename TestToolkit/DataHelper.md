@@ -5,6 +5,7 @@ non-strings, non-integers, booleans, and combinations of test data (Cartesian
 product).
 
 #### Example
+
 ```php
 use \PHPUnit\Framework\TestCase;
 use \PHPUnit\Framework\Attributes\DataProviderExternal;
