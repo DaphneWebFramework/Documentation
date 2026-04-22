@@ -10,7 +10,7 @@ unifying two distinct responsibilities:
    neatly organized in one object.
 
 2. Execution Gating (The Pass Filter): Manages a cumulative logic chain for
-   mock expectations. Using 'pass()' and 'passIf()', it determines whether
+   mock expectations. Using 'chain()' and 'chainIf()', it determines whether
    a method is expected to be called or not, based on the scenario's setup.
 
 #### Example
@@ -65,11 +65,11 @@ class FileServiceTest extends TestCase
         $ctx->fileService = new FileService($ctx->storage);
         $ctx->data = "hello";
 
-        $ctx->storage->expects($ctx->pass())
+        $ctx->storage->expects($ctx->chain())
             ->method('HasPermission')
             ->willReturn($hasPermission);
 
-        $ctx->storage->expects($ctx->passIf($hasPermission))
+        $ctx->storage->expects($ctx->chainIf($hasPermission))
             ->method('Write')
             ->with($ctx->data)
             ->willReturn($writeSucceeds);
@@ -116,22 +116,22 @@ public function __construct(\PHPUnit\Framework\TestCase $testCase)
 
 ---
 
-### pass
+### chain
 
 #### Syntax
 
 ```php
-public function pass(): \PHPUnit\Framework\MockObject\Rule\InvokedCount
+public function chain(): \PHPUnit\Framework\MockObject\Rule\InvokedCount
 ```
 
 ---
 
-### passIf
+### chainIf
 
 #### Syntax
 
 ```php
-public function passIf(bool $condition): \PHPUnit\Framework\MockObject\Rule\InvokedCount
+public function chainIf(bool $condition): \PHPUnit\Framework\MockObject\Rule\InvokedCount
 ```
 
 #### Parameters
