@@ -140,4 +140,28 @@ public function chainIf(bool $condition): \PHPUnit\Framework\MockObject\Rule\Inv
 
 ---
 
+### update
+
+#### Syntax
+
+```php
+public function update(bool $condition): void
+```
+
+#### Parameters
+
+- **$condition**
+
+---
+
+### isFailed
+
+#### Syntax
+
+```php
+public function isFailed(): bool
+```
+
+---
+
 *This documentation was automatically generated using [phpDocumentor](http://www.phpdoc.org/) with the [Calliope](https://github.com/DaphneWebFramework/Calliope) template.*
