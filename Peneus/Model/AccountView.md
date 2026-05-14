@@ -13,9 +13,6 @@ is invoked.
 
 Returns the SQL `SELECT` statement that defines the view.
 
-The returned SQL should not include a trailing semicolon (`;`), although
-including one does not cause failure.
-
 #### Syntax
 
 ```php

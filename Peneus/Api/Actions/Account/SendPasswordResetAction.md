@@ -2,8 +2,9 @@
 
 Handles password reset requests for accounts.
 
-The action mitigates account enumeration by always returning the same generic
-success message, even if no account exists for the given email.
+Mitigates account enumeration by always returning the same generic success
+message, even if no account exists for the given email or if the account is
+third-party and therefore has an empty password hash.
 
 ## Methods
 
