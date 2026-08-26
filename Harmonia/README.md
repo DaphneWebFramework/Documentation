@@ -74,6 +74,7 @@
 
 #### Rules
 - [ArrayRule](Systems/ValidationSystem/Rules/ArrayRule.md)
+- [BooleanRule](Systems/ValidationSystem/Rules/BooleanRule.md)
 - [DatetimeRule](Systems/ValidationSystem/Rules/DatetimeRule.md)
 - [EmailRule](Systems/ValidationSystem/Rules/EmailRule.md)
 - [EnumRule](Systems/ValidationSystem/Rules/EnumRule.md)

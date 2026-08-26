@@ -7,6 +7,26 @@ and testable, without adding extra behavior beyond the underlying PHP functions.
 
 ## Methods
 
+### IsBoolean
+
+Determines if the given value is of boolean type.
+
+#### Syntax
+
+```php
+public function IsBoolean(mixed $value): bool
+```
+
+#### Parameters
+
+- **$value**: The value to check for boolean type.
+
+#### Return Value
+
+Returns `true` if the value is a boolean, `false` otherwise.
+
+---
+
 ### IsInteger
 
 Determines if the given value is of integer type.
